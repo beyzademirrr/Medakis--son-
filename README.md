@@ -164,4 +164,5 @@ bulunmaz**; ilgili kaynaktan ayrıca indirilir ve modelin kendi lisans koşullar
   optimizasyondur (CP-SAT). MedAkis AI operasyon asistanı bu sürümde kural tabanlı araç yönlendirmesidir. Hiçbir bileşen
   personel atamasını kendisi uygulamaz; her öneri yönetici onayı ister.
 - **Veri:** bütün veriler sentetiktir; gerçek hasta ya da personel verisi kullanılmamıştır.
-- Telif Hakkı © 2026 Beyza Demir. Tüm Hakları Saklıdır.
+
+Telif Hakkı © 2026 Beyza Demir. Tüm Hakları Saklıdır.
