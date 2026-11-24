@@ -86,6 +86,50 @@ yoğunluğa duyarlı optimizasyon ve AI Agent **henüz uygulanmadı** (yol harit
 
 > Geliştirme geçmişi ve deney raporları: `docs/raporlar/`. Paketle gelen özgün README `docs/paket_v2/README_PAKET_v2.md`.
 
+## Test sonuçları (teslim sürümü, 24.11.2026)
+
+- **Varsayılan test paketi** (`pytest`, PostgreSQL ve gerçek model testleri hariç): teslim reposunda 1418 test geçti.
+  İlk koşuda 3 test ortamdan dolayı başarısız oldu (geçmişsiz depo için sağlama özeti denetimi, `.env.example`
+  kuralı ve proje içi `.venv` gerektiren prova testi); üçü de düzeltilip yeniden koşuldu ve geçti.
+- **Çalıştırılmayanlar:** PostgreSQL/Docker testleri (510; `-m postgres`, çalışan veritabanı ister) ve gerçek model
+  entegrasyon testleri (12; `-m integration`, yerel Ollama modelleri ister).
+- **Uygulama:** Sentetik Demo modunda başlatıldı; ana ekran ve sekmeler doğrulandı. Öneri → onay → dry-run bildirim →
+  bildirim izi akışı uçtan uca testle doğrulandı (`tests/test_notifications.py`).
+
+## Üçüncü taraf bileşenler ve kaynak atfı
+
+MedAkis aşağıdaki açık kaynak yazılımları kullanır; her biri kendi lisansına tabidir. Model ağırlıkları **bu depoda
+bulunmaz**; kullanıcı tarafından ilgili kaynaktan ayrıca indirilir ve modelin kendi lisans koşulları geçerlidir.
+
+| Bileşen | Kullanım | Lisans |
+|---|---|---|
+| Streamlit | Kullanıcı arayüzü | Apache-2.0 |
+| Google OR-Tools (CP-SAT) | Personel optimizasyonu | Apache-2.0 |
+| scikit-learn, pandas, NumPy | İş yükü tahmini (Random Forest) ve veri işleme | BSD-3-Clause |
+| ChromaDB | Vektör deposu (RAG) | Apache-2.0 |
+| SQLAlchemy, Alembic, psycopg | Veritabanı katmanı | MIT / MIT / LGPL-3.0 |
+| Ollama | Yerel model sunucusu | MIT |
+| BAAI/bge-m3 | Türkçe metin gömme (RAG) | MIT |
+| Google Gemma 3 4B (`gemma3:4b`) | Yerel kanıt denetimi (geliştirme kipi) | Gemma Kullanım Koşulları |
+| nlpai-lab/LAMAR-600m | Reranker kapısı (deney) | MIT |
+| ytu-ce-cosmos/modernbert-tr-reranker | Türkçe reranker kapısı (deney) | Apache-2.0 |
+| Qwen/Qwen3-Reranker-0.6B, BAAI/bge-reranker-v2-m3 | Karşılaştırma reranker'ları (deney) | Apache-2.0 |
+| PyTorch, Hugging Face Transformers, sentence-transformers | Reranker deney ortamı (`experiments/d5`, ayrı sanal ortam) | BSD-3-Clause / Apache-2.0 / Apache-2.0 |
+
+Bağımlılıkların tam ve sabit sürüm listesi `requirements.txt` (uygulama) ve `experiments/d5/requirements-d5.lock.txt`
+(deney ortamı) dosyalarındadır.
+
+## Yapay zekâ kullanım beyanı
+
+- **Üründe yapay zekâ:** iş yükü tahmini makine öğrenmesi (Random Forest) ile yapılır. Kaynaklı RAG prototipi BGE-M3
+  gömme modeli, reranker modelleri ve yerel Gemma 3 4B dil modelini kullanır. Personel optimizasyonu yapay zekâ
+  modeli değil, matematiksel optimizasyondur (CP-SAT). Hiçbir model personel atamasını kendisi uygulamaz; her öneri
+  yönetici onayı ister.
+- **Geliştirmede yapay zekâ:** kod, test ve dokümantasyon hazırlanırken yapay zekâ destekli kodlama asistanlarından
+  yararlanılmıştır. Proje kapsamı, mimari kararlar, aşama onayları, belge onayları ve kabul ölçütleri proje sahibi
+  tarafından belirlenmiş; üretilen kod otomatik testlerle doğrulanmıştır.
+- **Veri:** bütün veriler sentetiktir; gerçek hasta ya da personel verisi kullanılmamıştır.
+
 ## Gereksinimler
 
 - Windows 10/11 x64
