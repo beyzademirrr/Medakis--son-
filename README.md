@@ -163,7 +163,5 @@ bulunmaz**; ilgili kaynaktan ayrıca indirilir ve modelin kendi lisans koşullar
   reranker modelleri ve yerel Gemma 3 4B dil modelini kullanır (geliştirme kipi). Personel optimizasyonu matematiksel
   optimizasyondur (CP-SAT). MedAkis AI operasyon asistanı bu sürümde kural tabanlı araç yönlendirmesidir. Hiçbir bileşen
   personel atamasını kendisi uygulamaz; her öneri yönetici onayı ister.
-- **Geliştirmede yapay zekâ:** kod, test ve dokümantasyon hazırlanırken yapay zekâ destekli kodlama asistanlarından
-  yararlanılmıştır. Proje kapsamı, mimari kararlar, aşama onayları, belge onayları ve kabul ölçütleri proje sahibi
-  tarafından belirlenmiş; kod otomatik testlerle doğrulanmıştır.
 - **Veri:** bütün veriler sentetiktir; gerçek hasta ya da personel verisi kullanılmamıştır.
+- Telif Hakkı © 2026 Beyza Demir. Tüm Hakları Saklıdır.
