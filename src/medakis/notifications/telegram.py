@@ -68,7 +68,7 @@ def build_message(proposal: Mapping[str, Any]) -> str:
             f"Öneri: {proposal['id']}\n"
             f"Plan özeti: {str(proposal['plan_sha256'])[:12]}…\n"
             f"Onay zamanı: {(proposal.get('kararlar') or [{}])[-1].get('zaman', '-')}\n"
-            "Bu bildirim yönetici onayından sonra gönderildi; otomatik personel emri değildir.")  # fmt: skip
+            "Bu bildirim yönetici onayından sonra hazırlandı; otomatik personel emri değildir.")  # fmt: skip
 
 
 class TelegramNotifier:
@@ -78,7 +78,10 @@ class TelegramNotifier:
         self._post = post
 
     def _already_sent(self, proposal_id: str, sha: str) -> bool:
-        return any(e.get("oneri_id") == proposal_id and e.get("plan_sha256") == sha and e.get("durum") == SENT for e in self.journal.events())
+        """Mükerrer engeli: canlı kipte başarılı gönderim, dry-run kipinde hazırlanmış dry-run kaydı varsa tekrar yok."""
+        blocking = SENT if self.config.live_ready else DRY
+        return any(e.get("oneri_id") == proposal_id and e.get("plan_sha256") == sha and e.get("durum") in (SENT, blocking)
+                   for e in self.journal.events())  # fmt: skip
 
     def _record(self, status: str, proposal_id: str, sha: str, detail: str) -> None:
         events = self.journal.events()

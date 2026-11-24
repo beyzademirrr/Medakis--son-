@@ -26,19 +26,21 @@ Bu belge, teslim edilen kodda **gerçekten çalışan** bileşenleri ve henüz u
 
 | Özellik | Durum | Not |
 |---|---|---|
-| Kullanıcı arayüzü (Streamlit) | **Çalışıyor ve doğrulandı** | Genel bakış, Servis paneli, Öneri inceleme ve onay, Mimari ve aşamalar, Yapılandırma |
+| Kullanıcı arayüzü (Streamlit) | **Çalışıyor ve doğrulandı** | Komuta merkezi (`dashboard.py`): 9 sayfa, koyu tema. Klasik inceleme ekranı (`app.py`) korunur |
 | Makine öğrenmesi ile iş yükü tahmini | **Çalışıyor ve doğrulandı** | Random Forest; sızıntı testleri |
 | CP-SAT ile personel optimizasyonu | **Çalışıyor ve doğrulandı** | Rol, yetkinlik, vardiya, mola, eşzamanlı atama kısıtları; bağımsız doğrulayıcı |
 | İnsan onaylı öneri akışı | **Çalışıyor ve doğrulandı** | Sistem hiçbir planı uygulamaz; onay izlenebilir kayıttır |
 | Denetim kayıtları | **Çalışıyor ve doğrulandı** | Özet zincirli, yalnız ekleme yapılan iz (tek yazıcılı prototip) |
 | Telegram bildirim altyapısı | **Çalışan prototip** (bu teslimde eklendi) | Varsayılan **dry-run**; yalnız geçerli onaylı öneri için; tekrar engeli; başarısızlık ayrı kaydedilir; token yalnız ortam değişkeninden. Canlı gönderim test edilmedi (token yenilenmedi) |
-| Kaynaklı RAG altyapısı | **Çalışan prototip / geliştirme** | Kaynak, sürüm ve alıntı aralığı doğrulaması; kaynak yoksa açıkça kaçınır. A6 karşılanmadı; normal kullanıcıya kapalı |
-| Kamera tabanlı yoğunluk analizi | **Henüz uygulanmadı** | 2 Aralık planı: sentetik video üreticisi ve açık "simülasyon" etiketi |
-| Hizmet alanı ısı haritası | **Henüz uygulanmadı** | 2 Aralık planı |
-| Yoğunluğa duyarlı personel optimizasyonu | **Henüz uygulanmadı** | Mevcut CP-SAT kısıtları üzerine kurulacak |
-| Yönetici ile etkileşen AI Agent | **Henüz uygulanmadı** | MCP entegrasyonu **yoktur**. Araç sözleşmeleri 2 Aralık planında |
+| Kaynaklı RAG altyapısı | **Çalışan prototip / geliştirme** | Arayüzde: BM25 anahtar kelime kaynak araması (belge, sürüm, birebir alıntı; kaynak yoksa kaçınır; embedding/LLM yok). BGE-M3 + reranker + Gemma hattı geliştirme kipinde; A6 karşılanmadı, normal kullanıcıya kapalı |
+| Kamera tabanlı yoğunluk analizi | **Çalışan prototip** | Programatik sentetik kamera simülasyonu (5 alan, hareketli anonim figürler, senaryolar, başlat/durdur); sentetik karede renk tabanlı sayım. Gerçek kamera ve gerçek insan tespiti YOK |
+| Hizmet alanı ısı haritası | **Çalışıyor ve doğrulandı** | Kat planı üzerinde SVG ısı haritası (yeşil/sarı/kırmızı), simülasyondan canlı |
+| Yoğunluğa duyarlı personel optimizasyonu | **Çalışan prototip** | CP-SAT geçici görevlendirme modeli + bağımsız doğrulayıcı (rol/yetkinlik, vardiya, aktif görev, asgari kapasite, tek atama). Sentetik kadro. Yoğunluk tek başına gerekçe değil |
+| Yönetici ile etkileşen AI Agent | **Çalışan prototip** | Kural tabanlı araç yönlendirmeli asistan (dil modeli DEĞİL): yoğunluk, personel, tahmin projeksiyonu, optimizasyon, kaynak arama, öneri oluşturma, onay durumu. Onay veremez. MCP entegrasyonu yok |
 
 ## Doğrulama (teslim gecesi)
+
+- Kabul senaryosu tarayıcıda çalıştırıldı: simülasyon başlatıldı → acil servis kritik → ısı haritası kırmızı → CP-SAT önerisi (doğrulayıcı: ihlal yok) → öneri onaya gönderildi → onaylandı → dry-run bildirim hazırlandı. Asistan ve kaynak araması `tests/test_urun_prototipi.py` ile doğrulandı.
 
 - Uygulama Sentetik Demo modunda başlatıldı. Tarayıcıda ana ekran, sekmeler ve inceleme senaryosu yüklemesi doğrulandı.
 - Öneri → onay → dry-run bildirim → bildirim izi akışı servis düzeyinde uçtan uca testle doğrulandı (`tests/test_notifications.py`).
