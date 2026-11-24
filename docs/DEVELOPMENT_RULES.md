@@ -46,7 +46,7 @@ Donanım: i7-10750H, 16 GB RAM, GTX 1660 Ti 6 GB, Windows. Aynı anda üç model
 6. Yönetici onayı, plan hash'i, denetim ve iptal akışı; onay bekle.
 7. Kontrollü corpus, Chroma indeksleme, retrieval ve metrik aracı; onay bekle.
 8. Kaynaklı Ollama cevabı, CPU/hafif kip, saldırı/arıza testleri; onay bekle.
-9. Kör değerlendirme, Qwen/BGE karşılaştırması, donanım ölçümü ve uçtan uca teslim; onay bekle.
+9. Kör değerlendirme, Qwen/BGE karşılaştırması, donanım ölçümü ve uçtan uca doğrulama; onay bekle.
 Mevcut uygulama varsa önce durumunu incele; tamamlanmış aşamaları yeniden yazma. Her aşama raporu değişen dosyaları, gerçek komut/test çıktısını, sınırlamaları ve sonraki kapsamı içerir.
 
 ## Sentetik veri yönetimi (FAZ 1.2C kararları)

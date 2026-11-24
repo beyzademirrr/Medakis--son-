@@ -12,7 +12,7 @@ def test_checksum_manifests(project_root):
     )
     result = json.loads(proc.stdout)
     assert result["original_files"] == 20
-    # Teslim reposu bilerek geçmişsiz oluşturulur: özgün paket kaydı git geçmişinden doğrulanamaz ("skipped");
+    # Bu depo bilerek geçmişsiz oluşturulur: özgün paket kaydı git geçmişinden doğrulanamaz ("skipped");
     # geliştirme reposunda geçmiş vardır ve doğrulama zorunludur. Güncel sağlama özeti her iki durumda da denetlenir.
     assert result["original_status"] == "verified" or result["original_status"].startswith("skipped"), result["original_status"]
     assert result["original_errors"] == [], "Özgün paket dosyaları değişmiş olmamalı"

@@ -32,7 +32,7 @@ STAGES: tuple[Stage, ...] = (
     Stage(6, "Yönetici onayı, plan hash'i, denetim ve iptal akışı"),
     Stage(7, "Kontrollü corpus, Chroma indeksleme, retrieval ve metrik aracı"),
     Stage(8, "Kaynaklı Ollama cevabı, CPU/hafif kip, saldırı/arıza testleri"),
-    Stage(9, "Kör değerlendirme, Qwen/BGE karşılaştırması, donanım ölçümü, teslim"),
+    Stage(9, "Kör değerlendirme, Qwen/BGE karşılaştırması, donanım ölçümü, uçtan uca doğrulama"),
 )
 
 MODULES: tuple[str, ...] = (

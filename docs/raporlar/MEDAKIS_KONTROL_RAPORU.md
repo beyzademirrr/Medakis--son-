@@ -1,4 +1,4 @@
-# MedAkis — Teslim kontrol raporu
+# MedAkis — Kontrol raporu
 
 - **Tarih:** 2026-11-21
 - **Dal:** `feature/asama-6-arayuz-onay` (Aşama 4–6 ve iyileştirmelerin hepsini içerir; `main`'den 36+ commit ileride)
@@ -23,7 +23,7 @@
 | 5 / U7 | Plan SHA-256 anlık görüntüsü, onay, ret, iptal ve geri alma durum makinesi, zincirli denetim izi, güvenlik girdisi parmak izi (plan, yetkinlik, takvim, kilit, görev) | `ASAMA_5_U7_RAPORU.md` |
 | 6 | Streamlit öneri inceleme ve onay ekranı, onaylı taşıma kilidi, simülasyon saati, veritabanısız Sentetik Demo Modu | `ASAMA_6_UYGULAMA_RAPORU.md`, `ASAMA_6_DEMO_MODU_DUZELTME_RAPORU.md` |
 
-**Teslim hazırlığında yapılanlar** (bu rapor; yeni özellik yok):
+**Kontrol kapsamında yapılanlar** (bu rapor; yeni özellik yok):
 - **Ana ekran:** Eski "Aşama 4'te eklenecek" ifadesi kaldırıldı. Genel bakış, Aşama 3–6 özelliklerini doğru tanıtıyor. Aşama tablosunda 1–6 "Tamamlandı (prototip)", 7–9 "Planlandı".
 - **README:**
   - "Mevcut durum" güncellendi; beş sekme ve kenar çubuğu tanıtıldı.
@@ -39,7 +39,7 @@
 
 | Kontrol | Sonuç |
 |---|---|
-| Varsayılan test paketi | **1017 passed** (1012 + 5 teslim testi; gerçek senaryo uçtan uca dahil), 510 deselected (PostgreSQL, Ollama ve rol testleri), 5 uyarı (Streamlit içi pandas uyarısı) |
+| Varsayılan test paketi | **1017 passed** (1012 + 5 uçtan uca test; gerçek senaryo uçtan uca dahil), 510 deselected (PostgreSQL, Ollama ve rol testleri), 5 uyarı (Streamlit içi pandas uyarısı) |
 | Uçtan uca demo (sahte senaryo, `AppTest`) | Açılış → senaryo yükle → oturum → değerlendir → kaydet → onayla ("Onay şu an geçerli") → geri al (gerekçeli) → denetim geçmişi `[oneri_kaydedildi, onaylandi, geri_alindi]`, zincir 3 olay. **Veritabanı servisi, repository ya da bağlantı fabrikası çağrısı: 0** |
 | Uçtan uca demo (**gerçek** sentetik senaryo; üretici 2.1 + RF + U1, 19.01.2027 09:30) | Aynı akış; model sürümleri anlık görüntüde (`random_forest`, `baseline_bilgi`); veritabanı çağrısı 0 (model dosyaları yoksa test atlanır) |
 | Eksik ya da bozuk model dosyası | Açık hata, çözüm komutları, değerlendirme yok |

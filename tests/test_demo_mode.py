@@ -161,7 +161,7 @@ def test_home_mentions_demo_launch_command():
     assert "--demo" in Path(home.__file__).read_text(encoding="utf-8")
 
 
-# ---- Teslim: uçtan uca demo akışı, eksik model dosyaları, güncel aşama metinleri -------------------------------
+# ---- Uçtan uca demo akışı, eksik model dosyaları, güncel aşama metinleri -------------------------------
 
 
 def _history_events(at):

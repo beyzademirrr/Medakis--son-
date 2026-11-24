@@ -98,7 +98,7 @@ olduğunu söyleyen bir uyarı görünür.
 .\.venv\Scripts\python.exe scripts\asama5_u1_kalibrasyon.py
 ```
 
-Temiz ortamda doğrulandı (`MEDAKIS_SON_TESLIM_DOGRULAMASI.md`): iki betik toplam ~10 dk sürer (Aşama 4
+Temiz ortamda doğrulandı: iki betik toplam ~10 dk sürer (Aşama 4
 ~5 dk, U1 ~5 dk; ağ gerekmez) ve model dosyaları baytı baytına aynı üretilir (RF `bd3e4b25…`, bilgi
 baseline'ı `2527e87d…`, kalibrasyon `02fbfbe3…`). Aşama 4 betiği demo için gerekmeyen `baseline/`,
 `random_forest_gerceklesen/` ve `sonuclar.json` dosyalarını da yazar (toplam ~64 MB). U1 betiği depodaki
@@ -348,7 +348,7 @@ OR-Tools veya Chroma içe aktaramaz.
 
 ## Dosya bütünlüğü (SHA-256)
 
-- `docs/paket_v2/SHA256SUMS_PAKET_v2.txt`: paket teslimindeki özgün kayıt; hiç değiştirilmez.
+- `docs/paket_v2/SHA256SUMS_PAKET_v2.txt`: özgün paket kaydı; hiç değiştirilmez.
   Güncel belgeler MedAkis adıyla düzenlendiği için özgün baytlar, paketin depoya ilk alındığı
   git commit'inde (`5f89cb8`) doğrulanır. Git geçmişi olmayan kopyada bu kontrol atlanır.
 - `SHA256SUMS.txt`: aynı 20 paket dosyasının güncel hâli, güncel adlarıyla

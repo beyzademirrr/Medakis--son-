@@ -8,7 +8,7 @@ import streamlit as st
 from medakis.agent import llm
 from medakis.agent import tools as T
 from medakis.agent.orchestrator import EXAMPLES, answer
-from medakis.retrieval_demo import CORPUS, search_sources
+from medakis.retrieval_demo import list_documents, quote_in_document, search_sources
 from medakis.ui import common as C
 from medakis.ui import state as S
 from medakis.ui import theme
@@ -116,10 +116,7 @@ def page_agent() -> None:
 
 def page_rag() -> None:
     C.top("Kurallar ve Belgeler", "Kontrollü sentetik kaynak belgeler · kaynaklı arama · bulunamazsa cevap üretilmez")
-    from medakis.rag.ingestion.corpus_loader import load_corpus
-
-    corpus = load_corpus(CORPUS)
-    docs = [d.record for d in corpus.documents]
+    docs = list_documents()
     st.markdown(theme.alert("Bu ekranda sınırlı anahtar kelime (BM25) araması çalışır; sonuç dil modeli cevabı DEĞİLDİR. BGE-M3 + yeniden "
                             "sıralayıcı + Gemma hattı geliştirme kipindedir ve kabul ölçütü (A6) karşılanmadığı için normal kullanıcıya kapalıdır.",
                             "sari"), unsafe_allow_html=True)  # fmt: skip
@@ -136,10 +133,8 @@ def page_rag() -> None:
             S.ss().sess.log("belge_arama", soru=q, bulundu=res["bulundu"], kaynak=[k["kimlik"] for k in res["kaynaklar"]])
             if not res["bulundu"]:
                 st.error(res["mesaj"] + " (Desteklenmeyen ya da kaynakta olmayan soru: güvenli ret.)")
-            texts = {d.record.uid: d.text for d in corpus.documents}
-            uid_of = {d.record.source_key: d.record.uid for d in corpus.documents}
             for k in res["kaynaklar"]:
-                verified = k["alinti"].strip()[:120] in texts.get(uid_of.get(k["kimlik"], ""), "")
+                verified = quote_in_document(k["kimlik"], k["alinti"])
                 with st.container(border=True):
                     st.markdown(f"**{k['belge']}** · {theme.chip(k['kimlik'])} {theme.chip('sürüm ' + str(k['surum']))} "
                                 f"{theme.chip('skor ' + str(k['skor']), 'info')} {theme.chip('alıntı belgede doğrulandı' if verified else 'alıntı doğrulanamadı', 'ok' if verified else 'crit')}",
@@ -147,6 +142,6 @@ def page_rag() -> None:
                     st.caption(f"Bölüm: {k['bolum']}")
                     st.markdown(f"> {k['alinti']}")
     with t2:
-        st.dataframe(pd.DataFrame([{"Kimlik": r.source_key, "Belge": r.source_name, "Sürüm": r.version, "Amaç": r.purpose} for r in docs]),
+        st.dataframe(pd.DataFrame([{"Kimlik": r["kimlik"], "Belge": r["belge"], "Sürüm": r["surum"], "Amaç": r["amac"]} for r in docs]),
                      hide_index=True, width="stretch", height=420)  # fmt: skip
         st.caption(f"{len(docs)} belge · kontrollü sentetik corpus (yetkili klinik kaynak değildir). Güvenlik fikstürleri aramaya katılmaz.")

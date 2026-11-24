@@ -102,7 +102,7 @@ Gemma'nın kapıdan sonra reddettiği vakalar büyük ölçüde D2 ve D3'te "gol
 
 ## 5. Güvenlik ve enjeksiyon
 
-**Enjeksiyon koşusu TAMAMLANMADI.** Gecikme koşusunun içindeydi ve teslim önceliği nedeniyle 2026-11-24 21:35'te güvenli biçimde durduruldu (§6). Enjeksiyonun cevap ya da kaynak olarak yayımlanıp yayımlanmadığı bu deneyde **ölçülmedi**; D3'teki ölçüm (M2 hariç yayımlanma 0) ve aşağıdaki değişmezler geçerlidir.
+**Enjeksiyon koşusu TAMAMLANMADI.** Gecikme koşusunun içindeydi ve zaman önceliği nedeniyle 2026-11-24 21:35'te güvenli biçimde durduruldu (§6). Enjeksiyonun cevap ya da kaynak olarak yayımlanıp yayımlanmadığı bu deneyde **ölçülmedi**; D3'teki ölçüm (M2 hariç yayımlanma 0) ve aşağıdaki değişmezler geçerlidir.
 
 **Değişmezler (birim testler):**
 - `conflicting_sources`, `rejected`, `unavailable` ve retrieval `no_source` kapıyı ve Gemma'yı aşar; model çağrılmaz.
@@ -117,7 +117,7 @@ Gemma'nın kapıdan sonra reddettiği vakalar büyük ölçüde D2 ve D3'te "gol
 
 ## 6. Gerçek uçtan uca gecikme ve bellek
 
-**Gerçek uçtan uca gecikme koşusu TAMAMLANMADI.** Koşu (S ve W politikaları, 3 tekrar) 1. tekrarı bitirdikten sonra teslim önceliği nedeniyle durduruldu. Betik sonuçları yalnız iş sonunda yazdığı için 1. tekrarın gecikme ve bellek verisi **kaydedilmedi**; hiçbir gecikme değeri raporlanmıyor. Koşu öncesi küçük doğrulamada (tek vaka) ölçülen soğuk maliyetler bilgi amaçlıdır: işçi süreç başlatma (torch içe aktarma) yaklaşık 44 sn, ModernBERT-TR soğuk yükleme yaklaşık 22 sn, ilk skorlama yaklaşık 7 sn; canlı skorların D5 skorlarıyla farkı 6e-6. D5 reranker skorlama maliyetleri `ASAMA_8_D5_KARSILASTIRMA_RAPORU.md` §4.4'tedir. Betik (`scripts/rag_d5_mimari_gecikme.py`) korunuyor; koşu 2 Aralık sonrası planına alındı. Durdurmadan sonra Ollama'da yüklü model yok, VRAM 0 MiB.
+**Gerçek uçtan uca gecikme koşusu TAMAMLANMADI.** Koşu (S ve W politikaları, 3 tekrar) 1. tekrarı bitirdikten sonra zaman önceliği nedeniyle durduruldu. Betik sonuçları yalnız iş sonunda yazdığı için 1. tekrarın gecikme ve bellek verisi **kaydedilmedi**; hiçbir gecikme değeri raporlanmıyor. Koşu öncesi küçük doğrulamada (tek vaka) ölçülen soğuk maliyetler bilgi amaçlıdır: işçi süreç başlatma (torch içe aktarma) yaklaşık 44 sn, ModernBERT-TR soğuk yükleme yaklaşık 22 sn, ilk skorlama yaklaşık 7 sn; canlı skorların D5 skorlarıyla farkı 6e-6. D5 reranker skorlama maliyetleri `ASAMA_8_D5_KARSILASTIRMA_RAPORU.md` §4.4'tedir. Betik (`scripts/rag_d5_mimari_gecikme.py`) korunuyor; koşu 2 Aralık sonrası planına alındı. Durdurmadan sonra Ollama'da yüklü model yok, VRAM 0 MiB.
 
 ## 7. Sınırlılıklar
 
@@ -128,7 +128,7 @@ Gemma'nın kapıdan sonra reddettiği vakalar büyük ölçüde D2 ve D3'te "gol
 
 ## 8. Testler
 
-Yeni birim testleri `tests/test_rag_d5_mimari.py` (9 test) ve ilgili RAG testleri geçti (114). Tam regresyon teslim doğrulamasıyla birlikte koşuldu (teslim notu).
+Yeni birim testleri `tests/test_rag_d5_mimari.py` (9 test) ve ilgili RAG testleri geçti (114). Tam regresyon son doğrulamayla birlikte koşuldu (teslim notu).
 
 ## 9. Proje sahibinin kararını bekleyenler
 

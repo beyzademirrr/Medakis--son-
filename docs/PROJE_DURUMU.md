@@ -1,6 +1,6 @@
-# MedAkis teslim durumu (bütünleşik ürün sürümü, 25.11.2026)
+# MedAkis proje durumu (bütünleşik ürün sürümü, 25.11.2026)
 
-Bu belge, teslim edilen kodda **gerçekten çalışan** bileşenleri ve henüz uygulanmamış bileşenleri ayırır. Çalışmayan
+Bu belge, koddaki **gerçekten çalışan** bileşenleri ve henüz uygulanmamış bileşenleri ayırır. Çalışmayan
 özellik çalışıyormuş gibi gösterilmez. Arayüzde aşama numarası kullanılmaz; bu tablo yalnız teknik izlenebilirlik içindir.
 
 **Kategoriler:** **Çalışıyor ve doğrulandı** (otomatik test + arayüz/komut) · **Çalışan prototip** (çalışır, sınırlı) ·
@@ -11,7 +11,7 @@ Bu belge, teslim edilen kodda **gerçekten çalışan** bileşenleri ve henüz u
 | Aşama | Kapsam | Durum |
 |---|---|---|
 | 1 | Klasör yapısı, kilitli bağımlılıklar, Türkçe Streamlit arayüzü | **Çalışıyor ve doğrulandı** |
-| 2 | Şema (34 tablo), iş kuralları, deterministik sentetik veri (üretici 2.1) | **Çalışıyor ve doğrulandı**. PostgreSQL ile çalışan testler bu teslimde koşulmadı (sunucu yok) |
+| 2 | Şema (34 tablo), iş kuralları, deterministik sentetik veri (üretici 2.1) | **Çalışıyor ve doğrulandı**. PostgreSQL ile çalışan testler bu sürümde koşulmadı (sunucu yok) |
 | 3 | Görev, kapasite, gözlem hesapları | **Çalışıyor ve doğrulandı** |
 | 4 | İş yükü tahmini: baseline, Random Forest, 30/60 dk, zamansal değerlendirme | **Çalışıyor ve doğrulandı** |
 | 5 | CP-SAT personel optimizasyonu ve bağımsız doğrulayıcı | **Çalışıyor ve doğrulandı** |
@@ -21,7 +21,7 @@ Bu belge, teslim edilen kodda **gerçekten çalışan** bileşenleri ve henüz u
 | 9 | Dijital Hastane İkizi: ortak veri sağlayıcı, merkezi saat, senaryolar, what-if, onaylı etkinin simülasyonu | **Çalışan prototip** |
 | 10 | Sentetik kamera, yoğunluk, uzamsal ve zamansal ısı haritaları, yoğunluğa duyarlı CP-SAT | **Çalışan prototip** (sentetik tespit; gerçek kamera yok) |
 | 11 | Araç tabanlı AI Agent, otomatik taslak, talepler, izleme; LangGraph/MCP | Agent ve talepler **çalışan prototip**; LangGraph ve MCP **Geliştiriliyor — Prototip** (paket kurulu değil, MCP çağrısı/kaydı yok) |
-| 12 | Telegram bildirimi, n8n, bütünleşik denetim/açıklanabilirlik, README, teslim | Telegram **çalışan prototip (dry-run doğrulandı; canlı gönderim test edilmedi)**; n8n **Geliştiriliyor**; denetim ve README **tamamlandı**. Kör test ve bağımsız RAG kabulü **henüz uygulanmadı** |
+| 12 | Telegram bildirimi, n8n, bütünleşik denetim/açıklanabilirlik, README ve dokümantasyon | Telegram **çalışan prototip (dry-run doğrulandı; canlı gönderim test edilmedi)**; n8n **Geliştiriliyor**; denetim ve README **tamamlandı**. Kör test ve bağımsız RAG kabulü **henüz uygulanmadı** |
 
 ## Bileşen ayrıntıları
 
@@ -43,12 +43,20 @@ Bu belge, teslim edilen kodda **gerçekten çalışan** bileşenleri ve henüz u
 
 ## Doğrulama
 
-- `tests/test_urun_prototipi.py` (24 test, bildirim testleriyle birlikte) geçti; tam test paketi sonucu commit mesajında ve teslim raporunda.
+- `tests/test_urun_prototipi.py` (24 test, bildirim testleriyle birlikte) geçti; tam test paketi sonucu aşağıdaki "Test sonuçları" bölümündedir.
 - Gerçek tarayıcıda: Kontrol Merkezi → Dijital İkiz "Acil kritik yoğunluk (+%150)" → Acil 25/22 Kritik, ek sinyal 18 dk →
   Kamera ekranı (kutular + ısı) → Optimizasyon (OPTIMAL, doğrulayıcı geçti, 3 taşıma) → onaya gönderildi → Onaylandı
   ("Plan hâlâ geçerli") → Emirler ve Bildirimler dry-run ("ağ isteği yapılmadı") → Agent otomatik taslağı (aynı plan
   kayıtlı olduğu için ikinci kez kaydedilmedi) → zamansal ısı haritası.
 - Çalıştırılmayan: PostgreSQL entegrasyon testleri, canlı Telegram gönderimi, Gemma ile agent yeniden ifadesi, LangGraph/MCP.
+
+## Test sonuçları (25.11.2026)
+
+- Tam varsayılan paket: 1438 geçti, 2 başarısız (arayüzün RAG paketini doğrudan içe aktarması ve şartname .md/.docx
+  eşleşmesi); ikisi düzeltildi ve ilgili 113 test ile ürün testleri (24) yeniden çalıştırılıp geçti. 522 test işaretle
+  dışarıda bırakılır (PostgreSQL ve entegrasyon testleri; bu makinede sunucu yok).
+- Tarayıcı: 15 ekranın hepsi hatasız açıldı; kritik senaryo → CP-SAT → onay → dry-run bildirim → mükerrer engeli →
+  agent → denetim zinciri → ikizde simüle etki → saat oynatma uçtan uca denendi.
 
 ## 2 Aralık'a kadar kalan işler
 

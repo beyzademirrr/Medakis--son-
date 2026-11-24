@@ -38,3 +38,17 @@ def search_sources(question: str, k: int = 3) -> dict:
         r = recs[c.doc_uid]
         out.append({"belge": r.source_name, "kimlik": r.source_key, "surum": r.version, "bolum": c.section, "skor": round(s, 2), "alinti": c.text})
     return {"bulundu": True, "yontem": "BM25 anahtar kelime araması (embedding/LLM yok)", "kaynaklar": out}
+
+
+def list_documents() -> list[dict]:
+    """Kontrollü corpus'taki bütün belgeler (kimlik, ad, sürüm, amaç)."""
+    corpus = load_corpus(CORPUS)
+    return [{"kimlik": d.record.source_key, "belge": d.record.source_name, "surum": d.record.version, "amac": d.record.purpose}
+            for d in corpus.documents]  # fmt: skip
+
+
+def quote_in_document(source_key: str, quote: str) -> bool:
+    """Alıntının (ilk 120 karakteri) belgenin özgün metninde birebir geçip geçmediği."""
+    corpus = load_corpus(CORPUS)
+    text = next((d.text for d in corpus.documents if d.record.source_key == source_key), "")
+    return bool(quote.strip()) and quote.strip()[:120] in text

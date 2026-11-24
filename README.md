@@ -195,7 +195,7 @@ Betik sanal ortamı kurar, bağımlılıkları yükler, tahmin modellerini sente
   gerekçeleri, what-if güvenlik kontrolleri, agent araç sınırları ve araç izi, talep ve güvenli ret, öneri → onay →
   dry-run → mükerrer engeli → denetim zinciri, kaynaklı arama, dil modeli sayı denetimi, uygulama açılışı.
 - Mevcut test paketi (optimizasyon kısıtları, tahmin sızıntısı, onay akışı, denetim zinciri, bildirim güvenliği, RAG) korunur.
-- Uçtan uca demo gerçek tarayıcıda çalıştırıldı. Sonuçlar ve çalıştırılamayan testler: [`docs/TESLIM_DURUMU.md`](docs/TESLIM_DURUMU.md).
+- Uçtan uca demo gerçek tarayıcıda çalıştırıldı. Sonuçlar ve çalıştırılamayan testler: [`docs/PROJE_DURUMU.md`](docs/PROJE_DURUMU.md).
 
 ## 16. Güvenlik ve gizlilik
 
@@ -208,7 +208,7 @@ adresten çağrılır.
 Aşama 1–8 bileşenleri (şema, sentetik veri, iş yükü kuralları, tahmin, CP-SAT ve doğrulayıcı, insan onayı ve denetim,
 RAG corpus'u ve geliştirme kipindeki kaynaklı cevap hattı) korunmuş ve arayüze bağlanmıştır. Dijital ikiz, kamera,
 yoğunluğa duyarlı yönlendirme, agent, bildirim ve talepler çalışan prototiptir. Ayrıntılı ve dürüst durum tablosu:
-[`docs/TESLIM_DURUMU.md`](docs/TESLIM_DURUMU.md).
+[`docs/PROJE_DURUMU.md`](docs/PROJE_DURUMU.md).
 
 ## 18. Yol haritası
 

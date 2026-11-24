@@ -3,7 +3,7 @@
 İki manifest vardır:
 
 1. docs/paket_v2/SHA256SUMS_PAKET_v2.txt  (özgün paket kaydı, ASLA güncellenmez)
-   Paket teslimindeki 20 dosyanın özgün hash'leri. MedAkis yeniden adlandırmasından
+   Özgün paketteki 20 dosyanın özgün hash'leri. MedAkis yeniden adlandırmasından
    sonra güncel belgelerin içeriği değiştiği için özgün baytlar çalışma klasöründe
    değil, paketin depoya ilk alındığı commit'te (ORIGINAL_IMPORT_COMMIT) doğrulanır.
    Bu commit'te özgün README docs/paket_v2/README_PAKET_v2.md konumundadır.

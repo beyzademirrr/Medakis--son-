@@ -234,7 +234,7 @@ ARTIFACTS_PRESENT = all((ROOT / p).exists() for p in RS.ARTIFACTS.values()) and 
 
 @pytest.mark.skipif(not ARTIFACTS_PRESENT, reason="model dosyaları (artifacts/, Git dışı) bu ortamda yok")
 def test_real_scenario_plan_hashes_unchanged_with_config_limit():
-    """Altın plan özetleri: A 51e1e11b60f6bbd3…, B 31f0d653a70ad9df… (Aşama 6 ve son teslim doğrulaması)."""
+    """Altın plan özetleri: A 51e1e11b60f6bbd3…, B 31f0d653a70ad9df… (Aşama 6 ve son uçtan uca doğrulama)."""
     from medakis.approvals.audit_log import MemoryJournal
     from medakis.services.review_service import ReviewService, SimulationClock, demo_policies
 
