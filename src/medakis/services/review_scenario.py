@@ -139,12 +139,12 @@ class SyntheticReviewScenario:
     def timezone(self) -> ZoneInfo:
         return self._bundle["tz"]
 
-    def u3_rows(self, at: datetime) -> list[dict[str, Any]]:
+    def u3_rows(self, at: datetime, horizon: int = 60) -> list[dict[str, Any]]:
         from medakis.optimization.u3_flow import run_comparison
 
         b = self._bundle
         versions = {k: f"{k}@{m['model_sha256'][:12]}" for k, m in b["mans"].items()}
-        return run_comparison(b["base"], b["plan"], b["staff"], at, b["models"], b["cal"], b["mans"], versions, list(b["calendars"]), b["tz"])
+        return run_comparison(b["base"], b["plan"], b["staff"], at, b["models"], b["cal"], b["mans"], versions, list(b["calendars"]), b["tz"], horizon)
 
     def layer_a_inputs(self, at: datetime, rows: list[dict[str, Any]], locks: tuple = ()) -> Any:
         from medakis.optimization.layer_a_contracts import LayerAInputs

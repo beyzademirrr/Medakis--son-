@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import os
 import re
-from collections.abc import Callable, Mapping
+from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from typing import Any
@@ -62,13 +62,15 @@ def redact(text: str) -> str:
     return _TOKEN.sub("***", text)
 
 
-def build_message(proposal: Mapping[str, Any]) -> str:
-    """Yalnız onay kaydındaki idari özet; serbest metin ya da kişisel sağlık verisi içermez."""
-    return ("MedAkis — onaylanan öneri (sentetik prototip)\n"
-            f"Öneri: {proposal['id']}\n"
-            f"Plan özeti: {str(proposal['plan_sha256'])[:12]}…\n"
-            f"Onay zamanı: {(proposal.get('kararlar') or [{}])[-1].get('zaman', '-')}\n"
-            "Bu bildirim yönetici onayından sonra hazırlandı; otomatik personel emri değildir.")  # fmt: skip
+def build_message(proposal: Mapping[str, Any], lines: Sequence[str] = ()) -> str:
+    """Yalnız onay kaydındaki idari özet (personel kodu, birimler, saat); serbest metin ya da sağlık verisi içermez."""
+    approved = next((d for d in reversed(proposal.get("kararlar") or []) if d.get("karar") == APPROVED), {})
+    body = "\n".join(lines) or "Kalem ayrıntısı yok."
+    return ("MEDAKİS | PERSONEL YÖNLENDİRME\n"
+            f"{body}\n"
+            f"Öneri: {proposal['id']} · Plan özeti: {str(proposal['plan_sha256'])[:12]}…\n"
+            f"Onaylayan: {approved.get('aktor', '-')} · Onay zamanı: {approved.get('zaman', '-')}\n"
+            "Sentetik prototip: yönetici onayından sonra hazırlandı; otomatik personel emri değildir.")  # fmt: skip
 
 
 class TelegramNotifier:
@@ -88,7 +90,7 @@ class TelegramNotifier:
         self.journal.append({"olay": "bildirim", "kanal": "telegram", "kip": self.config.mode, "durum": status, "oneri_id": proposal_id,
                              "plan_sha256": sha, "ayrinti": redact(detail)[:300], "zaman": self.clock().isoformat()}, len(events))  # fmt: skip
 
-    def notify_approved(self, proposal: Mapping[str, Any] | None, presented_sha256: str) -> NotificationResult:
+    def notify_approved(self, proposal: Mapping[str, Any] | None, presented_sha256: str, lines: Sequence[str] = ()) -> NotificationResult:
         pid = str((proposal or {}).get("id", ""))
         sha = str((proposal or {}).get("plan_sha256", ""))
         if not proposal or proposal.get("durum") != APPROVED:
@@ -99,7 +101,7 @@ class TelegramNotifier:
             return NotificationResult(REFUSED, pid, "", "Sunulan plan özeti onay kaydıyla uyuşmuyor.")
         if self._already_sent(pid, sha):
             return NotificationResult(REFUSED, pid, "", "Bu öneri için bildirim daha önce gönderildi; tekrar gönderilmez.")
-        text = build_message(proposal)
+        text = build_message(proposal, lines)
         if not self.config.live_ready:
             reason = "dry_run" if self.config.mode == DRY_RUN else "canli_kip_icin_token_veya_chat_id_eksik"
             self._record(DRY, pid, sha, reason)

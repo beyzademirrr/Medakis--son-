@@ -54,9 +54,9 @@ def units_of(base_ds: Any) -> dict[int, UnitInfo]:
 
 def run_comparison(base_ds: Any, plan: PlanSet, staff: Mapping[int, Staff], at: datetime, models: Mapping[str, Any],
                    cal: Calibration, manifests: Mapping[str, dict], versions: Mapping[str, str],
-                   calendars: Sequence[ServiceCalendar], local_tz: tzinfo) -> list[dict[str, Any]]:  # fmt: skip
-    """Tek karar anı için bütün servis × rol karşılaştırmaları (60 dk ufuk)."""
+                   calendars: Sequence[ServiceCalendar], local_tz: tzinfo, horizon: int = HORIZON_MINUTES) -> list[dict[str, Any]]:  # fmt: skip
+    """Tek karar anı için bütün servis × rol karşılaştırmaları (varsayılan 60 dk ufuk; 30 dk yalnız gösterim içindir)."""
     frame = decision_inputs(base_ds, at)
     out = forecast_at(frame, models, cal, manifests, versions)
-    demands = demand_from_u1(out, manifests, HORIZON_MINUTES)
-    return compare(at, demands, plan, staff, units_of(base_ds), calendars, local_tz, HORIZON_MINUTES)
+    demands = demand_from_u1(out, manifests, horizon)
+    return compare(at, demands, plan, staff, units_of(base_ds), calendars, local_tz, horizon)

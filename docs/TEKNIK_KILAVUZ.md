@@ -27,7 +27,20 @@ sabit). Doğrudan bağımlılıklar `pyproject.toml` içindedir: streamlit, pand
 scikit-learn, ortools, chromadb, httpx, tzdata, psycopg, sqlalchemy, alembic, keyring ve
 geliştirme için pytest, pyyaml.
 
-## Çalıştırma
+## Bütünleşik ürün arayüzü (önerilen)
+
+```powershell
+.\baslat.ps1                    # = .\.venv\Scripts\python.exe -m streamlit run dashboard.py
+```
+
+`dashboard.py` beş gruplu menüyle 15 ekranı açar (Operasyon, Analiz, Personel, Yapay Zekâ, Yönetim). Bütün ekranlar
+`src/medakis/twin/` altındaki ortak motoru kullanır: `data.py` (sentetik veri sağlayıcı ve indeksler), `engine.py`
+(simülasyon saati, kamera yoğunluğu, tahmin, yoğunluğa duyarlı Katman A, aday gerekçeleri, olaylar), `whatif.py`
+(gerçek atama yapmayan etki analizi) ve `hub.py` (onay, bildirim, talep ve operasyon denetim izleri). Yerleşim ve kamera
+varsayımları `config/dijital_ikiz.json` dosyasındadır. İlk açılışta veri, model ve kalibrasyon yüklemesi ~40 sn sürer.
+Kod değişikliğinden sonra sunucuyu yeniden başlatın (modüller süreç içinde önbelleğe alınır). Tema: ⋮ → Settings → Theme.
+
+## Klasik inceleme ekranı
 
 ```powershell
 .\.venv\Scripts\python.exe -m streamlit run app.py
@@ -276,7 +289,8 @@ Kullanıcı adı ve parola ayarlardan okunmaz: rolü kod seçer, parola Credenti
 ## Klasör yapısı
 
 ```text
-app.py                      Streamlit giriş noktası (src/ yolunu ekler, ui.home.main çağırır)
+dashboard.py                Bütünleşik ürün arayüzü (ui.command_center.main)
+app.py                      Klasik inceleme ekranı (src/ yolunu ekler, ui.home.main çağırır)
 pyproject.toml              Proje meta verisi, doğrudan bağımlılıklar, pytest ayarı
 requirements.txt            Tam bağımlılık kilidi (Python 3.14.6, Windows x64)
 compose.yaml                PostgreSQL 18 servisi (yalnız 127.0.0.1)
@@ -296,6 +310,10 @@ src/medakis/
   forecasting/              Baseline ve Random Forest              (Aşama 4)
   optimization/             CP-SAT ve bağımsız doğrulayıcı         (Aşama 5)
   approvals/                Yönetici onayı ve plan hash'i          (Aşama 6)
+  twin/                     Dijital ikiz: veri sağlayıcı, motor, what-if, ortak servisler
+  density/                  Sentetik kamera ve bağlı bileşen dedektörü
+  agent/                    Araç tabanlı agent, yerel orkestrasyon, isteğe bağlı Gemma katmanı
+  notifications/            Telegram bildirimi (varsayılan dry-run)
   rag/                      Kaynaklı RAG                           (Aşama 7-9)
     contracts/              RagAnswer/Citation DTO'ları ve sağlayıcı arayüzleri (taslak, hazır)
     ingestion, chunking, embeddings, vector_store, retrieval,

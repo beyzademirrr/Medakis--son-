@@ -1,0 +1,15 @@
+{
+  "_aciklama": "Dijital Hastane İkizi sentetik prototip varsayımları. hasta_basi_kisi: alandaki kişi sayısının (hasta + refakatçi + bekleyen) aktif hasta kaydına oranı. Birimler, personel, vardiya, görev ve hasta kayıtları sentetik veri üreticisinden gelir; bu dosya yalnız veri setinde bulunmayan yerleşim ve kamera varsayımlarını tanımlar. Klinik standart değildir.",
+  "kullanim_orani_kaynagi": "Katman A planlama yapılandırması (kullanım oranı 0,85)",
+  "yogunluk_esikleri": {"sari": 0.6, "turuncu": 0.85, "kirmizi": 1.0},
+  "ek_talep_sinyali": {
+    "_aciklama": "Kamera yoğunluğu Random Forest modelinin girdisi değildir. Kapasite üstü her kişi için hemşire talebine eklenen dakika (60 dk pencere); yalnız yoğunluğa duyarlı senaryoda ve açıkça etiketli uygulanır.",
+    "kisi_basi_dk": 6.0
+  },
+  "birimler": {
+    "1": {"kamera": "KAM-01", "alan": "Yataklı Servis A · Koridor", "kapasite": 14, "renk": "#38BDF8", "kat_plani": [20, 20, 330, 170], "hasta_basi_kisi": 0.35},
+    "2": {"kamera": "KAM-02", "alan": "Yataklı Servis B · Koridor", "kapasite": 14, "renk": "#A78BFA", "kat_plani": [370, 20, 330, 170], "hasta_basi_kisi": 0.35},
+    "3": {"kamera": "KAM-03", "alan": "Acil Servis · Bekleme", "kapasite": 22, "renk": "#EF4444", "kat_plani": [20, 210, 330, 190], "hasta_basi_kisi": 2.5},
+    "4": {"kamera": "KAM-04", "alan": "Ayaktan Klinik · Bekleme", "kapasite": 20, "renk": "#22C55E", "kat_plani": [370, 210, 330, 190], "hasta_basi_kisi": 0.9}
+  }
+}

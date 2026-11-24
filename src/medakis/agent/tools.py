@@ -1,130 +1,141 @@
-"""MedAkis asistanının araçları (kontrollü araç sözleşmeleri) ve görevlendirme öneri/onay servisi.
+"""MedAkis agent araç katmanı: dijital ikiz üzerinde kontrollü, sınırlı yetkili araçlar.
 
-Hiçbir araç personel atamasını uygulamaz. Öneri yalnız `create_transfer_proposal` ile oluşturulur; onay YALNIZ yönetici
-arayüzündeki `TransferService.decide` ile verilir (asistanın onay aracı yoktur). Bildirim yalnız onaylı öneri için hazırlanır.
+Bütün araçlar ortak `Twin` durumunu okur; personel, kapasite ya da sayı uydurmaz. Yazma yetkisi yalnız TASLAK öneri ve
+TASLAK personel talebi oluşturmaktır. Onay verme, gerçek atama ya da bildirim gönderme aracı YOKTUR. Her çağrı süresiyle
+birlikte `ToolContext.calls` listesine yazılır (gerçek ölçüm).
 """
 
 from __future__ import annotations
 
+import time
+from collections.abc import Callable
 from dataclasses import dataclass, field
-from datetime import UTC, datetime
-from pathlib import Path
+from datetime import datetime
 from typing import Any
 
-from medakis.approvals.audit_log import Journal, verify_chain
-from medakis.approvals.plan_hash import sha256_of
-from medakis.density import staffing as S
-from medakis.density.simulator import AREAS, Simulator
-from medakis.notifications.telegram import TelegramNotifier
 from medakis.retrieval_demo import search_sources
-
-PENDING, APPROVED, REJECTED = "beklemede", "onaylandi", "reddedildi"
+from medakis.twin.data import ROLE_TR
+from medakis.twin.engine import Twin
 
 
 @dataclass
-class TransferService:
-    journal: Journal
-    notifier: TelegramNotifier
-    clock: Any = field(default=lambda: datetime.now(UTC))
+class ToolContext:
+    twin: Twin
+    at: datetime
+    minute: int
+    surges: dict[int, float]
+    create_proposal: Callable[[dict], dict] | None = None  # yönetici onayına TASLAK öneri (insan onayı servisi)
+    create_request: Callable[[dict], dict] | None = None
+    approval_status: Callable[[], list[dict]] | None = None
+    calls: list[dict] = field(default_factory=list)
 
-    def _append(self, event: dict) -> dict:
-        events = self.journal.events()
-        return self.journal.append({**event, "zaman": self.clock().isoformat()}, len(events))
-
-    def proposals(self) -> dict[str, dict]:
-        out: dict[str, dict] = {}
-        for e in self.journal.events():
-            if e["olay"] == "oneri_olusturuldu":
-                out[e["oneri_id"]] = {"id": e["oneri_id"], "plan": e["plan"], "plan_sha256": e["plan_sha256"], "durum": PENDING,
-                                      "kaynak": e["kaynak"], "kararlar": [], "olusturma": e["zaman"]}  # fmt: skip
-            elif e["olay"] in (APPROVED, REJECTED) and e["oneri_id"] in out:
-                out[e["oneri_id"]]["durum"] = e["olay"]
-                out[e["oneri_id"]]["kararlar"].append({"karar": e["olay"], "aktor": e["aktor"], "zaman": e["zaman"]})
-        return out
-
-    def create(self, plan: dict, source: str) -> dict:
-        content = {"tur": "gecici_gorevlendirme", "plan": plan}
-        sha = sha256_of(content)
-        pid = "G-" + sha[:8]
-        if pid in self.proposals():
-            return self.proposals()[pid]
-        self._append({"olay": "oneri_olusturuldu", "oneri_id": pid, "plan": plan, "plan_sha256": sha, "kaynak": source})
-        return self.proposals()[pid]
-
-    def decide(self, pid: str, presented_sha: str, approve: bool, actor: str, reason: str = "") -> tuple[bool, str]:
-        prop = self.proposals().get(pid)
-        if prop is None:
-            return False, "Öneri bulunamadı."
-        if prop["durum"] != PENDING:
-            return False, f"Öneri zaten {prop['durum']}."
-        if presented_sha != prop["plan_sha256"]:
-            return False, "Plan özeti uyuşmuyor; karar kaydedilmedi."
-        if not approve and not reason.strip():
-            return False, "Ret için gerekçe zorunlu."
-        self._append({"olay": APPROVED if approve else REJECTED, "oneri_id": pid, "plan_sha256": presented_sha, "aktor": actor, "neden": reason})
-        return True, "Karar kaydedildi."
-
-    def audit(self) -> tuple[list[dict], list[str]]:
-        ev = self.journal.events()
-        return ev, verify_chain(ev)
+    def dens(self) -> list[dict]:
+        return [{k: v for k, v in d.items() if k != "goruntu"} for d in self.twin.density(self.at, self.minute, self.surges)]
 
 
-# ---- Araç sözleşmeleri (asistan bunları çağırır) ------------------------------------------------------------------
+# ---- Araçlar (ham fonksiyonlar) ----------------------------------------------------------------------------------
 
 
-def get_service_density(sim: Simulator) -> dict:
-    staff = S.roster()
-    return {"zaman_adimi": sim.t, "senaryo": sim.scenario, "alanlar": S.area_status(sim.counts(), staff)}
+def get_density(ctx: ToolContext) -> list[dict]:
+    return ctx.dens()
 
 
-def get_staff_availability(area: str | None = None) -> list[dict]:
-    return [{"id": s.id, "rol": s.role, "alan": S.AREA_NAMES[s.area], "yetkinlikler": sorted(s.skills), "vardiyada": s.on_shift,
-             "aktif_gorevde": s.busy} for s in S.roster() if area is None or s.area == area]  # fmt: skip
+def get_service_status(ctx: ToolContext) -> list[dict]:
+    st = ctx.twin.staffing(ctx.at)
+    rows = {r["servis_id"]: r for r in (ctx.twin.forecast(ctx.at) or []) if r["rol"] == "nurse"}
+    out = []
+    for u in ctx.twin.data.units.values():
+        r = rows.get(u.id, {})
+        out.append({"birim": u.id, "ad": u.name, "hemsire": st[u.id]["nurse"], "personel": st[u.id]["toplam"], "molada": st[u.id]["molada"],
+                    "tamponlu_talep_dk": r.get("tamponlu_talep_dk"), "etkin_kapasite_dk": r.get("etkin_kapasite_dk"),
+                    "acik_personel_dk": r.get("acik_personel_dk")})  # fmt: skip
+    return out
 
 
-def get_workload_forecast(sim: Simulator, steps: int = 6) -> dict:
-    """Simülasyon ileri oynatılarak kısa vadeli doluluk projeksiyonu (makine öğrenmesi tahmini DEĞİLDİR)."""
-    probe = Simulator(sim.scenario, sim.seed)
-    for _ in range(sim.t):
-        probe.step()
-    series = []
-    for _ in range(steps):
-        series.append(probe.step())
-    return {"yontem": "simülasyon projeksiyonu", "adimlar": series}
+def get_staff(ctx: ToolContext, unit: int | None = None) -> list[dict]:
+    return [s for s in ctx.twin.data.staff_on_duty(ctx.at) if unit is None or s["birim"] == unit]
 
 
-def optimize_staff_allocation(sim: Simulator, target: str | None = None, pinned: tuple[str, ...] = ()) -> dict:
-    staff = S.roster()
-    plan = S.optimize(sim.counts(), staff, target=target, pinned=pinned)
-    if pinned:
-        plan["yonetici_istegi"] = True
-    plan["dogrulama"] = S.verify(plan, sim.counts(), staff) if plan.get("aktarimlar") else []
-    return plan
+def get_staff_availability(ctx: ToolContext, target: int) -> list[dict]:
+    return ctx.twin.candidates(ctx.at, target)
 
 
-def retrieve_policy_evidence(question: str) -> dict:
+def get_staff_qualifications(ctx: ToolContext, code: str) -> dict | None:
+    s = next((x for x in ctx.twin.data.staff.values() if x["kod"] == code), None)
+    if s is None:
+        return None
+    return {"kod": code, "rol": ROLE_TR[s["rol"]], "yetkinlikler": ctx.twin.data.skills_valid(s["id"], ctx.at)}
+
+
+def get_shifts(ctx: ToolContext, unit: int | None = None) -> list[dict]:
+    return [{"kod": s["kod"], "birim": s["birim"], "vardiya": s["vardiya"], "baslangic": s["baslangic"], "bitis": s["bitis"]}
+            for s in get_staff(ctx, unit)]  # fmt: skip
+
+
+def get_workload_forecast(ctx: ToolContext) -> list[dict] | None:
+    return ctx.twin.forecast(ctx.at)
+
+
+def get_capacity(ctx: ToolContext) -> dict:
+    return ctx.twin.staffing(ctx.at)
+
+
+def optimize_allocation(ctx: ToolContext, density_aware: bool = True) -> dict | None:
+    return ctx.twin.optimize(ctx.at, ctx.twin.density_signal(ctx.dens()) if density_aware else {})
+
+
+def validate_transfer(ctx: ToolContext, code: str, target: int) -> dict:
+    row = next((c for c in ctx.twin.candidates(ctx.at, target) if c["kod"] == code), None)
+    if row is None:
+        return {"uygun": False, "gerekce": "Personel bu karar anında vardiyada değil ya da zaten hedef birimde."}
+    if not row["uygun_veri"]:
+        return {"uygun": False, "gerekce": row["gerekce"]}
+    return {"uygun": True, "gerekce": "Rol, yetkinlik, kural kapsamı ve kullanılabilir süre uygun; son karar CP-SAT ve doğrulayıcınındır."}
+
+
+def simulate_transfer(ctx: ToolContext) -> dict | None:
+    base = ctx.twin.optimize(ctx.at, {})
+    if base is None:
+        return None
+    dens = ctx.twin.optimize(ctx.at, ctx.twin.density_signal(ctx.dens()))
+    return {"once": Twin.gaps(base), "sonra": Twin.gaps(dens), "sinyal": dens["sinyal"]}
+
+
+def retrieve_policy_evidence(ctx: ToolContext, question: str) -> dict:
     return search_sources(question)
 
 
-def create_transfer_proposal(svc: TransferService, plan: dict, source: str = "asistan") -> dict:
-    if plan.get("durum") != "oneri" or plan.get("dogrulama"):
-        return {"olusturuldu": False, "neden": "Doğrulanmış geçerli plan yok; öneri oluşturulmadı."}
-    return {"olusturuldu": True, "oneri": svc.create({k: plan[k] for k in ("hedef", "aktarimlar", "gerekce", "acik")}, source)}
+def create_transfer_proposal(ctx: ToolContext) -> dict:
+    if ctx.create_proposal is None:
+        return {"olusturuldu": False, "neden": "Onay servisi bu modda yok (model dosyaları gerekli)."}
+    opt = optimize_allocation(ctx)
+    if opt is None or not opt["sonuc"].get("oneri_yayinlanabilir"):
+        return {"olusturuldu": False, "neden": "Doğrulanmış ve yayınlanabilir plan yok (güvenli ret)."}
+    return ctx.create_proposal(opt)
 
 
-def get_approval_status(svc: TransferService) -> list[dict]:
-    return [{"id": p["id"], "durum": p["durum"], "hedef": S.AREA_NAMES.get(p["plan"]["hedef"], p["plan"]["hedef"])} for p in svc.proposals().values()]
+def create_staff_request(ctx: ToolContext, unit: int, reason: str) -> dict:
+    if ctx.create_request is None:
+        return {"olusturuldu": False, "neden": "Talep servisi yok."}
+    return ctx.create_request({"tur": "ek_personel", "birim": unit, "gerekce": reason, "kaynak": "agent"})
 
 
-def prepare_approved_notification(svc: TransferService, pid: str) -> dict:
-    prop = svc.proposals().get(pid)
-    r = svc.notifier.notify_approved(prop, prop["plan_sha256"] if prop else "")
-    return {"durum": r.status, "mesaj": r.message, "ayrinti": r.detail}
+def get_approval_status(ctx: ToolContext) -> list[dict]:
+    return ctx.approval_status() if ctx.approval_status else []
 
 
-def area_key(text: str) -> str | None:
-    t = text.lower()
-    for a in AREAS:
-        if a.key in t or a.name.lower().split()[0] in t:
-            return a.key
-    return None
+TOOLS: dict[str, Callable[..., Any]] = {f.__name__: f for f in (
+    get_density, get_service_status, get_staff, get_staff_availability, get_staff_qualifications, get_shifts, get_workload_forecast,
+    get_capacity, optimize_allocation, validate_transfer, simulate_transfer, retrieve_policy_evidence, create_transfer_proposal,
+    create_staff_request, get_approval_status)}  # fmt: skip
+WRITE_TOOLS = ("create_transfer_proposal", "create_staff_request")  # yalnız TASLAK üretir; onay/atama/bildirim aracı yok
+
+
+def call(ctx: ToolContext, name: str, **kwargs: Any) -> Any:
+    """Aracı çalıştırır ve gerçek süresini kaydeder. Tanımsız araç adı reddedilir."""
+    if name not in TOOLS:
+        raise KeyError(f"tanimsiz_arac:{name}")
+    t0 = time.perf_counter()
+    out = TOOLS[name](ctx, **kwargs)
+    ctx.calls.append({"arac": name, "parametre": {k: v for k, v in kwargs.items()}, "sure_ms": round((time.perf_counter() - t0) * 1000, 1)})
+    return out
