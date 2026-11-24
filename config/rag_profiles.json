@@ -1,0 +1,52 @@
+{
+  "hardware": {
+    "cpu": "Intel Core i7-10750H",
+    "ram_gb": 16,
+    "gpu": "GTX 1660 Ti",
+    "vram_gb": 6,
+    "os": "Windows",
+    "free_disk_gb_user_reported": 220
+  },
+  "measured_on_user_device": false,
+  "common": {
+    "concurrency": 1,
+    "embedding_batch_start": 1,
+    "embedding_batch_max_initial": 8,
+    "num_ctx": 2048,
+    "num_predict": 256,
+    "temperature": 0,
+    "timeout_seconds": 120,
+    "sequential_unload": true,
+    "embedding_keep_alive": 0,
+    "ollama_base_url": "http://127.0.0.1:11434",
+    "distance": "cosine",
+    "top_k_retrieval": 10,
+    "max_answer_chunks": 5,
+    "min_similarity": "CALIBRATE_ON_DEV_PER_MODEL"
+  },
+  "profiles": {
+    "primary": {
+      "embed": "qwen3-embedding:0.6b",
+      "generator": "gemma3:4b"
+    },
+    "comparison": {
+      "embed": "bge-m3",
+      "generator": "gemma3:4b"
+    },
+    "light": {
+      "embed": "paraphrase-multilingual:278m",
+      "generator": "gemma3:1b"
+    },
+    "cpu": {
+      "embed": "qwen3-embedding:0.6b",
+      "generator": "gemma3:1b",
+      "server_env": {
+        "CUDA_VISIBLE_DEVICES": "-1"
+      }
+    },
+    "retrieval_only": {
+      "embed": "qwen3-embedding:0.6b",
+      "generator": null
+    }
+  }
+}

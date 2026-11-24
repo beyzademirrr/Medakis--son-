@@ -1,0 +1,82 @@
+[
+  {
+    "source_key": "SYN-PROC",
+    "source_name": "Sentetik vardiya devir prosedürü",
+    "doc_type": "procedure",
+    "version": "1.0",
+    "valid_from": "2026-11-01T00:00:00Z",
+    "valid_until": null,
+    "status": "draft",
+    "approved_by": null,
+    "approved_at": null,
+    "is_synthetic": true,
+    "path": "SYN-PROC.md",
+    "content_sha256": "0bd0e8431fe3ef6f874e6f48cab1fbe9d6c2affc3057fcc2ee452525de744d91",
+    "sections": [
+      {
+        "section": "devir",
+        "gold_chunk_key": "SYN-PROC-v1-devir"
+      }
+    ]
+  },
+  {
+    "source_key": "SYN-ROLE",
+    "source_name": "Sentetik görev tanımları",
+    "doc_type": "job_description",
+    "version": "1.0",
+    "valid_from": "2026-11-01T00:00:00Z",
+    "valid_until": null,
+    "status": "draft",
+    "approved_by": null,
+    "approved_at": null,
+    "is_synthetic": true,
+    "path": "SYN-ROLE.md",
+    "content_sha256": "9c44163865912ffd104c3e4187e01c31e2f211cf97c56997554dfb5aef6b4311",
+    "sections": [
+      {
+        "section": "sorumluluk",
+        "gold_chunk_key": "SYN-ROLE-v1-sorumluluk"
+      }
+    ]
+  },
+  {
+    "source_key": "SYN-SKILL",
+    "source_name": "Sentetik yetkinlik kuralları",
+    "doc_type": "competency",
+    "version": "1.0",
+    "valid_from": "2026-11-01T00:00:00Z",
+    "valid_until": null,
+    "status": "draft",
+    "approved_by": null,
+    "approved_at": null,
+    "is_synthetic": true,
+    "path": "SYN-SKILL.md",
+    "content_sha256": "ed26a6909c9b75d2a12dcc543112afd62149a85b9507e18e197867636f1ea2cd",
+    "sections": [
+      {
+        "section": "gecerlilik",
+        "gold_chunk_key": "SYN-SKILL-v1-gecerlilik"
+      }
+    ]
+  },
+  {
+    "source_key": "SYN-FLOW",
+    "source_name": "Sentetik planlama iş akışı",
+    "doc_type": "workflow",
+    "version": "1.0",
+    "valid_from": "2026-11-01T00:00:00Z",
+    "valid_until": null,
+    "status": "draft",
+    "approved_by": null,
+    "approved_at": null,
+    "is_synthetic": true,
+    "path": "SYN-FLOW.md",
+    "content_sha256": "fde9f31ae044dfd6f6a8fe69daf4117634987cff5ac0c855bd6dfbccdebc5c80",
+    "sections": [
+      {
+        "section": "onay",
+        "gold_chunk_key": "SYN-FLOW-v1-onay"
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+ "dosya": "muhurlu_test.jsonl",
+ "sha256": "b997c4e2458c997c6323edcdee2507f68f5a6470bd25571e9cb5d85afd57c9c4",
+ "vaka": 56,
+ "cevaplanabilir": 42,
+ "kaynak_disi": 14,
+ "olusturma": "2026-11-23T19:24:14.584590Z",
+ "acilma": "Kullanılmadı. Kör test DEĞİLDİR (içerik Git'te); geliştirme amaçlı ayrıldı. Kullanımı ayrı karar gerektirir.",
+ "dev_sha256": "0671e31a59303af4b8e29be1cf75b3865d2598bef13bf7c365966c0c8e14b797",
+ "guvenlik_sha256": "22a1f19c9fbc313b4fde14d6a99ee66407522933a0f5478cb21a02e33dab2dfa",
+ "corpus_manifest_sha256": "21e7e086e2e14ef09b657eab60bb1683cf1d26f48dbce022358a5d4c0e11194d",
+ "etiket_durumu": "taslak_proje_sahibi_incelemesi_bekliyor",
+ "durum": "gelistirme_amacli_ayrildi_kor_test_degil",
+ "muhur_anlami": "Yalnız bütünlük (dosya değişmedi). Gizlilik sağlamaz: sorular ve gold etiketleri depoda okunabilir.",
+ "karar": "2026-11-23 proje sahibi incelemesi; Aşama 9 kör testi için bkz. docs/raporlar/ASAMA_9_KOR_TEST_PROTOKOLU_ONERISI.md"
+}

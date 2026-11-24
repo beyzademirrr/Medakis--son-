@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medakis"
+version = "0.1.0"
+description = "Sentetik verilerle iş yükü tahmini ve personel kaynak optimizasyonu için idari karar destek prototipi"
+readme = "README.md"
+requires-python = ">=3.12"
+# Doğrudan bağımlılıklar. Tam ve tekrarlanabilir sürümler requirements.txt kilidindedir.
+dependencies = [
+    "streamlit",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "ortools",
+    "chromadb",
+    "httpx",   # Ollama yerel HTTP API istemcisi (Aşama 7-8)
+    "tzdata",  # Windows'ta IANA saat dilimi verisi (Europe/Istanbul)
+    "psycopg[binary]",  # PostgreSQL istemcisi
+    "sqlalchemy>=2",    # Core API (ORM kullanılmıyor)
+    "alembic",          # PostgreSQL migration
+    "keyring",          # Parolalar için Windows Credential Manager
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pyyaml"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra -m 'not integration and not postgres and not postgres_lifecycle and not prova_rol'"
+markers = [
+    "integration: gerçek yerel Ollama/Chroma gerektiren testler (varsayılan olarak atlanır)",
+    "postgres: çalışan medakis-postgres konteyneri gerektiren testler (pytest -m postgres)",
+    "postgres_lifecycle: konteyneri durduran kalıcılık ve yedek testleri (pytest -m postgres_lifecycle)",
+    "prova_rol: küme rol üyeliğini değiştiren testler; yalnız scripts/db/prova.ps1 -Islem test ile izole provada",
+]

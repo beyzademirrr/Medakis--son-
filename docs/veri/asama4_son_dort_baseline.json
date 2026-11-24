@@ -1,0 +1,1606 @@
+{
+ "tanim": "Son dört erişilebilir 15 dk pencerenin ortalama gerçekleşen iş hızı × (ufuk / 15). Yalnız karşılaştırma referansı; model seçimine ve U1 kalibrasyonuna girmez. Rol hedeflerinde tanımsız (rol gecikme girdisi yok).",
+ "veri": {
+  "sozlesme_surumu": "1.0",
+  "kaynak": "üretici 2.0.0, bellek içi (veritabanı kullanılmadı)",
+  "uretici_surumu": "2.0.0",
+  "seed": 42,
+  "parametreler": {
+   "seed": 42,
+   "start_day": "2026-10-05",
+   "days": 112,
+   "timezone": "Europe/Istanbul",
+   "inpatient_profiles": [
+    [
+     "normal",
+     0.545
+    ],
+    [
+     "yuksek",
+     0.88
+    ]
+   ],
+   "inpatient_rooms_per_unit": 15,
+   "inpatient_beds_per_room": 2,
+   "inpatient_alos_days": 4.0,
+   "inpatient_los_sigma": 0.5,
+   "inpatient_shift_pattern": "12_12",
+   "inpatient_warmup_days": 28,
+   "ed_level_label": "II",
+   "ed_beds": 8,
+   "ed_base_arrivals_per_hour": 1.5,
+   "ed_volume_profile": "taban",
+   "ed_triage_profile": "orta",
+   "ed_staffing_profile": "temel",
+   "outpatient_rooms": 3,
+   "outpatient_slot_minutes": 15,
+   "outpatient_fill_rate": 0.9,
+   "outpatient_no_show_rate": 0.1,
+   "outpatient_walk_in_rate": 0.1,
+   "outpatient_nurses_per_day": 3,
+   "staff_pool": {
+    "inpatient:nurse": 22,
+    "inpatient:support": 8,
+    "inpatient:supervisor": 4,
+    "emergency:nurse": 20,
+    "emergency:support": 8,
+    "emergency:supervisor": 4,
+    "outpatient:nurse": 5
+   },
+   "clinical_cancel_rate": 0.05,
+   "shift_no_show_rate": 0.03,
+   "short_leave_rate": 0.02,
+   "short_leave_minutes": 120,
+   "break_minutes_per_12h": 30,
+   "pending_horizon_hours": 12
+  },
+  "parametre_parmak_izi": "377cf402f745fa244e242da22bfb9a7ffcec5680759f1b5c346f6c10c278e2be",
+  "donem": "2026-10-04T21:00:00+00:00 / 2027-01-24T21:00:00+00:00",
+  "icerik_sha256": "2a1fdfb0dabcbd9999b3b5f61e3c3f8807f6bb62353c12aea76dfacf2cac733e",
+  "talep_sha256": "491826c98dabf22ca2f2d65e6456b3c73e92ac9674a01bd6edd3444d17bdc293",
+  "ek_kayit_sha256": "c337a0758b790a38b173f4d8a7166bc9bd5b6f0761e94a8ed886191b17fba25f",
+  "pencere_dk": 15,
+  "ufuklar_dk": [
+   30,
+   60
+  ],
+  "bolumler": {
+   "egitim": "2026-10-04T21:00:00+00:00 / 2026-12-13T21:00:00+00:00",
+   "dogrulama": "2026-12-13T21:00:00+00:00 / 2027-01-03T21:00:00+00:00",
+   "test": "2027-01-03T21:00:00+00:00 / 2027-01-24T21:00:00+00:00"
+  },
+  "bolum_sayilari": {
+   "ambargo": 24,
+   "dogrulama": 8052,
+   "egitim": 26852,
+   "test": 8052
+  },
+  "satir": 42980,
+  "cerceve_sha256": "f35899f71b7de0fbfc5db0bef302c78cc877f8293852a3370da127e46687be76"
+ },
+ "model_sha256": {
+  "baseline": "c3027b7592c1563285753c1a11cf8e092965f77c3f30847f350a3238aadb71ce",
+  "baseline_bilgi": "2527e87de1b5ec10970a3d45f223ac2d55e718e47e369cf0636296816f47d2e0",
+  "random_forest": "bd3e4b253d79430424867828254fa9c9fe1984bfdec2701ed12b73573c0bc6b1",
+  "random_forest_gerceklesen": "d4a9eeb39de85c9343ec3df40780412788630adc457721ef564e08cc201b3ad6"
+ },
+ "hedefler": [
+  "talep_dk_30",
+  "talep_dk_60",
+  "gerceklesen_dk_30",
+  "gerceklesen_dk_60"
+ ],
+ "secime_etkisi": "yok",
+ "kalibrasyona_etkisi": "yok",
+ "dogrulama": {
+  "talep_dk_30": {
+   "son_dort_pencere": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 49.48974788872344,
+     "rmse": 86.3930572390414,
+     "wape": 0.8773201598188011,
+     "r2": 0.1222164625215314,
+     "sifir_talep_n": 2,
+     "sifir_talep_mae": 7.7325,
+     "ortalama_talep": 56.41013412816654
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 54.02719821162457,
+     "rmse": 77.40794762355223,
+     "wape": 1.1440010729275156,
+     "r2": 0.019672989420145948,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 47.22652757078948
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 106.3944957774469,
+     "rmse": 148.03401950287915,
+     "wape": 1.1312943438483836,
+     "r2": -0.00934893849158791,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 94.04669647292509
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 25.981997019374067,
+     "rmse": 35.61524032828265,
+     "wape": 0.41640136237482495,
+     "r2": 0.2851283287180407,
+     "sifir_talep_n": 2,
+     "sifir_talep_mae": 7.7325,
+     "ortalama_talep": 62.39652260307998
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 11.555300546448224,
+     "rmse": 26.08706053434159,
+     "wape": 0.5259392410100608,
+     "r2": 0.5976488650777566,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 21.970789865871623
+    }
+   ],
+   "baseline": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 49.06780313099997,
+     "rmse": 80.73160239774964,
+     "wape": 0.869840213808306,
+     "r2": 0.23349164856252425,
+     "sifir_talep_n": 2,
+     "sifir_talep_mae": 31.532499999999935,
+     "ortalama_talep": 56.41013412816654
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 63.85844628160209,
+     "rmse": 83.79525237544003,
+     "wape": 1.352173229037046,
+     "r2": -0.1487848240866203,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 47.22652757078948
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 96.37326247633649,
+     "rmse": 131.94779615110113,
+     "wape": 1.0247384128381398,
+     "r2": 0.19809568703474134,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 94.04669647292509
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 27.758867899195767,
+     "rmse": 35.34869110101876,
+     "wape": 0.4448784442007598,
+     "r2": 0.29578867774902806,
+     "sifir_talep_n": 2,
+     "sifir_talep_mae": 31.532499999999935,
+     "ortalama_talep": 62.39652260307998
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 8.280635866865529,
+     "rmse": 19.72235560174972,
+     "wape": 0.3768929527530621,
+     "r2": 0.7700292991066876,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 21.970789865871623
+    }
+   ],
+   "baseline_bilgi": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 19.716538610145374,
+     "rmse": 34.90750033255189,
+     "wape": 0.34952121484675613,
+     "r2": 0.8566930518499566,
+     "sifir_talep_n": 2,
+     "sifir_talep_mae": 28.954999999999934,
+     "ortalama_talep": 56.41013412816654
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 25.508660374234392,
+     "rmse": 48.41715878303831,
+     "wape": 0.5401341510022801,
+     "r2": 0.6164707737796251,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 47.22652757078948
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 18.13101396478489,
+     "rmse": 30.517290319889455,
+     "wape": 0.19278735611946152,
+     "r2": 0.9571046509475806,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 94.04669647292509
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 27.7846917260032,
+     "rmse": 35.28889554381901,
+     "wape": 0.44529231064283226,
+     "r2": 0.2981691389042376,
+     "sifir_talep_n": 2,
+     "sifir_talep_mae": 28.954999999999934,
+     "ortalama_talep": 62.39652260307998
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 7.441788375559023,
+     "rmse": 18.796326664417965,
+     "wape": 0.3387128283047591,
+     "r2": 0.7911180529824486,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 21.970789865871623
+    }
+   ],
+   "random_forest": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 7.909110301381801,
+     "rmse": 13.574164706345492,
+     "wape": 0.140207259273872,
+     "r2": 0.9783301465220349,
+     "sifir_talep_n": 2,
+     "sifir_talep_mae": 9.60544713756957,
+     "ortalama_talep": 56.41013412816654
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 7.646869769465626,
+     "rmse": 12.923677260641767,
+     "wape": 0.1619189502764817,
+     "r2": 0.9726742512377586,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 47.22652757078948
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 9.521536730168485,
+     "rmse": 16.459301297467935,
+     "wape": 0.10124264952687123,
+     "r2": 0.987522112714574,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 94.04669647292509
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 9.92362775441519,
+     "rmse": 13.32822995670737,
+     "wape": 0.159041359044027,
+     "r2": 0.899884508658497,
+     "sifir_talep_n": 2,
+     "sifir_talep_mae": 9.60544713756957,
+     "ortalama_talep": 62.39652260307998
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 4.544406951477905,
+     "rmse": 11.020891206388525,
+     "wape": 0.2068385788230993,
+     "r2": 0.9281894307815632,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 21.970789865871623
+    }
+   ]
+  },
+  "talep_dk_60": {
+   "son_dort_pencere": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 73.896219572777,
+     "rmse": 112.46175725003367,
+     "wape": 0.6552941824301117,
+     "r2": 0.21220477914843217,
+     "sifir_talep_n": 53,
+     "sifir_talep_mae": 85.84113207547169,
+     "ortalama_talep": 112.76800794833532
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 73.69498261301543,
+     "rmse": 97.95289256498755,
+     "wape": 0.7809778912101808,
+     "r2": -0.006544089838224076,
+     "sifir_talep_n": 27,
+     "sifir_talep_mae": 55.93481481481482,
+     "ortalama_talep": 94.36244411326396
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 147.97399900645803,
+     "rmse": 183.8457041268079,
+     "wape": 0.7871839336831549,
+     "r2": -0.07577813802318256,
+     "sifir_talep_n": 26,
+     "sifir_talep_mae": 116.89769230769231,
+     "ortalama_talep": 187.97893691008466
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 50.095827123695535,
+     "rmse": 67.38603105113518,
+     "wape": 0.4014440263630157,
+     "r2": 0.2679324630221538,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.7890710382501
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 23.82006954793904,
+     "rmse": 51.533465888756965,
+     "wape": 0.5420849612907981,
+     "r2": 0.5707820772741843,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 43.94157973174259
+    }
+   ],
+   "baseline": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 56.172296029263435,
+     "rmse": 85.84286622394389,
+     "wape": 0.49812262406017294,
+     "r2": 0.5410006914569532,
+     "sifir_talep_n": 53,
+     "sifir_talep_mae": 32.82591981132101,
+     "ortalama_talep": 112.76800794833532
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 84.8077187134975,
+     "rmse": 113.82410518980673,
+     "wape": 0.898744405260446,
+     "r2": -0.35914803701908227,
+     "sifir_talep_n": 27,
+     "sifir_talep_mae": 34.15291666666695,
+     "ortalama_talep": 94.36244411326396
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 75.02990846658881,
+     "rmse": 105.94984303713137,
+     "wape": 0.3991399765308685,
+     "r2": 0.6427136890115188,
+     "sifir_talep_n": 26,
+     "sifir_talep_mae": 31.447884615384847,
+     "ortalama_talep": 187.97893691008466
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 50.60657929166123,
+     "rmse": 63.88788249923648,
+     "wape": 0.40553695023620595,
+     "r2": 0.34196592767684353,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.7890710382501
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 14.24497764530624,
+     "rmse": 34.82862377525837,
+     "wape": 0.32417991643153027,
+     "r2": 0.8039477763646705,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 43.94157973174259
+    }
+   ],
+   "baseline_bilgi": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 34.92602376221252,
+     "rmse": 54.74112968560558,
+     "wape": 0.309715711021638,
+     "r2": 0.8133486554609748,
+     "sifir_talep_n": 53,
+     "sifir_talep_mae": 1.1811320754719898,
+     "ortalama_talep": 112.76800794833532
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 47.04898051553817,
+     "rmse": 70.58165049906599,
+     "wape": 0.49859857867887486,
+     "r2": 0.4773849741446534,
+     "sifir_talep_n": 27,
+     "sifir_talep_mae": 0.8000000000005841,
+     "ortalama_talep": 94.36244411326396
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 30.15470442126177,
+     "rmse": 43.91122804806381,
+     "wape": 0.16041533651020468,
+     "r2": 0.938628476029084,
+     "sifir_talep_n": 26,
+     "sifir_talep_mae": 1.5769230769230649,
+     "ortalama_talep": 187.97893691008466
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 50.74668929734499,
+     "rmse": 63.88897107077411,
+     "wape": 0.4066597248872074,
+     "r2": 0.34194350329098233,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.7890710382501
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 11.75372081470516,
+     "rmse": 31.537266157382323,
+     "wape": 0.26748516749874773,
+     "r2": 0.8392513882019901,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 43.94157973174259
+    }
+   ],
+   "random_forest": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 15.217822124129878,
+     "rmse": 24.399518198252824,
+     "wape": 0.1349480442281278,
+     "r2": 0.9629177469864366,
+     "sifir_talep_n": 53,
+     "sifir_talep_mae": 1.8815091600432674,
+     "ortalama_talep": 112.76800794833532
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 12.870757352911708,
+     "rmse": 19.125544354194815,
+     "wape": 0.13639703246201254,
+     "r2": 0.961626988622297,
+     "sifir_talep_n": 27,
+     "sifir_talep_mae": 1.6689105822843016,
+     "ortalama_talep": 94.36244411326396
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 15.817505814881244,
+     "rmse": 25.189480656537572,
+     "wape": 0.08414509665222321,
+     "r2": 0.9798045205115694,
+     "sifir_talep_n": 26,
+     "sifir_talep_mae": 2.102284606177578,
+     "ortalama_talep": 187.97893691008466
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 24.64639905916796,
+     "rmse": 32.67564004128201,
+     "wape": 0.19750446777196842,
+     "r2": 0.827868798719661,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.7890710382501
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 7.536626269558593,
+     "rmse": 17.701754673751907,
+     "wape": 0.17151468644432935,
+     "r2": 0.9493555592529616,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 43.94157973174259
+    }
+   ]
+  },
+  "gerceklesen_dk_30": {
+   "son_dort_pencere": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 22.813616492796974,
+     "rmse": 35.20734862346107,
+     "wape": 0.46962727680219385,
+     "r2": 0.47654057252466886,
+     "sifir_talep_n": 2443,
+     "sifir_talep_mae": 8.953223495702007,
+     "ortalama_talep": 48.57813338301052
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 32.71335320417291,
+     "rmse": 43.42440661615576,
+     "wape": 0.7375427070307474,
+     "r2": 0.144828706354741,
+     "sifir_talep_n": 603,
+     "sifir_talep_mae": 19.439485903814262,
+     "ortalama_talep": 44.354520615996165
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 35.632205663189765,
+     "rmse": 48.229276156339644,
+     "wape": 0.4380615043283646,
+     "r2": 0.3084632534100873,
+     "sifir_talep_n": 252,
+     "sifir_talep_mae": 25.67956349206349,
+     "ortalama_talep": 81.34064580228528
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 16.279786388474946,
+     "rmse": 21.16835545813113,
+     "wape": 0.3204155333905238,
+     "r2": 0.4539590943498085,
+     "sifir_talep_n": 88,
+     "sifir_talep_mae": 9.044488636363637,
+     "ortalama_talep": 50.808355688027994
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 6.629120715350275,
+     "rmse": 17.27391522047657,
+     "wape": 0.3722340649280347,
+     "r2": 0.7130412342961934,
+     "sifir_talep_n": 1500,
+     "sifir_talep_mae": 1.9223666666666668,
+     "ortalama_talep": 17.80901142573264
+    }
+   ],
+   "random_forest_gerceklesen": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 8.112438006600144,
+     "rmse": 13.733220446421234,
+     "wape": 0.166997730082345,
+     "r2": 0.9203545138823046,
+     "sifir_talep_n": 2443,
+     "sifir_talep_mae": 2.2914811263457797,
+     "ortalama_talep": 48.57813338301052
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 10.984674004453314,
+     "rmse": 16.927464066346406,
+     "wape": 0.24765624454729793,
+     "r2": 0.8700521405900731,
+     "sifir_talep_n": 603,
+     "sifir_talep_mae": 5.55699717378086,
+     "ortalama_talep": 44.354520615996165
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 10.922818729343236,
+     "rmse": 17.246349433374416,
+     "wape": 0.1342848783853196,
+     "r2": 0.911572339123072,
+     "sifir_talep_n": 252,
+     "sifir_talep_mae": 5.449532662266549,
+     "ortalama_talep": 81.34064580228528
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 8.823670145421733,
+     "rmse": 11.848968009325075,
+     "wape": 0.17366572930642704,
+     "r2": 0.8289149767870712,
+     "sifir_talep_n": 88,
+     "sifir_talep_mae": 6.048673956060154,
+     "ortalama_talep": 50.808355688027994
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 1.718589147182294,
+     "rmse": 5.480120795976762,
+     "wape": 0.09650109745558735,
+     "r2": 0.9711186033402606,
+     "sifir_talep_n": 1500,
+     "sifir_talep_mae": 0.22776903789894565,
+     "ortalama_talep": 17.80901142573264
+    }
+   ]
+  },
+  "gerceklesen_dk_60": {
+   "son_dort_pencere": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 45.477144808743105,
+     "rmse": 68.64445028030124,
+     "wape": 0.4682021572447282,
+     "r2": 0.42753176780958635,
+     "sifir_talep_n": 2020,
+     "sifir_talep_mae": 14.348836633663367,
+     "ortalama_talep": 97.1314294585198
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 61.02971684053636,
+     "rmse": 79.3382318775538,
+     "wape": 0.6884717891079668,
+     "r2": 0.036980389515512746,
+     "sifir_talep_n": 371,
+     "sifir_talep_mae": 41.73522911051213,
+     "ortalama_talep": 88.64519622454075
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 73.20207650273224,
+     "rmse": 96.85675437909782,
+     "wape": 0.4500884197387744,
+     "r2": 0.17501130414340071,
+     "sifir_talep_n": 138,
+     "sifir_talep_mae": 56.1145652173913,
+     "ortalama_talep": 162.63932439145577
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 32.07894187779409,
+     "rmse": 41.71769781434453,
+     "wape": 0.31566561542415117,
+     "r2": 0.3987813446827305,
+     "sifir_talep_n": 43,
+     "sifir_talep_mae": 13.616976744186045,
+     "ortalama_talep": 101.62317436661735
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 15.597844013909759,
+     "rmse": 37.84296499880329,
+     "wape": 0.43791998446842717,
+     "r2": 0.6378856790073798,
+     "sifir_talep_n": 1468,
+     "sifir_talep_mae": 3.5228474114441415,
+     "ortalama_talep": 35.61802285146528
+    }
+   ],
+   "random_forest_gerceklesen": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 13.885889707180505,
+     "rmse": 21.937459762922547,
+     "wape": 0.1429597997742894,
+     "r2": 0.9415326778728161,
+     "sifir_talep_n": 2020,
+     "sifir_talep_mae": 2.345486378085461,
+     "ortalama_talep": 97.1314294585198
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 16.90605913971974,
+     "rmse": 24.761679627289755,
+     "wape": 0.19071602139495772,
+     "r2": 0.9061940693736218,
+     "sifir_talep_n": 371,
+     "sifir_talep_mae": 7.800166157732886,
+     "ortalama_talep": 88.64519622454075
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 17.143098481684746,
+     "rmse": 25.564477025376124,
+     "wape": 0.10540561789609448,
+     "r2": 0.9425272471807035,
+     "sifir_talep_n": 138,
+     "sifir_talep_mae": 4.789296224909027,
+     "ortalama_talep": 162.63932439145577
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 18.028742517752935,
+     "rmse": 23.65517054629803,
+     "wape": 0.17740778744730176,
+     "r2": 0.8066946174227845,
+     "sifir_talep_n": 43,
+     "sifir_talep_mae": 14.68994893405786,
+     "ortalama_talep": 101.62317436661735
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 3.4656586895646035,
+     "rmse": 9.937716351326257,
+     "wape": 0.09730070374813156,
+     "r2": 0.975028272795843,
+     "sifir_talep_n": 1468,
+     "sifir_talep_mae": 0.37563362126144184,
+     "ortalama_talep": 35.61802285146528
+    }
+   ]
+  }
+ },
+ "dogrulama_satir": 8052,
+ "test": {
+  "talep_dk_30": {
+   "son_dort_pencere": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 55.72967958271256,
+     "rmse": 95.6733985669123,
+     "wape": 0.9133614220203112,
+     "r2": 0.09367297740353142,
+     "sifir_talep_n": 5,
+     "sifir_talep_mae": 3.525,
+     "ortalama_talep": 61.016020864381105
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 72.4355762543469,
+     "rmse": 102.38886144631999,
+     "wape": 1.1603831235595978,
+     "r2": -0.00577244236921759,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 62.42384500745117
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 111.45874068554434,
+     "rmse": 154.6502404662428,
+     "wape": 1.1626927358147408,
+     "r2": -0.009612055774000927,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 95.86259314455938
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 26.16758569299556,
+     "rmse": 37.80633555565849,
+     "wape": 0.42125721350701173,
+     "r2": 0.23526973221025016,
+     "sifir_talep_n": 5,
+     "sifir_talep_mae": 3.525,
+     "ortalama_talep": 62.11783407848991
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 12.856815697963468,
+     "rmse": 28.001820310214477,
+     "wape": 0.5434031393825436,
+     "r2": 0.5652218780603337,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 23.659811227023965
+    }
+   ],
+   "baseline": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 52.76382206815625,
+     "rmse": 86.7846067795559,
+     "wape": 0.8647535732530435,
+     "r2": 0.2542591628456755,
+     "sifir_talep_n": 5,
+     "sifir_talep_mae": 53.19949999999996,
+     "ortalama_talep": 61.016020864381105
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 74.03053768746399,
+     "rmse": 95.86093645151763,
+     "wape": 1.1859336392788187,
+     "r2": 0.11838770334759996,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 62.42384500745117
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 99.99068299297838,
+     "rmse": 138.3620858119205,
+     "wape": 1.043062572302763,
+     "r2": 0.19185827675334421,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 95.86259314455938
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 29.730381551447117,
+     "rmse": 38.996667043094455,
+     "wape": 0.47861265597060015,
+     "r2": 0.18635662734602743,
+     "sifir_talep_n": 5,
+     "sifir_talep_mae": 53.19949999999996,
+     "ortalama_talep": 62.11783407848991
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 7.303686040735475,
+     "rmse": 16.496845985564484,
+     "wape": 0.3086958712668477,
+     "r2": 0.8490973059751525,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 23.659811227023965
+    }
+   ],
+   "baseline_bilgi": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 18.44750234586323,
+     "rmse": 31.839475224982664,
+     "wape": 0.302338665886881,
+     "r2": 0.8996229730724751,
+     "sifir_talep_n": 5,
+     "sifir_talep_mae": 52.84399999999996,
+     "ortalama_talep": 61.016020864381105
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 18.840355467240904,
+     "rmse": 34.392025231481455,
+     "wape": 0.30181344108155966,
+     "r2": 0.8865224878086724,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 62.42384500745117
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 19.19602141634975,
+     "rmse": 33.66881132629001,
+     "wape": 0.20024517162186747,
+     "r2": 0.952147030112219,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 95.86259314455938
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 29.601262902246503,
+     "rmse": 39.009042876963356,
+     "wape": 0.4765340476109226,
+     "r2": 0.18584011587037297,
+     "sifir_talep_n": 5,
+     "sifir_talep_mae": 52.84399999999996,
+     "ortalama_talep": 62.11783407848991
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 6.152369597615753,
+     "rmse": 14.727628749537452,
+     "wape": 0.2600346020761335,
+     "r2": 0.8797290311206513,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 23.659811227023965
+    }
+   ],
+   "random_forest": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 8.098132615818724,
+     "rmse": 14.319470125117567,
+     "wape": 0.13272141482018612,
+     "r2": 0.9796971773331306,
+     "sifir_talep_n": 5,
+     "sifir_talep_mae": 11.578313030316627,
+     "ortalama_talep": 61.016020864381105
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 8.059609292515692,
+     "rmse": 14.55775653048704,
+     "wape": 0.12911106791889554,
+     "r2": 0.9796678545349641,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 62.42384500745117
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 9.387808580839362,
+     "rmse": 16.85772174569697,
+     "wape": 0.09792984179639898,
+     "r2": 0.9880035957852094,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 95.86259314455938
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 10.194520057234909,
+     "rmse": 13.83779674250033,
+     "wape": 0.16411583256997453,
+     "r2": 0.8975497541897424,
+     "sifir_talep_n": 5,
+     "sifir_talep_mae": 11.578313030316627,
+     "ortalama_talep": 62.11783407848991
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 4.7505925326849265,
+     "rmse": 11.514913039771628,
+     "wape": 0.20078742332731486,
+     "r2": 0.9264781411853271,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 23.659811227023965
+    }
+   ]
+  },
+  "talep_dk_60": {
+   "son_dort_pencere": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 84.74229259811241,
+     "rmse": 127.04647419630685,
+     "wape": 0.6946884421148743,
+     "r2": 0.13528102317094626,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 121.98604073522071
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 102.42252856433187,
+     "rmse": 131.63861405428932,
+     "wape": 0.8206593645415715,
+     "r2": -0.09126829555048865,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.80516641828137
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 159.4566766020865,
+     "rmse": 197.346560999806,
+     "wape": 0.8321924723031371,
+     "r2": -0.10550775960007308,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 191.61033283656323
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 50.84689518132107,
+     "rmse": 71.87594669058339,
+     "wape": 0.4093654912475492,
+     "r2": 0.20925136222315788,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.20904123199091
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 26.243070044710155,
+     "rmse": 55.88098837350297,
+     "wape": 0.5545917039003024,
+     "r2": 0.5259238779869184,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 47.319622454047334
+    }
+   ],
+   "baseline": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 55.456334311211606,
+     "rmse": 85.37416609139942,
+     "wape": 0.45461213411773294,
+     "r2": 0.6095164838542597,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 121.98604073522071
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 70.9937669002833,
+     "rmse": 98.09041109835503,
+     "wape": 0.5688367632342197,
+     "r2": 0.3940761534220293,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.80516641828137
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 83.38121249043388,
+     "rmse": 116.88562282849776,
+     "wape": 0.4351603134135521,
+     "r2": 0.6121847698625162,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 191.61033283656323
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 55.048599284828796,
+     "rmse": 71.62660780543482,
+     "wape": 0.44319317449695145,
+     "r2": 0.2147280873177998,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.20904123199091
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 12.40175856930043,
+     "rmse": 27.21478318935707,
+     "wape": 0.26208490106495336,
+     "r2": 0.8875577101426124,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 47.319622454047334
+    }
+   ],
+   "baseline_bilgi": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 32.456759535243364,
+     "rmse": 51.3494614184103,
+     "wape": 0.26606945630519246,
+     "r2": 0.8587392389607786,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 121.98604073522071
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 33.15192250372591,
+     "rmse": 50.54892238304715,
+     "wape": 0.26562940826197917,
+     "r2": 0.8390878866614018,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.80516641828137
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 32.42923000496757,
+     "rmse": 49.09855922630518,
+     "wape": 0.16924572659987258,
+     "r2": 0.931571004292569,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 191.61033283656323
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 54.98567698846387,
+     "rmse": 71.5548428195023,
+     "wape": 0.44268659063042437,
+     "r2": 0.21630087702658418,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.20904123199091
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 9.260208643816084,
+     "rmse": 21.47349875388802,
+     "wape": 0.19569489703364434,
+     "r2": 0.929995566348482,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 47.319622454047334
+    }
+   ],
+   "random_forest": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 16.065589107735192,
+     "rmse": 25.96812349613812,
+     "wape": 0.13170022578736384,
+     "r2": 0.9638730837989768,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 121.98604073522071
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 14.401637210948978,
+     "rmse": 22.857036679038238,
+     "wape": 0.11539295707264437,
+     "r2": 0.9670993266867028,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.80516641828137
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 15.898902335096793,
+     "rmse": 26.12926967106747,
+     "wape": 0.08297518249528843,
+     "r2": 0.9806198465213386,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 191.61033283656323
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 25.79688421631651,
+     "rmse": 33.69691299564296,
+     "wape": 0.20768926287849274,
+     "r2": 0.8261992965920791,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 124.20904123199091
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 8.164932668578484,
+     "rmse": 18.886739975880573,
+     "wape": 0.17254855903610025,
+     "r2": 0.9458455778483735,
+     "sifir_talep_n": 0,
+     "sifir_talep_mae": null,
+     "ortalama_talep": 47.319622454047334
+    }
+   ]
+  },
+  "gerceklesen_dk_30": {
+   "son_dort_pencere": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 24.69465598609023,
+     "rmse": 38.05693469334901,
+     "wape": 0.46971498980271315,
+     "r2": 0.43869017935454446,
+     "sifir_talep_n": 2231,
+     "sifir_talep_mae": 9.088292245629763,
+     "ortalama_talep": 52.57370218579213
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 36.983544461003405,
+     "rmse": 48.966319905973215,
+     "wape": 0.6443160785553222,
+     "r2": 0.13236574773816878,
+     "sifir_talep_n": 443,
+     "sifir_talep_mae": 22.51181715575621,
+     "ortalama_talep": 57.39969200198676
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 37.20557625434618,
+     "rmse": 50.56751290613974,
+     "wape": 0.4523762842047095,
+     "r2": 0.28996535707662374,
+     "sifir_talep_n": 248,
+     "sifir_talep_mae": 25.056290322580644,
+     "ortalama_talep": 82.24475409836005
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 17.22056631892684,
+     "rmse": 22.23678948180296,
+     "wape": 0.33700537789224977,
+     "r2": 0.40121731100245484,
+     "sifir_talep_n": 78,
+     "sifir_talep_mae": 12.377051282051283,
+     "ortalama_talep": 51.09878787878793
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 7.368936910084484,
+     "rmse": 18.54919027641321,
+     "wape": 0.37689735988121276,
+     "r2": 0.696625129244147,
+     "sifir_talep_n": 1462,
+     "sifir_talep_mae": 2.1367134062927495,
+     "ortalama_talep": 19.5515747640338
+    }
+   ],
+   "random_forest_gerceklesen": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 8.025628483972762,
+     "rmse": 13.433818428845976,
+     "wape": 0.15265480934956227,
+     "r2": 0.9300586551332415,
+     "sifir_talep_n": 2231,
+     "sifir_talep_mae": 1.7617548982991447,
+     "ortalama_talep": 52.57370218579213
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 10.397873545819152,
+     "rmse": 16.00464765669501,
+     "wape": 0.18114859476004253,
+     "r2": 0.9073097629937547,
+     "sifir_talep_n": 443,
+     "sifir_talep_mae": 4.0654518183760615,
+     "ortalama_talep": 57.39969200198676
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 11.10395296382312,
+     "rmse": 17.28785552867822,
+     "wape": 0.13501107864634654,
+     "r2": 0.917011369107797,
+     "sifir_talep_n": 248,
+     "sifir_talep_mae": 5.404729865494904,
+     "ortalama_talep": 82.24475409836005
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 9.03826056860039,
+     "rmse": 12.051331670501295,
+     "wape": 0.17687817938147885,
+     "r2": 0.8241286305930956,
+     "sifir_talep_n": 78,
+     "sifir_talep_mae": 7.916719907401336,
+     "ortalama_talep": 51.09878787878793
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 1.5624268576483855,
+     "rmse": 4.649367687006085,
+     "wape": 0.07991309531355786,
+     "r2": 0.9809402378013606,
+     "sifir_talep_n": 1462,
+     "sifir_talep_mae": 0.1173754193876583,
+     "ortalama_talep": 19.5515747640338
+    }
+   ]
+  },
+  "gerceklesen_dk_60": {
+   "son_dort_pencere": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 50.15583830104288,
+     "rmse": 75.40678033179354,
+     "wape": 0.47708394690882516,
+     "r2": 0.3652819024876307,
+     "sifir_talep_n": 1866,
+     "sifir_talep_mae": 14.311302250803859,
+     "ortalama_talep": 105.13000620963692
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 71.62960755091912,
+     "rmse": 92.87013413154666,
+     "wape": 0.6240387507989851,
+     "r2": -0.01640184654354848,
+     "sifir_talep_n": 264,
+     "sifir_talep_mae": 46.94329545454545,
+     "ortalama_talep": 114.78390958767943
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 77.29226527570631,
+     "rmse": 102.80416747062857,
+     "wape": 0.47002329614536936,
+     "r2": 0.13253804537716685,
+     "sifir_talep_n": 140,
+     "sifir_talep_mae": 57.10035714285714,
+     "ortalama_talep": 164.44347739691878
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 34.13278688524585,
+     "rmse": 43.38067030470428,
+     "wape": 0.33401465693219384,
+     "r2": 0.34664360544391637,
+     "sifir_talep_n": 34,
+     "sifir_talep_mae": 16.24705882352941,
+     "ortalama_talep": 102.18948832588184
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 17.568693492300206,
+     "rmse": 40.85693161513102,
+     "wape": 0.44929100863575416,
+     "r2": 0.6122820642213005,
+     "sifir_talep_n": 1428,
+     "sifir_talep_mae": 4.0374019607843135,
+     "ortalama_talep": 39.1031495280676
+    }
+   ],
+   "random_forest_gerceklesen": [
+    {
+     "servis": "tum",
+     "kapsama": 1.0,
+     "n": 8052,
+     "mae": 13.862005800154447,
+     "rmse": 22.148498886043704,
+     "wape": 0.13185584496696973,
+     "r2": 0.9452418609864144,
+     "sifir_talep_n": 1866,
+     "sifir_talep_mae": 1.5287477460757193,
+     "ortalama_talep": 105.13000620963692
+    },
+    {
+     "servis": "1",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 16.10615893952127,
+     "rmse": 24.68959742790266,
+     "wape": 0.14031721865352856,
+     "r2": 0.928164136402738,
+     "sifir_talep_n": 264,
+     "sifir_talep_mae": 5.056053244596087,
+     "ortalama_talep": 114.78390958767943
+    },
+    {
+     "servis": "2",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 17.663146031471186,
+     "rmse": 26.464280275137885,
+     "wape": 0.10741165481947017,
+     "r2": 0.942515710170866,
+     "sifir_talep_n": 140,
+     "sifir_talep_mae": 4.9443231809488415,
+     "ortalama_talep": 164.44347739691878
+    },
+    {
+     "servis": "3",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 18.49821838579141,
+     "rmse": 24.012494803510968,
+     "wape": 0.18101879839930962,
+     "r2": 0.799814693580507,
+     "sifir_talep_n": 34,
+     "sifir_talep_mae": 17.856970913565792,
+     "ortalama_talep": 102.18948832588184
+    },
+    {
+     "servis": "4",
+     "kapsama": 1.0,
+     "n": 2013,
+     "mae": 3.180499843833936,
+     "rmse": 8.699985821754302,
+     "wape": 0.08133615532812838,
+     "r2": 0.9824198941272875,
+     "sifir_talep_n": 1428,
+     "sifir_talep_mae": 0.15301329216376083,
+     "ortalama_talep": 39.1031495280676
+    }
+   ]
+  }
+ },
+ "test_satir": 8052,
+ "sure_sn": 53.7
+}

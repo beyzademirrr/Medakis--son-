@@ -1,0 +1,2521 @@
+{
+ "matris_sonuc": {
+  "gecti": 32
+ },
+ "deneysel_dondurma_sonuc": {
+  "gecti": 8
+ },
+ "deneysel_dondurma_yayin": 0,
+ "saldiri_sonuc": {
+  "gecti": 25
+ },
+ "sozluk_sonuc": {
+  "gecti": 7
+ },
+ "matris": [
+  {
+   "kimlik": "T1",
+   "alt": "a",
+   "amac": "Normal doluluk: yeterli kadro, gereksiz taşıma yok",
+   "veri": "ŷ A60 B30 Acil50 (D=2ŷ), kadro 3/2/2/1",
+   "beklenen": "OPTIMAL, doğrulanmış, 0 taşıma, O1=0",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     270.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 0,
+   "fazla_personel_dk": 560,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0311,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "optimal": true,
+    "yayinlanabilir": true,
+    "tasima_yok": true,
+    "acik_sifir": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T2",
+   "alt": "a",
+   "amac": "Yataklı B yüksek talep; A'dan yetkili destek; A asgarisi korunur",
+   "veri": "ŷ B120 (D240, kapasite 120), A 3 hemşire asgari 2, A↔B destek (MON)",
+   "beklenen": "1 taşıma A→B; B açığı 120→60; A her atomda ≥2",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     240.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 60,
+   "fazla_personel_dk": 500,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.0253,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "yayinlanabilir": true,
+    "tek_tasima_A_B": true,
+    "B_acik_azaldi": true,
+    "A_asgari": true
+   },
+   "ek": {
+    "B": {
+     "mevcut_kapasite_tam": 120,
+     "kapasite_personel_dk_tam": 180,
+     "mevcut_acik_tam": 120,
+     "acik_personel_dk_tam": 60
+    }
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T2",
+   "alt": "b",
+   "amac": "A asgarisi 3 iken taşıma yapılamaz; açık raporlanır",
+   "veri": "aynı, A asgari 3",
+   "beklenen": "OPTIMAL, 0 taşıma, B açığı 120 raporlanır",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     120.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     500.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     300.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 120,
+   "fazla_personel_dk": 560,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0241,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "yayinlanabilir": true,
+    "tasima_yok": true,
+    "acik_raporlandi": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T3",
+   "alt": "a",
+   "amac": "Acil yüksek hacim: göreli tampon eşiği aşılırsa inceleme; tehlikeli öneri yok",
+   "veri": "ed_volume_profile=yuksek (28 gün) karar anı satırları; küçük RF + U1 kalibrasyonu (normal veride); eşik B/ŷ > 0,5 ve B > 10 dk",
+   "beklenen": "Eşiği aşan Acil satırı inceleme_gerekli (kural birebir); herhangi bir inceleme varsa U4 öneri vermez",
+   "durum": "inceleme_gerekli",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "u3_inceleme_gerekli:3:support"
+   ],
+   "tani": [],
+   "kontroller": {
+    "esik_kurali_birebir": true,
+    "en_az_bir_inceleme": true,
+    "u4_inceleme": true,
+    "oneri_yok": true
+   },
+   "ek": {
+    "acil_B_bolu_yhat": {
+     "nurse": 0.483,
+     "supervisor": 0.0,
+     "support": 1.335
+    },
+    "esik_asildi": {
+     "nurse": false,
+     "supervisor": false,
+     "support": true
+    },
+    "test_donemi_acil": {
+     "nurse": {
+      "inceleme_orani": 0.555,
+      "yuksek_goreli_tampon_orani": 0.335,
+      "B_bolu_yhat_medyan": 0.483
+     },
+     "supervisor": {
+      "inceleme_orani": 0.229,
+      "yuksek_goreli_tampon_orani": 0.0,
+      "B_bolu_yhat_medyan": 0.0
+     },
+     "support": {
+      "inceleme_orani": 0.571,
+      "yuksek_goreli_tampon_orani": 0.561,
+      "B_bolu_yhat_medyan": 1.335
+     }
+    },
+    "not": "Acil profili yüksek hacimde de 'temel' kalır; görülmemiş kategori uyarısı oluşmaz."
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T4",
+   "alt": "a",
+   "amac": "Poliklinik saatleri ve tatil",
+   "veri": "29 Ekim tam gün tatil 10:00; A→poliklinik destek kuralı tanımlı",
+   "beklenen": "Doğrulanmış kapalı: talep 0, polikliniğe taşıma yok",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     490.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 0,
+   "fazla_personel_dk": 760,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0246,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "cozum": true,
+    "polikliniğe_tasima_yok": true,
+    "poliklinik_kisi_0": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T4",
+   "alt": "b",
+   "amac": "Poliklinik saatleri ve tatil",
+   "veri": "28 Ekim yarım gün 14:00 (13:00 sonrası); A→poliklinik destek kuralı tanımlı",
+   "beklenen": "Doğrulanmış kapalı: talep 0, polikliniğe taşıma yok",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     490.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 0,
+   "fazla_personel_dk": 760,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0222,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "cozum": true,
+    "polikliniğe_tasima_yok": true,
+    "poliklinik_kisi_0": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T4",
+   "alt": "c",
+   "amac": "Poliklinik saatleri ve tatil",
+   "veri": "Hafta içi 18:00 (kapanış sonrası); A→poliklinik destek kuralı tanımlı",
+   "beklenen": "Doğrulanmış kapalı: talep 0, polikliniğe taşıma yok",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     490.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 0,
+   "fazla_personel_dk": 760,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0193,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "cozum": true,
+    "polikliniğe_tasima_yok": true,
+    "poliklinik_kisi_0": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T4",
+   "alt": "d",
+   "amac": "Poliklinik saatleri ve tatil",
+   "veri": "28 Ekim yarım gün 12:30 (kısmi açık); A→poliklinik destek kuralı tanımlı",
+   "beklenen": "Kısmi açık: inceleme_gerekli, öneri yok",
+   "durum": "inceleme_gerekli",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "kismi_acik_pencere:4"
+   ],
+   "tani": [],
+   "kontroller": {
+    "inceleme": true,
+    "kismi_neden": true,
+    "oneri_yok": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T5",
+   "alt": "a",
+   "amac": "Personel yetersizliği: asgari sağlanamıyor",
+   "veri": "B asgari 4; B 2 + A'dan en fazla 1",
+   "beklenen": "INFEASIBLE, gevşetme yok, eksik kişi atom bazında",
+   "durum": "INFEASIBLE",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "INFEASIBLE",
+     null
+    ]
+   ],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0153,
+   "nedenler": [
+    "cozucu:O1_karsilanmayan_talep:INFEASIBLE"
+   ],
+   "tani": [
+    "H7_karsilanamaz:2:nurse:2026-10-27T07:00:00+00:00:3<4",
+    "H7_karsilanamaz:2:nurse:2026-10-27T07:15:00+00:00:3<4",
+    "H7_karsilanamaz:2:nurse:2026-10-27T07:30:00+00:00:3<4",
+    "H7_karsilanamaz:2:nurse:2026-10-27T07:45:00+00:00:3<4"
+   ],
+   "kontroller": {
+    "infeasible": true,
+    "oneri_yok": true,
+    "atom_tanisi": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T6",
+   "alt": "a",
+   "amac": "Ani devamsızlık bildirimden önce/sonra",
+   "veri": "B hemşiresi bütün vardiya devamsız; bildirim t−10 / t+10",
+   "beklenen": "Bilinen: kapasite düşer, A'dan destek; bilinmeyen: çözüm devamsızlık hiç yokmuş gibi (özet aynı)",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     330.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 0,
+   "fazla_personel_dk": 600,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.05840000000000001,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "bilinen_kapasite_dustu": true,
+    "bilinen_destek": true,
+    "bilinmeyen_ayni_ozet": true
+   },
+   "ek": {
+    "ozet_bilinmeyen": "8c0b714dfc4bebbb6955317ec9cbcba117f63eafecaa7573fb616b8de0ce62b7",
+    "ozet_temel": "8c0b714dfc4bebbb6955317ec9cbcba117f63eafecaa7573fb616b8de0ce62b7"
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T7",
+   "alt": "a",
+   "amac": "Eşzamanlı açık: Acil ve B; tek kişi iki yerde değil; O2 dengesi",
+   "veri": "B D240 (kapasite 120), Acil D480 (120); tek destek hemşiresi (A3: TRIAGE+MON) iki servise de yetkili",
+   "beklenen": "1 taşıma Acil'e (göreli açık max %62,5 < %75); her kişi tek atama",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     420.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     625.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     280.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 420,
+   "fazla_personel_dk": 520,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.0285,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "yayinlanabilir": true,
+    "tek_atama": true,
+    "acile": true,
+    "O1": true,
+    "O2": true
+   },
+   "ek": {
+    "alternatif_B": "B'ye gitseydi O2 = 750 (max %25, %75)"
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T8",
+   "alt": "a",
+   "amac": "Yetkinlik yetersizliği: TRIAGE yok veya pencere içinde bitiyor",
+   "veri": "A hemşireleri: 2'sinde TRIAGE yok, A3'te 10:30'da bitiyor",
+   "beklenen": "Acil'e taşıma yok; açık raporlanır. Kontrol: geçerli TRIAGE ile yalnız A3 taşınır.",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     360.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     750.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     430.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 360,
+   "fazla_personel_dk": 700,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.043399999999999994,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "yayinlanabilir": true,
+    "tasima_yok": true,
+    "acik_raporlandi": true,
+    "kontrol_A3": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T9",
+   "alt": "a",
+   "amac": "Eksik/tutarsız plan → güvenli ret",
+   "veri": "Örtüşen vardiya (A1 aynı anda B'de)",
+   "beklenen": "MODEL_INVALID; doğrulayıcı aynı çözümü bu girdiyle reddeder",
+   "durum": "MODEL_INVALID",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "u3_gecersiz_plan:1:nurse",
+    "u3_gecersiz_plan:1:supervisor",
+    "u3_gecersiz_plan:1:support",
+    "u3_gecersiz_plan:2:nurse",
+    "u3_gecersiz_plan:2:supervisor",
+    "u3_gecersiz_plan:2:support",
+    "u3_gecersiz_plan:3:nurse",
+    "u3_gecersiz_plan:3:supervisor",
+    "u3_gecersiz_plan:3:support",
+    "u3_gecersiz_plan:4:nurse",
+    "u3_gecersiz_plan:4:supervisor",
+    "u3_gecersiz_plan:4:support"
+   ],
+   "tani": [],
+   "kontroller": {
+    "model_invalid": true,
+    "neden": true,
+    "oneri_yok": true,
+    "dogrulayici_listeler": true
+   },
+   "ek": {
+    "dogrulayici_ihlalleri": [
+     "H10_acik_tutarsiz:2:nurse",
+     "H1_cok_servisli_personel_tasindi:1001",
+     "H4_kapasite_tutarsiz:2:nurse:180!=240",
+     "amac_degeri_tutarsiz:O1_karsilanmayan_talep:60!=0",
+     "amac_degeri_tutarsiz:O2_denge:250!=0",
+     "girdi_gecersiz_plan:cakisan_vardiya:personel:1001:99/1"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T9",
+   "alt": "b",
+   "amac": "Eksik/tutarsız plan → güvenli ret",
+   "veri": "Yanlış rol (hemşireye sorumlu vardiyası)",
+   "beklenen": "MODEL_INVALID; doğrulayıcı aynı çözümü bu girdiyle reddeder",
+   "durum": "MODEL_INVALID",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "u3_gecersiz_plan:1:nurse",
+    "u3_gecersiz_plan:1:supervisor",
+    "u3_gecersiz_plan:1:support",
+    "u3_gecersiz_plan:2:nurse",
+    "u3_gecersiz_plan:2:supervisor",
+    "u3_gecersiz_plan:2:support",
+    "u3_gecersiz_plan:3:nurse",
+    "u3_gecersiz_plan:3:supervisor",
+    "u3_gecersiz_plan:3:support",
+    "u3_gecersiz_plan:4:nurse",
+    "u3_gecersiz_plan:4:supervisor",
+    "u3_gecersiz_plan:4:support"
+   ],
+   "tani": [],
+   "kontroller": {
+    "model_invalid": true,
+    "neden": true,
+    "oneri_yok": true,
+    "dogrulayici_listeler": true
+   },
+   "ek": {
+    "dogrulayici_ihlalleri": [
+     "girdi_gecersiz_plan:rol_uyusmuyor:vardiya:98",
+     "on_kosul_u3_durumu:1:nurse",
+     "on_kosul_u3_durumu:1:supervisor",
+     "on_kosul_u3_durumu:1:support",
+     "on_kosul_u3_durumu:2:nurse",
+     "on_kosul_u3_durumu:2:supervisor"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T9",
+   "alt": "c",
+   "amac": "Eksik/tutarsız plan → güvenli ret",
+   "veri": "Eksik asgari kural (Acil hemşire)",
+   "beklenen": "MODEL_INVALID; doğrulayıcı aynı çözümü bu girdiyle reddeder",
+   "durum": "MODEL_INVALID",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "u3_veri_eksik:3:nurse"
+   ],
+   "tani": [],
+   "kontroller": {
+    "model_invalid": true,
+    "neden": true,
+    "oneri_yok": true,
+    "dogrulayici_listeler": true
+   },
+   "ek": {
+    "dogrulayici_ihlalleri": [
+     "H7_kural_yok:3:nurse:2026-10-27T07:00:00+00:00",
+     "H7_kural_yok:3:nurse:2026-10-27T07:15:00+00:00",
+     "H7_kural_yok:3:nurse:2026-10-27T07:30:00+00:00",
+     "H7_kural_yok:3:nurse:2026-10-27T07:45:00+00:00",
+     "on_kosul_u3_durumu:3:nurse",
+     "yayin_aciklama_tutarsiz:3:nurse"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T9",
+   "alt": "d",
+   "amac": "Eksik/tutarsız plan → güvenli ret",
+   "veri": "Eksik çalışma takvimi (poliklinik)",
+   "beklenen": "MODEL_INVALID; doğrulayıcı aynı çözümü bu girdiyle reddeder",
+   "durum": "MODEL_INVALID",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "calisma_takvimi_dogrulanamadi:4:bilinmiyor",
+    "u3_veri_eksik:4:nurse",
+    "u3_veri_eksik:4:supervisor",
+    "u3_veri_eksik:4:support"
+   ],
+   "tani": [],
+   "kontroller": {
+    "model_invalid": true,
+    "neden": true,
+    "oneri_yok": true,
+    "dogrulayici_listeler": true
+   },
+   "ek": {
+    "dogrulayici_ihlalleri": [
+     "on_kosul_takvim_dogrulanamadi:4:bilinmiyor",
+     "on_kosul_u3_durumu:4:nurse",
+     "on_kosul_u3_durumu:4:supervisor",
+     "on_kosul_u3_durumu:4:support",
+     "yayin_aciklama_tutarsiz:4:nurse",
+     "yayin_aciklama_tutarsiz:4:supervisor"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T9",
+   "alt": "e",
+   "amac": "Eksik/tutarsız plan → güvenli ret",
+   "veri": "Eksik alan: ters aralıklı vardiya",
+   "beklenen": "MODEL_INVALID; doğrulayıcı aynı çözümü bu girdiyle reddeder",
+   "durum": "MODEL_INVALID",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "u3_gecersiz_plan:1:nurse",
+    "u3_gecersiz_plan:1:supervisor",
+    "u3_gecersiz_plan:1:support",
+    "u3_gecersiz_plan:2:nurse",
+    "u3_gecersiz_plan:2:supervisor",
+    "u3_gecersiz_plan:2:support",
+    "u3_gecersiz_plan:3:nurse",
+    "u3_gecersiz_plan:3:supervisor",
+    "u3_gecersiz_plan:3:support",
+    "u3_gecersiz_plan:4:nurse",
+    "u3_gecersiz_plan:4:supervisor",
+    "u3_gecersiz_plan:4:support"
+   ],
+   "tani": [],
+   "kontroller": {
+    "model_invalid": true,
+    "neden": true,
+    "oneri_yok": true,
+    "dogrulayici_listeler": true,
+    "h5_kodu": true
+   },
+   "ek": {
+    "dogrulayici_ihlalleri": [
+     "H5_gecersiz_vardiya_araligi:2001:97",
+     "girdi_gecersiz_plan:ters_aralik:vardiya:97",
+     "on_kosul_u3_durumu:1:nurse",
+     "on_kosul_u3_durumu:1:supervisor",
+     "on_kosul_u3_durumu:1:support",
+     "on_kosul_u3_durumu:2:nurse"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T10",
+   "alt": "a",
+   "amac": "Birlikte sağlanamayan asgari kurallar",
+   "veri": "B ve Acil asgari 3 (her biri 2 kişi); tek destek hemşiresi ikisine de yetkili",
+   "beklenen": "INFEASIBLE; birinde 2<3 atom tanısı",
+   "durum": "INFEASIBLE",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "INFEASIBLE",
+     null
+    ]
+   ],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0143,
+   "nedenler": [
+    "cozucu:O1_karsilanmayan_talep:INFEASIBLE"
+   ],
+   "tani": [
+    "H7_karsilanamaz:3:nurse:2026-10-27T07:00:00+00:00:2<3",
+    "H7_karsilanamaz:3:nurse:2026-10-27T07:15:00+00:00:2<3",
+    "H7_karsilanamaz:3:nurse:2026-10-27T07:30:00+00:00:2<3",
+    "H7_karsilanamaz:3:nurse:2026-10-27T07:45:00+00:00:2<3"
+   ],
+   "kontroller": {
+    "infeasible": true,
+    "oneri_yok": true,
+    "somut_atom": true
+   },
+   "ek": {
+    "tani": [
+     "H7_karsilanamaz:3:nurse:2026-10-27T07:00:00+00:00:2<3",
+     "H7_karsilanamaz:3:nurse:2026-10-27T07:15:00+00:00:2<3",
+     "H7_karsilanamaz:3:nurse:2026-10-27T07:30:00+00:00:2<3",
+     "H7_karsilanamaz:3:nurse:2026-10-27T07:45:00+00:00:2<3"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T11",
+   "alt": "a",
+   "amac": "Yüksek tahmin hatası riski → güvenli ret",
+   "veri": "Eğitim dışı girdi (Acil hasta sayısı) + görülmemiş kategori (A profili)",
+   "beklenen": "U1 inceleme; U4 inceleme_gerekli (küresel ret), öneri yok",
+   "durum": "inceleme_gerekli",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "u3_inceleme_gerekli:1:nurse",
+    "u3_inceleme_gerekli:1:supervisor",
+    "u3_inceleme_gerekli:1:support",
+    "u3_inceleme_gerekli:3:nurse",
+    "u3_inceleme_gerekli:3:supervisor",
+    "u3_inceleme_gerekli:3:support"
+   ],
+   "tani": [],
+   "kontroller": {
+    "u1_isaretledi": true,
+    "u4_guvenli_ret": true,
+    "u1_nedeni_raporda": true,
+    "oneri_yok": true
+   },
+   "ek": {
+    "u1_nedenler": [
+     "dagilim_disi:hasta_sayisi",
+     "gorulmemis_kategori:inpatient/yuksek_bilinmeyen",
+     "toplam_rol_tutarsiz",
+     "yuksek_goreli_tampon"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T11",
+   "alt": "b",
+   "amac": "Yüksek tahmin hatası riski → güvenli ret",
+   "veri": "Geçersiz girdi (B bekleyen_dk = NaN)",
+   "beklenen": "U1 inceleme; U4 MODEL_INVALID (talep yok, dondurulamaz), öneri yok",
+   "durum": "MODEL_INVALID",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "talep_veya_kullanim_orani_yok:2:nurse",
+    "talep_veya_kullanim_orani_yok:2:supervisor",
+    "talep_veya_kullanim_orani_yok:2:support",
+    "u3_inceleme_gerekli:2:nurse",
+    "u3_inceleme_gerekli:2:supervisor",
+    "u3_inceleme_gerekli:2:support"
+   ],
+   "tani": [],
+   "kontroller": {
+    "u1_isaretledi": true,
+    "u4_guvenli_ret": true,
+    "u1_nedeni_raporda": true,
+    "oneri_yok": true
+   },
+   "ek": {
+    "u1_nedenler": [
+     "gecerli_tahmin_yok",
+     "gecersiz_girdi:bekleyen_dk",
+     "toplam_rol_tutarsiz",
+     "yuksek_goreli_tampon"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T12",
+   "alt": "a",
+   "amac": "Uzlaştırma farkı > 2τ",
+   "veri": "Toplam 60 dk tahmini +10 000 dk; rol tahminleri değişmedi",
+   "beklenen": "U1 toplam_rol_tutarsiz; roller düşürülmez; U4 inceleme, öneri yok",
+   "durum": "inceleme_gerekli",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "u3_inceleme_gerekli:1:nurse",
+    "u3_inceleme_gerekli:1:supervisor",
+    "u3_inceleme_gerekli:1:support",
+    "u3_inceleme_gerekli:2:nurse",
+    "u3_inceleme_gerekli:2:supervisor",
+    "u3_inceleme_gerekli:2:support",
+    "u3_inceleme_gerekli:3:nurse",
+    "u3_inceleme_gerekli:3:supervisor",
+    "u3_inceleme_gerekli:3:support",
+    "u3_inceleme_gerekli:4:nurse",
+    "u3_inceleme_gerekli:4:supervisor",
+    "u3_inceleme_gerekli:4:support"
+   ],
+   "tani": [],
+   "kontroller": {
+    "u1_tutarsiz": true,
+    "roller_ayni": true,
+    "u4_inceleme": true,
+    "oneri_yok": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T13",
+   "alt": "a",
+   "amac": "Bilgi sızıntısı yok",
+   "veri": "t'den sonra yayımlanan ek B vardiyası",
+   "beklenen": "Çözüm içeriği ve özeti t görünümüyle birebir aynı",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     240.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 60,
+   "fazla_personel_dk": 500,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.0248,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "ayni_ozet": true,
+    "yayinlanabilir": true
+   },
+   "ek": {
+    "ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab",
+    "temel_ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab"
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T13",
+   "alt": "b",
+   "amac": "Bilgi sızıntısı yok",
+   "veri": "t'den sonra iptal edilen B vardiyası",
+   "beklenen": "Çözüm içeriği ve özeti t görünümüyle birebir aynı",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     240.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 60,
+   "fazla_personel_dk": 500,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.0255,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "ayni_ozet": true,
+    "yayinlanabilir": true
+   },
+   "ek": {
+    "ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab",
+    "temel_ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab"
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T13",
+   "alt": "c",
+   "amac": "Bilgi sızıntısı yok",
+   "veri": "t'den sonra bildirilen B devamsızlığı",
+   "beklenen": "Çözüm içeriği ve özeti t görünümüyle birebir aynı",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     240.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 60,
+   "fazla_personel_dk": 500,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.0354,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "ayni_ozet": true,
+    "yayinlanabilir": true
+   },
+   "ek": {
+    "ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab",
+    "temel_ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab"
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T13",
+   "alt": "d",
+   "amac": "Bilgi sızıntısı yok",
+   "veri": "t'den sonra bilinen daha katı A kuralı",
+   "beklenen": "Çözüm içeriği ve özeti t görünümüyle birebir aynı",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     240.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 60,
+   "fazla_personel_dk": 500,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.025,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "ayni_ozet": true,
+    "yayinlanabilir": true
+   },
+   "ek": {
+    "ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab",
+    "temel_ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab"
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T13",
+   "alt": "e",
+   "amac": "Bilgi sızıntısı yok",
+   "veri": "t'den sonra onaylanan kilit",
+   "beklenen": "Çözüm içeriği ve özeti t görünümüyle birebir aynı",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     240.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 60,
+   "fazla_personel_dk": 500,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.0247,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "ayni_ozet": true,
+    "yayinlanabilir": true
+   },
+   "ek": {
+    "ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab",
+    "temel_ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab"
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T13",
+   "alt": "f",
+   "amac": "Bilgi sızıntısı yok",
+   "veri": "t'den sonra bilinen destek kuralı",
+   "beklenen": "Çözüm içeriği ve özeti t görünümüyle birebir aynı",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     240.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 60,
+   "fazla_personel_dk": 500,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.025,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "ayni_ozet": true,
+    "yayinlanabilir": true
+   },
+   "ek": {
+    "ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab",
+    "temel_ozet": "a07e80811a0a8c0d7a63644f27409b9a1cd1d5bdb1664dffd61ffabd75d74bab"
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T14",
+   "alt": "a",
+   "amac": "Zaman aşımı, çözüm yok",
+   "veri": "max_time_in_seconds = 0",
+   "beklenen": "UNKNOWN; öneri yok",
+   "durum": "UNKNOWN",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "UNKNOWN",
+     null
+    ]
+   ],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0062,
+   "nedenler": [
+    "cozucu:O1_karsilanmayan_talep:UNKNOWN"
+   ],
+   "tani": [],
+   "kontroller": {
+    "unknown": true,
+    "oneri_yok": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T14",
+   "alt": "b",
+   "amac": "O1 aşaması FEASIBLE bitti",
+   "veri": "O1 durumu FEASIBLE olarak bildirildi (çözüm gerçek)",
+   "beklenen": "FEASIBLE; O1 optimal değil; sözlük sırası tam değil; yalnız doğrulanmışsa yayın",
+   "durum": "FEASIBLE",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "FEASIBLE",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     330.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 60,
+   "fazla_personel_dk": 600,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.0244,
+   "nedenler": [
+    "asama_optimal_degil:O1_karsilanmayan_talep"
+   ],
+   "tani": [],
+   "kontroller": {
+    "feasible": true,
+    "etiket": true,
+    "tam_degil": true,
+    "dogrulandi": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T14",
+   "alt": "c",
+   "amac": "O3 aşamasında çözüm yok",
+   "veri": "O3 UNKNOWN",
+   "beklenen": "FEASIBLE; O2 sonrası doğrulanmış çözüm korunur; tam değil",
+   "durum": "FEASIBLE",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "UNKNOWN",
+     null
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 60,
+   "fazla_personel_dk": 600,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.0209,
+   "nedenler": [
+    "sozluk_sirasi_tamamlanamadi:O3_hareket:UNKNOWN"
+   ],
+   "tani": [],
+   "kontroller": {
+    "feasible": true,
+    "uc_asama": true,
+    "uyari": true,
+    "dogrulandi": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T14",
+   "alt": "d",
+   "amac": "Doğrulayıcı geçmezse yayın yok",
+   "veri": "OPTIMAL çözüm, doğrulayıcı reddediyor",
+   "beklenen": "OPTIMAL ama oneri_yayinlanabilir = false, taşıma listesi boş",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     60.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     250.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     330.0
+    ]
+   ],
+   "dogrulama": false,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0218,
+   "nedenler": [
+    "dogrulayici_reddetti"
+   ],
+   "tani": [],
+   "kontroller": {
+    "optimal": true,
+    "oneri_yok": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "T15",
+   "alt": "a",
+   "amac": "Tekrarlanabilirlik",
+   "veri": "Aynı girdi, tek işçi, tohum 0; aynı süreçte iki kez ve yeni süreçte bir kez",
+   "beklenen": "Aynı çözüm içeriği, aynı SHA-256 ve aynı aşama değerleri",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     420.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     625.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     1.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     240.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": true,
+   "acik_personel_dk": 420,
+   "fazla_personel_dk": 480,
+   "tasima_sayisi": 1,
+   "sure_sn": 0.0292,
+   "nedenler": [],
+   "tani": [],
+   "kontroller": {
+    "ayni_icerik": true,
+    "ayni_asamalar": true,
+    "yeni_surec_ozet": true
+   },
+   "ek": {
+    "ozet": "d95185dc75e00f48dc820ce61c08b03185d0b6ebc148d74485bf85e5d1fab5d7",
+    "yeni_surec_ozet": "d95185dc75e00f48dc820ce61c08b03185d0b6ebc148d74485bf85e5d1fab5d7"
+   },
+   "sonuc": "gecti"
+  }
+ ],
+ "deneysel_dondurma": [
+  {
+   "kimlik": "D-T3",
+   "alt": "a",
+   "amac": "Acil yüksek hacim: göreli tampon eşiği aşılırsa inceleme; tehlikeli öneri yok",
+   "veri": "ed_volume_profile=yuksek (28 gün) karar anı satırları; küçük RF + U1 kalibrasyonu (normal veride); eşik B/ŷ > 0,5 ve B > 10 dk",
+   "beklenen": "Eşiği aşan Acil satırı inceleme_gerekli; DENEYSEL K1: işaretli çift dondurulur, Acil'e giriş/çıkış yok; çözüm varsa doğrulanmış kısmi, yayın yok",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     2639.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     909.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     60.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": 2669,
+   "fazla_personel_dk": 140,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0293,
+   "nedenler": [
+    "deneysel_mod:test:klinik_onay_yok:yayin_kapali",
+    "kismi_oneri:dondurulan_servis_rol=1"
+   ],
+   "tani": [],
+   "kontroller": {
+    "esik_kurali_birebir": true,
+    "en_az_bir_inceleme": true,
+    "isaretliler_donduruldu_veya_ret": true,
+    "dondurulana_giris_cikis_yok": true,
+    "deneysel_yayin_yok": true,
+    "deneysel_sizinti_yok": true,
+    "cozum_dogrulanmis_kismi": true
+   },
+   "ek": {
+    "acil_B_bolu_yhat": {
+     "nurse": 0.483,
+     "supervisor": 0.0,
+     "support": 1.335
+    },
+    "esik_asildi": {
+     "nurse": false,
+     "supervisor": false,
+     "support": true
+    },
+    "test_donemi_acil": {
+     "nurse": {
+      "inceleme_orani": 0.555,
+      "yuksek_goreli_tampon_orani": 0.335,
+      "B_bolu_yhat_medyan": 0.483
+     },
+     "supervisor": {
+      "inceleme_orani": 0.229,
+      "yuksek_goreli_tampon_orani": 0.0,
+      "B_bolu_yhat_medyan": 0.0
+     },
+     "support": {
+      "inceleme_orani": 0.571,
+      "yuksek_goreli_tampon_orani": 0.561,
+      "B_bolu_yhat_medyan": 1.335
+     }
+    },
+    "not": "Acil profili yüksek hacimde de 'temel' kalır; görülmemiş kategori uyarısı oluşmaz."
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "D-T4",
+   "alt": "a",
+   "amac": "Poliklinik saatleri ve tatil",
+   "veri": "29 Ekim tam gün tatil 10:00; A→poliklinik destek kuralı tanımlı",
+   "beklenen": "Doğrulanmış kapalı: talep 0, polikliniğe taşıma yok",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     490.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": 0,
+   "fazla_personel_dk": 760,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0197,
+   "nedenler": [
+    "deneysel_mod:test:klinik_onay_yok:yayin_kapali"
+   ],
+   "tani": [],
+   "kontroller": {
+    "cozum": true,
+    "polikliniğe_tasima_yok": true,
+    "poliklinik_kisi_0": true,
+    "deneysel_sizinti_yok": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "D-T4",
+   "alt": "b",
+   "amac": "Poliklinik saatleri ve tatil",
+   "veri": "28 Ekim yarım gün 14:00 (13:00 sonrası); A→poliklinik destek kuralı tanımlı",
+   "beklenen": "Doğrulanmış kapalı: talep 0, polikliniğe taşıma yok",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     490.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": 0,
+   "fazla_personel_dk": 760,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0193,
+   "nedenler": [
+    "deneysel_mod:test:klinik_onay_yok:yayin_kapali"
+   ],
+   "tani": [],
+   "kontroller": {
+    "cozum": true,
+    "polikliniğe_tasima_yok": true,
+    "poliklinik_kisi_0": true,
+    "deneysel_sizinti_yok": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "D-T4",
+   "alt": "c",
+   "amac": "Poliklinik saatleri ve tatil",
+   "veri": "Hafta içi 18:00 (kapanış sonrası); A→poliklinik destek kuralı tanımlı",
+   "beklenen": "Doğrulanmış kapalı: talep 0, polikliniğe taşıma yok",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     490.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": 0,
+   "fazla_personel_dk": 760,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0202,
+   "nedenler": [
+    "deneysel_mod:test:klinik_onay_yok:yayin_kapali"
+   ],
+   "tani": [],
+   "kontroller": {
+    "cozum": true,
+    "polikliniğe_tasima_yok": true,
+    "poliklinik_kisi_0": true,
+    "deneysel_sizinti_yok": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "D-T4",
+   "alt": "d",
+   "amac": "Poliklinik saatleri ve tatil",
+   "veri": "28 Ekim yarım gün 12:30 (kısmi açık); A→poliklinik destek kuralı tanımlı",
+   "beklenen": "Kısmi açık, DENEYSEL K1: poliklinik (bütün roller) dondurulur; polikliniğe/poliklinikten taşıma yok; doğrulanmış kısmi çözüm, yayın yok",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     490.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": 0,
+   "fazla_personel_dk": 790,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0203,
+   "nedenler": [
+    "deneysel_mod:test:klinik_onay_yok:yayin_kapali",
+    "kismi_oneri:dondurulan_servis_rol=3"
+   ],
+   "tani": [],
+   "kontroller": {
+    "poliklinik_donduruldu": true,
+    "isaretliler_donduruldu_veya_ret": true,
+    "dondurulana_giris_cikis_yok": true,
+    "deneysel_yayin_yok": true,
+    "deneysel_sizinti_yok": true,
+    "cozum_dogrulanmis_kismi": true,
+    "polikliniğe_tasima_yok": true,
+    "dogrulanmis_kismi_cozum": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "D-T11",
+   "alt": "a",
+   "amac": "Yüksek tahmin hatası riski → güvenli ret",
+   "veri": "Eğitim dışı girdi (Acil hasta sayısı) + görülmemiş kategori (A profili)",
+   "beklenen": "U1 inceleme; DENEYSEL K1: işaretli çiftler dondurulur (giriş/çıkış yok) ya da küresel ret; yayın yok",
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     1448.0
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     909.0
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     30.0
+    ]
+   ],
+   "dogrulama": true,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": 1803,
+   "fazla_personel_dk": 147,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.021,
+   "nedenler": [
+    "deneysel_mod:test:klinik_onay_yok:yayin_kapali",
+    "kismi_oneri:dondurulan_servis_rol=6"
+   ],
+   "tani": [],
+   "kontroller": {
+    "u1_isaretledi": true,
+    "isaretliler_donduruldu_veya_ret": true,
+    "dondurulana_giris_cikis_yok": true,
+    "deneysel_yayin_yok": true,
+    "deneysel_sizinti_yok": true,
+    "cozum_dogrulanmis_kismi": true
+   },
+   "ek": {
+    "u1_nedenler": [
+     "dagilim_disi:hasta_sayisi",
+     "gorulmemis_kategori:inpatient/yuksek_bilinmeyen",
+     "toplam_rol_tutarsiz",
+     "yuksek_goreli_tampon"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "D-T11",
+   "alt": "b",
+   "amac": "Yüksek tahmin hatası riski → güvenli ret",
+   "veri": "Geçersiz girdi (B bekleyen_dk = NaN)",
+   "beklenen": "U1 inceleme; U4 MODEL_INVALID (talep yok, dondurulamaz), öneri yok",
+   "durum": "MODEL_INVALID",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0002,
+   "nedenler": [
+    "talep_veya_kullanim_orani_yok:2:nurse",
+    "talep_veya_kullanim_orani_yok:2:supervisor",
+    "talep_veya_kullanim_orani_yok:2:support",
+    "u3_inceleme_gerekli:2:nurse",
+    "u3_inceleme_gerekli:2:supervisor",
+    "u3_inceleme_gerekli:2:support",
+    "deneysel_mod:test:klinik_onay_yok:yayin_kapali"
+   ],
+   "tani": [],
+   "kontroller": {
+    "u1_isaretledi": true,
+    "u4_guvenli_ret": true,
+    "u1_nedeni_raporda": true,
+    "oneri_yok": true,
+    "deneysel_sizinti_yok": true
+   },
+   "ek": {
+    "u1_nedenler": [
+     "gecerli_tahmin_yok",
+     "gecersiz_girdi:bekleyen_dk",
+     "toplam_rol_tutarsiz",
+     "yuksek_goreli_tampon"
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "D-T12",
+   "alt": "a",
+   "amac": "Uzlaştırma farkı > 2τ",
+   "veri": "Toplam 60 dk tahmini +10 000 dk; rol tahminleri değişmedi",
+   "beklenen": "U1 toplam_rol_tutarsiz; roller düşürülmez; U4 inceleme, öneri yok; DENEYSEL K1: bütün çiftler donar",
+   "durum": "inceleme_gerekli",
+   "asamalar": [],
+   "dogrulama": null,
+   "oneri_yayinlanabilir": false,
+   "acik_personel_dk": null,
+   "fazla_personel_dk": null,
+   "tasima_sayisi": 0,
+   "sure_sn": 0.0014,
+   "nedenler": [
+    "tum_servis_roller_donduruldu",
+    "deneysel_mod:test:klinik_onay_yok:yayin_kapali"
+   ],
+   "tani": [],
+   "kontroller": {
+    "u1_tutarsiz": true,
+    "roller_ayni": true,
+    "u4_inceleme": true,
+    "oneri_yok": true,
+    "tum_ciftler_donduruldu": true,
+    "deneysel_sizinti_yok": true
+   },
+   "ek": {},
+   "sonuc": "gecti"
+  }
+ ],
+ "saldirilar": [
+  {
+   "saldiri": "Çift servis ataması",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H1_cift_atama",
+   "kodlar": [
+    "H10_acik_tutarsiz:2:nurse",
+    "H10_fazla_tutarsiz:1:nurse",
+    "H1_cift_atama:1003",
+    "H4_kapasite_tutarsiz:1:nurse:120!=180",
+    "H4_kapasite_tutarsiz:2:nurse:180!=120",
+    "amac_degeri_tutarsiz:O1_karsilanmayan_talep:60!=120"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Yanlış rol",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H2_rol_degisti",
+   "kodlar": [
+    "H2_rol_degisti:2001"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Yetkisiz taşıma (Acil'e)",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H6_tasima_yetkisi_yok",
+   "kodlar": [
+    "H10_fazla_tutarsiz:1:nurse",
+    "H10_fazla_tutarsiz:3:nurse",
+    "H4_kapasite_tutarsiz:1:nurse:120!=60",
+    "H4_kapasite_tutarsiz:3:nurse:120!=180",
+    "H6_tasima_yetkisi_yok:1001:3",
+    "H7_asgari_alti:1:nurse:2026-10-27T07:00:00+00:00:1<2"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Onay kilidini bozma (kilitli kişiyi başka servise)",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H8_kilit_ihlali",
+   "kodlar": [
+    "H10_acik_tutarsiz:3:nurse",
+    "H10_fazla_tutarsiz:1:nurse",
+    "H4_kapasite_tutarsiz:1:nurse:120!=180",
+    "H4_kapasite_tutarsiz:3:nurse:180!=120",
+    "H8_kilit_ihlali:1003",
+    "amac_degeri_tutarsiz:O1_karsilanmayan_talep:20!=80"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Kilit bitişini yanlış gösterme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "yayin_kilitli_yerlesimler_tutarsiz",
+   "kodlar": [
+    "yayin_kilitli_yerlesimler_tutarsiz"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Vardiya dışı kapasite (10:20'de çıkan kişiyi tam sayma)",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H4_kapasite_tutarsiz",
+   "kodlar": [
+    "H4_kapasite_tutarsiz:2:nurse:180!=140"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Mola/izni kapasiteye geri ekleme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H4_kapasite_tutarsiz",
+   "kodlar": [
+    "H4_kapasite_tutarsiz:2:nurse:180!=135"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Asgari personel ihlali (A'dan ikinci hemşireyi alma)",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H7_asgari_alti",
+   "kodlar": [
+    "H10_acik_tutarsiz:2:nurse",
+    "H10_fazla_tutarsiz:1:nurse",
+    "H4_kapasite_tutarsiz:1:nurse:120!=60",
+    "H4_kapasite_tutarsiz:2:nurse:180!=240",
+    "H7_asgari_alti:1:nurse:2026-10-27T07:00:00+00:00:1<2",
+    "H7_asgari_alti:1:nurse:2026-10-27T07:15:00+00:00:1<2"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Talep manipülasyonu",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H10_talep_tutarsiz",
+   "kodlar": [
+    "H10_talep_tutarsiz:2:nurse"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Açık manipülasyonu",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H10_acik_tutarsiz",
+   "kodlar": [
+    "H10_acik_tutarsiz:2:nurse"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Fazla manipülasyonu",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "H10_fazla_tutarsiz",
+   "kodlar": [
+    "H10_fazla_tutarsiz:1:nurse"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Taşıma hedefini değiştirme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "yayin_tasimalar_tutarsiz",
+   "kodlar": [
+    "yayin_tasimalar_tutarsiz"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Taşıma personelini değiştirme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "yayin_tasimalar_tutarsiz",
+   "kodlar": [
+    "yayin_tasimalar_tutarsiz"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Açıklama atomunu değiştirme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "yayin_aciklama_tutarsiz",
+   "kodlar": [
+    "yayin_aciklama_tutarsiz:1:nurse"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Amaç değerini küçük gösterme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "amac_degeri_tutarsiz:O1",
+   "kodlar": [
+    "amac_degeri_tutarsiz:O1_karsilanmayan_talep:0!=60"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Amaç değerini büyük gösterme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "amac_degeri_tutarsiz:O4",
+   "kodlar": [
+    "amac_degeri_tutarsiz:O4_fazla_kapasite:99999!=240"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Dondurulan çifte giriş",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "dondurma_ihlali_giris",
+   "kodlar": [
+    "H10_acik_tutarsiz:2:nurse",
+    "H10_fazla_tutarsiz:1:nurse",
+    "H4_kapasite_tutarsiz:1:nurse:180!=120",
+    "H4_kapasite_tutarsiz:2:nurse:120!=180",
+    "amac_degeri_tutarsiz:O3_hareket:0!=1",
+    "amac_degeri_tutarsiz:O4_fazla_kapasite:390!=330"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Belirsiz servisten çıkış (başka rol)",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "dondurma_ihlali_cikis",
+   "kodlar": [
+    "H10_acik_tutarsiz:2:nurse",
+    "H10_fazla_tutarsiz:3:nurse",
+    "H4_kapasite_tutarsiz:2:nurse:120!=180",
+    "H4_kapasite_tutarsiz:3:nurse:120!=60",
+    "amac_degeri_tutarsiz:O1_karsilanmayan_talep:120!=60",
+    "amac_degeri_tutarsiz:O2_denge:500!=250"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Dondurma kümesini daraltma",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "dondurma_kumesi_tutarsiz",
+   "kodlar": [
+    "dondurma_kumesi_tutarsiz"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Politikayı küresel gösterme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "on_kosul_u3_durumu",
+   "kodlar": [
+    "amac_degeri_tutarsiz:O1_karsilanmayan_talep:0!=240",
+    "amac_degeri_tutarsiz:O2_denge:0!=667",
+    "dondurma_kumesi_tutarsiz",
+    "on_kosul_u3_durumu:2:nurse",
+    "oneri_kapsami_tutarsiz",
+    "yayin_aciklama_tutarsiz:2:nurse"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Kısmi öneriyi tam gösterme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "oneri_kapsami_tutarsiz",
+   "kodlar": [
+    "oneri_kapsami_tutarsiz"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Deneysel etiketi silme",
+   "ozet_yeniden_hesaplandi": true,
+   "reddedildi": true,
+   "beklenen_kod": "dondurma_deneysel_mod_eksik",
+   "kodlar": [
+    "dondurma_deneysel_mod_eksik"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Gerekli yetkinliği kaldırma (girdi)",
+   "ozet_yeniden_hesaplandi": null,
+   "reddedildi": true,
+   "beklenen_kod": "H3_yetkinlik_eksik",
+   "kodlar": [
+    "H3_yetkinlik_eksik:1003:2",
+    "yayin_tasimalar_tutarsiz"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Kilit süresini kısaltma (girdi)",
+   "ozet_yeniden_hesaplandi": null,
+   "reddedildi": true,
+   "beklenen_kod": "H8_asgari_kalis_saglanmiyor",
+   "kodlar": [
+    "H8_asgari_kalis_saglanmiyor:1003:3",
+    "yayin_aciklama_tutarsiz:1:nurse",
+    "yayin_aciklama_tutarsiz:1:supervisor",
+    "yayin_aciklama_tutarsiz:1:support",
+    "yayin_aciklama_tutarsiz:2:nurse",
+    "yayin_aciklama_tutarsiz:2:supervisor"
+   ],
+   "sonuc": "gecti"
+  },
+  {
+   "saldiri": "Özeti güncellemeden değişiklik (yalnız bütünlük)",
+   "ozet_yeniden_hesaplandi": false,
+   "reddedildi": true,
+   "beklenen_kod": "ozet_uyusmuyor",
+   "kodlar": [
+    "ozet_uyusmuyor",
+    "yayin_tasimalar_tutarsiz"
+   ],
+   "sonuc": "gecti"
+  }
+ ],
+ "sozluk_sirasi": [
+  {
+   "kimlik": "L1",
+   "varsayim": "B D360, kapasite 120; A 3 hemşire asgari 1",
+   "beklenen": "2 taşıma (O1 360→… en küçük), O3 = 2",
+   "gercek": {
+    "tasima": 2,
+    "O1_karsilanmayan_talep": 120.0,
+    "O2_denge": 334.0,
+    "O3_hareket": 2.0,
+    "O4_fazla_kapasite": 310.0,
+    "durum": "OPTIMAL"
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "L2",
+   "varsayim": "Tek destek hemşiresi; B D240, Acil D480; iki seçenekte O1 = 420",
+   "beklenen": "Acil (O2 625 < 750)",
+   "gercek": {
+    "tasimalar": [
+     [
+      1003,
+      1,
+      3
+     ]
+    ],
+    "O1_karsilanmayan_talep": 420.0,
+    "O2_denge": 625.0,
+    "O3_hareket": 1.0,
+    "O4_fazla_kapasite": 280.0
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "L3",
+   "varsayim": "B açığı 60; A1 tam (60 dk), A2 ve A3 yarım (30+30); A asgari 1",
+   "beklenen": "1 taşıma (A1), 2 yarım kişi değil; O1 = 0",
+   "gercek": {
+    "tasimalar": [
+     [
+      1001,
+      1,
+      2
+     ]
+    ],
+    "O1_karsilanmayan_talep": 0.0,
+    "O2_denge": 0.0,
+    "O3_hareket": 1.0,
+    "O4_fazla_kapasite": 310.0
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "L4",
+   "varsayim": "B açığı 60; A ve Acil'de fazla; tolerans A 0, Acil 1000",
+   "beklenen": "Taşıma A'dan (A'nın tolerans üstü fazlası azalır)",
+   "gercek": {
+    "tasimalar": [
+     [
+      1003,
+      1,
+      2
+     ]
+    ],
+    "O1_karsilanmayan_talep": 0.0,
+    "O2_denge": 0.0,
+    "O3_hareket": 1.0,
+    "O4_fazla_kapasite": 220.0
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "L5",
+   "varsayim": "B'de açık yok; A'da tolerans üstü fazla",
+   "beklenen": "0 taşıma; O4 > 0",
+   "gercek": {
+    "tasimalar": [],
+    "O1_karsilanmayan_talep": 0.0,
+    "O2_denge": 0.0,
+    "O3_hareket": 0.0,
+    "O4_fazla_kapasite": 280.0
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "L6",
+   "varsayim": "O1 FEASIBLE bildirildi",
+   "beklenen": "FEASIBLE, optimal=false, sözlük tam değil",
+   "gercek": {
+    "durum": "FEASIBLE",
+    "asamalar": [
+     [
+      "O1_karsilanmayan_talep",
+      "FEASIBLE",
+      60.0
+     ],
+     [
+      "O2_denge",
+      "OPTIMAL",
+      250.0
+     ],
+     [
+      "O3_hareket",
+      "OPTIMAL",
+      1.0
+     ],
+     [
+      "O4_fazla_kapasite",
+      "OPTIMAL",
+      330.0
+     ]
+    ]
+   },
+   "sonuc": "gecti"
+  },
+  {
+   "kimlik": "L7",
+   "varsayim": "O3 UNKNOWN",
+   "beklenen": "Doğrulanmış O2 çözümü korunur; tam değil",
+   "gercek": {
+    "durum": "FEASIBLE",
+    "asamalar": [
+     [
+      "O1_karsilanmayan_talep",
+      "OPTIMAL",
+      60.0
+     ],
+     [
+      "O2_denge",
+      "OPTIMAL",
+      250.0
+     ],
+     [
+      "O3_hareket",
+      "UNKNOWN",
+      null
+     ]
+    ]
+   },
+   "sonuc": "gecti"
+  }
+ ],
+ "performans": {
+  "P1_mevcut_yaklasik_40": {
+   "personel": 39,
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.009
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0047
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0055
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     0.0046
+    ]
+   ],
+   "cozucu_sn": 0.0238,
+   "toplam_sn": 0.12,
+   "dogrulayici_sn": 0.0037,
+   "dogrulama": true,
+   "python_bellek_tepe_mb": 0.2,
+   "degisken": 173,
+   "kisit": 170,
+   "tasima": 2,
+   "tutarli": true,
+   "nedenler": []
+  },
+  "P2_x2": {
+   "personel": 78,
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0153
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0088
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0112
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     0.0145
+    ]
+   ],
+   "cozucu_sn": 0.0498,
+   "toplam_sn": 0.2021,
+   "dogrulayici_sn": 0.0054,
+   "dogrulama": true,
+   "python_bellek_tepe_mb": 0.3,
+   "degisken": 285,
+   "kisit": 248,
+   "tasima": 4,
+   "tutarli": true,
+   "nedenler": []
+  },
+  "P3_x5": {
+   "personel": 195,
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0488
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.3262
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0276
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     0.6599
+    ]
+   ],
+   "cozucu_sn": 1.0625,
+   "toplam_sn": 1.3891,
+   "dogrulayici_sn": 0.0113,
+   "dogrulama": true,
+   "python_bellek_tepe_mb": 0.62,
+   "degisken": 621,
+   "kisit": 482,
+   "tasima": 10,
+   "tutarli": true,
+   "nedenler": []
+  },
+  "P4_x5_cok_secenek": {
+   "personel": 195,
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0701
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0366
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0623
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     0.0553
+    ]
+   ],
+   "cozucu_sn": 0.2243,
+   "toplam_sn": 0.6416,
+   "dogrulayici_sn": 0.0168,
+   "dogrulama": true,
+   "python_bellek_tepe_mb": 0.65,
+   "degisken": 716,
+   "kisit": 482,
+   "tasima": 24,
+   "tutarli": true,
+   "nedenler": []
+  },
+  "P5_x5_cok_atom": {
+   "personel": 195,
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.0523
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.0375
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.0452
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     0.0517
+    ]
+   ],
+   "cozucu_sn": 0.1867,
+   "toplam_sn": 0.7068,
+   "dogrulayici_sn": 0.0256,
+   "dogrulama": true,
+   "python_bellek_tepe_mb": 0.76,
+   "degisken": 621,
+   "kisit": 538,
+   "tasima": 27,
+   "tutarli": true,
+   "nedenler": []
+  },
+  "P6_x10_cok_secenek_cok_atom": {
+   "personel": 390,
+   "durum": "OPTIMAL",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "OPTIMAL",
+     0.2164
+    ],
+    [
+     "O2_denge",
+     "OPTIMAL",
+     0.3021
+    ],
+    [
+     "O3_hareket",
+     "OPTIMAL",
+     0.2006
+    ],
+    [
+     "O4_fazla_kapasite",
+     "OPTIMAL",
+     0.1908
+    ]
+   ],
+   "cozucu_sn": 0.9099,
+   "toplam_sn": 2.0525,
+   "dogrulayici_sn": 0.0361,
+   "dogrulama": true,
+   "python_bellek_tepe_mb": 1.38,
+   "degisken": 1371,
+   "kisit": 928,
+   "tasima": 71,
+   "tutarli": true,
+   "nedenler": []
+  },
+  "P7_x10_kisa_sure_0_05sn": {
+   "personel": 390,
+   "durum": "UNKNOWN",
+   "asamalar": [
+    [
+     "O1_karsilanmayan_talep",
+     "UNKNOWN",
+     0.0398
+    ]
+   ],
+   "cozucu_sn": 0.0398,
+   "toplam_sn": 0.6693,
+   "dogrulayici_sn": null,
+   "dogrulama": null,
+   "python_bellek_tepe_mb": 0.62,
+   "degisken": 1371,
+   "kisit": 928,
+   "tasima": 0,
+   "tutarli": true,
+   "nedenler": [
+    "cozucu:O1_karsilanmayan_talep:UNKNOWN"
+   ]
+  }
+ },
+ "sure_sn": 68.2
+}

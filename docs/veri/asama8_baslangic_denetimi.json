@@ -1,0 +1,40 @@
+{
+ "zaman": "2026-11-24T06:34:56.594472+00:00",
+ "anlik_goruntu": {
+  "ram_total_gb": 15.8,
+  "ram_free_gb": 5.6,
+  "gpu_name": "NVIDIA GeForce GTX 1660 Ti",
+  "vram_total_mib": 6144,
+  "vram_used_mib": 0,
+  "driver": "572.60",
+  "disk_free_gb": {
+   "C": 12.0,
+   "D": 197.7
+  },
+  "ollama_version": "0.40.17",
+  "installed": {
+   "bge-m3:latest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+   "qwen3-embedding:0.6b": "ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d",
+   "qwen2.5:1.5b": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+   "embeddinggemma:latest": "85462619ee721b466c5927d109d4cb765861907d5417b9109caebc4e614679f1",
+   "hf.co/ytu-ce-cosmos/Turkish-Gemma-9b-T1-GGUF:IQ3_XS": "7887c2fe02a7948a9a1ecf6459910a530b5434da25eb5538b27fd62cf15420c4",
+   "gemma3:4b": "68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7",
+   "hf.co/ytu-ce-cosmos/Turkish-Gemma-9b-T1-GGUF:IQ4_XS": "5c03deb9e5a1ec7b8a2ff7ec26d9cf274a091789e2d047ff8f6094d5a2c2f2e7",
+   "qwen3.5:4b": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+   "qwen2.5-coder:7b": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364"
+  },
+  "loaded": [],
+  "models_drive": "D:",
+  "store_drive": "D:",
+  "system_drive": "C:",
+  "vram_bos_mib": 6144
+ },
+ "ollama_models": "D:\\ollama\\models",
+ "rag_deposu": "D:<proje>/data/rag",
+ "yuklu_model_bellek": [],
+ "istenen_profil": "gpu_standart",
+ "secilen_profil": "gpu_standart",
+ "uretici": "gemma3:4b",
+ "elenen_profiller": [],
+ "uyarilar": []
+}

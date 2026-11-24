@@ -1,0 +1,6892 @@
+{
+ "ozet": {
+  "an_sayisi": 104,
+  "durumlar": {
+   "OPTIMAL": 98,
+   "FEASIBLE": 6
+  },
+  "gosterilebilir": 104,
+  "yeniden_dogrulama_hepsi": true,
+  "ihlal_toplam": 0,
+  "gercek_atama_veya_kayit": 0,
+  "kapsamdaki_gorev": 8591,
+  "sonraki_pencere_gorev": 35321,
+  "iptal_zamani_belirsiz_gorev_ust": 0,
+  "atanan_gorev": 3038,
+  "atanmayan_gorev": 5553,
+  "atanmayan_nedenleri": {
+   "son_tarih_gecmis": 3877,
+   "son_tarihe_kadar_sure_yetmiyor": 313,
+   "kapasite_yetersiz": 1315,
+   "uygun_zaman_araligi_yok": 23,
+   "rol_yetkinlik_vardiya_uygun_personel_yok": 25
+  },
+  "acik_dk_nedenleri": {
+   "son_tarih_gecmis": 41743,
+   "son_tarihe_kadar_sure_yetmiyor": 4348,
+   "kapasite_yetersiz": 12024,
+   "uygun_zaman_araligi_yok": 346,
+   "rol_yetkinlik_vardiya_uygun_personel_yok": 150
+  },
+  "somut_gorev_dk": 91223,
+  "atanan_dk": 32612,
+  "rol_bazinda": {
+   "nurse": {
+    "atanan": 2429,
+    "atanmayan": 3101
+   },
+   "supervisor": {
+    "atanan": 486,
+    "atanmayan": 1131
+   },
+   "support": {
+    "atanan": 123,
+    "atanmayan": 1321
+   }
+  },
+  "rezerv_toplam_dk": 8355.388,
+  "sozluk_sirali_tam": 98,
+  "sure_ortalama_sn": 1.6001,
+  "sure_en_buyuk_sn": 20.3501
+ },
+ "calistirmalar": [
+  {
+   "an": "2026-10-28T09:30:00+00:00",
+   "yerel": "2026-10-28 12:30",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     174.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     4.0
+    ]
+   ],
+   "sure_sn": 0.4145,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 64,
+    "sonraki_pencere_gorev": 283,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 790,
+    "atanan_dk": 355
+   },
+   "atanan_gorev": 29,
+   "atanmayan_gorev": 35,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 19,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 15
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 249,
+    "son_tarihe_kadar_sure_yetmiyor": 12,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 174
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 435,
+    "O2_yuk_farki_dk": 4
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 28,
+     "atanmayan": 35
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 76.764,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2026-10-28T11:00:00+00:00",
+   "yerel": "2026-10-28 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     15.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     18.0
+    ]
+   ],
+   "sure_sn": 0.0438,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 14,
+    "sonraki_pencere_gorev": 294,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 226,
+    "atanan_dk": 51
+   },
+   "atanan_gorev": 3,
+   "atanmayan_gorev": 11,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 7,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 108,
+    "son_tarihe_kadar_sure_yetmiyor": 52,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 15
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 175,
+    "O2_yuk_farki_dk": 18
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 0,
+     "atanmayan": 10
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 3,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 82.687,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2026-10-29T07:00:00+00:00",
+   "yerel": "2026-10-29 10:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     58.0
+    ]
+   ],
+   "sure_sn": 0.1727,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 133,
+    "sonraki_pencere_gorev": 366,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1772,
+    "atanan_dk": 412
+   },
+   "atanan_gorev": 21,
+   "atanmayan_gorev": 112,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 110,
+    "son_tarihe_kadar_sure_yetmiyor": 2
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 1310,
+    "son_tarihe_kadar_sure_yetmiyor": 50,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1360,
+    "O2_yuk_farki_dk": 58
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 21,
+     "atanmayan": 33
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 30
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 49
+    }
+   },
+   "rezerv_toplam_dk": 82.706,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2026-10-29T19:00:00+00:00",
+   "yerel": "2026-10-29 22:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     8.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     2.0
+    ]
+   ],
+   "sure_sn": 0.0673,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 49,
+    "sonraki_pencere_gorev": 457,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 655,
+    "atanan_dk": 122
+   },
+   "atanan_gorev": 10,
+   "atanmayan_gorev": 39,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 37,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 513,
+    "son_tarihe_kadar_sure_yetmiyor": 12,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 8
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 533,
+    "O2_yuk_farki_dk": 2
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 10,
+     "atanmayan": 39
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 9.626,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-01T07:00:00+00:00",
+   "yerel": "2027-01-01 10:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     36.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     88.0
+    ]
+   ],
+   "sure_sn": 0.133,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 94,
+    "sonraki_pencere_gorev": 281,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1135,
+    "atanan_dk": 309
+   },
+   "atanan_gorev": 18,
+   "atanmayan_gorev": 76,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 71,
+    "son_tarihe_kadar_sure_yetmiyor": 4,
+    "kapasite_yetersiz": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 726,
+    "son_tarihe_kadar_sure_yetmiyor": 64,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 36
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 826,
+    "O2_yuk_farki_dk": 88
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 16,
+     "atanmayan": 16
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 20
+    },
+    "support": {
+     "atanan": 2,
+     "atanmayan": 40
+    }
+   },
+   "rezerv_toplam_dk": 49.213,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-01T19:00:00+00:00",
+   "yerel": "2027-01-01 22:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     12.0
+    ]
+   ],
+   "sure_sn": 0.0918,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 25,
+    "sonraki_pencere_gorev": 341,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 338,
+    "atanan_dk": 60
+   },
+   "atanan_gorev": 5,
+   "atanmayan_gorev": 20,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 19,
+    "son_tarihe_kadar_sure_yetmiyor": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 266,
+    "son_tarihe_kadar_sure_yetmiyor": 12,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 278,
+    "O2_yuk_farki_dk": 12
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 5,
+     "atanmayan": 20
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 18.742,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-02T07:00:00+00:00",
+   "yerel": "2027-01-02 10:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     55.0
+    ]
+   ],
+   "sure_sn": 0.12,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 77,
+    "sonraki_pencere_gorev": 263,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 918,
+    "atanan_dk": 254
+   },
+   "atanan_gorev": 14,
+   "atanmayan_gorev": 63,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 59,
+    "son_tarihe_kadar_sure_yetmiyor": 4
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 608,
+    "son_tarihe_kadar_sure_yetmiyor": 56,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 664,
+    "O2_yuk_farki_dk": 55
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 14,
+     "atanmayan": 12
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 17
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 34
+    }
+   },
+   "rezerv_toplam_dk": 145.245,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-03T23:00:00+00:00",
+   "yerel": "2027-01-04 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     8.0
+    ]
+   ],
+   "sure_sn": 0.0952,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 9,
+    "sonraki_pencere_gorev": 374,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 94,
+    "atanan_dk": 46
+   },
+   "atanan_gorev": 5,
+   "atanmayan_gorev": 4,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 1,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "uygun_zaman_araligi_yok": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 8,
+    "son_tarihe_kadar_sure_yetmiyor": 22,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 18,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 48,
+    "O2_yuk_farki_dk": 8
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 5,
+     "atanmayan": 3
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 1.221,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-04T05:00:00+00:00",
+   "yerel": "2027-01-04 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     80.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     6.0
+    ]
+   ],
+   "sure_sn": 0.6517,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 136,
+    "sonraki_pencere_gorev": 245,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1299,
+    "atanan_dk": 534
+   },
+   "atanan_gorev": 56,
+   "atanmayan_gorev": 80,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 65,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 14
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 678,
+    "son_tarihe_kadar_sure_yetmiyor": 7,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 80
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 765,
+    "O2_yuk_farki_dk": 6
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 37,
+     "atanmayan": 29
+    },
+    "supervisor": {
+     "atanan": 19,
+     "atanmayan": 30
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 21
+    }
+   },
+   "rezerv_toplam_dk": 173.735,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-04T05:15:00+00:00",
+   "yerel": "2027-01-04 08:15",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     158.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     23.0
+    ]
+   ],
+   "sure_sn": 2.7069,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 113,
+    "sonraki_pencere_gorev": 244,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1190,
+    "atanan_dk": 454
+   },
+   "atanan_gorev": 47,
+   "atanmayan_gorev": 66,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 42,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 23
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 570,
+    "son_tarihe_kadar_sure_yetmiyor": 8,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 158
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 736,
+    "O2_yuk_farki_dk": 23
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 33,
+     "atanmayan": 25
+    },
+    "supervisor": {
+     "atanan": 14,
+     "atanmayan": 20
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 21
+    }
+   },
+   "rezerv_toplam_dk": 240.138,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-04T11:00:00+00:00",
+   "yerel": "2027-01-04 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     29.0
+    ]
+   ],
+   "sure_sn": 0.0928,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 28,
+    "sonraki_pencere_gorev": 225,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 326,
+    "atanan_dk": 93
+   },
+   "atanan_gorev": 9,
+   "atanmayan_gorev": 19,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 16,
+    "son_tarihe_kadar_sure_yetmiyor": 3
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 200,
+    "son_tarihe_kadar_sure_yetmiyor": 33,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 233,
+    "O2_yuk_farki_dk": 29
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 9,
+     "atanmayan": 18
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 173.798,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-04T17:00:00+00:00",
+   "yerel": "2027-01-04 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     131.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     7.0
+    ]
+   ],
+   "sure_sn": 0.2717,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 86,
+    "sonraki_pencere_gorev": 246,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 874,
+    "atanan_dk": 384
+   },
+   "atanan_gorev": 35,
+   "atanmayan_gorev": 51,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 37,
+    "son_tarihe_kadar_sure_yetmiyor": 4,
+    "kapasite_yetersiz": 10
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 307,
+    "son_tarihe_kadar_sure_yetmiyor": 52,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 131
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 490,
+    "O2_yuk_farki_dk": 7
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 34,
+     "atanmayan": 41
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 9
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 3.656,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-04T23:00:00+00:00",
+   "yerel": "2027-01-05 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     10.0
+    ]
+   ],
+   "sure_sn": 0.2213,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 6,
+    "sonraki_pencere_gorev": 408,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 59,
+    "atanan_dk": 10
+   },
+   "atanan_gorev": 1,
+   "atanmayan_gorev": 5,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 4,
+    "son_tarihe_kadar_sure_yetmiyor": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 39,
+    "son_tarihe_kadar_sure_yetmiyor": 10,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 49,
+    "O2_yuk_farki_dk": 10
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 1,
+     "atanmayan": 5
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 1.591,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-05T05:00:00+00:00",
+   "yerel": "2027-01-05 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     155.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     20.0
+    ]
+   ],
+   "sure_sn": 0.3618,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 150,
+    "sonraki_pencere_gorev": 277,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1548,
+    "atanan_dk": 526
+   },
+   "atanan_gorev": 52,
+   "atanmayan_gorev": 98,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 72,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 23
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 839,
+    "son_tarihe_kadar_sure_yetmiyor": 28,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 155
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1022,
+    "O2_yuk_farki_dk": 20
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 36,
+     "atanmayan": 40
+    },
+    "supervisor": {
+     "atanan": 16,
+     "atanmayan": 31
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 27
+    }
+   },
+   "rezerv_toplam_dk": 167.351,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-05T05:15:00+00:00",
+   "yerel": "2027-01-05 08:15",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     245.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     14.0
+    ]
+   ],
+   "sure_sn": 1.2712,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 140,
+    "sonraki_pencere_gorev": 276,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1490,
+    "atanan_dk": 458
+   },
+   "atanan_gorev": 48,
+   "atanmayan_gorev": 92,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 60,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 30
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 771,
+    "son_tarihe_kadar_sure_yetmiyor": 16,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 245
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1032,
+    "O2_yuk_farki_dk": 14
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 34,
+     "atanmayan": 40
+    },
+    "supervisor": {
+     "atanan": 14,
+     "atanmayan": 26
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 26
+    }
+   },
+   "rezerv_toplam_dk": 205.105,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-05T11:00:00+00:00",
+   "yerel": "2027-01-05 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     33.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     39.0
+    ]
+   ],
+   "sure_sn": 0.1167,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 43,
+    "sonraki_pencere_gorev": 241,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 535,
+    "atanan_dk": 141
+   },
+   "atanan_gorev": 12,
+   "atanmayan_gorev": 31,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 25,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "uygun_zaman_araligi_yok": 1,
+    "kapasite_yetersiz": 2
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 300,
+    "son_tarihe_kadar_sure_yetmiyor": 34,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 27,
+    "kapasite_yetersiz": 33
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 394,
+    "O2_yuk_farki_dk": 39
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 10,
+     "atanmayan": 28
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 2,
+     "atanmayan": 3
+    }
+   },
+   "rezerv_toplam_dk": 85.15,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-05T17:00:00+00:00",
+   "yerel": "2027-01-05 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     68.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     4.0
+    ]
+   ],
+   "sure_sn": 0.383,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 83,
+    "sonraki_pencere_gorev": 276,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 853,
+    "atanan_dk": 468
+   },
+   "atanan_gorev": 40,
+   "atanmayan_gorev": 43,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 35,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 6
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 290,
+    "son_tarihe_kadar_sure_yetmiyor": 27,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 68
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 385,
+    "O2_yuk_farki_dk": 4
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 40,
+     "atanmayan": 36
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 7
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 26.288,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-05T23:00:00+00:00",
+   "yerel": "2027-01-06 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     50.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     27.0
+    ]
+   ],
+   "sure_sn": 0.0994,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 17,
+    "sonraki_pencere_gorev": 439,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 224,
+    "atanan_dk": 72
+   },
+   "atanan_gorev": 5,
+   "atanmayan_gorev": 12,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 5,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 4
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 64,
+    "son_tarihe_kadar_sure_yetmiyor": 38,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 50
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 152,
+    "O2_yuk_farki_dk": 27
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 5,
+     "atanmayan": 12
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 6.537,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-06T05:00:00+00:00",
+   "yerel": "2027-01-06 08:00",
+   "durum": "FEASIBLE",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [
+    "asama_optimal_degil:O2_yuk_farki_dk"
+   ],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     116.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "FEASIBLE",
+     79.0
+    ]
+   ],
+   "sure_sn": 11.6919,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 148,
+    "sonraki_pencere_gorev": 283,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1578,
+    "atanan_dk": 594
+   },
+   "atanan_gorev": 59,
+   "atanmayan_gorev": 89,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 66,
+    "son_tarihe_kadar_sure_yetmiyor": 4,
+    "kapasite_yetersiz": 19
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 835,
+    "son_tarihe_kadar_sure_yetmiyor": 33,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 116
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 984,
+    "O2_yuk_farki_dk": 34
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 40,
+     "atanmayan": 38
+    },
+    "supervisor": {
+     "atanan": 19,
+     "atanmayan": 24
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 27
+    }
+   },
+   "rezerv_toplam_dk": 154.648,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-06T11:00:00+00:00",
+   "yerel": "2027-01-06 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     48.0
+    ]
+   ],
+   "sure_sn": 0.0951,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 34,
+    "sonraki_pencere_gorev": 261,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 380,
+    "atanan_dk": 117
+   },
+   "atanan_gorev": 8,
+   "atanmayan_gorev": 26,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 24,
+    "son_tarihe_kadar_sure_yetmiyor": 2
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 241,
+    "son_tarihe_kadar_sure_yetmiyor": 22,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 263,
+    "O2_yuk_farki_dk": 48
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 8,
+     "atanmayan": 25
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 31.823,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-06T17:00:00+00:00",
+   "yerel": "2027-01-06 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     75.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     12.0
+    ]
+   ],
+   "sure_sn": 0.4442,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 85,
+    "sonraki_pencere_gorev": 294,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 964,
+    "atanan_dk": 534
+   },
+   "atanan_gorev": 45,
+   "atanmayan_gorev": 40,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 31,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 6
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 305,
+    "son_tarihe_kadar_sure_yetmiyor": 50,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 75
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 430,
+    "O2_yuk_farki_dk": 12
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 44,
+     "atanmayan": 36
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 3
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 2.254,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-06T23:00:00+00:00",
+   "yerel": "2027-01-07 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     10.0
+    ]
+   ],
+   "sure_sn": 0.0673,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 3,
+    "sonraki_pencere_gorev": 446,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 30,
+    "atanan_dk": 20
+   },
+   "atanan_gorev": 2,
+   "atanmayan_gorev": 1,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 10,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 10,
+    "O2_yuk_farki_dk": 10
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 2,
+     "atanmayan": 1
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 0.141,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-07T05:00:00+00:00",
+   "yerel": "2027-01-07 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     104.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     3.0
+    ]
+   ],
+   "sure_sn": 1.125,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 161,
+    "sonraki_pencere_gorev": 332,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1704,
+    "atanan_dk": 700
+   },
+   "atanan_gorev": 70,
+   "atanmayan_gorev": 91,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 72,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 17
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 870,
+    "son_tarihe_kadar_sure_yetmiyor": 30,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 104
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1004,
+    "O2_yuk_farki_dk": 3
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 49,
+     "atanmayan": 40
+    },
+    "supervisor": {
+     "atanan": 21,
+     "atanmayan": 22
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 29
+    }
+   },
+   "rezerv_toplam_dk": 104.689,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-07T11:00:00+00:00",
+   "yerel": "2027-01-07 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     2.0
+    ]
+   ],
+   "sure_sn": 0.0922,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 33,
+    "sonraki_pencere_gorev": 328,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 367,
+    "atanan_dk": 80
+   },
+   "atanan_gorev": 8,
+   "atanmayan_gorev": 25,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 22,
+    "son_tarihe_kadar_sure_yetmiyor": 3
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 231,
+    "son_tarihe_kadar_sure_yetmiyor": 56,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 287,
+    "O2_yuk_farki_dk": 2
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 6,
+     "atanmayan": 24
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 2,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 144.357,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-07T17:00:00+00:00",
+   "yerel": "2027-01-07 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     243.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     4.0
+    ]
+   ],
+   "sure_sn": 0.2487,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 106,
+    "sonraki_pencere_gorev": 359,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1005,
+    "atanan_dk": 401
+   },
+   "atanan_gorev": 35,
+   "atanmayan_gorev": 71,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 47,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 22
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 340,
+    "son_tarihe_kadar_sure_yetmiyor": 21,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 243
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 604,
+    "O2_yuk_farki_dk": 4
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 34,
+     "atanmayan": 58
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 13
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 57.661,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-07T23:00:00+00:00",
+   "yerel": "2027-01-08 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     8.0
+    ]
+   ],
+   "sure_sn": 0.095,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 15,
+    "sonraki_pencere_gorev": 571,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 162,
+    "atanan_dk": 54
+   },
+   "atanan_gorev": 5,
+   "atanmayan_gorev": 10,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 6,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "uygun_zaman_araligi_yok": 2
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 60,
+    "son_tarihe_kadar_sure_yetmiyor": 23,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 25,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 108,
+    "O2_yuk_farki_dk": 8
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 5,
+     "atanmayan": 10
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 4.107,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-08T05:00:00+00:00",
+   "yerel": "2027-01-08 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     186.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     12.0
+    ]
+   ],
+   "sure_sn": 0.819,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 197,
+    "sonraki_pencere_gorev": 362,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1910,
+    "atanan_dk": 654
+   },
+   "atanan_gorev": 70,
+   "atanmayan_gorev": 127,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 98,
+    "kapasite_yetersiz": 29
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 1070,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 186
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1256,
+    "O2_yuk_farki_dk": 12
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 48,
+     "atanmayan": 48
+    },
+    "supervisor": {
+     "atanan": 22,
+     "atanmayan": 42
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 37
+    }
+   },
+   "rezerv_toplam_dk": 204.756,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-08T11:00:00+00:00",
+   "yerel": "2027-01-08 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     52.0
+    ]
+   ],
+   "sure_sn": 0.0917,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 31,
+    "sonraki_pencere_gorev": 307,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 329,
+    "atanan_dk": 128
+   },
+   "atanan_gorev": 11,
+   "atanmayan_gorev": 20,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 15,
+    "son_tarihe_kadar_sure_yetmiyor": 4,
+    "uygun_zaman_araligi_yok": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 146,
+    "son_tarihe_kadar_sure_yetmiyor": 40,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 15,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 201,
+    "O2_yuk_farki_dk": 52
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 11,
+     "atanmayan": 19
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 175.53,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-08T17:00:00+00:00",
+   "yerel": "2027-01-08 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     172.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     1.0
+    ]
+   ],
+   "sure_sn": 0.2743,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 120,
+    "sonraki_pencere_gorev": 345,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1022,
+    "atanan_dk": 397
+   },
+   "atanan_gorev": 36,
+   "atanmayan_gorev": 84,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 63,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 18
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 423,
+    "son_tarihe_kadar_sure_yetmiyor": 30,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 172
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 625,
+    "O2_yuk_farki_dk": 1
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 36,
+     "atanmayan": 73
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 11
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 16.991,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-08T23:00:00+00:00",
+   "yerel": "2027-01-09 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     12.0
+    ]
+   ],
+   "sure_sn": 0.0683,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 5,
+    "sonraki_pencere_gorev": 551,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 48,
+    "atanan_dk": 28
+   },
+   "atanan_gorev": 3,
+   "atanmayan_gorev": 2,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 1,
+    "son_tarihe_kadar_sure_yetmiyor": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 8,
+    "son_tarihe_kadar_sure_yetmiyor": 12,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 20,
+    "O2_yuk_farki_dk": 12
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 3,
+     "atanmayan": 2
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 15.052,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-09T05:00:00+00:00",
+   "yerel": "2027-01-09 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     225.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     8.0
+    ]
+   ],
+   "sure_sn": 0.4095,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 196,
+    "sonraki_pencere_gorev": 371,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1845,
+    "atanan_dk": 592
+   },
+   "atanan_gorev": 66,
+   "atanmayan_gorev": 130,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 95,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 34
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 1018,
+    "son_tarihe_kadar_sure_yetmiyor": 10,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 225
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1253,
+    "O2_yuk_farki_dk": 8
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 44,
+     "atanmayan": 52
+    },
+    "supervisor": {
+     "atanan": 22,
+     "atanmayan": 39
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 39
+    }
+   },
+   "rezerv_toplam_dk": 14.725,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-09T11:00:00+00:00",
+   "yerel": "2027-01-09 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     36.0
+    ]
+   ],
+   "sure_sn": 0.0982,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 35,
+    "sonraki_pencere_gorev": 303,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 547,
+    "atanan_dk": 120
+   },
+   "atanan_gorev": 9,
+   "atanmayan_gorev": 26,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 19,
+    "son_tarihe_kadar_sure_yetmiyor": 4,
+    "uygun_zaman_araligi_yok": 3
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 280,
+    "son_tarihe_kadar_sure_yetmiyor": 88,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 59,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 427,
+    "O2_yuk_farki_dk": 36
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 8,
+     "atanmayan": 21
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 5
+    }
+   },
+   "rezerv_toplam_dk": 5.06,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-09T17:00:00+00:00",
+   "yerel": "2027-01-09 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     115.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     11.0
+    ]
+   ],
+   "sure_sn": 0.2801,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 89,
+    "sonraki_pencere_gorev": 314,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 924,
+    "atanan_dk": 459
+   },
+   "atanan_gorev": 39,
+   "atanmayan_gorev": 50,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 37,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 10
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 302,
+    "son_tarihe_kadar_sure_yetmiyor": 48,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 115
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 465,
+    "O2_yuk_farki_dk": 11
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 38,
+     "atanmayan": 43
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 7
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 13.424,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-09T23:00:00+00:00",
+   "yerel": "2027-01-10 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     23.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     15.0
+    ]
+   ],
+   "sure_sn": 0.0852,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 19,
+    "sonraki_pencere_gorev": 467,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 235,
+    "atanan_dk": 91
+   },
+   "atanan_gorev": 7,
+   "atanmayan_gorev": 12,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 7,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 2
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 83,
+    "son_tarihe_kadar_sure_yetmiyor": 38,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 23
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 144,
+    "O2_yuk_farki_dk": 15
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 7,
+     "atanmayan": 12
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 6.268,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-10T05:00:00+00:00",
+   "yerel": "2027-01-10 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     166.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     5.0
+    ]
+   ],
+   "sure_sn": 0.4432,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 170,
+    "sonraki_pencere_gorev": 320,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1598,
+    "atanan_dk": 543
+   },
+   "atanan_gorev": 60,
+   "atanmayan_gorev": 110,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 86,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 23
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 877,
+    "son_tarihe_kadar_sure_yetmiyor": 12,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 166
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1055,
+    "O2_yuk_farki_dk": 5
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 39,
+     "atanmayan": 40
+    },
+    "supervisor": {
+     "atanan": 21,
+     "atanmayan": 39
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 31
+    }
+   },
+   "rezerv_toplam_dk": 16.904,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-10T11:00:00+00:00",
+   "yerel": "2027-01-10 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     36.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     18.0
+    ]
+   ],
+   "sure_sn": 0.078,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 23,
+    "sonraki_pencere_gorev": 275,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 323,
+    "atanan_dk": 80
+   },
+   "atanan_gorev": 5,
+   "atanmayan_gorev": 18,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 11,
+    "son_tarihe_kadar_sure_yetmiyor": 4,
+    "kapasite_yetersiz": 3
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 162,
+    "son_tarihe_kadar_sure_yetmiyor": 45,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 36
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 243,
+    "O2_yuk_farki_dk": 18
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 4,
+     "atanmayan": 16
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 2
+    }
+   },
+   "rezerv_toplam_dk": 38.401,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-10T17:00:00+00:00",
+   "yerel": "2027-01-10 20:00",
+   "durum": "FEASIBLE",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [
+    "asama_optimal_degil:O1_atanmayan_gorev_dk"
+   ],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "FEASIBLE",
+     84.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     9.0
+    ]
+   ],
+   "sure_sn": 10.3423,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 89,
+    "sonraki_pencere_gorev": 282,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 928,
+    "atanan_dk": 476
+   },
+   "atanan_gorev": 43,
+   "atanmayan_gorev": 46,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 34,
+    "son_tarihe_kadar_sure_yetmiyor": 5,
+    "kapasite_yetersiz": 7
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 308,
+    "son_tarihe_kadar_sure_yetmiyor": 60,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 84
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 452,
+    "O2_yuk_farki_dk": 9
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 43,
+     "atanmayan": 42
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 3
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 9.374,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-10T23:00:00+00:00",
+   "yerel": "2027-01-11 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     18.0
+    ]
+   ],
+   "sure_sn": 0.075,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 8,
+    "sonraki_pencere_gorev": 436,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 80,
+    "atanan_dk": 42
+   },
+   "atanan_gorev": 4,
+   "atanmayan_gorev": 4,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 2,
+    "son_tarihe_kadar_sure_yetmiyor": 2
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 18,
+    "son_tarihe_kadar_sure_yetmiyor": 20,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 38,
+    "O2_yuk_farki_dk": 18
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 4,
+     "atanmayan": 4
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 7.679,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-11T05:00:00+00:00",
+   "yerel": "2027-01-11 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     100.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     20.0
+    ]
+   ],
+   "sure_sn": 0.3476,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 160,
+    "sonraki_pencere_gorev": 288,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1708,
+    "atanan_dk": 645
+   },
+   "atanan_gorev": 67,
+   "atanmayan_gorev": 93,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 73,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 17
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 917,
+    "son_tarihe_kadar_sure_yetmiyor": 46,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 100
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1063,
+    "O2_yuk_farki_dk": 20
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 46,
+     "atanmayan": 41
+    },
+    "supervisor": {
+     "atanan": 21,
+     "atanmayan": 21
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 31
+    }
+   },
+   "rezerv_toplam_dk": 129.803,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-11T11:00:00+00:00",
+   "yerel": "2027-01-11 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     42.0
+    ]
+   ],
+   "sure_sn": 0.0892,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 21,
+    "sonraki_pencere_gorev": 213,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 265,
+    "atanan_dk": 90
+   },
+   "atanan_gorev": 8,
+   "atanmayan_gorev": 13,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 13
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 175,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 175,
+    "O2_yuk_farki_dk": 42
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 8,
+     "atanmayan": 11
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 2
+    }
+   },
+   "rezerv_toplam_dk": 194.336,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-11T17:00:00+00:00",
+   "yerel": "2027-01-11 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     61.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     4.0
+    ]
+   ],
+   "sure_sn": 0.2766,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 64,
+    "sonraki_pencere_gorev": 253,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 613,
+    "atanan_dk": 384
+   },
+   "atanan_gorev": 37,
+   "atanmayan_gorev": 27,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 21,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 5
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 158,
+    "son_tarihe_kadar_sure_yetmiyor": 10,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 61
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 229,
+    "O2_yuk_farki_dk": 4
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 37,
+     "atanmayan": 22
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 5
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 51.699,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-11T23:00:00+00:00",
+   "yerel": "2027-01-12 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     7.0
+    ]
+   ],
+   "sure_sn": 0.0879,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 6,
+    "sonraki_pencere_gorev": 385,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 53,
+    "atanan_dk": 46
+   },
+   "atanan_gorev": 5,
+   "atanmayan_gorev": 1,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 7,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 7,
+    "O2_yuk_farki_dk": 7
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 4,
+     "atanmayan": 1
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 1.32,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-12T05:00:00+00:00",
+   "yerel": "2027-01-12 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     75.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     4.0
+    ]
+   ],
+   "sure_sn": 0.3256,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 123,
+    "sonraki_pencere_gorev": 257,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1187,
+    "atanan_dk": 477
+   },
+   "atanan_gorev": 56,
+   "atanmayan_gorev": 67,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 55,
+    "kapasite_yetersiz": 12
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 635,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 75
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 710,
+    "O2_yuk_farki_dk": 4
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 33,
+     "atanmayan": 24
+    },
+    "supervisor": {
+     "atanan": 23,
+     "atanmayan": 19
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 24
+    }
+   },
+   "rezerv_toplam_dk": 226.564,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-12T11:00:00+00:00",
+   "yerel": "2027-01-12 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     49.0
+    ]
+   ],
+   "sure_sn": 0.0854,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 30,
+    "sonraki_pencere_gorev": 266,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 425,
+    "atanan_dk": 115
+   },
+   "atanan_gorev": 8,
+   "atanmayan_gorev": 22,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 13,
+    "son_tarihe_kadar_sure_yetmiyor": 6,
+    "uygun_zaman_araligi_yok": 3
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 136,
+    "son_tarihe_kadar_sure_yetmiyor": 115,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 59,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 310,
+    "O2_yuk_farki_dk": 49
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 5,
+     "atanmayan": 20
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 3,
+     "atanmayan": 2
+    }
+   },
+   "rezerv_toplam_dk": 128.895,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-12T17:00:00+00:00",
+   "yerel": "2027-01-12 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     49.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     7.0
+    ]
+   ],
+   "sure_sn": 0.533,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 76,
+    "sonraki_pencere_gorev": 288,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 752,
+    "atanan_dk": 408
+   },
+   "atanan_gorev": 40,
+   "atanmayan_gorev": 36,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 29,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 4
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 252,
+    "son_tarihe_kadar_sure_yetmiyor": 43,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 49
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 344,
+    "O2_yuk_farki_dk": 7
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 40,
+     "atanmayan": 33
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 2
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 32.614,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-12T23:00:00+00:00",
+   "yerel": "2027-01-13 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     15.0
+    ]
+   ],
+   "sure_sn": 0.1006,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 12,
+    "sonraki_pencere_gorev": 448,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 155,
+    "atanan_dk": 72
+   },
+   "atanan_gorev": 5,
+   "atanmayan_gorev": 7,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 4,
+    "son_tarihe_kadar_sure_yetmiyor": 3
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 47,
+    "son_tarihe_kadar_sure_yetmiyor": 36,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 83,
+    "O2_yuk_farki_dk": 15
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 5,
+     "atanmayan": 7
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 2.538,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-13T05:00:00+00:00",
+   "yerel": "2027-01-13 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     88.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     9.0
+    ]
+   ],
+   "sure_sn": 0.6437,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 153,
+    "sonraki_pencere_gorev": 327,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1439,
+    "atanan_dk": 549
+   },
+   "atanan_gorev": 66,
+   "atanmayan_gorev": 87,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 69,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 17
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 796,
+    "son_tarihe_kadar_sure_yetmiyor": 6,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 88
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 890,
+    "O2_yuk_farki_dk": 9
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 44,
+     "atanmayan": 32
+    },
+    "supervisor": {
+     "atanan": 22,
+     "atanmayan": 21
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 34
+    }
+   },
+   "rezerv_toplam_dk": 162.662,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-13T11:00:00+00:00",
+   "yerel": "2027-01-13 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     20.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     61.0
+    ]
+   ],
+   "sure_sn": 0.2794,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 43,
+    "sonraki_pencere_gorev": 349,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 431,
+    "atanan_dk": 141
+   },
+   "atanan_gorev": 12,
+   "atanmayan_gorev": 31,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 22,
+    "son_tarihe_kadar_sure_yetmiyor": 7,
+    "kapasite_yetersiz": 2
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 204,
+    "son_tarihe_kadar_sure_yetmiyor": 66,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 20
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 290,
+    "O2_yuk_farki_dk": 61
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 12,
+     "atanmayan": 31
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 141.522,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-13T12:30:00+00:00",
+   "yerel": "2027-01-13 15:30",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     463.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     15.0
+    ]
+   ],
+   "sure_sn": 0.9595,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 136,
+    "sonraki_pencere_gorev": 267,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1375,
+    "atanan_dk": 609
+   },
+   "atanan_gorev": 61,
+   "atanmayan_gorev": 75,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 21,
+    "son_tarihe_kadar_sure_yetmiyor": 7,
+    "kapasite_yetersiz": 47
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 209,
+    "son_tarihe_kadar_sure_yetmiyor": 94,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 463
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 766,
+    "O2_yuk_farki_dk": 15
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 46,
+     "atanmayan": 40
+    },
+    "supervisor": {
+     "atanan": 4,
+     "atanmayan": 3
+    },
+    "support": {
+     "atanan": 11,
+     "atanmayan": 32
+    }
+   },
+   "rezerv_toplam_dk": 207.086,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-13T17:00:00+00:00",
+   "yerel": "2027-01-13 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     138.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     2.0
+    ]
+   ],
+   "sure_sn": 2.3393,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 86,
+    "sonraki_pencere_gorev": 316,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 844,
+    "atanan_dk": 380
+   },
+   "atanan_gorev": 34,
+   "atanmayan_gorev": 52,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 38,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 13
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 318,
+    "son_tarihe_kadar_sure_yetmiyor": 8,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 138
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 464,
+    "O2_yuk_farki_dk": 2
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 34,
+     "atanmayan": 45
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 7
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 42.144,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-13T23:00:00+00:00",
+   "yerel": "2027-01-14 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     12.0
+    ]
+   ],
+   "sure_sn": 0.0803,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 9,
+    "sonraki_pencere_gorev": 516,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 125,
+    "atanan_dk": 56
+   },
+   "atanan_gorev": 5,
+   "atanmayan_gorev": 4,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 4
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 69,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 69,
+    "O2_yuk_farki_dk": 12
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 5,
+     "atanmayan": 3
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 0.0,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-14T05:00:00+00:00",
+   "yerel": "2027-01-14 08:00",
+   "durum": "FEASIBLE",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [
+    "asama_optimal_degil:O2_yuk_farki_dk"
+   ],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     153.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "FEASIBLE",
+     10.0
+    ]
+   ],
+   "sure_sn": 17.1043,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 177,
+    "sonraki_pencere_gorev": 360,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1797,
+    "atanan_dk": 661
+   },
+   "atanan_gorev": 69,
+   "atanmayan_gorev": 108,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 82,
+    "kapasite_yetersiz": 26
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 983,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 153
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1136,
+    "O2_yuk_farki_dk": 10
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 49,
+     "atanmayan": 42
+    },
+    "supervisor": {
+     "atanan": 20,
+     "atanmayan": 31
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 35
+    }
+   },
+   "rezerv_toplam_dk": 165.075,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-14T11:00:00+00:00",
+   "yerel": "2027-01-14 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     8.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     17.0
+    ]
+   ],
+   "sure_sn": 0.0951,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 28,
+    "sonraki_pencere_gorev": 353,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 307,
+    "atanan_dk": 113
+   },
+   "atanan_gorev": 10,
+   "atanmayan_gorev": 18,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 12,
+    "son_tarihe_kadar_sure_yetmiyor": 5,
+    "kapasite_yetersiz": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 142,
+    "son_tarihe_kadar_sure_yetmiyor": 44,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 8
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 194,
+    "O2_yuk_farki_dk": 17
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 9,
+     "atanmayan": 18
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 154.262,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-14T17:00:00+00:00",
+   "yerel": "2027-01-14 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     156.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     4.0
+    ]
+   ],
+   "sure_sn": 0.2945,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 94,
+    "sonraki_pencere_gorev": 343,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 920,
+    "atanan_dk": 394
+   },
+   "atanan_gorev": 34,
+   "atanmayan_gorev": 60,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 44,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 14
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 342,
+    "son_tarihe_kadar_sure_yetmiyor": 28,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 156
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 526,
+    "O2_yuk_farki_dk": 4
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 34,
+     "atanmayan": 49
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 10
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 32.859,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-14T23:00:00+00:00",
+   "yerel": "2027-01-15 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     22.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     15.0
+    ]
+   ],
+   "sure_sn": 0.0754,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 18,
+    "sonraki_pencere_gorev": 546,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 215,
+    "atanan_dk": 30
+   },
+   "atanan_gorev": 2,
+   "atanmayan_gorev": 16,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 6,
+    "son_tarihe_kadar_sure_yetmiyor": 4,
+    "uygun_zaman_araligi_yok": 4,
+    "kapasite_yetersiz": 2
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 67,
+    "son_tarihe_kadar_sure_yetmiyor": 46,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 50,
+    "kapasite_yetersiz": 22
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 185,
+    "O2_yuk_farki_dk": 15
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 2,
+     "atanmayan": 16
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 18.985,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-15T05:00:00+00:00",
+   "yerel": "2027-01-15 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     155.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     16.0
+    ]
+   ],
+   "sure_sn": 2.3824,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 193,
+    "sonraki_pencere_gorev": 362,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1995,
+    "atanan_dk": 709
+   },
+   "atanan_gorev": 71,
+   "atanmayan_gorev": 122,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 94,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 27
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 1119,
+    "son_tarihe_kadar_sure_yetmiyor": 12,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 155
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1286,
+    "O2_yuk_farki_dk": 16
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 51,
+     "atanmayan": 44
+    },
+    "supervisor": {
+     "atanan": 20,
+     "atanmayan": 39
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 39
+    }
+   },
+   "rezerv_toplam_dk": 160.0,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-15T11:00:00+00:00",
+   "yerel": "2027-01-15 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     64.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     61.0
+    ]
+   ],
+   "sure_sn": 0.1034,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 47,
+    "sonraki_pencere_gorev": 309,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 550,
+    "atanan_dk": 135
+   },
+   "atanan_gorev": 10,
+   "atanmayan_gorev": 37,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 22,
+    "son_tarihe_kadar_sure_yetmiyor": 8,
+    "kapasite_yetersiz": 6,
+    "uygun_zaman_araligi_yok": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 235,
+    "son_tarihe_kadar_sure_yetmiyor": 101,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 15,
+    "kapasite_yetersiz": 64
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 415,
+    "O2_yuk_farki_dk": 61
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 10,
+     "atanmayan": 33
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 4
+    }
+   },
+   "rezerv_toplam_dk": 134.406,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-15T17:00:00+00:00",
+   "yerel": "2027-01-15 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     116.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     2.0
+    ]
+   ],
+   "sure_sn": 0.7069,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 104,
+    "sonraki_pencere_gorev": 325,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1003,
+    "atanan_dk": 451
+   },
+   "atanan_gorev": 39,
+   "atanmayan_gorev": 65,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 52,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 10
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 403,
+    "son_tarihe_kadar_sure_yetmiyor": 33,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 116
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 552,
+    "O2_yuk_farki_dk": 2
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 39,
+     "atanmayan": 57
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 8
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 10.071,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-15T23:00:00+00:00",
+   "yerel": "2027-01-16 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     10.0
+    ]
+   ],
+   "sure_sn": 0.071,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 5,
+    "sonraki_pencere_gorev": 477,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 60,
+    "atanan_dk": 20
+   },
+   "atanan_gorev": 2,
+   "atanmayan_gorev": 3,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 2,
+    "son_tarihe_kadar_sure_yetmiyor": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 25,
+    "son_tarihe_kadar_sure_yetmiyor": 15,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 40,
+    "O2_yuk_farki_dk": 10
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 2,
+     "atanmayan": 3
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 3.116,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-16T05:00:00+00:00",
+   "yerel": "2027-01-16 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     179.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     11.0
+    ]
+   ],
+   "sure_sn": 1.8251,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 172,
+    "sonraki_pencere_gorev": 326,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1682,
+    "atanan_dk": 567
+   },
+   "atanan_gorev": 57,
+   "atanmayan_gorev": 115,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 88,
+    "kapasite_yetersiz": 27
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 936,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 179
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1115,
+    "O2_yuk_farki_dk": 11
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 38,
+     "atanmayan": 33
+    },
+    "supervisor": {
+     "atanan": 19,
+     "atanmayan": 48
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 34
+    }
+   },
+   "rezerv_toplam_dk": 31.845,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-16T11:00:00+00:00",
+   "yerel": "2027-01-16 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     82.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     73.0
+    ]
+   ],
+   "sure_sn": 0.1825,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 34,
+    "sonraki_pencere_gorev": 307,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 491,
+    "atanan_dk": 214
+   },
+   "atanan_gorev": 14,
+   "atanmayan_gorev": 20,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 9,
+    "son_tarihe_kadar_sure_yetmiyor": 4,
+    "kapasite_yetersiz": 6,
+    "uygun_zaman_araligi_yok": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 122,
+    "son_tarihe_kadar_sure_yetmiyor": 50,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 23,
+    "kapasite_yetersiz": 82
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 277,
+    "O2_yuk_farki_dk": 73
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 13,
+     "atanmayan": 19
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 43.587,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-16T17:00:00+00:00",
+   "yerel": "2027-01-16 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     155.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     6.0
+    ]
+   ],
+   "sure_sn": 3.3185,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 86,
+    "sonraki_pencere_gorev": 289,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 939,
+    "atanan_dk": 410
+   },
+   "atanan_gorev": 32,
+   "atanmayan_gorev": 54,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 39,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 13
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 352,
+    "son_tarihe_kadar_sure_yetmiyor": 22,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 155
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 529,
+    "O2_yuk_farki_dk": 6
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 31,
+     "atanmayan": 47
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 7
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 50.955,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-16T23:00:00+00:00",
+   "yerel": "2027-01-17 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     0.0
+    ]
+   ],
+   "sure_sn": 0.0642,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 1,
+    "sonraki_pencere_gorev": 462,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 15,
+    "atanan_dk": 0
+   },
+   "atanan_gorev": 0,
+   "atanmayan_gorev": 1,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 15,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 15,
+    "O2_yuk_farki_dk": 0
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 0,
+     "atanmayan": 1
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 3.87,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-17T05:00:00+00:00",
+   "yerel": "2027-01-17 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     208.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     11.0
+    ]
+   ],
+   "sure_sn": 0.3755,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 157,
+    "sonraki_pencere_gorev": 322,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1782,
+    "atanan_dk": 585
+   },
+   "atanan_gorev": 54,
+   "atanmayan_gorev": 103,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 73,
+    "kapasite_yetersiz": 30
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 989,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 208
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1197,
+    "O2_yuk_farki_dk": 11
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 36,
+     "atanmayan": 39
+    },
+    "supervisor": {
+     "atanan": 18,
+     "atanmayan": 30
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 34
+    }
+   },
+   "rezerv_toplam_dk": 35.384,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-17T11:00:00+00:00",
+   "yerel": "2027-01-17 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     15.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     36.0
+    ]
+   ],
+   "sure_sn": 0.1191,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 18,
+    "sonraki_pencere_gorev": 252,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 302,
+    "atanan_dk": 59
+   },
+   "atanan_gorev": 2,
+   "atanmayan_gorev": 16,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 12,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "uygun_zaman_araligi_yok": 2,
+    "kapasite_yetersiz": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 190,
+    "son_tarihe_kadar_sure_yetmiyor": 23,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 15,
+    "kapasite_yetersiz": 15
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 243,
+    "O2_yuk_farki_dk": 36
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 1,
+     "atanmayan": 13
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 3
+    }
+   },
+   "rezerv_toplam_dk": 61.687,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-17T17:00:00+00:00",
+   "yerel": "2027-01-17 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     85.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     2.0
+    ]
+   ],
+   "sure_sn": 0.6402,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 81,
+    "sonraki_pencere_gorev": 279,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 859,
+    "atanan_dk": 456
+   },
+   "atanan_gorev": 38,
+   "atanmayan_gorev": 43,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 31,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 9
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 286,
+    "son_tarihe_kadar_sure_yetmiyor": 32,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 85
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 403,
+    "O2_yuk_farki_dk": 2
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 38,
+     "atanmayan": 39
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 4
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 12.998,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-17T23:00:00+00:00",
+   "yerel": "2027-01-18 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     16.0
+    ]
+   ],
+   "sure_sn": 0.0773,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 10,
+    "sonraki_pencere_gorev": 427,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 100,
+    "atanan_dk": 60
+   },
+   "atanan_gorev": 6,
+   "atanmayan_gorev": 4,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 1,
+    "son_tarihe_kadar_sure_yetmiyor": 3
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 8,
+    "son_tarihe_kadar_sure_yetmiyor": 32,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 40,
+    "O2_yuk_farki_dk": 16
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 6,
+     "atanmayan": 4
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 6.03,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-18T05:00:00+00:00",
+   "yerel": "2027-01-18 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     100.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     20.0
+    ]
+   ],
+   "sure_sn": 2.1309,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 141,
+    "sonraki_pencere_gorev": 256,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1543,
+    "atanan_dk": 567
+   },
+   "atanan_gorev": 56,
+   "atanmayan_gorev": 85,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 66,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 18
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 869,
+    "son_tarihe_kadar_sure_yetmiyor": 7,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 100
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 976,
+    "O2_yuk_farki_dk": 20
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 38,
+     "atanmayan": 35
+    },
+    "supervisor": {
+     "atanan": 18,
+     "atanmayan": 22
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 28
+    }
+   },
+   "rezerv_toplam_dk": 146.622,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-18T11:00:00+00:00",
+   "yerel": "2027-01-18 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     20.0
+    ]
+   ],
+   "sure_sn": 0.0789,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 28,
+    "sonraki_pencere_gorev": 225,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 225,
+    "atanan_dk": 38
+   },
+   "atanan_gorev": 4,
+   "atanmayan_gorev": 24,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 19,
+    "son_tarihe_kadar_sure_yetmiyor": 5
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 139,
+    "son_tarihe_kadar_sure_yetmiyor": 48,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 187,
+    "O2_yuk_farki_dk": 20
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 4,
+     "atanmayan": 23
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 82.169,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-18T17:00:00+00:00",
+   "yerel": "2027-01-18 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     48.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     1.0
+    ]
+   ],
+   "sure_sn": 1.6251,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 89,
+    "sonraki_pencere_gorev": 270,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 968,
+    "atanan_dk": 488
+   },
+   "atanan_gorev": 40,
+   "atanmayan_gorev": 49,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 37,
+    "son_tarihe_kadar_sure_yetmiyor": 8,
+    "kapasite_yetersiz": 4
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 338,
+    "son_tarihe_kadar_sure_yetmiyor": 94,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 48
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 480,
+    "O2_yuk_farki_dk": 1
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 40,
+     "atanmayan": 47
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 1
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 12.688,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-18T23:00:00+00:00",
+   "yerel": "2027-01-19 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     12.0
+    ]
+   ],
+   "sure_sn": 0.1008,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 3,
+    "sonraki_pencere_gorev": 385,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 36,
+    "atanan_dk": 24
+   },
+   "atanan_gorev": 2,
+   "atanmayan_gorev": 1,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 12,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 12,
+    "O2_yuk_farki_dk": 12
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 2,
+     "atanmayan": 1
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 5.056,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-19T05:00:00+00:00",
+   "yerel": "2027-01-19 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     93.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     15.0
+    ]
+   ],
+   "sure_sn": 0.3679,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 133,
+    "sonraki_pencere_gorev": 265,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1522,
+    "atanan_dk": 570
+   },
+   "atanan_gorev": 55,
+   "atanmayan_gorev": 78,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 61,
+    "kapasite_yetersiz": 17
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 859,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 93
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 952,
+    "O2_yuk_farki_dk": 15
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 38,
+     "atanmayan": 34
+    },
+    "supervisor": {
+     "atanan": 17,
+     "atanmayan": 17
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 27
+    }
+   },
+   "rezerv_toplam_dk": 148.974,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-19T06:30:00+00:00",
+   "yerel": "2027-01-19 09:30",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     493.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     89.0
+    ]
+   ],
+   "sure_sn": 7.6898,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 139,
+    "sonraki_pencere_gorev": 321,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1609,
+    "atanan_dk": 405
+   },
+   "atanan_gorev": 32,
+   "atanmayan_gorev": 107,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 58,
+    "son_tarihe_kadar_sure_yetmiyor": 14,
+    "kapasite_yetersiz": 35
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 494,
+    "son_tarihe_kadar_sure_yetmiyor": 217,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 493
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1204,
+    "O2_yuk_farki_dk": 89
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 16,
+     "atanmayan": 49
+    },
+    "supervisor": {
+     "atanan": 4,
+     "atanmayan": 26
+    },
+    "support": {
+     "atanan": 12,
+     "atanmayan": 32
+    }
+   },
+   "rezerv_toplam_dk": 42.843,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-19T11:00:00+00:00",
+   "yerel": "2027-01-19 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     123.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     44.0
+    ]
+   ],
+   "sure_sn": 0.3337,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 56,
+    "sonraki_pencere_gorev": 301,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 765,
+    "atanan_dk": 161
+   },
+   "atanan_gorev": 11,
+   "atanmayan_gorev": 45,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 26,
+    "son_tarihe_kadar_sure_yetmiyor": 9,
+    "kapasite_yetersiz": 10
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 310,
+    "son_tarihe_kadar_sure_yetmiyor": 171,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 123
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 604,
+    "O2_yuk_farki_dk": 44
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 10,
+     "atanmayan": 44
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 215.708,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-19T12:15:00+00:00",
+   "yerel": "2027-01-19 15:15",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     306.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     15.0
+    ]
+   ],
+   "sure_sn": 17.8311,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 133,
+    "sonraki_pencere_gorev": 227,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1440,
+    "atanan_dk": 748
+   },
+   "atanan_gorev": 71,
+   "atanmayan_gorev": 62,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 25,
+    "son_tarihe_kadar_sure_yetmiyor": 7,
+    "kapasite_yetersiz": 30
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 271,
+    "son_tarihe_kadar_sure_yetmiyor": 115,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 306
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 692,
+    "O2_yuk_farki_dk": 15
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 52,
+     "atanmayan": 33
+    },
+    "supervisor": {
+     "atanan": 6,
+     "atanmayan": 1
+    },
+    "support": {
+     "atanan": 13,
+     "atanmayan": 28
+    }
+   },
+   "rezerv_toplam_dk": 175.802,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-19T12:30:00+00:00",
+   "yerel": "2027-01-19 15:30",
+   "durum": "FEASIBLE",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [
+    "asama_optimal_degil:O1_atanmayan_gorev_dk"
+   ],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "FEASIBLE",
+     422.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     21.0
+    ]
+   ],
+   "sure_sn": 19.5712,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 132,
+    "sonraki_pencere_gorev": 223,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1396,
+    "atanan_dk": 620
+   },
+   "atanan_gorev": 61,
+   "atanmayan_gorev": 71,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 26,
+    "son_tarihe_kadar_sure_yetmiyor": 6,
+    "kapasite_yetersiz": 39
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 290,
+    "son_tarihe_kadar_sure_yetmiyor": 64,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 422
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 776,
+    "O2_yuk_farki_dk": 21
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 45,
+     "atanmayan": 41
+    },
+    "supervisor": {
+     "atanan": 5,
+     "atanmayan": 3
+    },
+    "support": {
+     "atanan": 11,
+     "atanmayan": 27
+    }
+   },
+   "rezerv_toplam_dk": 165.619,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-19T17:00:00+00:00",
+   "yerel": "2027-01-19 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     268.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     6.0
+    ]
+   ],
+   "sure_sn": 1.2246,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 99,
+    "sonraki_pencere_gorev": 335,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 966,
+    "atanan_dk": 357
+   },
+   "atanan_gorev": 31,
+   "atanmayan_gorev": 68,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 39,
+    "son_tarihe_kadar_sure_yetmiyor": 5,
+    "kapasite_yetersiz": 24
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 291,
+    "son_tarihe_kadar_sure_yetmiyor": 50,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 268
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 609,
+    "O2_yuk_farki_dk": 6
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 30,
+     "atanmayan": 59
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 9
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 11.86,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-19T23:00:00+00:00",
+   "yerel": "2027-01-20 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     0.0
+    ]
+   ],
+   "sure_sn": 0.0736,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 9,
+    "sonraki_pencere_gorev": 508,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 87,
+    "atanan_dk": 40
+   },
+   "atanan_gorev": 4,
+   "atanmayan_gorev": 5,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 5
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 47,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 47,
+    "O2_yuk_farki_dk": 0
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 4,
+     "atanmayan": 5
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 0.909,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-20T05:00:00+00:00",
+   "yerel": "2027-01-20 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     129.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     13.0
+    ]
+   ],
+   "sure_sn": 0.4453,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 192,
+    "sonraki_pencere_gorev": 321,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1865,
+    "atanan_dk": 652
+   },
+   "atanan_gorev": 65,
+   "atanmayan_gorev": 127,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 100,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 25
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 1068,
+    "son_tarihe_kadar_sure_yetmiyor": 16,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 129
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1213,
+    "O2_yuk_farki_dk": 13
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 47,
+     "atanmayan": 58
+    },
+    "supervisor": {
+     "atanan": 18,
+     "atanmayan": 33
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 36
+    }
+   },
+   "rezerv_toplam_dk": 138.885,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-20T06:45:00+00:00",
+   "yerel": "2027-01-20 09:45",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     485.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     66.0
+    ]
+   ],
+   "sure_sn": 1.0076,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 134,
+    "sonraki_pencere_gorev": 320,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1599,
+    "atanan_dk": 358
+   },
+   "atanan_gorev": 28,
+   "atanmayan_gorev": 106,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 44,
+    "son_tarihe_kadar_sure_yetmiyor": 18,
+    "kapasite_yetersiz": 44
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 407,
+    "son_tarihe_kadar_sure_yetmiyor": 349,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 485
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1241,
+    "O2_yuk_farki_dk": 66
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 19,
+     "atanmayan": 32
+    },
+    "supervisor": {
+     "atanan": 3,
+     "atanmayan": 29
+    },
+    "support": {
+     "atanan": 6,
+     "atanmayan": 45
+    }
+   },
+   "rezerv_toplam_dk": 207.415,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-20T11:00:00+00:00",
+   "yerel": "2027-01-20 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     13.0
+    ]
+   ],
+   "sure_sn": 0.1216,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 30,
+    "sonraki_pencere_gorev": 292,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 295,
+    "atanan_dk": 109
+   },
+   "atanan_gorev": 12,
+   "atanmayan_gorev": 18,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 14,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "uygun_zaman_araligi_yok": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 135,
+    "son_tarihe_kadar_sure_yetmiyor": 39,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 12,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 186,
+    "O2_yuk_farki_dk": 13
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 10,
+     "atanmayan": 17
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 2,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 143.899,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-20T17:00:00+00:00",
+   "yerel": "2027-01-20 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     98.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     2.0
+    ]
+   ],
+   "sure_sn": 0.4722,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 87,
+    "sonraki_pencere_gorev": 297,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 823,
+    "atanan_dk": 418
+   },
+   "atanan_gorev": 37,
+   "atanmayan_gorev": 50,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 40,
+    "kapasite_yetersiz": 10
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 307,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 98
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 405,
+    "O2_yuk_farki_dk": 2
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 37,
+     "atanmayan": 42
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 8
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 32.375,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-20T23:00:00+00:00",
+   "yerel": "2027-01-21 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     12.0
+    ]
+   ],
+   "sure_sn": 0.0794,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 5,
+    "sonraki_pencere_gorev": 463,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 60,
+    "atanan_dk": 48
+   },
+   "atanan_gorev": 4,
+   "atanmayan_gorev": 1,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 12,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 12,
+    "O2_yuk_farki_dk": 12
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 4,
+     "atanmayan": 1
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 9.397,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-21T05:00:00+00:00",
+   "yerel": "2027-01-21 08:00",
+   "durum": "FEASIBLE",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [
+    "asama_optimal_degil:O2_yuk_farki_dk"
+   ],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     124.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "FEASIBLE",
+     73.0
+    ]
+   ],
+   "sure_sn": 10.6386,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 165,
+    "sonraki_pencere_gorev": 341,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1647,
+    "atanan_dk": 602
+   },
+   "atanan_gorev": 67,
+   "atanmayan_gorev": 98,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 77,
+    "kapasite_yetersiz": 21
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 921,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 124
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1045,
+    "O2_yuk_farki_dk": 63
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 45,
+     "atanmayan": 41
+    },
+    "supervisor": {
+     "atanan": 22,
+     "atanmayan": 24
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 33
+    }
+   },
+   "rezerv_toplam_dk": 171.369,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-21T11:00:00+00:00",
+   "yerel": "2027-01-21 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     38.0
+    ]
+   ],
+   "sure_sn": 0.0866,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 23,
+    "sonraki_pencere_gorev": 314,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 278,
+    "atanan_dk": 91
+   },
+   "atanan_gorev": 7,
+   "atanmayan_gorev": 16,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 14,
+    "son_tarihe_kadar_sure_yetmiyor": 2
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 155,
+    "son_tarihe_kadar_sure_yetmiyor": 32,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 187,
+    "O2_yuk_farki_dk": 38
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 3,
+     "atanmayan": 15
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 4,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 130.707,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-21T17:00:00+00:00",
+   "yerel": "2027-01-21 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     254.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     1.0
+    ]
+   ],
+   "sure_sn": 0.2759,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 107,
+    "sonraki_pencere_gorev": 367,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1075,
+    "atanan_dk": 418
+   },
+   "atanan_gorev": 36,
+   "atanmayan_gorev": 71,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 46,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 22
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 369,
+    "son_tarihe_kadar_sure_yetmiyor": 34,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 254
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 657,
+    "O2_yuk_farki_dk": 1
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 36,
+     "atanmayan": 61
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 10
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 16.607,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-21T23:00:00+00:00",
+   "yerel": "2027-01-22 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     3.0
+    ]
+   ],
+   "sure_sn": 0.0909,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 22,
+    "sonraki_pencere_gorev": 580,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 265,
+    "atanan_dk": 86
+   },
+   "atanan_gorev": 7,
+   "atanmayan_gorev": 15,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 12,
+    "son_tarihe_kadar_sure_yetmiyor": 3
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 142,
+    "son_tarihe_kadar_sure_yetmiyor": 37,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 179,
+    "O2_yuk_farki_dk": 3
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 7,
+     "atanmayan": 14
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 0.0,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-22T05:00:00+00:00",
+   "yerel": "2027-01-22 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     193.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     20.0
+    ]
+   ],
+   "sure_sn": 2.1042,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 220,
+    "sonraki_pencere_gorev": 414,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 2132,
+    "atanan_dk": 731
+   },
+   "atanan_gorev": 72,
+   "atanmayan_gorev": 148,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 113,
+    "kapasite_yetersiz": 35
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 1208,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 193
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1401,
+    "O2_yuk_farki_dk": 20
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 53,
+     "atanmayan": 62
+    },
+    "supervisor": {
+     "atanan": 19,
+     "atanmayan": 47
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 39
+    }
+   },
+   "rezerv_toplam_dk": 178.485,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-22T06:45:00+00:00",
+   "yerel": "2027-01-22 09:45",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     516.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     54.0
+    ]
+   ],
+   "sure_sn": 0.3899,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 147,
+    "sonraki_pencere_gorev": 393,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1605,
+    "atanan_dk": 277
+   },
+   "atanan_gorev": 24,
+   "atanmayan_gorev": 123,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 53,
+    "son_tarihe_kadar_sure_yetmiyor": 20,
+    "kapasite_yetersiz": 50
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 415,
+    "son_tarihe_kadar_sure_yetmiyor": 397,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 516
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1328,
+    "O2_yuk_farki_dk": 54
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 17,
+     "atanmayan": 39
+    },
+    "supervisor": {
+     "atanan": 2,
+     "atanmayan": 35
+    },
+    "support": {
+     "atanan": 5,
+     "atanmayan": 49
+    }
+   },
+   "rezerv_toplam_dk": 261.897,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-22T07:00:00+00:00",
+   "yerel": "2027-01-22 10:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     80.0
+    ]
+   ],
+   "sure_sn": 0.2038,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 148,
+    "sonraki_pencere_gorev": 414,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1670,
+    "atanan_dk": 345
+   },
+   "atanan_gorev": 25,
+   "atanmayan_gorev": 123,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 115,
+    "son_tarihe_kadar_sure_yetmiyor": 8
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 1227,
+    "son_tarihe_kadar_sure_yetmiyor": 98,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1325,
+    "O2_yuk_farki_dk": 80
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 23,
+     "atanmayan": 38
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 34
+    },
+    "support": {
+     "atanan": 2,
+     "atanmayan": 51
+    }
+   },
+   "rezerv_toplam_dk": 291.014,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-22T11:00:00+00:00",
+   "yerel": "2027-01-22 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     42.0
+    ]
+   ],
+   "sure_sn": 0.0831,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 29,
+    "sonraki_pencere_gorev": 341,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 313,
+    "atanan_dk": 69
+   },
+   "atanan_gorev": 7,
+   "atanmayan_gorev": 22,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 17,
+    "son_tarihe_kadar_sure_yetmiyor": 5
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 177,
+    "son_tarihe_kadar_sure_yetmiyor": 67,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 244,
+    "O2_yuk_farki_dk": 42
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 6,
+     "atanmayan": 20
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 2
+    }
+   },
+   "rezerv_toplam_dk": 149.998,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-22T12:15:00+00:00",
+   "yerel": "2027-01-22 15:15",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     401.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     14.0
+    ]
+   ],
+   "sure_sn": 5.6168,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 121,
+    "sonraki_pencere_gorev": 254,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1226,
+    "atanan_dk": 698
+   },
+   "atanan_gorev": 70,
+   "atanmayan_gorev": 51,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 14,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 34
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 103,
+    "son_tarihe_kadar_sure_yetmiyor": 24,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 401
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 528,
+    "O2_yuk_farki_dk": 14
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 50,
+     "atanmayan": 19
+    },
+    "supervisor": {
+     "atanan": 5,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 15,
+     "atanmayan": 32
+    }
+   },
+   "rezerv_toplam_dk": 222.03,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-22T12:30:00+00:00",
+   "yerel": "2027-01-22 15:30",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     580.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     2.0
+    ]
+   ],
+   "sure_sn": 0.5934,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 122,
+    "sonraki_pencere_gorev": 250,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1226,
+    "atanan_dk": 505
+   },
+   "atanan_gorev": 52,
+   "atanmayan_gorev": 70,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 17,
+    "son_tarihe_kadar_sure_yetmiyor": 3,
+    "kapasite_yetersiz": 50
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 115,
+    "son_tarihe_kadar_sure_yetmiyor": 26,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 580
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 721,
+    "O2_yuk_farki_dk": 2
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 37,
+     "atanmayan": 33
+    },
+    "supervisor": {
+     "atanan": 5,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 10,
+     "atanmayan": 37
+    }
+   },
+   "rezerv_toplam_dk": 184.905,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-22T12:45:00+00:00",
+   "yerel": "2027-01-22 15:45",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     729.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     15.0
+    ]
+   ],
+   "sure_sn": 0.5512,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 131,
+    "sonraki_pencere_gorev": 259,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1391,
+    "atanan_dk": 312
+   },
+   "atanan_gorev": 34,
+   "atanmayan_gorev": 97,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 16,
+    "son_tarihe_kadar_sure_yetmiyor": 12,
+    "kapasite_yetersiz": 69
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 142,
+    "son_tarihe_kadar_sure_yetmiyor": 208,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 729
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1079,
+    "O2_yuk_farki_dk": 15
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 27,
+     "atanmayan": 48
+    },
+    "supervisor": {
+     "atanan": 3,
+     "atanmayan": 2
+    },
+    "support": {
+     "atanan": 4,
+     "atanmayan": 47
+    }
+   },
+   "rezerv_toplam_dk": 105.249,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-22T17:00:00+00:00",
+   "yerel": "2027-01-22 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     264.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     3.0
+    ]
+   ],
+   "sure_sn": 0.337,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 113,
+    "sonraki_pencere_gorev": 381,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1139,
+    "atanan_dk": 435
+   },
+   "atanan_gorev": 35,
+   "atanmayan_gorev": 78,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 54,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 23
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 428,
+    "son_tarihe_kadar_sure_yetmiyor": 12,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 264
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 704,
+    "O2_yuk_farki_dk": 3
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 35,
+     "atanmayan": 63
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 15
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 42.327,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-22T23:00:00+00:00",
+   "yerel": "2027-01-23 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     8.0
+    ]
+   ],
+   "sure_sn": 0.0683,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 1,
+    "sonraki_pencere_gorev": 583,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 8,
+    "atanan_dk": 8
+   },
+   "atanan_gorev": 1,
+   "atanmayan_gorev": 0,
+   "atanmayan_nedenleri": {},
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 0,
+    "son_tarihe_kadar_sure_yetmiyor": 0,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 0,
+    "O2_yuk_farki_dk": 8
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 1,
+     "atanmayan": 0
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 11.362,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-23T05:00:00+00:00",
+   "yerel": "2027-01-23 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     319.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     10.0
+    ]
+   ],
+   "sure_sn": 0.6906,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 209,
+    "sonraki_pencere_gorev": 380,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 2233,
+    "atanan_dk": 618
+   },
+   "atanan_gorev": 62,
+   "atanmayan_gorev": 147,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 103,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 42
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 1276,
+    "son_tarihe_kadar_sure_yetmiyor": 20,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 319
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1615,
+    "O2_yuk_farki_dk": 10
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 43,
+     "atanmayan": 55
+    },
+    "supervisor": {
+     "atanan": 19,
+     "atanmayan": 49
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 43
+    }
+   },
+   "rezerv_toplam_dk": 36.019,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-23T05:15:00+00:00",
+   "yerel": "2027-01-23 08:15",
+   "durum": "FEASIBLE",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [
+    "asama_optimal_degil:O1_atanmayan_gorev_dk",
+    "asama_optimal_degil:O2_yuk_farki_dk"
+   ],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "FEASIBLE",
+     538.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "FEASIBLE",
+     13.0
+    ]
+   ],
+   "sure_sn": 20.3501,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 195,
+    "sonraki_pencere_gorev": 387,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 2206,
+    "atanan_dk": 444
+   },
+   "atanan_gorev": 45,
+   "atanmayan_gorev": 150,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 85,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 63
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 1189,
+    "son_tarihe_kadar_sure_yetmiyor": 35,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 538
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1762,
+    "O2_yuk_farki_dk": 13
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 30,
+     "atanmayan": 63
+    },
+    "supervisor": {
+     "atanan": 15,
+     "atanmayan": 43
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 44
+    }
+   },
+   "rezerv_toplam_dk": 26.71,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-23T11:00:00+00:00",
+   "yerel": "2027-01-23 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     71.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     63.0
+    ]
+   ],
+   "sure_sn": 0.5177,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 65,
+    "sonraki_pencere_gorev": 310,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 920,
+    "atanan_dk": 227
+   },
+   "atanan_gorev": 15,
+   "atanmayan_gorev": 50,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 40,
+    "son_tarihe_kadar_sure_yetmiyor": 4,
+    "kapasite_yetersiz": 6
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 573,
+    "son_tarihe_kadar_sure_yetmiyor": 49,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 71
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 693,
+    "O2_yuk_farki_dk": 63
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 15,
+     "atanmayan": 47
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 3
+    }
+   },
+   "rezerv_toplam_dk": 46.329,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-23T17:00:00+00:00",
+   "yerel": "2027-01-23 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     101.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     8.0
+    ]
+   ],
+   "sure_sn": 0.2892,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 88,
+    "sonraki_pencere_gorev": 295,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 937,
+    "atanan_dk": 443
+   },
+   "atanan_gorev": 37,
+   "atanmayan_gorev": 51,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 40,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 9
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 351,
+    "son_tarihe_kadar_sure_yetmiyor": 42,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 101
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 494,
+    "O2_yuk_farki_dk": 8
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 37,
+     "atanmayan": 41
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 9
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 1
+    }
+   },
+   "rezerv_toplam_dk": 8.859,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-23T23:00:00+00:00",
+   "yerel": "2027-01-24 02:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     8.0
+    ]
+   ],
+   "sure_sn": 0.1291,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 11,
+    "sonraki_pencere_gorev": 477,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 112,
+    "atanan_dk": 44
+   },
+   "atanan_gorev": 4,
+   "atanmayan_gorev": 7,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 2,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "uygun_zaman_araligi_yok": 3
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 24,
+    "son_tarihe_kadar_sure_yetmiyor": 16,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 28,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 68,
+    "O2_yuk_farki_dk": 8
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 4,
+     "atanmayan": 7
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 4.06,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-24T05:00:00+00:00",
+   "yerel": "2027-01-24 08:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     101.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     8.0
+    ]
+   ],
+   "sure_sn": 2.0761,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 165,
+    "sonraki_pencere_gorev": 341,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 1799,
+    "atanan_dk": 585
+   },
+   "atanan_gorev": 53,
+   "atanmayan_gorev": 112,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 73,
+    "son_tarihe_kadar_sure_yetmiyor": 2,
+    "kapasite_yetersiz": 12,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 25
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 942,
+    "son_tarihe_kadar_sure_yetmiyor": 21,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 150,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 101
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 1214,
+    "O2_yuk_farki_dk": 8
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 43,
+     "atanmayan": 43
+    },
+    "supervisor": {
+     "atanan": 10,
+     "atanmayan": 38
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 31
+    }
+   },
+   "rezerv_toplam_dk": 8.642,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-24T11:00:00+00:00",
+   "yerel": "2027-01-24 14:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     0.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     7.0
+    ]
+   ],
+   "sure_sn": 0.0775,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 17,
+    "sonraki_pencere_gorev": 272,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 265,
+    "atanan_dk": 37
+   },
+   "atanan_gorev": 3,
+   "atanmayan_gorev": 14,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 13,
+    "son_tarihe_kadar_sure_yetmiyor": 1
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 208,
+    "son_tarihe_kadar_sure_yetmiyor": 20,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 0
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 228,
+    "O2_yuk_farki_dk": 7
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 2,
+     "atanmayan": 12
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 0
+    },
+    "support": {
+     "atanan": 1,
+     "atanmayan": 2
+    }
+   },
+   "rezerv_toplam_dk": 60.539,
+   "tahminsiz_rezerv_satiri": 0
+  },
+  {
+   "an": "2027-01-24T17:00:00+00:00",
+   "yerel": "2027-01-24 20:00",
+   "durum": "OPTIMAL",
+   "gosterilebilir": true,
+   "nedenler": [],
+   "uyarilar": [],
+   "asamalar": [
+    [
+     "O1_atanmayan_gorev_dk",
+     "OPTIMAL",
+     178.0
+    ],
+    [
+     "O2_yuk_farki_dk",
+     "OPTIMAL",
+     0.0
+    ]
+   ],
+   "sure_sn": 0.269,
+   "gercek_atama_yok": true,
+   "kayit_yok": true,
+   "yeniden_dogrulama": true,
+   "ihlaller": [],
+   "kapsam": {
+    "pencerede_son_tarihli_gorev": 104,
+    "sonraki_pencere_gorev": 304,
+    "iptal_zamani_belirsiz_gorev": 0,
+    "somut_gorev_dk": 883,
+    "atanan_dk": 339
+   },
+   "atanan_gorev": 30,
+   "atanmayan_gorev": 74,
+   "atanmayan_nedenleri": {
+    "son_tarih_gecmis": 59,
+    "son_tarihe_kadar_sure_yetmiyor": 1,
+    "kapasite_yetersiz": 14
+   },
+   "acik_dk_nedenleri": {
+    "son_tarih_gecmis": 359,
+    "son_tarihe_kadar_sure_yetmiyor": 7,
+    "rol_yetkinlik_vardiya_uygun_personel_yok": 0,
+    "uygun_zaman_araligi_yok": 0,
+    "kapasite_yetersiz": 178
+   },
+   "amac": {
+    "O1_atanmayan_gorev_dk": 544,
+    "O2_yuk_farki_dk": 0
+   },
+   "rol_bazinda": {
+    "nurse": {
+     "atanan": 30,
+     "atanmayan": 46
+    },
+    "supervisor": {
+     "atanan": 0,
+     "atanmayan": 28
+    },
+    "support": {
+     "atanan": 0,
+     "atanmayan": 0
+    }
+   },
+   "rezerv_toplam_dk": 38.349,
+   "tahminsiz_rezerv_satiri": 0
+  }
+ ],
+ "sure_sn": 927.6,
+ "not": "Uygulanabilirlik denetimi; gerçek atama yok, kayıt yok, sentetik veri. Rezerv kimliksizdir ve atanmaz."
+}

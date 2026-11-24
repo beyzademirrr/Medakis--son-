@@ -1,0 +1,936 @@
+{
+ "varsayimlar": {
+  "kaynak": "test_sentetik: U4 örnek değeri; yetkili kaynak değildir",
+  "destek_kurallari": [
+   "test_sentetik: U4 örnek değeri; yetkili kaynak değildir (A-B)",
+   "test_sentetik: U4 örnek değeri; yetkili kaynak değildir (acil)"
+  ],
+  "yetkinlik_esleme": {
+   "1": [
+    "MON",
+    "MED"
+   ],
+   "2": [
+    "MON",
+    "MED"
+   ],
+   "3": [
+    "TRIAGE"
+   ]
+  },
+  "agirliklar": {
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 1
+  },
+  "fazla_toleransi": {
+   "1": 30,
+   "2": 30,
+   "3": 30,
+   "4": 30
+  }
+ },
+ "durum_sayilari": {
+  "OPTIMAL": 2,
+  "inceleme_gerekli": 12,
+  "INFEASIBLE": 1
+ },
+ "calistirmalar": {
+  "2027-01-11 10:00": {
+   "durum": "OPTIMAL",
+   "nedenler": [],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "uygun": 12
+   },
+   "asamalar": [
+    {
+     "asama": "O1_karsilanmayan_talep",
+     "durum": "OPTIMAL",
+     "amac_degeri": 457.0,
+     "alt_sinir": 457.0,
+     "sure_sn": 0.0129,
+     "optimal": true
+    },
+    {
+     "asama": "O2_denge",
+     "durum": "OPTIMAL",
+     "amac_degeri": 675.0,
+     "alt_sinir": 675.0,
+     "sure_sn": 0.004,
+     "optimal": true
+    },
+    {
+     "asama": "O3_hareket",
+     "durum": "OPTIMAL",
+     "amac_degeri": 1.0,
+     "alt_sinir": 1.0,
+     "sure_sn": 0.0041,
+     "optimal": true
+    },
+    {
+     "asama": "O4_fazla_kapasite",
+     "durum": "OPTIMAL",
+     "amac_degeri": 166.0,
+     "alt_sinir": 166.0,
+     "sure_sn": 0.0041,
+     "optimal": true
+    }
+   ],
+   "dogrulama": {
+    "calisti": true,
+    "gecti": true,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": true,
+   "tasimalar": [
+    {
+     "personel": 2,
+     "rol": "nurse",
+     "ev_servis": 1,
+     "son_onayli_servis": 1,
+     "hedef_servis": 3,
+     "baslangic": "2027-01-11T07:00:00+00:00",
+     "bitis": "2027-01-11T08:00:00+00:00",
+     "sure_dk": 60,
+     "asgari_kalis_dk": 60,
+     "destek_kurali_kaynagi": "test_sentetik: U4 örnek değeri; yetkili kaynak değildir (acil)",
+     "gerekli_yetkinlikler": [
+      "TRIAGE"
+     ],
+     "kullanilabilir_dk_ham": 60.0,
+     "kullanilabilir_dk_tam": 60
+    }
+   ],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [
+    {
+     "servis_id": 1,
+     "rol": "nurse",
+     "tamponlu_talep_dk_ham": 163.166602,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 191.960708,
+     "ihtiyac_personel_dk_tam": 192,
+     "kapasite_personel_dk_ham": 240.0,
+     "kapasite_personel_dk_tam": 240,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 48,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 300,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 5,
+     "onerilen_kisi": 4
+    },
+    {
+     "servis_id": 1,
+     "rol": "supervisor",
+     "tamponlu_talep_dk_ham": 0.0,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 0.0,
+     "ihtiyac_personel_dk_tam": 0,
+     "kapasite_personel_dk_ham": 60.0,
+     "kapasite_personel_dk_tam": 60,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 60,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 60,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 1,
+     "onerilen_kisi": 1
+    },
+    {
+     "servis_id": 1,
+     "rol": "support",
+     "tamponlu_talep_dk_ham": 240.14669,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 282.525518,
+     "ihtiyac_personel_dk_tam": 283,
+     "kapasite_personel_dk_ham": 120.0,
+     "kapasite_personel_dk_tam": 120,
+     "acik_personel_dk_tam": 163,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 162.525518,
+     "mevcut_kapasite_tam": 120,
+     "mevcut_acik_tam": 163,
+     "mevcut_kisi": 2,
+     "onerilen_kisi": 2
+    },
+    {
+     "servis_id": 2,
+     "rol": "nurse",
+     "tamponlu_talep_dk_ham": 176.529227,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 207.681444,
+     "ihtiyac_personel_dk_tam": 208,
+     "kapasite_personel_dk_ham": 300.0,
+     "kapasite_personel_dk_tam": 300,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 92,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 300,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 5,
+     "onerilen_kisi": 5
+    },
+    {
+     "servis_id": 2,
+     "rol": "supervisor",
+     "tamponlu_talep_dk_ham": 2.32822,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 2.739082,
+     "ihtiyac_personel_dk_tam": 3,
+     "kapasite_personel_dk_ham": 60.0,
+     "kapasite_personel_dk_tam": 60,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 57,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 60,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 1,
+     "onerilen_kisi": 1
+    },
+    {
+     "servis_id": 2,
+     "rol": "support",
+     "tamponlu_talep_dk_ham": 313.016066,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 368.254195,
+     "ihtiyac_personel_dk_tam": 369,
+     "kapasite_personel_dk_ham": 120.0,
+     "kapasite_personel_dk_tam": 120,
+     "acik_personel_dk_tam": 249,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 248.254195,
+     "mevcut_kapasite_tam": 120,
+     "mevcut_acik_tam": 249,
+     "mevcut_kisi": 2,
+     "onerilen_kisi": 2
+    },
+    {
+     "servis_id": 3,
+     "rol": "nurse",
+     "tamponlu_talep_dk_ham": 197.078059,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 231.85654,
+     "ihtiyac_personel_dk_tam": 232,
+     "kapasite_personel_dk_ham": 240.0,
+     "kapasite_personel_dk_tam": 240,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 8,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 180,
+     "mevcut_acik_tam": 52,
+     "mevcut_kisi": 3,
+     "onerilen_kisi": 4
+    },
+    {
+     "servis_id": 3,
+     "rol": "supervisor",
+     "tamponlu_talep_dk_ham": 21.2,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 24.941176,
+     "ihtiyac_personel_dk_tam": 25,
+     "kapasite_personel_dk_ham": 60.0,
+     "kapasite_personel_dk_tam": 60,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 35,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 60,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 1,
+     "onerilen_kisi": 1
+    },
+    {
+     "servis_id": 3,
+     "rol": "support",
+     "tamponlu_talep_dk_ham": 4.882994,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 5.744699,
+     "ihtiyac_personel_dk_tam": 6,
+     "kapasite_personel_dk_ham": 60.0,
+     "kapasite_personel_dk_tam": 60,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 54,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 60,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 1,
+     "onerilen_kisi": 1
+    },
+    {
+     "servis_id": 4,
+     "rol": "nurse",
+     "tamponlu_talep_dk_ham": 190.608268,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 224.245021,
+     "ihtiyac_personel_dk_tam": 225,
+     "kapasite_personel_dk_ham": 180.0,
+     "kapasite_personel_dk_tam": 180,
+     "acik_personel_dk_tam": 45,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 44.245021,
+     "mevcut_kapasite_tam": 180,
+     "mevcut_acik_tam": 45,
+     "mevcut_kisi": 3,
+     "onerilen_kisi": 3
+    },
+    {
+     "servis_id": 4,
+     "rol": "supervisor",
+     "tamponlu_talep_dk_ham": 0.0,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 0.0,
+     "ihtiyac_personel_dk_tam": 0,
+     "kapasite_personel_dk_ham": 0,
+     "kapasite_personel_dk_tam": 0,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 0,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 0,
+     "onerilen_kisi": 0
+    },
+    {
+     "servis_id": 4,
+     "rol": "support",
+     "tamponlu_talep_dk_ham": 0.0,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 0.0,
+     "ihtiyac_personel_dk_tam": 0,
+     "kapasite_personel_dk_ham": 0,
+     "kapasite_personel_dk_tam": 0,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 0,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 0,
+     "onerilen_kisi": 0
+    }
+   ],
+   "deterministik": true,
+   "u4_sure_sn": 0.179
+  },
+  "2027-01-11 14:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:1:nurse",
+    "u3_inceleme_gerekli:1:support",
+    "u3_inceleme_gerekli:2:nurse",
+    "u3_inceleme_gerekli:2:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "asgari_personel_ihlali": 4,
+    "inceleme_gerekli": 2,
+    "uygun": 6
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-11 22:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:1:nurse"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "inceleme_gerekli": 1,
+    "uygun": 7,
+    "asgari_personel_ihlali": 1,
+    "kapali_servis": 3
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-12 10:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:1:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "uygun": 11,
+    "inceleme_gerekli": 1
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-12 14:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:1:nurse",
+    "u3_inceleme_gerekli:1:support",
+    "u3_inceleme_gerekli:2:nurse",
+    "u3_inceleme_gerekli:2:support",
+    "u3_inceleme_gerekli:3:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "asgari_personel_ihlali": 5,
+    "inceleme_gerekli": 4,
+    "uygun": 3
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-12 22:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:1:nurse"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "inceleme_gerekli": 1,
+    "uygun": 7,
+    "asgari_personel_ihlali": 1,
+    "kapali_servis": 3
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-13 10:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:1:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "uygun": 11,
+    "inceleme_gerekli": 1
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-13 14:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:1:nurse",
+    "u3_inceleme_gerekli:1:support",
+    "u3_inceleme_gerekli:2:nurse",
+    "u3_inceleme_gerekli:2:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "asgari_personel_ihlali": 4,
+    "inceleme_gerekli": 3,
+    "uygun": 5
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-13 22:00": {
+   "durum": "INFEASIBLE",
+   "nedenler": [
+    "cozucu:O1_karsilanmayan_talep:INFEASIBLE"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "uygun": 8,
+    "asgari_personel_ihlali": 1,
+    "kapali_servis": 3
+   },
+   "asamalar": [
+    {
+     "asama": "O1_karsilanmayan_talep",
+     "durum": "INFEASIBLE",
+     "amac_degeri": null,
+     "alt_sinir": null,
+     "sure_sn": 0.0007,
+     "optimal": false
+    }
+   ],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [
+    "H7_karsilanamaz:3:supervisor:2027-01-13T19:00:00+00:00:0<1",
+    "H7_karsilanamaz:3:supervisor:2027-01-13T19:15:00+00:00:0<1",
+    "H7_karsilanamaz:3:supervisor:2027-01-13T19:30:00+00:00:0<1",
+    "H7_karsilanamaz:3:supervisor:2027-01-13T19:45:00+00:00:0<1"
+   ],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.039
+  },
+  "2027-01-14 10:00": {
+   "durum": "OPTIMAL",
+   "nedenler": [],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "uygun": 12
+   },
+   "asamalar": [
+    {
+     "asama": "O1_karsilanmayan_talep",
+     "durum": "OPTIMAL",
+     "amac_degeri": 641.0,
+     "alt_sinir": 641.0,
+     "sure_sn": 0.0081,
+     "optimal": true
+    },
+    {
+     "asama": "O2_denge",
+     "durum": "OPTIMAL",
+     "amac_degeri": 737.0,
+     "alt_sinir": 737.0,
+     "sure_sn": 0.0032,
+     "optimal": true
+    },
+    {
+     "asama": "O3_hareket",
+     "durum": "OPTIMAL",
+     "amac_degeri": 0.0,
+     "alt_sinir": 0.0,
+     "sure_sn": 0.0031,
+     "optimal": true
+    },
+    {
+     "asama": "O4_fazla_kapasite",
+     "durum": "OPTIMAL",
+     "amac_degeri": 209.0,
+     "alt_sinir": 209.0,
+     "sure_sn": 0.0025,
+     "optimal": true
+    }
+   ],
+   "dogrulama": {
+    "calisti": true,
+    "gecti": true,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": true,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [
+    {
+     "servis_id": 1,
+     "rol": "nurse",
+     "tamponlu_talep_dk_ham": 178.231954,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 209.684652,
+     "ihtiyac_personel_dk_tam": 210,
+     "kapasite_personel_dk_ham": 300.0,
+     "kapasite_personel_dk_tam": 300,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 90,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 300,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 5,
+     "onerilen_kisi": 5
+    },
+    {
+     "servis_id": 1,
+     "rol": "supervisor",
+     "tamponlu_talep_dk_ham": 0.0,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 0.0,
+     "ihtiyac_personel_dk_tam": 0,
+     "kapasite_personel_dk_ham": 60.0,
+     "kapasite_personel_dk_tam": 60,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 60,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 60,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 1,
+     "onerilen_kisi": 1
+    },
+    {
+     "servis_id": 1,
+     "rol": "support",
+     "tamponlu_talep_dk_ham": 293.121282,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 344.848567,
+     "ihtiyac_personel_dk_tam": 345,
+     "kapasite_personel_dk_ham": 120.0,
+     "kapasite_personel_dk_tam": 120,
+     "acik_personel_dk_tam": 225,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 224.848567,
+     "mevcut_kapasite_tam": 120,
+     "mevcut_acik_tam": 225,
+     "mevcut_kisi": 2,
+     "onerilen_kisi": 2
+    },
+    {
+     "servis_id": 2,
+     "rol": "nurse",
+     "tamponlu_talep_dk_ham": 190.733155,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 224.391947,
+     "ihtiyac_personel_dk_tam": 225,
+     "kapasite_personel_dk_ham": 300.0,
+     "kapasite_personel_dk_tam": 300,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 75,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 300,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 5,
+     "onerilen_kisi": 5
+    },
+    {
+     "servis_id": 2,
+     "rol": "supervisor",
+     "tamponlu_talep_dk_ham": 0.026923,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 0.031674,
+     "ihtiyac_personel_dk_tam": 1,
+     "kapasite_personel_dk_ham": 60.0,
+     "kapasite_personel_dk_tam": 60,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 59,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 60,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 1,
+     "onerilen_kisi": 1
+    },
+    {
+     "servis_id": 2,
+     "rol": "support",
+     "tamponlu_talep_dk_ham": 386.239266,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 454.399136,
+     "ihtiyac_personel_dk_tam": 455,
+     "kapasite_personel_dk_ham": 120.0,
+     "kapasite_personel_dk_tam": 120,
+     "acik_personel_dk_tam": 335,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 334.399136,
+     "mevcut_kapasite_tam": 120,
+     "mevcut_acik_tam": 335,
+     "mevcut_kisi": 2,
+     "onerilen_kisi": 2
+    },
+    {
+     "servis_id": 3,
+     "rol": "nurse",
+     "tamponlu_talep_dk_ham": 112.025026,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 131.794148,
+     "ihtiyac_personel_dk_tam": 132,
+     "kapasite_personel_dk_ham": 180.0,
+     "kapasite_personel_dk_tam": 180,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 48,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 180,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 3,
+     "onerilen_kisi": 3
+    },
+    {
+     "servis_id": 3,
+     "rol": "supervisor",
+     "tamponlu_talep_dk_ham": 25.65,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 30.176471,
+     "ihtiyac_personel_dk_tam": 31,
+     "kapasite_personel_dk_ham": 60.0,
+     "kapasite_personel_dk_tam": 60,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 29,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 60,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 1,
+     "onerilen_kisi": 1
+    },
+    {
+     "servis_id": 3,
+     "rol": "support",
+     "tamponlu_talep_dk_ham": 1.960391,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 2.306342,
+     "ihtiyac_personel_dk_tam": 3,
+     "kapasite_personel_dk_ham": 60.0,
+     "kapasite_personel_dk_tam": 60,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 57,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 60,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 1,
+     "onerilen_kisi": 1
+    },
+    {
+     "servis_id": 4,
+     "rol": "nurse",
+     "tamponlu_talep_dk_ham": 221.545222,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 260.641438,
+     "ihtiyac_personel_dk_tam": 261,
+     "kapasite_personel_dk_ham": 180.0,
+     "kapasite_personel_dk_tam": 180,
+     "acik_personel_dk_tam": 81,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 80.641438,
+     "mevcut_kapasite_tam": 180,
+     "mevcut_acik_tam": 81,
+     "mevcut_kisi": 3,
+     "onerilen_kisi": 3
+    },
+    {
+     "servis_id": 4,
+     "rol": "supervisor",
+     "tamponlu_talep_dk_ham": 0.0,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 0.0,
+     "ihtiyac_personel_dk_tam": 0,
+     "kapasite_personel_dk_ham": 0,
+     "kapasite_personel_dk_tam": 0,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 0,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 0,
+     "onerilen_kisi": 0
+    },
+    {
+     "servis_id": 4,
+     "rol": "support",
+     "tamponlu_talep_dk_ham": 0.0,
+     "kullanim_orani": 0.85,
+     "ihtiyac_personel_dk_ham": 0.0,
+     "ihtiyac_personel_dk_tam": 0,
+     "kapasite_personel_dk_ham": 0,
+     "kapasite_personel_dk_tam": 0,
+     "acik_personel_dk_tam": 0,
+     "fazla_personel_dk_tam": 0,
+     "acik_personel_dk_ham": 0.0,
+     "mevcut_kapasite_tam": 0,
+     "mevcut_acik_tam": 0,
+     "mevcut_kisi": 0,
+     "onerilen_kisi": 0
+    }
+   ],
+   "deterministik": true,
+   "u4_sure_sn": 0.089
+  },
+  "2027-01-14 14:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:1:nurse",
+    "u3_inceleme_gerekli:1:support",
+    "u3_inceleme_gerekli:2:nurse",
+    "u3_inceleme_gerekli:2:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "inceleme_gerekli": 4,
+    "uygun": 5,
+    "asgari_personel_ihlali": 3
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-14 22:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:4:nurse",
+    "u3_inceleme_gerekli:4:supervisor",
+    "u3_inceleme_gerekli:4:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "uygun": 8,
+    "asgari_personel_ihlali": 1,
+    "inceleme_gerekli": 3
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.002
+  },
+  "2027-01-15 10:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:3:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "uygun": 11,
+    "inceleme_gerekli": 1
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-15 14:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:1:nurse",
+    "u3_inceleme_gerekli:1:support",
+    "u3_inceleme_gerekli:2:nurse",
+    "u3_inceleme_gerekli:2:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "inceleme_gerekli": 4,
+    "asgari_personel_ihlali": 4,
+    "uygun": 4
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.001
+  },
+  "2027-01-15 22:00": {
+   "durum": "inceleme_gerekli",
+   "nedenler": [
+    "u3_inceleme_gerekli:4:nurse",
+    "u3_inceleme_gerekli:4:supervisor",
+    "u3_inceleme_gerekli:4:support"
+   ],
+   "uyarilar": [],
+   "u3_durumlari": {
+    "uygun": 7,
+    "asgari_personel_ihlali": 2,
+    "inceleme_gerekli": 3
+   },
+   "asamalar": [],
+   "dogrulama": {
+    "calisti": false,
+    "gecti": false,
+    "ihlaller": []
+   },
+   "oneri_yayinlanabilir": false,
+   "tasimalar": [],
+   "kilitli": [],
+   "tani": [],
+   "servis_rol": [],
+   "deterministik": true,
+   "u4_sure_sn": 0.002
+  }
+ },
+ "sure_sn": 131.3
+}

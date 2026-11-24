@@ -1,0 +1,1584 @@
+{
+ "dev_vaka": 60,
+ "v2_parcalama": {
+  "target_tokens": 320,
+  "overlap_tokens": 40,
+  "max_input_tokens": 512,
+  "counter": "yaklasik_v1",
+  "version": "parcalama_v2",
+  "exclude_intro": true
+ },
+ "kabul_kurali": "bge-m3: hiçbir ölçü kötüleşmez ve en az biri iyileşir",
+ "adaylar": {
+  "bge-m3": {
+   "v1_indeks": "8d505c0775bf637cef5a339f730df02a10576ceb4db0b13a4a2a7f0a5d487545",
+   "v2_indeks": "3183f148adca636df4e1289042b11ab613476bab486231e1dd5d4da5329c52b6",
+   "v1": {
+    "recall_at_5": 0.9667,
+    "mrr_at_10": 0.9233,
+    "esik": 0.424,
+    "orneklem_ici_kacinma": 0.967,
+    "orneklem_ici_yanlis_kacinma": 0.133,
+    "cv": {
+     "kacinma_recall": 0.933,
+     "yanlis_kacinma": 0.167,
+     "kat_esikleri": [
+      0.424,
+      0.424,
+      0.4642,
+      0.4135,
+      0.4642
+     ]
+    },
+    "giris_ilk1_vaka": [
+     "E001"
+    ],
+    "giris_ilk5_toplam": 6,
+    "parca": 73,
+    "vakalar": [
+     {
+      "vaka": "C001",
+      "ans": true,
+      "d1": 0.3924,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C003",
+      "ans": true,
+      "d1": 0.3403,
+      "ilk_gold": 2
+     },
+     {
+      "vaka": "C006",
+      "ans": true,
+      "d1": 0.3252,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C009",
+      "ans": true,
+      "d1": 0.3652,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C013",
+      "ans": true,
+      "d1": 0.2452,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C016",
+      "ans": true,
+      "d1": 0.4466,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C021",
+      "ans": true,
+      "d1": 0.4482,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C024",
+      "ans": true,
+      "d1": 0.4961,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C026",
+      "ans": true,
+      "d1": 0.3392,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C031",
+      "ans": true,
+      "d1": 0.2707,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C034",
+      "ans": true,
+      "d1": 0.3299,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C036",
+      "ans": true,
+      "d1": 0.3068,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C041",
+      "ans": true,
+      "d1": 0.3148,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C042",
+      "ans": true,
+      "d1": 0.3027,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C046",
+      "ans": true,
+      "d1": 0.3772,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C050",
+      "ans": true,
+      "d1": 0.4135,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C054",
+      "ans": true,
+      "d1": 0.2603,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C057",
+      "ans": true,
+      "d1": 0.2945,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "U001",
+      "ans": false,
+      "d1": 0.5616,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U002",
+      "ans": false,
+      "d1": 0.5494,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U003",
+      "ans": false,
+      "d1": 0.6164,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U004",
+      "ans": false,
+      "d1": 0.65,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U005",
+      "ans": false,
+      "d1": 0.5233,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U006",
+      "ans": false,
+      "d1": 0.4948,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "E001",
+      "ans": true,
+      "d1": 0.4642,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "E002",
+      "ans": true,
+      "d1": 0.4044,
+      "ilk_gold": 5
+     },
+     {
+      "vaka": "E003",
+      "ans": true,
+      "d1": 0.4015,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E004",
+      "ans": true,
+      "d1": 0.4038,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E005",
+      "ans": true,
+      "d1": 0.3643,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E006",
+      "ans": true,
+      "d1": 0.424,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E007",
+      "ans": true,
+      "d1": 0.2946,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E008",
+      "ans": true,
+      "d1": 0.3768,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E009",
+      "ans": true,
+      "d1": 0.3451,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E010",
+      "ans": true,
+      "d1": 0.3972,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E011",
+      "ans": true,
+      "d1": 0.3219,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E012",
+      "ans": true,
+      "d1": 0.3215,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "V001",
+      "ans": false,
+      "d1": 0.4749,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V002",
+      "ans": false,
+      "d1": 0.507,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V003",
+      "ans": false,
+      "d1": 0.4782,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V004",
+      "ans": false,
+      "d1": 0.4819,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V005",
+      "ans": false,
+      "d1": 0.4933,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V006",
+      "ans": false,
+      "d1": 0.4429,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V007",
+      "ans": false,
+      "d1": 0.4697,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V008",
+      "ans": false,
+      "d1": 0.4701,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V009",
+      "ans": false,
+      "d1": 0.4867,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V010",
+      "ans": false,
+      "d1": 0.5435,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V011",
+      "ans": false,
+      "d1": 0.4849,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V012",
+      "ans": false,
+      "d1": 0.6024,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V013",
+      "ans": false,
+      "d1": 0.3882,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V014",
+      "ans": false,
+      "d1": 0.6058,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V015",
+      "ans": false,
+      "d1": 0.567,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V016",
+      "ans": false,
+      "d1": 0.5115,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V017",
+      "ans": false,
+      "d1": 0.5427,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V018",
+      "ans": false,
+      "d1": 0.4426,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V019",
+      "ans": false,
+      "d1": 0.6112,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V020",
+      "ans": false,
+      "d1": 0.5152,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V021",
+      "ans": false,
+      "d1": 0.5548,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V022",
+      "ans": false,
+      "d1": 0.5419,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V023",
+      "ans": false,
+      "d1": 0.4786,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V024",
+      "ans": false,
+      "d1": 0.5234,
+      "ilk_gold": null
+     }
+    ]
+   },
+   "v2": {
+    "recall_at_5": 0.9833,
+    "mrr_at_10": 0.9567,
+    "esik": 0.424,
+    "orneklem_ici_kacinma": 0.967,
+    "orneklem_ici_yanlis_kacinma": 0.133,
+    "cv": {
+     "kacinma_recall": 0.933,
+     "yanlis_kacinma": 0.167,
+     "kat_esikleri": [
+      0.424,
+      0.424,
+      0.4482,
+      0.4135,
+      0.4482
+     ]
+    },
+    "giris_ilk1_vaka": [],
+    "giris_ilk5_toplam": 0,
+    "parca": 54,
+    "vakalar": [
+     {
+      "vaka": "C001",
+      "ans": true,
+      "d1": 0.3924,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C003",
+      "ans": true,
+      "d1": 0.3403,
+      "ilk_gold": 2
+     },
+     {
+      "vaka": "C006",
+      "ans": true,
+      "d1": 0.3252,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C009",
+      "ans": true,
+      "d1": 0.3652,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C013",
+      "ans": true,
+      "d1": 0.2452,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C016",
+      "ans": true,
+      "d1": 0.4466,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C021",
+      "ans": true,
+      "d1": 0.4482,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C024",
+      "ans": true,
+      "d1": 0.4961,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C026",
+      "ans": true,
+      "d1": 0.3392,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C031",
+      "ans": true,
+      "d1": 0.2707,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C034",
+      "ans": true,
+      "d1": 0.3299,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C036",
+      "ans": true,
+      "d1": 0.3068,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C041",
+      "ans": true,
+      "d1": 0.3148,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C042",
+      "ans": true,
+      "d1": 0.3027,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C046",
+      "ans": true,
+      "d1": 0.3772,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C050",
+      "ans": true,
+      "d1": 0.4135,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C054",
+      "ans": true,
+      "d1": 0.2603,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C057",
+      "ans": true,
+      "d1": 0.2945,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "U001",
+      "ans": false,
+      "d1": 0.5616,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U002",
+      "ans": false,
+      "d1": 0.5494,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U003",
+      "ans": false,
+      "d1": 0.6164,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U004",
+      "ans": false,
+      "d1": 0.65,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U005",
+      "ans": false,
+      "d1": 0.5233,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U006",
+      "ans": false,
+      "d1": 0.4948,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "E001",
+      "ans": true,
+      "d1": 0.565,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E002",
+      "ans": true,
+      "d1": 0.4044,
+      "ilk_gold": 5
+     },
+     {
+      "vaka": "E003",
+      "ans": true,
+      "d1": 0.4015,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E004",
+      "ans": true,
+      "d1": 0.4038,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E005",
+      "ans": true,
+      "d1": 0.3643,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E006",
+      "ans": true,
+      "d1": 0.424,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E007",
+      "ans": true,
+      "d1": 0.2946,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E008",
+      "ans": true,
+      "d1": 0.3768,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E009",
+      "ans": true,
+      "d1": 0.3451,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E010",
+      "ans": true,
+      "d1": 0.3972,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E011",
+      "ans": true,
+      "d1": 0.3219,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E012",
+      "ans": true,
+      "d1": 0.3215,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "V001",
+      "ans": false,
+      "d1": 0.4749,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V002",
+      "ans": false,
+      "d1": 0.507,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V003",
+      "ans": false,
+      "d1": 0.4782,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V004",
+      "ans": false,
+      "d1": 0.4819,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V005",
+      "ans": false,
+      "d1": 0.4933,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V006",
+      "ans": false,
+      "d1": 0.4429,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V007",
+      "ans": false,
+      "d1": 0.4697,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V008",
+      "ans": false,
+      "d1": 0.4701,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V009",
+      "ans": false,
+      "d1": 0.4867,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V010",
+      "ans": false,
+      "d1": 0.5435,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V011",
+      "ans": false,
+      "d1": 0.4849,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V012",
+      "ans": false,
+      "d1": 0.6024,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V013",
+      "ans": false,
+      "d1": 0.3882,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V014",
+      "ans": false,
+      "d1": 0.6058,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V015",
+      "ans": false,
+      "d1": 0.567,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V016",
+      "ans": false,
+      "d1": 0.5115,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V017",
+      "ans": false,
+      "d1": 0.5427,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V018",
+      "ans": false,
+      "d1": 0.4426,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V019",
+      "ans": false,
+      "d1": 0.6112,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V020",
+      "ans": false,
+      "d1": 0.5152,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V021",
+      "ans": false,
+      "d1": 0.5548,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V022",
+      "ans": false,
+      "d1": 0.5419,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V023",
+      "ans": false,
+      "d1": 0.4786,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V024",
+      "ans": false,
+      "d1": 0.5234,
+      "ilk_gold": null
+     }
+    ]
+   },
+   "karar": {
+    "kotulesen": [],
+    "iyilesen": [
+     "recall_at_5",
+     "mrr_at_10"
+    ],
+    "kabul": true
+   }
+  },
+  "qwen3-embedding:0.6b": {
+   "v1_indeks": "679b1f6d69cd4d3532eee96866373043257b6093648c7fa5f6791371becacf48",
+   "v2_indeks": "3d22667eb391b38f50acd42c85e1715aa6c397eb0f71ce54df2bcc2fc5cc0800",
+   "v1": {
+    "recall_at_5": 0.9667,
+    "mrr_at_10": 0.9139,
+    "esik": 0.5066,
+    "orneklem_ici_kacinma": 0.833,
+    "orneklem_ici_yanlis_kacinma": 0.033,
+    "cv": {
+     "kacinma_recall": 0.867,
+     "yanlis_kacinma": 0.1,
+     "kat_esikleri": [
+      0.5066,
+      0.5066,
+      0.4797,
+      0.5066,
+      0.5066
+     ]
+    },
+    "giris_ilk1_vaka": [
+     "E001",
+     "V012"
+    ],
+    "giris_ilk5_toplam": 19,
+    "parca": 73,
+    "vakalar": [
+     {
+      "vaka": "C001",
+      "ans": true,
+      "d1": 0.3856,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C003",
+      "ans": true,
+      "d1": 0.3383,
+      "ilk_gold": 3
+     },
+     {
+      "vaka": "C006",
+      "ans": true,
+      "d1": 0.3862,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C009",
+      "ans": true,
+      "d1": 0.5066,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C013",
+      "ans": true,
+      "d1": 0.1953,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C016",
+      "ans": true,
+      "d1": 0.3379,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C021",
+      "ans": true,
+      "d1": 0.2866,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C024",
+      "ans": true,
+      "d1": 0.4727,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C026",
+      "ans": true,
+      "d1": 0.2419,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C031",
+      "ans": true,
+      "d1": 0.2809,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C034",
+      "ans": true,
+      "d1": 0.3589,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C036",
+      "ans": true,
+      "d1": 0.3254,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C041",
+      "ans": true,
+      "d1": 0.3594,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C042",
+      "ans": true,
+      "d1": 0.3699,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C046",
+      "ans": true,
+      "d1": 0.3749,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C050",
+      "ans": true,
+      "d1": 0.5906,
+      "ilk_gold": 2
+     },
+     {
+      "vaka": "C054",
+      "ans": true,
+      "d1": 0.3369,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C057",
+      "ans": true,
+      "d1": 0.2897,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "U001",
+      "ans": false,
+      "d1": 0.7359,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U002",
+      "ans": false,
+      "d1": 0.6114,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U003",
+      "ans": false,
+      "d1": 0.7254,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U004",
+      "ans": false,
+      "d1": 0.6955,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U005",
+      "ans": false,
+      "d1": 0.6226,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U006",
+      "ans": false,
+      "d1": 0.5335,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "E001",
+      "ans": true,
+      "d1": 0.5054,
+      "ilk_gold": 4
+     },
+     {
+      "vaka": "E002",
+      "ans": true,
+      "d1": 0.422,
+      "ilk_gold": 3
+     },
+     {
+      "vaka": "E003",
+      "ans": true,
+      "d1": 0.4993,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E004",
+      "ans": true,
+      "d1": 0.4879,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E005",
+      "ans": true,
+      "d1": 0.4207,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E006",
+      "ans": true,
+      "d1": 0.4797,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E007",
+      "ans": true,
+      "d1": 0.1996,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E008",
+      "ans": true,
+      "d1": 0.3626,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E009",
+      "ans": true,
+      "d1": 0.3536,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E010",
+      "ans": true,
+      "d1": 0.2876,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E011",
+      "ans": true,
+      "d1": 0.4265,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E012",
+      "ans": true,
+      "d1": 0.2989,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "V001",
+      "ans": false,
+      "d1": 0.5581,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V002",
+      "ans": false,
+      "d1": 0.5467,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V003",
+      "ans": false,
+      "d1": 0.6558,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V004",
+      "ans": false,
+      "d1": 0.4839,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V005",
+      "ans": false,
+      "d1": 0.5201,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V006",
+      "ans": false,
+      "d1": 0.3644,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V007",
+      "ans": false,
+      "d1": 0.485,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V008",
+      "ans": false,
+      "d1": 0.565,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V009",
+      "ans": false,
+      "d1": 0.6015,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V010",
+      "ans": false,
+      "d1": 0.618,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V011",
+      "ans": false,
+      "d1": 0.6628,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V012",
+      "ans": false,
+      "d1": 0.605,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V013",
+      "ans": false,
+      "d1": 0.4371,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V014",
+      "ans": false,
+      "d1": 0.6634,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V015",
+      "ans": false,
+      "d1": 0.5607,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V016",
+      "ans": false,
+      "d1": 0.5332,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V017",
+      "ans": false,
+      "d1": 0.6173,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V018",
+      "ans": false,
+      "d1": 0.5834,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V019",
+      "ans": false,
+      "d1": 0.6368,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V020",
+      "ans": false,
+      "d1": 0.4161,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V021",
+      "ans": false,
+      "d1": 0.5223,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V022",
+      "ans": false,
+      "d1": 0.5843,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V023",
+      "ans": false,
+      "d1": 0.5258,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V024",
+      "ans": false,
+      "d1": 0.6117,
+      "ilk_gold": null
+     }
+    ]
+   },
+   "v2": {
+    "recall_at_5": 0.9667,
+    "mrr_at_10": 0.9167,
+    "esik": 0.5066,
+    "orneklem_ici_kacinma": 0.833,
+    "orneklem_ici_yanlis_kacinma": 0.067,
+    "cv": {
+     "kacinma_recall": 0.867,
+     "yanlis_kacinma": 0.133,
+     "kat_esikleri": [
+      0.5066,
+      0.5066,
+      0.4797,
+      0.5066,
+      0.5066
+     ]
+    },
+    "giris_ilk1_vaka": [],
+    "giris_ilk5_toplam": 0,
+    "parca": 54,
+    "vakalar": [
+     {
+      "vaka": "C001",
+      "ans": true,
+      "d1": 0.3856,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C003",
+      "ans": true,
+      "d1": 0.3383,
+      "ilk_gold": 3
+     },
+     {
+      "vaka": "C006",
+      "ans": true,
+      "d1": 0.3862,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C009",
+      "ans": true,
+      "d1": 0.5066,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C013",
+      "ans": true,
+      "d1": 0.1953,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C016",
+      "ans": true,
+      "d1": 0.3379,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C021",
+      "ans": true,
+      "d1": 0.2866,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C024",
+      "ans": true,
+      "d1": 0.4727,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C026",
+      "ans": true,
+      "d1": 0.2419,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C031",
+      "ans": true,
+      "d1": 0.2809,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C034",
+      "ans": true,
+      "d1": 0.3589,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C036",
+      "ans": true,
+      "d1": 0.3254,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C041",
+      "ans": true,
+      "d1": 0.3594,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C042",
+      "ans": true,
+      "d1": 0.3699,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C046",
+      "ans": true,
+      "d1": 0.3749,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C050",
+      "ans": true,
+      "d1": 0.5906,
+      "ilk_gold": 2
+     },
+     {
+      "vaka": "C054",
+      "ans": true,
+      "d1": 0.3369,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "C057",
+      "ans": true,
+      "d1": 0.2897,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "U001",
+      "ans": false,
+      "d1": 0.7359,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U002",
+      "ans": false,
+      "d1": 0.6114,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U003",
+      "ans": false,
+      "d1": 0.7254,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U004",
+      "ans": false,
+      "d1": 0.6955,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U005",
+      "ans": false,
+      "d1": 0.6226,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "U006",
+      "ans": false,
+      "d1": 0.5335,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "E001",
+      "ans": true,
+      "d1": 0.5258,
+      "ilk_gold": 3
+     },
+     {
+      "vaka": "E002",
+      "ans": true,
+      "d1": 0.422,
+      "ilk_gold": 3
+     },
+     {
+      "vaka": "E003",
+      "ans": true,
+      "d1": 0.4993,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E004",
+      "ans": true,
+      "d1": 0.4879,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E005",
+      "ans": true,
+      "d1": 0.4207,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E006",
+      "ans": true,
+      "d1": 0.4797,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E007",
+      "ans": true,
+      "d1": 0.1996,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E008",
+      "ans": true,
+      "d1": 0.3626,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E009",
+      "ans": true,
+      "d1": 0.3536,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E010",
+      "ans": true,
+      "d1": 0.2876,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E011",
+      "ans": true,
+      "d1": 0.4265,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "E012",
+      "ans": true,
+      "d1": 0.2989,
+      "ilk_gold": 1
+     },
+     {
+      "vaka": "V001",
+      "ans": false,
+      "d1": 0.5581,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V002",
+      "ans": false,
+      "d1": 0.5467,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V003",
+      "ans": false,
+      "d1": 0.6558,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V004",
+      "ans": false,
+      "d1": 0.4839,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V005",
+      "ans": false,
+      "d1": 0.5201,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V006",
+      "ans": false,
+      "d1": 0.3644,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V007",
+      "ans": false,
+      "d1": 0.485,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V008",
+      "ans": false,
+      "d1": 0.565,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V009",
+      "ans": false,
+      "d1": 0.6015,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V010",
+      "ans": false,
+      "d1": 0.618,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V011",
+      "ans": false,
+      "d1": 0.6628,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V012",
+      "ans": false,
+      "d1": 0.625,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V013",
+      "ans": false,
+      "d1": 0.4371,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V014",
+      "ans": false,
+      "d1": 0.6634,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V015",
+      "ans": false,
+      "d1": 0.5607,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V016",
+      "ans": false,
+      "d1": 0.5332,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V017",
+      "ans": false,
+      "d1": 0.6173,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V018",
+      "ans": false,
+      "d1": 0.5834,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V019",
+      "ans": false,
+      "d1": 0.6368,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V020",
+      "ans": false,
+      "d1": 0.4161,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V021",
+      "ans": false,
+      "d1": 0.5223,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V022",
+      "ans": false,
+      "d1": 0.5843,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V023",
+      "ans": false,
+      "d1": 0.5258,
+      "ilk_gold": null
+     },
+     {
+      "vaka": "V024",
+      "ans": false,
+      "d1": 0.6117,
+      "ilk_gold": null
+     }
+    ]
+   },
+   "karar": {
+    "kotulesen": [
+     "cv_yanlis_kacinma"
+    ],
+    "iyilesen": [
+     "mrr_at_10"
+    ],
+    "kabul": false
+   }
+  }
+ },
+ "gercek_depo_hazir_indeksler": {
+  "qwen3-embedding:0.6b": "679b1f6d69cd4d3532eee96866373043257b6093648c7fa5f6791371becacf48",
+  "bge-m3": "8d505c0775bf637cef5a339f730df02a10576ceb4db0b13a4a2a7f0a5d487545"
+ },
+ "gercek_depo_esik": {
+  "679b1f6d69cd4d3532eee96866373043257b6093648c7fa5f6791371becacf48": null,
+  "8d505c0775bf637cef5a339f730df02a10576ceb4db0b13a4a2a7f0a5d487545": null
+ }
+}

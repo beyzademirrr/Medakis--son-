@@ -1,0 +1,1650 @@
+{
+ "sabit_parametreler": {
+  "max_df": 0.3,
+  "k": 3
+ },
+ "yanlis_kaçınma_siniri": 0.15,
+ "katlar": 5,
+ "adaylar": {
+  "bge-m3": {
+   "recall_at_5": 0.967,
+   "mrr_at_10": 0.923,
+   "yontemler": {
+    "M0": {
+     "cv": {
+      "kacinma_recall": 0.933,
+      "yanlis_kacinma": 0.167,
+      "kacinilan_cevaplanabilir": [
+       "C016",
+       "C021",
+       "C024",
+       "E001",
+       "E006"
+      ],
+      "cevaplanan_kaynak_disi": [
+       "V013",
+       "V018"
+      ],
+      "kat_parametreleri": [
+       [
+        0.424,
+        0.0
+       ],
+       [
+        0.424,
+        0.0
+       ],
+       [
+        0.4642,
+        0.0
+       ],
+       [
+        0.4135,
+        0.0
+       ],
+       [
+        0.4642,
+        0.0
+       ]
+      ]
+     },
+     "orneklem_ici_parametre": [
+      0.424,
+      0.0
+     ]
+    },
+    "M1": {
+     "cv": {
+      "kacinma_recall": 0.8,
+      "yanlis_kacinma": 0.1,
+      "kacinilan_cevaplanabilir": [
+       "E001",
+       "E002",
+       "E011"
+      ],
+      "cevaplanan_kaynak_disi": [
+       "V001",
+       "V004",
+       "V006",
+       "V007",
+       "V013",
+       "V020"
+      ],
+      "kat_parametreleri": [
+       [
+        null,
+        0.5
+       ],
+       [
+        null,
+        0.5
+       ],
+       [
+        null,
+        0.5
+       ],
+       [
+        null,
+        0.5
+       ],
+       [
+        null,
+        0.5
+       ]
+      ]
+     },
+     "orneklem_ici_parametre": [
+      Infinity,
+      0.5
+     ]
+    },
+    "M2": {
+     "cv": {
+      "kacinma_recall": 0.933,
+      "yanlis_kacinma": 0.233,
+      "kacinilan_cevaplanabilir": [
+       "C016",
+       "C021",
+       "C024",
+       "E001",
+       "E002",
+       "E006",
+       "E011"
+      ],
+      "cevaplanan_kaynak_disi": [
+       "V013",
+       "V018"
+      ],
+      "kat_parametreleri": [
+       [
+        0.424,
+        0.3
+       ],
+       [
+        0.424,
+        0.3
+       ],
+       [
+        0.4642,
+        0.1
+       ],
+       [
+        0.4135,
+        0.4
+       ],
+       [
+        0.4482,
+        0.5
+       ]
+      ]
+     },
+     "orneklem_ici_parametre": [
+      0.424,
+      0.3
+     ]
+    },
+    "M3": {
+     "cv": {
+      "kacinma_recall": 0.933,
+      "yanlis_kacinma": 0.167,
+      "kacinilan_cevaplanabilir": [
+       "C016",
+       "C021",
+       "C024",
+       "E001",
+       "E006"
+      ],
+      "cevaplanan_kaynak_disi": [
+       "V013",
+       "V018"
+      ],
+      "kat_parametreleri": [
+       [
+        0.424,
+        0.0
+       ],
+       [
+        0.424,
+        0.0
+       ],
+       [
+        0.4642,
+        0.0
+       ],
+       [
+        0.4135,
+        0.0
+       ],
+       [
+        0.4642,
+        0.0
+       ]
+      ]
+     },
+     "orneklem_ici_parametre": [
+      0.424,
+      0.0
+     ]
+    }
+   },
+   "duyarlilik_bilgi_amacli": {
+    "max_df=0.2,k=1": [
+     0.933,
+     0.233
+    ],
+    "max_df=0.2,k=3": [
+     0.933,
+     0.2
+    ],
+    "max_df=0.2,k=5": [
+     0.9,
+     0.167
+    ],
+    "max_df=0.3,k=1": [
+     0.933,
+     0.233
+    ],
+    "max_df=0.3,k=3": [
+     0.933,
+     0.233
+    ],
+    "max_df=0.3,k=5": [
+     0.9,
+     0.167
+    ],
+    "max_df=0.5,k=1": [
+     0.933,
+     0.233
+    ],
+    "max_df=0.5,k=3": [
+     0.933,
+     0.233
+    ],
+    "max_df=0.5,k=5": [
+     0.9,
+     0.167
+    ]
+   },
+   "vakalar": [
+    {
+     "vaka": "C001",
+     "grup": "C001",
+     "ans": true,
+     "d1": 0.392,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.833,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C003",
+     "grup": "C003",
+     "ans": true,
+     "d1": 0.34,
+     "recall5": 1.0,
+     "rr10": 0.5,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C006",
+     "grup": "C006",
+     "ans": true,
+     "d1": 0.325,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C009",
+     "grup": "C009",
+     "ans": true,
+     "d1": 0.365,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.5,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C013",
+     "grup": "C013",
+     "ans": true,
+     "d1": 0.245,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C016",
+     "grup": "C016",
+     "ans": true,
+     "d1": 0.447,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C021",
+     "grup": "C021",
+     "ans": true,
+     "d1": 0.448,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C024",
+     "grup": "C024",
+     "ans": true,
+     "d1": 0.496,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C026",
+     "grup": "C026",
+     "ans": true,
+     "d1": 0.339,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C031",
+     "grup": "C031",
+     "ans": true,
+     "d1": 0.271,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C034",
+     "grup": "C034",
+     "ans": true,
+     "d1": 0.33,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C036",
+     "grup": "C036",
+     "ans": true,
+     "d1": 0.307,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C041",
+     "grup": "C041",
+     "ans": true,
+     "d1": 0.315,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C042",
+     "grup": "C042",
+     "ans": true,
+     "d1": 0.303,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.667,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C046",
+     "grup": "C046",
+     "ans": true,
+     "d1": 0.377,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C050",
+     "grup": "C050",
+     "ans": true,
+     "d1": 0.413,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C054",
+     "grup": "C054",
+     "ans": true,
+     "d1": 0.26,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C057",
+     "grup": "C057",
+     "ans": true,
+     "d1": 0.294,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U001",
+     "grup": "U001",
+     "ans": false,
+     "d1": 0.562,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U002",
+     "grup": "U002",
+     "ans": false,
+     "d1": 0.549,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U003",
+     "grup": "U003",
+     "ans": false,
+     "d1": 0.616,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U004",
+     "grup": "U004",
+     "ans": false,
+     "d1": 0.65,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U005",
+     "grup": "U005",
+     "ans": false,
+     "d1": 0.523,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U006",
+     "grup": "U006",
+     "ans": false,
+     "d1": 0.495,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.4,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E001",
+     "grup": "C001",
+     "ans": true,
+     "d1": 0.464,
+     "recall5": 0.0,
+     "rr10": 0.0,
+     "cov": 0.143,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E002",
+     "grup": "C003",
+     "ans": true,
+     "d1": 0.404,
+     "recall5": 1.0,
+     "rr10": 0.2,
+     "cov": 0.429,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E003",
+     "grup": "C006",
+     "ans": true,
+     "d1": 0.402,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.5,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E004",
+     "grup": "C009",
+     "ans": true,
+     "d1": 0.404,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.571,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E005",
+     "grup": "C016",
+     "ans": true,
+     "d1": 0.364,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.5,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E006",
+     "grup": "C024",
+     "ans": true,
+     "d1": 0.424,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.833,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E007",
+     "grup": "C026",
+     "ans": true,
+     "d1": 0.295,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.571,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E008",
+     "grup": "C034",
+     "ans": true,
+     "d1": 0.377,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.6,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E009",
+     "grup": "C036",
+     "ans": true,
+     "d1": 0.345,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E010",
+     "grup": "C041",
+     "ans": true,
+     "d1": 0.397,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.5,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E011",
+     "grup": "C046",
+     "ans": true,
+     "d1": 0.322,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.333,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E012",
+     "grup": "C057",
+     "ans": true,
+     "d1": 0.322,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V001",
+     "grup": "V001",
+     "ans": false,
+     "d1": 0.475,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.667,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V002",
+     "grup": "V002",
+     "ans": false,
+     "d1": 0.507,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.167,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V003",
+     "grup": "V003",
+     "ans": false,
+     "d1": 0.478,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V004",
+     "grup": "V004",
+     "ans": false,
+     "d1": 0.482,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V005",
+     "grup": "V005",
+     "ans": false,
+     "d1": 0.493,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V006",
+     "grup": "V006",
+     "ans": false,
+     "d1": 0.443,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.833,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V007",
+     "grup": "V007",
+     "ans": false,
+     "d1": 0.47,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.667,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V008",
+     "grup": "V008",
+     "ans": false,
+     "d1": 0.47,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.2,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V009",
+     "grup": "V009",
+     "ans": false,
+     "d1": 0.487,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V010",
+     "grup": "V010",
+     "ans": false,
+     "d1": 0.543,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V011",
+     "grup": "V011",
+     "ans": false,
+     "d1": 0.485,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V012",
+     "grup": "V012",
+     "ans": false,
+     "d1": 0.602,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V013",
+     "grup": "V013",
+     "ans": false,
+     "d1": 0.388,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.75,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V014",
+     "grup": "V014",
+     "ans": false,
+     "d1": 0.606,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V015",
+     "grup": "V015",
+     "ans": false,
+     "d1": 0.567,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.2,
+     "tur_uyumu": false
+    },
+    {
+     "vaka": "V016",
+     "grup": "V016",
+     "ans": false,
+     "d1": 0.511,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.333,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V017",
+     "grup": "V017",
+     "ans": false,
+     "d1": 0.543,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.333,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V018",
+     "grup": "V018",
+     "ans": false,
+     "d1": 0.443,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.4,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V019",
+     "grup": "V019",
+     "ans": false,
+     "d1": 0.611,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V020",
+     "grup": "V020",
+     "ans": false,
+     "d1": 0.515,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.6,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V021",
+     "grup": "V021",
+     "ans": false,
+     "d1": 0.555,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.2,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V022",
+     "grup": "V022",
+     "ans": false,
+     "d1": 0.542,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V023",
+     "grup": "V023",
+     "ans": false,
+     "d1": 0.479,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V024",
+     "grup": "V024",
+     "ans": false,
+     "d1": 0.523,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.167,
+     "tur_uyumu": true
+    }
+   ]
+  },
+  "qwen3-embedding:0.6b": {
+   "recall_at_5": 0.967,
+   "mrr_at_10": 0.914,
+   "yontemler": {
+    "M0": {
+     "cv": {
+      "kacinma_recall": 0.867,
+      "yanlis_kacinma": 0.1,
+      "kacinilan_cevaplanabilir": [
+       "C009",
+       "C050",
+       "E004"
+      ],
+      "cevaplanan_kaynak_disi": [
+       "V004",
+       "V006",
+       "V013",
+       "V020"
+      ],
+      "kat_parametreleri": [
+       [
+        0.5066,
+        0.0
+       ],
+       [
+        0.5066,
+        0.0
+       ],
+       [
+        0.4797,
+        0.0
+       ],
+       [
+        0.5066,
+        0.0
+       ],
+       [
+        0.5066,
+        0.0
+       ]
+      ]
+     },
+     "orneklem_ici_parametre": [
+      0.5066,
+      0.0
+     ]
+    },
+    "M1": {
+     "cv": {
+      "kacinma_recall": 0.8,
+      "yanlis_kacinma": 0.033,
+      "kacinilan_cevaplanabilir": [
+       "E001"
+      ],
+      "cevaplanan_kaynak_disi": [
+       "V001",
+       "V004",
+       "V006",
+       "V007",
+       "V013",
+       "V020"
+      ],
+      "kat_parametreleri": [
+       [
+        null,
+        0.5
+       ],
+       [
+        null,
+        0.5
+       ],
+       [
+        null,
+        0.5
+       ],
+       [
+        null,
+        0.5
+       ],
+       [
+        null,
+        0.5
+       ]
+      ]
+     },
+     "orneklem_ici_parametre": [
+      Infinity,
+      0.5
+     ]
+    },
+    "M2": {
+     "cv": {
+      "kacinma_recall": 0.867,
+      "yanlis_kacinma": 0.133,
+      "kacinilan_cevaplanabilir": [
+       "C009",
+       "C050",
+       "E001",
+       "E004"
+      ],
+      "cevaplanan_kaynak_disi": [
+       "V004",
+       "V006",
+       "V013",
+       "V020"
+      ],
+      "kat_parametreleri": [
+       [
+        0.5066,
+        0.2
+       ],
+       [
+        0.5066,
+        0.2
+       ],
+       [
+        0.4797,
+        0.5
+       ],
+       [
+        0.5066,
+        0.5
+       ],
+       [
+        0.5066,
+        0.2
+       ]
+      ]
+     },
+     "orneklem_ici_parametre": [
+      0.5066,
+      0.2
+     ]
+    },
+    "M3": {
+     "cv": {
+      "kacinma_recall": 0.933,
+      "yanlis_kacinma": 0.133,
+      "kacinilan_cevaplanabilir": [
+       "C009",
+       "C031",
+       "C050",
+       "E004"
+      ],
+      "cevaplanan_kaynak_disi": [
+       "V004",
+       "V013"
+      ],
+      "kat_parametreleri": [
+       [
+        0.5066,
+        0.0
+       ],
+       [
+        0.5066,
+        0.0
+       ],
+       [
+        0.4797,
+        0.0
+       ],
+       [
+        0.5066,
+        0.0
+       ],
+       [
+        0.5066,
+        0.0
+       ]
+      ]
+     },
+     "orneklem_ici_parametre": [
+      0.5066,
+      0.0
+     ]
+    }
+   },
+   "duyarlilik_bilgi_amacli": {
+    "max_df=0.2,k=1": [
+     0.867,
+     0.133
+    ],
+    "max_df=0.2,k=3": [
+     0.867,
+     0.133
+    ],
+    "max_df=0.2,k=5": [
+     0.867,
+     0.1
+    ],
+    "max_df=0.3,k=1": [
+     0.867,
+     0.1
+    ],
+    "max_df=0.3,k=3": [
+     0.867,
+     0.133
+    ],
+    "max_df=0.3,k=5": [
+     0.867,
+     0.1
+    ],
+    "max_df=0.5,k=1": [
+     0.867,
+     0.1
+    ],
+    "max_df=0.5,k=3": [
+     0.867,
+     0.133
+    ],
+    "max_df=0.5,k=5": [
+     0.867,
+     0.1
+    ]
+   },
+   "vakalar": [
+    {
+     "vaka": "C001",
+     "grup": "C001",
+     "ans": true,
+     "d1": 0.386,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.833,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C003",
+     "grup": "C003",
+     "ans": true,
+     "d1": 0.338,
+     "recall5": 1.0,
+     "rr10": 0.333,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C006",
+     "grup": "C006",
+     "ans": true,
+     "d1": 0.386,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C009",
+     "grup": "C009",
+     "ans": true,
+     "d1": 0.507,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.5,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C013",
+     "grup": "C013",
+     "ans": true,
+     "d1": 0.195,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C016",
+     "grup": "C016",
+     "ans": true,
+     "d1": 0.338,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.75,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C021",
+     "grup": "C021",
+     "ans": true,
+     "d1": 0.287,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C024",
+     "grup": "C024",
+     "ans": true,
+     "d1": 0.473,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C026",
+     "grup": "C026",
+     "ans": true,
+     "d1": 0.242,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.6,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C031",
+     "grup": "C031",
+     "ans": true,
+     "d1": 0.281,
+     "recall5": 0.5,
+     "rr10": 1.0,
+     "cov": 0.6,
+     "tur_uyumu": false
+    },
+    {
+     "vaka": "C034",
+     "grup": "C034",
+     "ans": true,
+     "d1": 0.359,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C036",
+     "grup": "C036",
+     "ans": true,
+     "d1": 0.325,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C041",
+     "grup": "C041",
+     "ans": true,
+     "d1": 0.359,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C042",
+     "grup": "C042",
+     "ans": true,
+     "d1": 0.37,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.667,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C046",
+     "grup": "C046",
+     "ans": true,
+     "d1": 0.375,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C050",
+     "grup": "C050",
+     "ans": true,
+     "d1": 0.591,
+     "recall5": 1.0,
+     "rr10": 0.5,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C054",
+     "grup": "C054",
+     "ans": true,
+     "d1": 0.337,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "C057",
+     "grup": "C057",
+     "ans": true,
+     "d1": 0.29,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U001",
+     "grup": "U001",
+     "ans": false,
+     "d1": 0.736,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U002",
+     "grup": "U002",
+     "ans": false,
+     "d1": 0.611,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U003",
+     "grup": "U003",
+     "ans": false,
+     "d1": 0.725,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U004",
+     "grup": "U004",
+     "ans": false,
+     "d1": 0.696,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U005",
+     "grup": "U005",
+     "ans": false,
+     "d1": 0.623,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "U006",
+     "grup": "U006",
+     "ans": false,
+     "d1": 0.533,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.4,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E001",
+     "grup": "C001",
+     "ans": true,
+     "d1": 0.505,
+     "recall5": 0.5,
+     "rr10": 0.25,
+     "cov": 0.286,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E002",
+     "grup": "C003",
+     "ans": true,
+     "d1": 0.422,
+     "recall5": 1.0,
+     "rr10": 0.333,
+     "cov": 0.571,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E003",
+     "grup": "C006",
+     "ans": true,
+     "d1": 0.499,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.5,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E004",
+     "grup": "C009",
+     "ans": true,
+     "d1": 0.488,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.571,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E005",
+     "grup": "C016",
+     "ans": true,
+     "d1": 0.421,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.5,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E006",
+     "grup": "C024",
+     "ans": true,
+     "d1": 0.48,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.833,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E007",
+     "grup": "C026",
+     "ans": true,
+     "d1": 0.2,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.571,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E008",
+     "grup": "C034",
+     "ans": true,
+     "d1": 0.363,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E009",
+     "grup": "C036",
+     "ans": true,
+     "d1": 0.354,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E010",
+     "grup": "C041",
+     "ans": true,
+     "d1": 0.288,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.5,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E011",
+     "grup": "C046",
+     "ans": true,
+     "d1": 0.426,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 0.5,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "E012",
+     "grup": "C057",
+     "ans": true,
+     "d1": 0.299,
+     "recall5": 1.0,
+     "rr10": 1.0,
+     "cov": 1.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V001",
+     "grup": "V001",
+     "ans": false,
+     "d1": 0.558,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.667,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V002",
+     "grup": "V002",
+     "ans": false,
+     "d1": 0.547,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.167,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V003",
+     "grup": "V003",
+     "ans": false,
+     "d1": 0.656,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V004",
+     "grup": "V004",
+     "ans": false,
+     "d1": 0.484,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.8,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V005",
+     "grup": "V005",
+     "ans": false,
+     "d1": 0.52,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V006",
+     "grup": "V006",
+     "ans": false,
+     "d1": 0.364,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.5,
+     "tur_uyumu": false
+    },
+    {
+     "vaka": "V007",
+     "grup": "V007",
+     "ans": false,
+     "d1": 0.485,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.667,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V008",
+     "grup": "V008",
+     "ans": false,
+     "d1": 0.565,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.2,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V009",
+     "grup": "V009",
+     "ans": false,
+     "d1": 0.602,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V010",
+     "grup": "V010",
+     "ans": false,
+     "d1": 0.618,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.333,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V011",
+     "grup": "V011",
+     "ans": false,
+     "d1": 0.663,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V012",
+     "grup": "V012",
+     "ans": false,
+     "d1": 0.605,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V013",
+     "grup": "V013",
+     "ans": false,
+     "d1": 0.437,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.75,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V014",
+     "grup": "V014",
+     "ans": false,
+     "d1": 0.663,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V015",
+     "grup": "V015",
+     "ans": false,
+     "d1": 0.561,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.2,
+     "tur_uyumu": false
+    },
+    {
+     "vaka": "V016",
+     "grup": "V016",
+     "ans": false,
+     "d1": 0.533,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.333,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V017",
+     "grup": "V017",
+     "ans": false,
+     "d1": 0.617,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.333,
+     "tur_uyumu": false
+    },
+    {
+     "vaka": "V018",
+     "grup": "V018",
+     "ans": false,
+     "d1": 0.583,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.4,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V019",
+     "grup": "V019",
+     "ans": false,
+     "d1": 0.637,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V020",
+     "grup": "V020",
+     "ans": false,
+     "d1": 0.416,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.6,
+     "tur_uyumu": false
+    },
+    {
+     "vaka": "V021",
+     "grup": "V021",
+     "ans": false,
+     "d1": 0.522,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.2,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V022",
+     "grup": "V022",
+     "ans": false,
+     "d1": 0.584,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.0,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V023",
+     "grup": "V023",
+     "ans": false,
+     "d1": 0.526,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.25,
+     "tur_uyumu": true
+    },
+    {
+     "vaka": "V024",
+     "grup": "V024",
+     "ans": false,
+     "d1": 0.612,
+     "recall5": null,
+     "rr10": null,
+     "cov": 0.167,
+     "tur_uyumu": true
+    }
+   ]
+  }
+ }
+}

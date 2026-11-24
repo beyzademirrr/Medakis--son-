@@ -1,0 +1,272 @@
+{
+ "profil": "gpu_standart",
+ "embedding": "bge-m3",
+ "uretici": "gemma3:4b",
+ "sorgu": 6,
+ "politikalar": {
+  "her_sorguda_bosalt": {
+   "keep_alive": {
+    "embedding": 0,
+    "uretici": 0
+   },
+   "ilk_sorgu_soguk_ms": 53845,
+   "sonraki_toplam_ms": [
+    70101,
+    66920,
+    67983,
+    44145,
+    44552
+   ],
+   "sonraki_toplam_ort_ms": 58740,
+   "sonraki_en_fazla_ms": 70101,
+   "vram_tepe_mib": 3697,
+   "ollama_ram_tepe_mib": 1124,
+   "sorgular": [
+    {
+     "vaka": "C001",
+     "getirme_ms": 5834,
+     "uretici_ms": 48011,
+     "toplam_ms": 53845,
+     "sonuc": "no_source",
+     "yuklu": []
+    },
+    {
+     "vaka": "C003",
+     "getirme_ms": 19538,
+     "uretici_ms": 50562,
+     "toplam_ms": 70101,
+     "sonuc": "answered",
+     "yuklu": []
+    },
+    {
+     "vaka": "C006",
+     "getirme_ms": 18850,
+     "uretici_ms": 48069,
+     "toplam_ms": 66920,
+     "sonuc": "no_source",
+     "yuklu": []
+    },
+    {
+     "vaka": "C009",
+     "getirme_ms": 19163,
+     "uretici_ms": 48819,
+     "toplam_ms": 67983,
+     "sonuc": "answered",
+     "yuklu": []
+    },
+    {
+     "vaka": "C013",
+     "getirme_ms": 17375,
+     "uretici_ms": 26770,
+     "toplam_ms": 44145,
+     "sonuc": "no_source",
+     "yuklu": []
+    },
+    {
+     "vaka": "C016",
+     "getirme_ms": 11605,
+     "uretici_ms": 32946,
+     "toplam_ms": 44552,
+     "sonuc": "answered",
+     "yuklu": []
+    }
+   ],
+   "yasam_dongusu": [
+    "tumu_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "tumu_bosaltildi"
+   ]
+  },
+  "uretici_sicak": {
+   "keep_alive": {
+    "embedding": 0,
+    "uretici": "5m"
+   },
+   "ilk_sorgu_soguk_ms": 20329,
+   "sonraki_toplam_ms": [
+    33995,
+    12034,
+    17000,
+    12799,
+    17291
+   ],
+   "sonraki_toplam_ort_ms": 18624,
+   "sonraki_en_fazla_ms": 33995,
+   "vram_tepe_mib": 4438,
+   "ollama_ram_tepe_mib": 2899,
+   "sorgular": [
+    {
+     "vaka": "C001",
+     "getirme_ms": 4487,
+     "uretici_ms": 15842,
+     "toplam_ms": 20329,
+     "sonuc": "no_source",
+     "yuklu": [
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C003",
+     "getirme_ms": 16637,
+     "uretici_ms": 17359,
+     "toplam_ms": 33995,
+     "sonuc": "answered",
+     "yuklu": [
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C006",
+     "getirme_ms": 2865,
+     "uretici_ms": 9169,
+     "toplam_ms": 12034,
+     "sonuc": "no_source",
+     "yuklu": [
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C009",
+     "getirme_ms": 2583,
+     "uretici_ms": 14417,
+     "toplam_ms": 17000,
+     "sonuc": "answered",
+     "yuklu": [
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C013",
+     "getirme_ms": 2682,
+     "uretici_ms": 10117,
+     "toplam_ms": 12799,
+     "sonuc": "no_source",
+     "yuklu": [
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C016",
+     "getirme_ms": 2911,
+     "uretici_ms": 14379,
+     "toplam_ms": 17291,
+     "sonuc": "answered",
+     "yuklu": [
+      "gemma3:4b"
+     ]
+    }
+   ],
+   "yasam_dongusu": [
+    "tumu_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "embedding_bosaltildi",
+    "tumu_bosaltildi"
+   ]
+  },
+  "ikisi_sicak": {
+   "keep_alive": {
+    "embedding": "5m",
+    "uretici": "5m"
+   },
+   "ilk_sorgu_soguk_ms": 48282,
+   "sonraki_toplam_ms": [
+    13130,
+    4332,
+    9572,
+    5333,
+    9612
+   ],
+   "sonraki_toplam_ort_ms": 8396,
+   "sonraki_en_fazla_ms": 13130,
+   "vram_tepe_mib": 4438,
+   "ollama_ram_tepe_mib": 3131,
+   "sorgular": [
+    {
+     "vaka": "C001",
+     "getirme_ms": 4512,
+     "uretici_ms": 43770,
+     "toplam_ms": 48282,
+     "sonuc": "no_source",
+     "yuklu": [
+      "bge-m3:latest",
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C003",
+     "getirme_ms": 566,
+     "uretici_ms": 12564,
+     "toplam_ms": 13130,
+     "sonuc": "answered",
+     "yuklu": [
+      "bge-m3:latest",
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C006",
+     "getirme_ms": 238,
+     "uretici_ms": 4093,
+     "toplam_ms": 4332,
+     "sonuc": "no_source",
+     "yuklu": [
+      "bge-m3:latest",
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C009",
+     "getirme_ms": 253,
+     "uretici_ms": 9319,
+     "toplam_ms": 9572,
+     "sonuc": "answered",
+     "yuklu": [
+      "bge-m3:latest",
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C013",
+     "getirme_ms": 246,
+     "uretici_ms": 5087,
+     "toplam_ms": 5333,
+     "sonuc": "no_source",
+     "yuklu": [
+      "bge-m3:latest",
+      "gemma3:4b"
+     ]
+    },
+    {
+     "vaka": "C016",
+     "getirme_ms": 287,
+     "uretici_ms": 9325,
+     "toplam_ms": 9612,
+     "sonuc": "answered",
+     "yuklu": [
+      "bge-m3:latest",
+      "gemma3:4b"
+     ]
+    }
+   ],
+   "yasam_dongusu": [
+    "tumu_bosaltildi",
+    "embedding_yuklu_kalabilir",
+    "embedding_yuklu_kalabilir",
+    "embedding_yuklu_kalabilir",
+    "embedding_yuklu_kalabilir",
+    "embedding_yuklu_kalabilir",
+    "embedding_yuklu_kalabilir",
+    "tumu_bosaltildi"
+   ]
+  }
+ }
+}

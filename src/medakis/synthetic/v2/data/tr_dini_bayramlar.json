@@ -1,0 +1,10 @@
+{
+  "aciklama": "Dini bayram arefe tarihleri. 2429 sayili Kanun m.2/B sureyi verir (Ramazan: arefe 13.00'ten itibaren 3,5 gun; Kurban: 4,5 gun), tarihi vermez. Dogrulama D1 olmayan kayit tatil olarak KULLANILMAZ; yalniz koruma penceresidir: uretim donemi bu pencereye degerse uretim durur.",
+  "koruma_tamponu_gun": 5,
+  "kayitlar": [
+    {"ad": "Ramazan Bayrami", "arefe": "2026-03-19", "gun": 3, "dogrulama": "D3", "kaynak": "genel bilgi; resmi takvimle dogrulanmadi"},
+    {"ad": "Kurban Bayrami", "arefe": "2026-05-26", "gun": 4, "dogrulama": "D3", "kaynak": "genel bilgi; resmi takvimle dogrulanmadi"},
+    {"ad": "Ramazan Bayrami", "arefe": "2027-03-08", "gun": 3, "dogrulama": "D3", "kaynak": "genel bilgi; resmi takvimle dogrulanmadi"},
+    {"ad": "Kurban Bayrami", "arefe": "2027-05-15", "gun": 4, "dogrulama": "D3", "kaynak": "genel bilgi; resmi takvimle dogrulanmadi"}
+  ]
+}

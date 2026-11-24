@@ -1,0 +1,12 @@
+[server]
+# Yalnız bu bilgisayardan erişim (yerel prototip).
+address = "localhost"
+port = 8501
+
+[client]
+# Demo ekranında "Deploy" gibi geliştirici düğmelerini gizler.
+toolbarMode = "minimal"
+
+[browser]
+# Streamlit kullanım istatistiği gönderilmez.
+gatherUsageStats = false

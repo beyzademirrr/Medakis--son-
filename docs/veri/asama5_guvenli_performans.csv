@@ -1,0 +1,8 @@
+profil,personel,degisken,kisit,durum,cozucu_sn,toplam_sn,dogrulayici_sn,dogrulama,python_bellek_tepe_mb,tasima,tutarli,asamalar
+P1_mevcut_yaklasik_40,39,173,170,OPTIMAL,0.0238,0.12,0.0037,True,0.2,2,True,"[[""O1_karsilanmayan_talep"", ""OPTIMAL"", 0.009], [""O2_denge"", ""OPTIMAL"", 0.0047], [""O3_hareket"", ""OPTIMAL"", 0.0055], [""O4_fazla_kapasite"", ""OPTIMAL"", 0.0046]]"
+P2_x2,78,285,248,OPTIMAL,0.0498,0.2021,0.0054,True,0.3,4,True,"[[""O1_karsilanmayan_talep"", ""OPTIMAL"", 0.0153], [""O2_denge"", ""OPTIMAL"", 0.0088], [""O3_hareket"", ""OPTIMAL"", 0.0112], [""O4_fazla_kapasite"", ""OPTIMAL"", 0.0145]]"
+P3_x5,195,621,482,OPTIMAL,1.0625,1.3891,0.0113,True,0.62,10,True,"[[""O1_karsilanmayan_talep"", ""OPTIMAL"", 0.0488], [""O2_denge"", ""OPTIMAL"", 0.3262], [""O3_hareket"", ""OPTIMAL"", 0.0276], [""O4_fazla_kapasite"", ""OPTIMAL"", 0.6599]]"
+P4_x5_cok_secenek,195,716,482,OPTIMAL,0.2243,0.6416,0.0168,True,0.65,24,True,"[[""O1_karsilanmayan_talep"", ""OPTIMAL"", 0.0701], [""O2_denge"", ""OPTIMAL"", 0.0366], [""O3_hareket"", ""OPTIMAL"", 0.0623], [""O4_fazla_kapasite"", ""OPTIMAL"", 0.0553]]"
+P5_x5_cok_atom,195,621,538,OPTIMAL,0.1867,0.7068,0.0256,True,0.76,27,True,"[[""O1_karsilanmayan_talep"", ""OPTIMAL"", 0.0523], [""O2_denge"", ""OPTIMAL"", 0.0375], [""O3_hareket"", ""OPTIMAL"", 0.0452], [""O4_fazla_kapasite"", ""OPTIMAL"", 0.0517]]"
+P6_x10_cok_secenek_cok_atom,390,1371,928,OPTIMAL,0.9099,2.0525,0.0361,True,1.38,71,True,"[[""O1_karsilanmayan_talep"", ""OPTIMAL"", 0.2164], [""O2_denge"", ""OPTIMAL"", 0.3021], [""O3_hareket"", ""OPTIMAL"", 0.2006], [""O4_fazla_kapasite"", ""OPTIMAL"", 0.1908]]"
+P7_x10_kisa_sure_0_05sn,390,1371,928,UNKNOWN,0.0398,0.6693,,,0.62,0,True,"[[""O1_karsilanmayan_talep"", ""UNKNOWN"", 0.0398]]"

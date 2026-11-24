@@ -1,0 +1,1629 @@
+{
+ "dev_vaka": 60,
+ "model": {
+  "embedding": "bge-m3",
+  "uretici": "gemma3:4b"
+ },
+ "cv_kat_esikleri": [
+  0.424,
+  0.424,
+  0.4642,
+  0.4135,
+  0.4642
+ ],
+ "M0_yalniz_cosine_cv": {
+  "dogru_kacinma": 0.933,
+  "yanlis_kacinma": 0.167,
+  "cevaplanan_kaynak_disi": [
+   "V013",
+   "V018"
+  ],
+  "kacinilan_cevaplanabilir": [
+   "C016",
+   "C021",
+   "C024",
+   "E001",
+   "E006"
+  ],
+  "gold_isabeti": 0.0,
+  "sahte_alinti": 0,
+  "hata_unavailable": 0,
+  "model_cagrisi": 0
+ },
+ "P1_esik_kanit_cv": {
+  "dogru_kacinma": 1.0,
+  "yanlis_kacinma": 0.7,
+  "cevaplanan_kaynak_disi": [],
+  "kacinilan_cevaplanabilir": [
+   "C001",
+   "C003",
+   "C006",
+   "C013",
+   "C016",
+   "C021",
+   "C024",
+   "C026",
+   "C031",
+   "C036",
+   "C050",
+   "C054",
+   "C057",
+   "E001",
+   "E002",
+   "E004",
+   "E006",
+   "E007",
+   "E009",
+   "E011",
+   "E012"
+  ],
+  "gold_isabeti": 1.0,
+  "sahte_alinti": 16,
+  "hata_unavailable": 0,
+  "model_cagrisi": 27
+ },
+ "P2_aday_kanit": {
+  "dogru_kacinma": 0.9,
+  "yanlis_kacinma": 0.667,
+  "cevaplanan_kaynak_disi": [
+   "V003",
+   "V006",
+   "V013"
+  ],
+  "kacinilan_cevaplanabilir": [
+   "C003",
+   "C006",
+   "C009",
+   "C013",
+   "C021",
+   "C024",
+   "C026",
+   "C031",
+   "C036",
+   "C050",
+   "C054",
+   "C057",
+   "E001",
+   "E002",
+   "E003",
+   "E006",
+   "E007",
+   "E009",
+   "E011",
+   "E012"
+  ],
+  "gold_isabeti": 1.0,
+  "sahte_alinti": 33,
+  "hata_unavailable": 0,
+  "model_cagrisi": 60
+ },
+ "gemma": {
+  "benzersiz_cagri": 85,
+  "sure_ms_p50": 4009.4,
+  "sure_ms_p95": 5028.2,
+  "sure_ms_en_fazla": 19302.1,
+  "vram_tepe_mib": 3699
+ },
+ "vakalar": {
+  "P1": [
+   {
+    "vaka": "C006",
+    "grup": "C006",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C021",
+    "grup": "C021",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "C031",
+    "grup": "C031",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:alinti_yok"
+    ]
+   },
+   {
+    "vaka": "C057",
+    "grup": "C057",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "U002",
+    "grup": "U002",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "U004",
+    "grup": "U004",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "E003",
+    "grup": "C006",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "E012",
+    "grup": "C057",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:alinti_yok"
+    ]
+   },
+   {
+    "vaka": "V006",
+    "grup": "V006",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V012",
+    "grup": "V012",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V022",
+    "grup": "V022",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "C013",
+    "grup": "C013",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:alinti_yok"
+    ]
+   },
+   {
+    "vaka": "C016",
+    "grup": "C016",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "C034",
+    "grup": "C034",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "U001",
+    "grup": "U001",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "E005",
+    "grup": "C016",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "E008",
+    "grup": "C034",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "V008",
+    "grup": "V008",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V011",
+    "grup": "V011",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V013",
+    "grup": "V013",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C009",
+    "grup": "C009",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C036",
+    "grup": "C036",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C041",
+    "grup": "C041",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C050",
+    "grup": "C050",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E004",
+    "grup": "C009",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E009",
+    "grup": "C036",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E010",
+    "grup": "C041",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "V001",
+    "grup": "V001",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V007",
+    "grup": "V007",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V015",
+    "grup": "V015",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V016",
+    "grup": "V016",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V018",
+    "grup": "V018",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "C001",
+    "grup": "C001",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "C024",
+    "grup": "C024",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "C042",
+    "grup": "C042",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C046",
+    "grup": "C046",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C054",
+    "grup": "C054",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:alinti_yok"
+    ]
+   },
+   {
+    "vaka": "E001",
+    "grup": "C001",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "E006",
+    "grup": "C024",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "E011",
+    "grup": "C046",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V002",
+    "grup": "V002",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V009",
+    "grup": "V009",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V014",
+    "grup": "V014",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V017",
+    "grup": "V017",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V019",
+    "grup": "V019",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V021",
+    "grup": "V021",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V023",
+    "grup": "V023",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V024",
+    "grup": "V024",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "C003",
+    "grup": "C003",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C026",
+    "grup": "C026",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "U003",
+    "grup": "U003",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "U005",
+    "grup": "U005",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "U006",
+    "grup": "U006",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "E002",
+    "grup": "C003",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E007",
+    "grup": "C026",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V003",
+    "grup": "V003",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V004",
+    "grup": "V004",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V005",
+    "grup": "V005",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V010",
+    "grup": "V010",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   },
+   {
+    "vaka": "V020",
+    "grup": "V020",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 0,
+    "uyari": [
+     "esik_alti_aday_yok"
+    ]
+   }
+  ],
+  "P2": [
+   {
+    "vaka": "C001",
+    "grup": "C001",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C003",
+    "grup": "C003",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C006",
+    "grup": "C006",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C009",
+    "grup": "C009",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C013",
+    "grup": "C013",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C016",
+    "grup": "C016",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C021",
+    "grup": "C021",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C024",
+    "grup": "C024",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C026",
+    "grup": "C026",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C031",
+    "grup": "C031",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C034",
+    "grup": "C034",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C036",
+    "grup": "C036",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C041",
+    "grup": "C041",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C042",
+    "grup": "C042",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C046",
+    "grup": "C046",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "C050",
+    "grup": "C050",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C054",
+    "grup": "C054",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "C057",
+    "grup": "C057",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "U001",
+    "grup": "U001",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "U002",
+    "grup": "U002",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "U003",
+    "grup": "U003",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "U004",
+    "grup": "U004",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "U005",
+    "grup": "U005",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "U006",
+    "grup": "U006",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E001",
+    "grup": "C001",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "E002",
+    "grup": "C003",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E003",
+    "grup": "C006",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E004",
+    "grup": "C009",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "E005",
+    "grup": "C016",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "E006",
+    "grup": "C024",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E007",
+    "grup": "C026",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E008",
+    "grup": "C034",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "E009",
+    "grup": "C036",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E010",
+    "grup": "C041",
+    "ans": true,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": true,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "E011",
+    "grup": "C046",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "E012",
+    "grup": "C057",
+    "ans": true,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V001",
+    "grup": "V001",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V002",
+    "grup": "V002",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V003",
+    "grup": "V003",
+    "ans": false,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "V004",
+    "grup": "V004",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V005",
+    "grup": "V005",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V006",
+    "grup": "V006",
+    "ans": false,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "V007",
+    "grup": "V007",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V008",
+    "grup": "V008",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V009",
+    "grup": "V009",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V010",
+    "grup": "V010",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V011",
+    "grup": "V011",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V012",
+    "grup": "V012",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V013",
+    "grup": "V013",
+    "ans": false,
+    "sonuc": "answered",
+    "kacindi": false,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": []
+   },
+   {
+    "vaka": "V014",
+    "grup": "V014",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V015",
+    "grup": "V015",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V016",
+    "grup": "V016",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V017",
+    "grup": "V017",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V018",
+    "grup": "V018",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V019",
+    "grup": "V019",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V020",
+    "grup": "V020",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V021",
+    "grup": "V021",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V022",
+    "grup": "V022",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": false,
+    "cagri": 1,
+    "uyari": [
+     "kanit_yetersiz"
+    ]
+   },
+   {
+    "vaka": "V023",
+    "grup": "V023",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   },
+   {
+    "vaka": "V024",
+    "grup": "V024",
+    "ans": false,
+    "sonuc": "no_source",
+    "kacindi": true,
+    "gold": false,
+    "sahte": true,
+    "cagri": 1,
+    "uyari": [
+     "sahte_alinti:0:parca_getirilmedi"
+    ]
+   }
+  ]
+ }
+}

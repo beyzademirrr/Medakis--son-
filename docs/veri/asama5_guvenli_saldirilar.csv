@@ -1,0 +1,26 @@
+saldiri,ozet_yeniden_hesaplandi,reddedildi,beklenen_kod,kodlar,sonuc
+Çift servis ataması,True,True,H1_cift_atama,"[""H10_acik_tutarsiz:2:nurse"", ""H10_fazla_tutarsiz:1:nurse"", ""H1_cift_atama:1003"", ""H4_kapasite_tutarsiz:1:nurse:120!=180"", ""H4_kapasite_tutarsiz:2:nurse:180!=120"", ""amac_degeri_tutarsiz:O1_karsilanmayan_talep:60!=120""]",gecti
+Yanlış rol,True,True,H2_rol_degisti,"[""H2_rol_degisti:2001""]",gecti
+Yetkisiz taşıma (Acil'e),True,True,H6_tasima_yetkisi_yok,"[""H10_fazla_tutarsiz:1:nurse"", ""H10_fazla_tutarsiz:3:nurse"", ""H4_kapasite_tutarsiz:1:nurse:120!=60"", ""H4_kapasite_tutarsiz:3:nurse:120!=180"", ""H6_tasima_yetkisi_yok:1001:3"", ""H7_asgari_alti:1:nurse:2026-10-27T07:00:00+00:00:1<2""]",gecti
+Onay kilidini bozma (kilitli kişiyi başka servise),True,True,H8_kilit_ihlali,"[""H10_acik_tutarsiz:3:nurse"", ""H10_fazla_tutarsiz:1:nurse"", ""H4_kapasite_tutarsiz:1:nurse:120!=180"", ""H4_kapasite_tutarsiz:3:nurse:180!=120"", ""H8_kilit_ihlali:1003"", ""amac_degeri_tutarsiz:O1_karsilanmayan_talep:20!=80""]",gecti
+Kilit bitişini yanlış gösterme,True,True,yayin_kilitli_yerlesimler_tutarsiz,"[""yayin_kilitli_yerlesimler_tutarsiz""]",gecti
+Vardiya dışı kapasite (10:20'de çıkan kişiyi tam sayma),True,True,H4_kapasite_tutarsiz,"[""H4_kapasite_tutarsiz:2:nurse:180!=140""]",gecti
+Mola/izni kapasiteye geri ekleme,True,True,H4_kapasite_tutarsiz,"[""H4_kapasite_tutarsiz:2:nurse:180!=135""]",gecti
+Asgari personel ihlali (A'dan ikinci hemşireyi alma),True,True,H7_asgari_alti,"[""H10_acik_tutarsiz:2:nurse"", ""H10_fazla_tutarsiz:1:nurse"", ""H4_kapasite_tutarsiz:1:nurse:120!=60"", ""H4_kapasite_tutarsiz:2:nurse:180!=240"", ""H7_asgari_alti:1:nurse:2026-10-27T07:00:00+00:00:1<2"", ""H7_asgari_alti:1:nurse:2026-10-27T07:15:00+00:00:1<2""]",gecti
+Talep manipülasyonu,True,True,H10_talep_tutarsiz,"[""H10_talep_tutarsiz:2:nurse""]",gecti
+Açık manipülasyonu,True,True,H10_acik_tutarsiz,"[""H10_acik_tutarsiz:2:nurse""]",gecti
+Fazla manipülasyonu,True,True,H10_fazla_tutarsiz,"[""H10_fazla_tutarsiz:1:nurse""]",gecti
+Taşıma hedefini değiştirme,True,True,yayin_tasimalar_tutarsiz,"[""yayin_tasimalar_tutarsiz""]",gecti
+Taşıma personelini değiştirme,True,True,yayin_tasimalar_tutarsiz,"[""yayin_tasimalar_tutarsiz""]",gecti
+Açıklama atomunu değiştirme,True,True,yayin_aciklama_tutarsiz,"[""yayin_aciklama_tutarsiz:1:nurse""]",gecti
+Amaç değerini küçük gösterme,True,True,amac_degeri_tutarsiz:O1,"[""amac_degeri_tutarsiz:O1_karsilanmayan_talep:0!=60""]",gecti
+Amaç değerini büyük gösterme,True,True,amac_degeri_tutarsiz:O4,"[""amac_degeri_tutarsiz:O4_fazla_kapasite:99999!=240""]",gecti
+Dondurulan çifte giriş,True,True,dondurma_ihlali_giris,"[""H10_acik_tutarsiz:2:nurse"", ""H10_fazla_tutarsiz:1:nurse"", ""H4_kapasite_tutarsiz:1:nurse:180!=120"", ""H4_kapasite_tutarsiz:2:nurse:120!=180"", ""amac_degeri_tutarsiz:O3_hareket:0!=1"", ""amac_degeri_tutarsiz:O4_fazla_kapasite:390!=330""]",gecti
+Belirsiz servisten çıkış (başka rol),True,True,dondurma_ihlali_cikis,"[""H10_acik_tutarsiz:2:nurse"", ""H10_fazla_tutarsiz:3:nurse"", ""H4_kapasite_tutarsiz:2:nurse:120!=180"", ""H4_kapasite_tutarsiz:3:nurse:120!=60"", ""amac_degeri_tutarsiz:O1_karsilanmayan_talep:120!=60"", ""amac_degeri_tutarsiz:O2_denge:500!=250""]",gecti
+Dondurma kümesini daraltma,True,True,dondurma_kumesi_tutarsiz,"[""dondurma_kumesi_tutarsiz""]",gecti
+Politikayı küresel gösterme,True,True,on_kosul_u3_durumu,"[""amac_degeri_tutarsiz:O1_karsilanmayan_talep:0!=240"", ""amac_degeri_tutarsiz:O2_denge:0!=667"", ""dondurma_kumesi_tutarsiz"", ""on_kosul_u3_durumu:2:nurse"", ""oneri_kapsami_tutarsiz"", ""yayin_aciklama_tutarsiz:2:nurse""]",gecti
+Kısmi öneriyi tam gösterme,True,True,oneri_kapsami_tutarsiz,"[""oneri_kapsami_tutarsiz""]",gecti
+Deneysel etiketi silme,True,True,dondurma_deneysel_mod_eksik,"[""dondurma_deneysel_mod_eksik""]",gecti
+Gerekli yetkinliği kaldırma (girdi),,True,H3_yetkinlik_eksik,"[""H3_yetkinlik_eksik:1003:2"", ""yayin_tasimalar_tutarsiz""]",gecti
+Kilit süresini kısaltma (girdi),,True,H8_asgari_kalis_saglanmiyor,"[""H8_asgari_kalis_saglanmiyor:1003:3"", ""yayin_aciklama_tutarsiz:1:nurse"", ""yayin_aciklama_tutarsiz:1:supervisor"", ""yayin_aciklama_tutarsiz:1:support"", ""yayin_aciklama_tutarsiz:2:nurse"", ""yayin_aciklama_tutarsiz:2:supervisor""]",gecti
+Özeti güncellemeden değişiklik (yalnız bütünlük),False,True,ozet_uyusmuyor,"[""ozet_uyusmuyor"", ""yayin_tasimalar_tutarsiz""]",gecti

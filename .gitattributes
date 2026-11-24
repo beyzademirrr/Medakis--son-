@@ -1,0 +1,3 @@
+# Dosyalar bayt bayt aynı saklanır ve çıkarılır (satır sonu dönüşümü yok).
+# Böylece SHA256SUMS.txt kontrolleri klonlanan kopyada da geçerli kalır.
+* -text

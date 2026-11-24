@@ -1,0 +1,1091 @@
+{
+ "smoke_bge_yok_cuda_t1": {
+  "meta": {
+   "model": "BAAI/bge-reranker-v2-m3",
+   "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+   "kip": "smoke",
+   "talimat": null,
+   "tekrar": 1,
+   "batch": 4,
+   "yukleme_s": 38.81,
+   "torch": "2.14.1+cu126",
+   "transformers": "5.24.0",
+   "gpu": "NVIDIA GeForce GTX 1660 Ti",
+   "dtype": "torch.float32",
+   "cihaz": "cuda",
+   "vram_tepe_mib": 2295,
+   "vram_kullanilan_mib_bosaltma_sonrasi_surec_ici": 109,
+   "ram_tepe_mib": 3202,
+   "sure_s": 47.87
+  },
+  "gecti": true,
+  "kontroller": {
+   "sonlu": true,
+   "sabit_degil": true,
+   "D_gt_U": true,
+   "determinizm": true,
+   "toplu_tekli": true,
+   "sira_degismezligi": true,
+   "kesilen_cift": 0
+  },
+  "en_buyuk_fark": {
+   "determinizm": 0.0,
+   "toplu_tekli": 1.1444091796875e-05,
+   "sira": 7.62939453125e-06,
+   "tolerans_goreli": 0.0001
+  },
+  "bilgi_ozet": {
+   "D_gt_I": 8,
+   "D_gt_C": 6,
+   "D_gt_O": 8,
+   "D_gt_S": 8,
+   "N_en_ust": 0
+  },
+  "gruplar": [
+   {
+    "id": "G1",
+    "skor": {
+     "D": 6.693621,
+     "I": -6.257254,
+     "U": -11.015536,
+     "C": 6.605497,
+     "O": 1.518197,
+     "S": 0.247936,
+     "N": -10.398911
+    },
+    "D_sirasi": 1,
+    "yayilim": 17.709157,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G2",
+    "skor": {
+     "D": 7.642036,
+     "I": -1.127042,
+     "U": -11.034243,
+     "C": 7.488184,
+     "O": 1.722558,
+     "S": 0.292625,
+     "N": -4.289391
+    },
+    "D_sirasi": 1,
+    "yayilim": 18.676279,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G3",
+    "skor": {
+     "D": 8.885368,
+     "I": -5.152413,
+     "U": -11.031303,
+     "C": 9.113897,
+     "O": -6.633639,
+     "S": -1.338094,
+     "N": -9.634962
+    },
+    "D_sirasi": 2,
+    "yayilim": 20.145201,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": false,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G4",
+    "skor": {
+     "D": 9.897243,
+     "I": -2.992846,
+     "U": -11.036028,
+     "C": 3.910369,
+     "O": 0.78333,
+     "S": -2.923419,
+     "N": -10.77275
+    },
+    "D_sirasi": 1,
+    "yayilim": 20.933271,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G5",
+    "skor": {
+     "D": 7.282007,
+     "I": -4.184573,
+     "U": -4.716269,
+     "C": 4.581651,
+     "O": 0.509241,
+     "S": -4.863932,
+     "N": -7.199151
+    },
+    "D_sirasi": 1,
+    "yayilim": 14.481158,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G6",
+    "skor": {
+     "D": 10.439743,
+     "I": -1.363438,
+     "U": -11.012313,
+     "C": -0.478668,
+     "O": -1.235003,
+     "S": -5.220793,
+     "N": -9.404793
+    },
+    "D_sirasi": 1,
+    "yayilim": 21.452056,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G7",
+    "skor": {
+     "D": 5.256678,
+     "I": -2.518332,
+     "U": -11.018887,
+     "C": 6.37785,
+     "O": -3.12429,
+     "S": -11.038626,
+     "N": -5.69719
+    },
+    "D_sirasi": 2,
+    "yayilim": 17.416475,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": false,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G8",
+    "skor": {
+     "D": 8.113361,
+     "I": -4.47605,
+     "U": -11.023838,
+     "C": 5.051683,
+     "O": 4.241735,
+     "S": 0.760144,
+     "N": -5.580362
+    },
+    "D_sirasi": 1,
+    "yayilim": 19.137199,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   }
+  ]
+ },
+ "smoke_lamar_yok_cuda_t1": {
+  "meta": {
+   "model": "nlpai-lab/LAMAR-600m",
+   "revision": "3af1f97945392da8ef46217640641355928aeb59",
+   "kip": "smoke",
+   "talimat": null,
+   "tekrar": 1,
+   "batch": 4,
+   "yukleme_s": 45.74,
+   "torch": "2.14.1+cu126",
+   "transformers": "5.24.0",
+   "gpu": "NVIDIA GeForce GTX 1660 Ti",
+   "dtype": "torch.float32",
+   "cihaz": "cuda",
+   "vram_tepe_mib": 2295,
+   "vram_kullanilan_mib_bosaltma_sonrasi_surec_ici": 109,
+   "ram_tepe_mib": 3239,
+   "sure_s": 55.28
+  },
+  "gecti": true,
+  "kontroller": {
+   "sonlu": true,
+   "sabit_degil": true,
+   "D_gt_U": true,
+   "determinizm": true,
+   "toplu_tekli": true,
+   "sira_degismezligi": true,
+   "kesilen_cift": 0
+  },
+  "en_buyuk_fark": {
+   "determinizm": 0.0,
+   "toplu_tekli": 9.5367431640625e-06,
+   "sira": 1.2636184692382812e-05,
+   "tolerans_goreli": 0.0001
+  },
+  "bilgi_ozet": {
+   "D_gt_I": 8,
+   "D_gt_C": 6,
+   "D_gt_O": 8,
+   "D_gt_S": 8,
+   "N_en_ust": 0
+  },
+  "gruplar": [
+   {
+    "id": "G1",
+    "skor": {
+     "D": 9.186427,
+     "I": -2.486491,
+     "U": -12.149673,
+     "C": 9.124557,
+     "O": 0.905618,
+     "S": 1.967653,
+     "N": -8.99695
+    },
+    "D_sirasi": 1,
+    "yayilim": 21.3361,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G2",
+    "skor": {
+     "D": 8.940879,
+     "I": -0.464409,
+     "U": -12.730847,
+     "C": 8.91402,
+     "O": 8.23712,
+     "S": 5.151382,
+     "N": -0.546989
+    },
+    "D_sirasi": 1,
+    "yayilim": 21.671726,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G3",
+    "skor": {
+     "D": 8.792153,
+     "I": -2.518223,
+     "U": -12.838963,
+     "C": 8.793546,
+     "O": -2.150058,
+     "S": 1.920959,
+     "N": -5.440792
+    },
+    "D_sirasi": 2,
+    "yayilim": 21.632508,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": false,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G4",
+    "skor": {
+     "D": 9.100557,
+     "I": 1.56371,
+     "U": -10.946387,
+     "C": 7.025683,
+     "O": 6.968503,
+     "S": 2.100113,
+     "N": -1.605785
+    },
+    "D_sirasi": 1,
+    "yayilim": 20.046945,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G5",
+    "skor": {
+     "D": 9.223113,
+     "I": -1.33972,
+     "U": -5.361396,
+     "C": 8.107086,
+     "O": 1.95001,
+     "S": 1.044492,
+     "N": -2.149917
+    },
+    "D_sirasi": 1,
+    "yayilim": 14.584509,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G6",
+    "skor": {
+     "D": 9.963716,
+     "I": 1.45825,
+     "U": -13.016617,
+     "C": 6.479664,
+     "O": 6.270175,
+     "S": -2.069387,
+     "N": -1.391956
+    },
+    "D_sirasi": 1,
+    "yayilim": 22.980332,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G7",
+    "skor": {
+     "D": 7.869861,
+     "I": 0.262472,
+     "U": -12.576053,
+     "C": 8.281307,
+     "O": 1.693914,
+     "S": -10.287862,
+     "N": -1.255367
+    },
+    "D_sirasi": 2,
+    "yayilim": 20.85736,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": false,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G8",
+    "skor": {
+     "D": 9.183097,
+     "I": -0.007204,
+     "U": -11.748628,
+     "C": 7.389054,
+     "O": 7.173256,
+     "S": 2.259855,
+     "N": -1.798581
+    },
+    "D_sirasi": 1,
+    "yayilim": 20.931725,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   }
+  ]
+ },
+ "smoke_modernbert_yok_cuda_t1": {
+  "meta": {
+   "model": "ytu-ce-cosmos/modernbert-tr-reranker",
+   "revision": "d6aabbe061f1bf6cb796e317ecb6d9b8f7b96c54",
+   "kip": "smoke",
+   "talimat": null,
+   "tekrar": 1,
+   "batch": 4,
+   "yukleme_s": 3.07,
+   "torch": "2.14.1+cu126",
+   "transformers": "5.24.0",
+   "gpu": "NVIDIA GeForce GTX 1660 Ti",
+   "dtype": "torch.float32",
+   "cihaz": "cuda",
+   "vram_tepe_mib": 703,
+   "vram_kullanilan_mib_bosaltma_sonrasi_surec_ici": 109,
+   "ram_tepe_mib": 1312,
+   "sure_s": 12.91
+  },
+  "gecti": true,
+  "kontroller": {
+   "sonlu": true,
+   "sabit_degil": true,
+   "D_gt_U": true,
+   "determinizm": true,
+   "toplu_tekli": true,
+   "sira_degismezligi": true,
+   "kesilen_cift": 0
+  },
+  "en_buyuk_fark": {
+   "determinizm": 0.0,
+   "toplu_tekli": 6.735324859619141e-06,
+   "sira": 6.735324859619141e-06,
+   "tolerans_goreli": 0.0001
+  },
+  "bilgi_ozet": {
+   "D_gt_I": 8,
+   "D_gt_C": 6,
+   "D_gt_O": 8,
+   "D_gt_S": 8,
+   "N_en_ust": 0
+  },
+  "gruplar": [
+   {
+    "id": "G1",
+    "skor": {
+     "D": 4.015754,
+     "I": -0.376544,
+     "U": -3.154527,
+     "C": 3.906923,
+     "O": 1.342978,
+     "S": 1.653203,
+     "N": -2.633645
+    },
+    "D_sirasi": 1,
+    "yayilim": 7.170281,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G2",
+    "skor": {
+     "D": 3.67436,
+     "I": 0.458616,
+     "U": -4.507258,
+     "C": 4.235724,
+     "O": 2.842072,
+     "S": 2.063355,
+     "N": -0.250364
+    },
+    "D_sirasi": 2,
+    "yayilim": 8.742982,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": false,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G3",
+    "skor": {
+     "D": 3.603502,
+     "I": 0.012491,
+     "U": -4.64502,
+     "C": 3.766688,
+     "O": 0.280747,
+     "S": 1.53196,
+     "N": -2.763154
+    },
+    "D_sirasi": 2,
+    "yayilim": 8.411708,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": false,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G4",
+    "skor": {
+     "D": 4.703675,
+     "I": 0.044033,
+     "U": -3.813236,
+     "C": 2.811457,
+     "O": 2.968476,
+     "S": -0.921651,
+     "N": -1.360224
+    },
+    "D_sirasi": 1,
+    "yayilim": 8.516911,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G5",
+    "skor": {
+     "D": 4.262468,
+     "I": 0.067937,
+     "U": -0.8945,
+     "C": 2.471571,
+     "O": 1.818659,
+     "S": 0.537512,
+     "N": -0.732677
+    },
+    "D_sirasi": 1,
+    "yayilim": 5.156968,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G6",
+    "skor": {
+     "D": 4.532972,
+     "I": 1.347993,
+     "U": -4.858057,
+     "C": 2.595105,
+     "O": 1.237877,
+     "S": 0.214586,
+     "N": -0.881085
+    },
+    "D_sirasi": 1,
+    "yayilim": 9.391029,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G7",
+    "skor": {
+     "D": 3.667282,
+     "I": -0.330741,
+     "U": -2.941466,
+     "C": 3.40081,
+     "O": 1.366231,
+     "S": -3.407928,
+     "N": -0.044674
+    },
+    "D_sirasi": 1,
+    "yayilim": 7.07521,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G8",
+    "skor": {
+     "D": 5.080154,
+     "I": -1.303245,
+     "U": -4.402184,
+     "C": 3.635844,
+     "O": 2.922939,
+     "S": 2.828297,
+     "N": -0.348183
+    },
+    "D_sirasi": 1,
+    "yayilim": 9.482338,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   }
+  ]
+ },
+ "smoke_qwen06_cevap_cuda_t1": {
+  "meta": {
+   "model": "Qwen/Qwen3-Reranker-0.6B",
+   "revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+   "kip": "smoke",
+   "talimat": "cevap",
+   "tekrar": 1,
+   "batch": 4,
+   "yukleme_s": 7.32,
+   "torch": "2.14.1+cu126",
+   "transformers": "5.24.0",
+   "gpu": "NVIDIA GeForce GTX 1660 Ti",
+   "dtype": "torch.float32",
+   "cihaz": "cuda",
+   "yes_id": 9693,
+   "no_id": 2152,
+   "yes_tek_token": true,
+   "no_tek_token": true,
+   "yes_no_farkli": true,
+   "dolgu": "left",
+   "vram_tepe_mib": 3973,
+   "vram_kullanilan_mib_bosaltma_sonrasi_surec_ici": 109,
+   "ram_tepe_mib": 3516,
+   "sure_s": 87.04
+  },
+  "gecti": true,
+  "kontroller": {
+   "sonlu": true,
+   "sabit_degil": true,
+   "D_gt_U": true,
+   "determinizm": true,
+   "toplu_tekli": true,
+   "sira_degismezligi": true,
+   "kesilen_cift": 0
+  },
+  "en_buyuk_fark": {
+   "determinizm": 0.0,
+   "toplu_tekli": 1.0162591934204102e-05,
+   "sira": 5.424022674560547e-06,
+   "tolerans_goreli": 0.0001
+  },
+  "bilgi_ozet": {
+   "D_gt_I": 8,
+   "D_gt_C": 8,
+   "D_gt_O": 8,
+   "D_gt_S": 8,
+   "N_en_ust": 0
+  },
+  "gruplar": [
+   {
+    "id": "G1",
+    "skor": {
+     "D": 0.999876,
+     "I": 0.017743,
+     "U": 0.000784,
+     "C": 0.999853,
+     "O": 0.979848,
+     "S": 0.155332,
+     "N": 0.005948
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.999092,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G2",
+    "skor": {
+     "D": 0.999871,
+     "I": 0.838742,
+     "U": 0.000532,
+     "C": 0.999836,
+     "O": 0.999469,
+     "S": 0.98517,
+     "N": 0.202172
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.999338,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G3",
+    "skor": {
+     "D": 0.999913,
+     "I": 0.003319,
+     "U": 0.000345,
+     "C": 0.9999,
+     "O": 0.011672,
+     "S": 0.980153,
+     "N": 0.001057
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.999568,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G4",
+    "skor": {
+     "D": 0.999788,
+     "I": 0.916017,
+     "U": 0.000694,
+     "C": 0.999456,
+     "O": 0.999117,
+     "S": 0.145479,
+     "N": 0.001754
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.999094,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G5",
+    "skor": {
+     "D": 0.999636,
+     "I": 0.047917,
+     "U": 0.003544,
+     "C": 0.998958,
+     "O": 0.997206,
+     "S": 0.281731,
+     "N": 0.011195
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.996092,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G6",
+    "skor": {
+     "D": 0.999967,
+     "I": 0.989887,
+     "U": 8.6e-05,
+     "C": 0.999697,
+     "O": 0.968268,
+     "S": 0.718212,
+     "N": 0.01136
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.99988,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G7",
+    "skor": {
+     "D": 0.998533,
+     "I": 0.03263,
+     "U": 0.000368,
+     "C": 0.998367,
+     "O": 0.334454,
+     "S": 0.001024,
+     "N": 0.017691
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.998164,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G8",
+    "skor": {
+     "D": 0.999775,
+     "I": 0.044749,
+     "U": 0.000334,
+     "C": 0.999234,
+     "O": 0.997889,
+     "S": 0.814036,
+     "N": 0.278024
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.99944,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   }
+  ],
+  "st_karsilastirma": {
+   "yapildi": false,
+   "neden": "yalnız varsayılan talimatla"
+  }
+ },
+ "smoke_qwen06_varsayilan_cuda_t1": {
+  "meta": {
+   "model": "Qwen/Qwen3-Reranker-0.6B",
+   "revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+   "kip": "smoke",
+   "talimat": "varsayilan",
+   "tekrar": 1,
+   "batch": 4,
+   "yukleme_s": 16.09,
+   "torch": "2.14.1+cu126",
+   "transformers": "5.24.0",
+   "gpu": "NVIDIA GeForce GTX 1660 Ti",
+   "dtype": "torch.float32",
+   "cihaz": "cuda",
+   "yes_id": 9693,
+   "no_id": 2152,
+   "yes_tek_token": true,
+   "no_tek_token": true,
+   "yes_no_farkli": true,
+   "dolgu": "left",
+   "vram_tepe_mib": 5957,
+   "vram_kullanilan_mib_bosaltma_sonrasi_surec_ici": 109,
+   "ram_tepe_mib": 4415,
+   "sure_s": 137.97
+  },
+  "gecti": true,
+  "kontroller": {
+   "sonlu": true,
+   "sabit_degil": true,
+   "D_gt_U": true,
+   "determinizm": true,
+   "toplu_tekli": true,
+   "sira_degismezligi": true,
+   "kesilen_cift": 0
+  },
+  "en_buyuk_fark": {
+   "determinizm": 0.0,
+   "toplu_tekli": 1.4066696166992188e-05,
+   "sira": 1.633167266845703e-05,
+   "tolerans_goreli": 0.0001
+  },
+  "bilgi_ozet": {
+   "D_gt_I": 8,
+   "D_gt_C": 6,
+   "D_gt_O": 8,
+   "D_gt_S": 8,
+   "N_en_ust": 0
+  },
+  "gruplar": [
+   {
+    "id": "G1",
+    "skor": {
+     "D": 0.99999,
+     "I": 0.881588,
+     "U": 0.000784,
+     "C": 0.999992,
+     "O": 0.999003,
+     "S": 0.944856,
+     "N": 0.004594
+    },
+    "D_sirasi": 2,
+    "yayilim": 0.999208,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": false,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G2",
+    "skor": {
+     "D": 0.999989,
+     "I": 0.997508,
+     "U": 0.000137,
+     "C": 0.999985,
+     "O": 0.999967,
+     "S": 0.999137,
+     "N": 0.907228
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.999853,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G3",
+    "skor": {
+     "D": 0.999997,
+     "I": 0.007078,
+     "U": 4.2e-05,
+     "C": 0.999993,
+     "O": 0.012058,
+     "S": 0.998714,
+     "N": 0.000271
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.999955,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G4",
+    "skor": {
+     "D": 0.999981,
+     "I": 0.99769,
+     "U": 0.000768,
+     "C": 0.999947,
+     "O": 0.999953,
+     "S": 0.387969,
+     "N": 0.001814
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.999213,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G5",
+    "skor": {
+     "D": 0.999992,
+     "I": 0.981202,
+     "U": 0.075697,
+     "C": 0.999984,
+     "O": 0.999748,
+     "S": 0.754112,
+     "N": 0.07432
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.925672,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G6",
+    "skor": {
+     "D": 0.999997,
+     "I": 0.999885,
+     "U": 0.000122,
+     "C": 0.999951,
+     "O": 0.986802,
+     "S": 0.823022,
+     "N": 0.316208
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.999875,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G7",
+    "skor": {
+     "D": 0.999867,
+     "I": 0.899173,
+     "U": 0.000118,
+     "C": 0.999883,
+     "O": 0.652068,
+     "S": 0.00078,
+     "N": 0.01615
+    },
+    "D_sirasi": 2,
+    "yayilim": 0.999764,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": false,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   },
+   {
+    "id": "G8",
+    "skor": {
+     "D": 0.999969,
+     "I": 0.796496,
+     "U": 0.000323,
+     "C": 0.999926,
+     "O": 0.999896,
+     "S": 0.996381,
+     "N": 0.485977
+    },
+    "D_sirasi": 1,
+    "yayilim": 0.999646,
+    "bilgi": {
+     "D_gt_I": true,
+     "D_gt_C": true,
+     "D_gt_O": true,
+     "D_gt_S": true,
+     "N_en_ust": false
+    }
+   }
+  ],
+  "st_karsilastirma": {
+   "yapildi": true,
+   "en_buyuk_fark": 1.9609928131103516e-05,
+   "ayni_siralama": true,
+   "st_istemleri": {
+    "query": "Given a web search query, retrieve relevant passages that answer the query"
+   }
+  }
+ }
+}

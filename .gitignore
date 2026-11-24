@@ -1,0 +1,42 @@
+# Sanal ortam ve Python önbellekleri
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Veri ve çıktılar sürüm kontrolü dışında (yalnız sentetik)
+data/*
+!data/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Streamlit yerel gizli ayarlar
+.streamlit/secrets.toml
+
+# Model ve vektör deposu dosyaları (Ollama modelleri git'e girmez)
+*.pkl
+*.joblib
+*.onnx
+*.gguf
+*.safetensors
+chroma/
+chroma_db/
+
+# Gizli bilgiler
+.env
+*.env
+*.pem
+*.key
+
+# Veritabanı yedekleri (sentetik olsa da git dışında)
+backups/
+*.dump
+
+# Yerel araç talimatları ve ayarları (paylaşılan kurallar: docs/DEVELOPMENT_RULES.md)

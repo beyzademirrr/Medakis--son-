@@ -1,0 +1,10 @@
+# İzole prova kümesi (scripts/db/prova.ps1 kullanır). compose.yaml üzerine eklenir:
+# ayrı konteyner adı ve ayrı volume. Port MEDAKIS_PG_PORT ile 5433'e alınır.
+# Gerçek medakis-postgres konteynerine ve medakis_pgdata volume'una dokunmaz.
+services:
+  postgres:
+    container_name: medakis-prova-postgres
+
+volumes:
+  pgdata:
+    name: medakis_prova_pgdata
