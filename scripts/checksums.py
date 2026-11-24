@@ -76,7 +76,7 @@ def _git_show(commit: str, rel: str) -> bytes | None:
 def verify_original() -> tuple[str, list[str]]:
     """Özgün manifesti ilk içe aktarma commit'indeki baytlara karşı doğrular."""
     if _git_show(ORIGINAL_IMPORT_COMMIT, "SHA256SUMS.txt") is None:
-        return "skipped (git geçmişi yok)", []
+        return "skipped (git gecmisi yok)", []
     errors = []
     for digest, rel in parse(ORIGINAL):
         data = _git_show(ORIGINAL_IMPORT_COMMIT, ORIGINAL_RELOCATED.get(rel, rel))
