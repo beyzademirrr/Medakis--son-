@@ -10,7 +10,7 @@ from __future__ import annotations
 import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Any
 
 from medakis.retrieval_demo import search_sources
@@ -27,6 +27,7 @@ class ToolContext:
     create_proposal: Callable[[dict], dict] | None = None  # yönetici onayına TASLAK öneri (insan onayı servisi)
     create_request: Callable[[dict], dict] | None = None
     approval_status: Callable[[], list[dict]] | None = None
+    request_status: Callable[[], list[dict]] | None = None
     calls: list[dict] = field(default_factory=list)
 
     def dens(self) -> list[dict]:
@@ -76,6 +77,19 @@ def get_workload_forecast(ctx: ToolContext) -> list[dict] | None:
     return ctx.twin.forecast(ctx.at)
 
 
+def get_density_ahead(ctx: ToolContext, minutes: int = 60) -> list[dict]:
+    """`minutes` sonrası beklenen kişi sayısı: aktif hasta kaydı projeksiyonu × alan katsayısı × senaryo (kamera görüntüsü değildir)."""
+    t = ctx.at + timedelta(minutes=minutes)
+    return [{k: v for k, v in d.items() if k != "goruntu"} for d in ctx.twin.density(t, ctx.minute, ctx.surges)]
+
+
+def get_daily_gaps(ctx: ToolContext, unit: int | None = None, start_hour: int = 0, end_hour: int = 24) -> list[dict]:
+    """Karar gününün saatlik hemşire talep/etkin kapasite matrisi; yalnız açığı olan saatler (talep > etkin kapasite)."""
+    day = ctx.twin.data.local(ctx.at).date()
+    return [r for r in ctx.twin.hourly(day, "nurse") if r["acik_dk"] > 0 and (unit is None or r["birim"] == unit)
+            and start_hour <= r["saat"] < end_hour]  # fmt: skip
+
+
 def get_capacity(ctx: ToolContext) -> dict:
     return ctx.twin.staffing(ctx.at)
 
@@ -120,15 +134,35 @@ def create_staff_request(ctx: ToolContext, unit: int, reason: str) -> dict:
     return ctx.create_request({"tur": "ek_personel", "birim": unit, "gerekce": reason, "kaynak": "agent"})
 
 
+def create_transfer_request(ctx: ToolContext, code: str, target: int, reason: str) -> dict:
+    """Belirli personel için geçici görevlendirme TALEBİ (taslak). Önce uygunluk denetlenir; uygun değilse talep açılmaz.
+    Gerçek atama değildir; yönetici kararı ve CP-SAT/doğrulayıcı denetimi gerekir."""
+    check = validate_transfer(ctx, code, target)
+    if not check["uygun"]:
+        return {"olusturuldu": False, "neden": check["gerekce"]}
+    if ctx.create_request is None:
+        return {"olusturuldu": False, "neden": "Talep servisi yok."}
+    dup = next((r for r in get_request_status(ctx) if r.get("personel") == code and r.get("birim") == target and r.get("durum") == "beklemede"), None)
+    if dup is not None:
+        return {"olusturuldu": False, "neden": f"aynı personel ve birim için bekleyen talep zaten var ({dup['talep']})", "talep": dup["talep"]}
+    staff = next(s for s in ctx.twin.data.staff_on_duty(ctx.at) if s["kod"] == code)
+    return ctx.create_request({"tur": "gecici_gorevlendirme", "birim": target, "personel": code, "kaynak_birim": staff["birim"],
+                               "gerekce": reason, "kaynak": "agent"})  # fmt: skip
+
+
 def get_approval_status(ctx: ToolContext) -> list[dict]:
     return ctx.approval_status() if ctx.approval_status else []
 
 
+def get_request_status(ctx: ToolContext) -> list[dict]:
+    return ctx.request_status() if ctx.request_status else []
+
+
 TOOLS: dict[str, Callable[..., Any]] = {f.__name__: f for f in (
     get_density, get_service_status, get_staff, get_staff_availability, get_staff_qualifications, get_shifts, get_workload_forecast,
-    get_capacity, optimize_allocation, validate_transfer, simulate_transfer, retrieve_policy_evidence, create_transfer_proposal,
-    create_staff_request, get_approval_status)}  # fmt: skip
-WRITE_TOOLS = ("create_transfer_proposal", "create_staff_request")  # yalnız TASLAK üretir; onay/atama/bildirim aracı yok
+    get_capacity, get_density_ahead, get_daily_gaps, optimize_allocation, validate_transfer, simulate_transfer, retrieve_policy_evidence,
+    create_transfer_proposal, create_staff_request, create_transfer_request, get_approval_status, get_request_status)}  # fmt: skip
+WRITE_TOOLS = ("create_transfer_proposal", "create_staff_request", "create_transfer_request")  # yalnız TASLAK üretir; onay/atama/bildirim aracı yok
 
 
 def call(ctx: ToolContext, name: str, **kwargs: Any) -> Any:

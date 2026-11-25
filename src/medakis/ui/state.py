@@ -104,7 +104,7 @@ def snapshot(view: str | None = None) -> dict:
 def tool_ctx() -> T.ToolContext:
     s = ss()
     return T.ToolContext(engine().twin, at(), s.minute, dict(s.surges), create_proposal=lambda o: s.sess.create_proposal(o, "agent"),
-                         create_request=s.sess.create_request, approval_status=s.sess.proposals)  # fmt: skip
+                         create_request=s.sess.create_request, approval_status=s.sess.proposals, request_status=s.sess.request_list)  # fmt: skip
 
 
 def unit_names() -> dict[int, str]:

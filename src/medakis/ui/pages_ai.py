@@ -7,7 +7,7 @@ import streamlit as st
 
 from medakis.agent import llm
 from medakis.agent import tools as T
-from medakis.agent.orchestrator import EXAMPLES, answer
+from medakis.agent.orchestrator import EXAMPLE_GROUPS, answer
 from medakis.retrieval_demo import list_documents, quote_in_document, search_sources
 from medakis.ui import common as C
 from medakis.ui import state as S
@@ -78,16 +78,22 @@ def page_agent() -> None:
                                                for c in m["cagrilar"]]), hide_index=True, width="stretch")  # fmt: skip
                     for src in m["kaynaklar"]:
                         st.caption(f"Kaynak: {src['belge']} · {src['kimlik']} v{src['surum']} · {src['bolum']} · skor {src['skor']}")
-        q = st.chat_input("Örn. Acil servise personel öner")
+        q = st.chat_input("Soru, istek ya da talimat yazın · ör. STAFF0002'yi Acil Servis'e yönlendir · \"yardım\" ile bütün komutlar")
         if q:
             _run(q)
             st.rerun()
     with right:
-        st.markdown("#### Örnek sorular")
-        for i, ex in enumerate(EXAMPLES):
-            if st.button(ex, key=f"ex_{i}", width="stretch"):
-                _run(ex)
-                st.rerun()
+        st.markdown("#### Soru, istek ve talimatlar")
+        st.caption("Tıklayın ya da kendi cümlenizle yazın. Talimatlar yalnız TASLAK talep/öneri açar; onay yöneticidedir.")
+        i = 0
+        for group, items in EXAMPLE_GROUPS.items():
+            st.markdown(f'<div class="ma-foot" style="text-transform:uppercase;letter-spacing:.6px;margin:10px 0 4px">{theme.esc(group)}</div>',
+                        unsafe_allow_html=True)  # fmt: skip
+            for ex in items:
+                if st.button(ex, key=f"ex_{i}", width="stretch"):
+                    _run(ex)
+                    st.rerun()
+                i += 1
         st.markdown("#### Bekleyen onaylar")
         pend = [p for p in s.sess.proposals() if p["durum"] == "beklemede"]
         for p in pend:
@@ -125,7 +131,7 @@ def page_rag() -> None:
         st.session_state.setdefault("rag_q", "Acil serviste hangi yetkinlik aranır?")
         q = st.text_input("Soru", key="rag_q")
         ex = st.columns(3)
-        for i, (col, sample) in enumerate(zip(ex, ("Destek kuralı hangi birimleri kapsar?", "Kullanım oranı nedir?", "Hastaya hangi ilaç verilmeli?"))):
+        for i, (col, sample) in enumerate(zip(ex, ("Destek kuralı hangi birimleri kapsar?", "Onaylanmamış öneri kilit midir?", "Hastaya hangi ilaç verilmeli?"))):
             # Değer widget çizilmeden önce, callback içinde atanır (Streamlit kuralı).
             col.button(sample, key=f"rag_ex_{i}", width="stretch", on_click=st.session_state.__setitem__, args=("rag_q", sample))
         if q:

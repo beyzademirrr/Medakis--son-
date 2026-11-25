@@ -34,10 +34,10 @@ Bu belge, koddaki **gerçekten çalışan** bileşenleri ve henüz uygulanmamı�
 | Tahmin | Çalışıyor ve doğrulandı | Mevcut RF + U1 tampon; 30 dk satırları yalnız gösterim, optimizasyon 60 dk kullanır |
 | Yoğunluğa duyarlı CP-SAT | Çalışan prototip | Mevcut Katman A; kısıt gevşetilmez; kamera sinyali etiketli ek talep; doğrulayıcı her sonuçta çalışır |
 | What-if | Çalışan prototip | Taşıma, izin, ek personel, yoğunluk; rol/yetkinlik/kapsam/asgari kişi/kaynak açığı kontrolleri |
-| AI Agent | Çalışan prototip | 15 araç (13 salt okunur, 2 yalnız taslak); onay/atama/bildirim aracı yok; araç süreleri gerçek ölçüm. Gemma 3 4B isteğe bağlı ve sayı denetimli; bu makinede doğrulama sırasında Ollama yanıt vermedi, agent deterministik kipte doğrulandı |
+| AI Agent | Çalışan prototip | 19 araç (16 salt okunur, 3 yalnız taslak); onay/atama/bildirim aracı yok; araç süreleri gerçek ölçüm. Soru, istek ve doğrudan talimat (ör. "STAFF0002'yi Acil Servis'e yönlendir", "Servis A'dan 1 hemşireyi Acil Servis'e gönder": uygunluk denetimli TASLAK geçici görevlendirme talebi; mükerrer talep engelli). 6 kategoride 24 örnek komut. Gemma 3 4B isteğe bağlı ve sayı denetimli; 25.11.2026'da yerel Ollama ile yeniden ifade çalıştı (ilk çağrı ~40 sn); anlam kayması görülebildiği için varsayılan deterministik |
 | Kaynaklı arama | Çalışan prototip | BM25; belge, sürüm, skor, belgede doğrulanmış alıntı; bulunamazsa ret. Dil modeli cevabı değildir |
 | İnsan onayı | Çalışıyor ve doğrulandı | Agent oturumu yalnız kayda alabilir; onay yönetici oturumunda; özet ve güncellik kontrolü |
-| Telegram | Çalışan prototip | Varsayılan dry-run; yalnız ortam değişkenleri; onaysız/özeti uyuşmayan/mükerrer bildirim engelli. Daha önce paylaşılan token kullanılmadı; canlı gönderim test edilmedi |
+| Telegram | Çalışan prototip | Onay bildirimi varsayılan dry-run; kimlik ortam değişkeni ya da Windows Credential Manager (depoda yok); onaysız/özeti uyuşmayan/mükerrer bildirim engelli. Telegram agent'ı (`scripts/telegram_agent.py`) yeni token ile çalışır; yalnız tek yapılandırılmış sohbeti yanıtlar. Telegram'dan açılan taslaklar bot oturumunun izine yazılır, web oturumunda görünmez (ortak kayıt kalan iş) |
 | Talepler ve izleme | Çalışan prototip | Ek personel, geçici görevlendirme, alternatif talepleri; metrikler yalnız oturum izinden |
 | Denetim ve açıklanabilirlik | Çalışıyor ve doğrulandı | Operasyon, onay, bildirim ve talep izleri özet zincirli; kullanılan veri, kurallar, fayda/risk, elenen adaylar, kaynak belgeler |
 
@@ -48,20 +48,23 @@ Bu belge, koddaki **gerçekten çalışan** bileşenleri ve henüz uygulanmamı�
   Kamera ekranı (kutular + ısı) → Optimizasyon (OPTIMAL, doğrulayıcı geçti, 3 taşıma) → onaya gönderildi → Onaylandı
   ("Plan hâlâ geçerli") → Emirler ve Bildirimler dry-run ("ağ isteği yapılmadı") → Agent otomatik taslağı (aynı plan
   kayıtlı olduğu için ikinci kez kaydedilmedi) → zamansal ısı haritası.
-- Çalıştırılmayan: PostgreSQL entegrasyon testleri, canlı Telegram gönderimi, Gemma ile agent yeniden ifadesi, LangGraph/MCP.
+- Çalıştırılmayan: PostgreSQL entegrasyon testleri, canlı onay bildirimi (Telegram agent'ı ayrıca denendi), LangGraph/MCP.
 
 ## Test sonuçları (25.11.2026)
 
 - Tam varsayılan paket: 1438 geçti, 2 başarısız (arayüzün RAG paketini doğrudan içe aktarması ve şartname .md/.docx
   eşleşmesi); ikisi düzeltildi ve ilgili 113 test ile ürün testleri (24) yeniden çalıştırılıp geçti. 522 test işaretle
   dışarıda bırakılır (PostgreSQL ve entegrasyon testleri; bu makinede sunucu yok).
+- Agent ve Telegram güncellemesi sonrası (25.11.2026): varsayılan paket 1438 geçti, 6 başarısız; başarısızların hepsi tohumlama
+  komut satırı testleri ve değişiklik öncesi kodda da aynı: alt süreç çıktısı Windows kod sayfasıyla yazıldığında UTF-8
+  okunamıyor. `PYTHONUTF8=1` ile bu iki dosya 71/71 geçti. Ürün testleri (28) geçti.
 - Tarayıcı: 15 ekranın hepsi hatasız açıldı; kritik senaryo → CP-SAT → onay → dry-run bildirim → mükerrer engeli →
   agent → denetim zinciri → ikizde simüle etki → saat oynatma uçtan uca denendi.
 
 ## 2 Aralık'a kadar kalan işler
 
 1. LangGraph orkestrasyonu ve salt okunur/taslak MCP araç sunucusu (paket kurulumu proje sahibinin onayıyla).
-2. Ollama açıkken Gemma 3 4B yeniden ifade akışının uçtan uca doğrulanması.
+2. Gemma 3 4B yeniden ifadesinde anlam denetimi (sayı denetimi var; anlam kayması örneği görüldü).
 3. Bütünleşik arayüzün doğrulanmış PostgreSQL kipine bağlanması (veri sağlayıcı seçimi).
-4. Yeni token ile tek demo sohbetine canlı Telegram testi; n8n akışı.
+4. Telegram agent'ı ile web oturumunun ortak kayıt deposu; canlı onay bildirimi; n8n akışı.
 5. Kaynak doğrulamalı RAG'in bağımsız soru setiyle kabulü (A6) ve kör test.

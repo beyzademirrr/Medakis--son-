@@ -124,9 +124,14 @@ karşılanmadığı için normal kullanıcıya kapalıdır.
 
 - Onay mevcut onay servisinden geçer: yetki, plan SHA-256 eşleşmesi, güncellik (plan, yetkinlik, takvim, kilit) ve süre.
 - Agent'ın oturumu yalnız kayda alma yetkisine sahiptir; onay yalnız yönetici oturumundadır.
-- Telegram yalnız `TELEGRAM_BOT_TOKEN` ve `TELEGRAM_CHAT_ID` ortam değişkenleriyle ve `MEDAKIS_TELEGRAM_MODE=live` ile canlıdır.
-  **Daha önce paylaşılmış token kullanılmaz; yeni token girilene kadar dry-run varsayılandır.** Onaysız, özeti uyuşmayan ve
-  mükerrer bildirim engellenir. Tek demo sohbeti, bütün personele bildirim gönderildiği anlamına gelmez.
+- Telegram kimliği ortam değişkenlerinden (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`) ya da Windows Credential Manager'daki
+  `medakis-telegram` kaydından okunur; depoya, loga ve mesaja yazılmaz. Onay bildirimleri `MEDAKIS_TELEGRAM_MODE=live`
+  verilmedikçe dry-run'dır. Onaysız, özeti uyuşmayan ve mükerrer bildirim engellenir. Tek demo sohbeti, bütün personele
+  bildirim gönderildiği anlamına gelmez.
+- **Telegram agent'ı** (`scripts/telegram_agent.py`): web ekranındaki agent'ın aynısı Telegram sohbetinden çalışır (soru,
+  istek, talimat; `/senaryo`, `/gemma`, `/yardim`). Yalnız yapılandırılmış tek sohbet yanıtlanır, diğerleri yok sayılır.
+  Yetkisi web agent'ıyla aynıdır: TASLAK öneri/talep açar; onay, atama ve personel bildirimi yapamaz. Kimlik kaydı:
+  `.\.venv\Scripts\python.exe scripts\telegram_agent.py --kaydet` (token gizli girişle alınır).
 - Yoğunluk olayları, optimizasyonlar, agent araç çağrıları, öneriler, kararlar, bildirim denemeleri, talepler ve what-if
   senaryoları özet zincirli izlere yazılır. n8n bağlantısı "Geliştiriliyor" durumundadır.
 

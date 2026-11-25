@@ -38,9 +38,15 @@ class TelegramConfig:
 
     @staticmethod
     def from_env(env: Mapping[str, str] | None = None) -> TelegramConfig:
+        """Ortam değişkenleri; verilmemişse (yalnız gerçek ortamda) Windows Credential Manager'daki `medakis-telegram` kaydı.
+        Kip yine `MEDAKIS_TELEGRAM_MODE` ile seçilir; varsayılan dry-run."""
         e = os.environ if env is None else env
         mode = (e.get("MEDAKIS_TELEGRAM_MODE") or DRY_RUN).strip().lower()
-        return TelegramConfig(LIVE if mode == LIVE else DRY_RUN, e.get("TELEGRAM_BOT_TOKEN") or None, e.get("TELEGRAM_CHAT_ID") or None)
+        token, chat = e.get("TELEGRAM_BOT_TOKEN") or None, e.get("TELEGRAM_CHAT_ID") or None
+        if env is None and not (token and chat):
+            stored_token, stored_chat = stored_credentials()
+            token, chat = token or stored_token, chat or stored_chat
+        return TelegramConfig(LIVE if mode == LIVE else DRY_RUN, token, chat)
 
     @property
     def live_ready(self) -> bool:
@@ -56,6 +62,19 @@ class NotificationResult:
     proposal_id: str
     message: str
     detail: str = ""
+
+
+KEYRING_SERVICE = "medakis-telegram"
+
+
+def stored_credentials() -> tuple[str | None, str | None]:
+    """(token, chat_id) Windows Credential Manager'dan; keyring yoksa ya da kayıt yoksa (None, None). Değerler yazdırılmaz."""
+    try:
+        import keyring
+
+        return keyring.get_password(KEYRING_SERVICE, "bot_token"), keyring.get_password(KEYRING_SERVICE, "chat_id")
+    except Exception:  # noqa: BLE001 — kimlik deposu erişilemez: canlı kip kullanılamaz
+        return None, None
 
 
 def redact(text: str) -> str:

@@ -11,7 +11,7 @@ from streamlit.testing.v1 import AppTest
 
 from medakis.agent import llm
 from medakis.agent import tools as T
-from medakis.agent.orchestrator import answer
+from medakis.agent.orchestrator import EXAMPLES, _norm, answer, help_text, unit_of, unit_roles
 from medakis.approvals.audit_log import verify_chain
 from medakis.density import camera as CAM
 from medakis.notifications.telegram import DRY, REFUSED
@@ -40,7 +40,7 @@ def session(engine):
 
 def ctx(engine, session, surges=None, minute=20):
     return T.ToolContext(engine.twin, AT, minute, surges or {}, create_proposal=lambda o: session.create_proposal(o, "agent"),
-                         create_request=session.create_request, approval_status=session.proposals)  # fmt: skip
+                         create_request=session.create_request, approval_status=session.proposals, request_status=session.request_list)  # fmt: skip
 
 
 # ---- Sentetik kamera ve dedektör --------------------------------------------------------------------------------
@@ -144,7 +144,7 @@ def test_whatif_checks_eligibility_and_source_safety(engine):
 def test_agent_has_no_approval_assignment_or_send_tool():
     banned = ("approve", "onay", "assign", "notify", "send", "telegram")
     assert not [n for n in T.TOOLS if any(b in n for b in banned) and n != "get_approval_status"]
-    assert set(T.WRITE_TOOLS) == {"create_transfer_proposal", "create_staff_request"}
+    assert set(T.WRITE_TOOLS) == {"create_transfer_proposal", "create_staff_request", "create_transfer_request"}
 
 
 def test_agent_density_answer_uses_tools(engine, session):
@@ -180,6 +180,60 @@ def test_proposal_approval_notification_duplicate_and_audit(engine, session):
     rows, issues = session.audit()
     assert not issues and {"oneri_olusturma", "onay_karari", "bildirim_denemesi"} <= {r.get("olay") for r in rows}
     assert verify_chain(session.ops.events()) == []
+
+
+def test_unit_roles_parse_source_and_target():
+    assert unit_roles(_norm("Servis A'dan 1 hemşireyi Acil Servis'e gönder")) == (1, 3)
+    assert unit_roles(_norm("Ayaktan Klinik'ten 2 hemşireyi Servis B'ye gönder")) == (4, 2)
+    assert unit_roles(_norm("STAFF0002'yi Acil Servis'e yönlendir")) == (None, 3)
+    assert unit_of(_norm("acil servis alanına")) == 3  # 'servis alanı' A servisi sayılmaz
+
+
+def test_examples_route_to_intended_tools(engine, session):
+    expect = {"Bugün hangi birimlerde personel açığı var?": "get_daily_gaps", "60 dk sonra hangi alanlarda yoğunluk bekleniyor?": "get_density_ahead",
+              "Acil Serviste şu an kimler çalışıyor?": "get_shifts", "Birimlerin personel kapasitesi nedir?": "get_capacity",
+              "Taleplerin durumu ne?": "get_request_status", "Onaylanmamış öneri kilit midir?": "retrieve_policy_evidence",
+              "Acil için ek personel talebi oluştur": "create_staff_request"}  # fmt: skip
+    for q, tool in expect.items():
+        assert tool in [c["arac"] for c in answer(q, ctx(engine, session)).calls], q
+    assert "Kurallar" in help_text() and all(q in help_text() for q in EXAMPLES)
+
+
+def test_direct_transfer_instruction_opens_checked_draft_request_once(engine, session):
+    r = answer("STAFF0002'yi Acil Servis'e yönlendir", ctx(engine, session))
+    req = session.request_list()
+    assert len(req) == 1 and req[0]["personel"] == "STAFF0002" and req[0]["tur"] == "gecici_gorevlendirme" and req[0]["durum"] == "beklemede"
+    assert "TASLAK" in r.text
+    answer("STAFF0002'yi Acil Servis'e yönlendir", ctx(engine, session))
+    assert len(session.request_list()) == 1  # mükerrer talep açılmaz
+    bad = answer("STAFF0020'yi Acil Servis'e yönlendir", ctx(engine, session))
+    assert "AÇILMADI" in bad.text and len(session.request_list()) == 1  # yetkinlik yoksa talep yok
+
+
+class _FakeHttp:
+    def __init__(self, updates):
+        self.updates, self.sent = updates, []
+
+    def post(self, url, json):
+        method = url.rsplit("/", 1)[-1]
+        self.sent.append((method, json))
+        result = self.updates if method == "getUpdates" else {"message_id": 1}
+        return type("R", (), {"status_code": 200, "json": lambda self: {"ok": True, "result": result}})()
+
+
+def test_telegram_agent_answers_only_configured_chat(engine):
+    from medakis.agent.telegram_bot import TelegramAgent
+    from medakis.notifications.telegram import TelegramConfig
+
+    token = "123456789:" + "A" * 30
+    ups = [{"update_id": 5, "message": {"chat": {"id": 999}, "text": "Onay durumu"}},
+           {"update_id": 6, "message": {"chat": {"id": 42}, "text": "Taleplerin durumu ne?"}}]  # fmt: skip
+    http = _FakeHttp(ups)
+    bot = TelegramAgent(engine, TelegramConfig("dry_run", token, "42"), http=http, persist=False, log=lambda _: None)
+    assert bot.poll_once(timeout=0) == 1 and bot.ignored == 1 and bot.offset == 7
+    sends = [p for m, p in http.sent if m == "sendMessage"]
+    assert len(sends) == 1 and sends[0]["chat_id"] == "42" and "Kayıtlı talep yok" in sends[0]["text"]
+    assert token not in str(sends) and "**" not in sends[0]["text"]
 
 
 def test_source_search_cites_or_abstains():
