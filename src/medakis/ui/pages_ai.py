@@ -122,12 +122,12 @@ def page_rag() -> None:
                             "sari"), unsafe_allow_html=True)  # fmt: skip
     t1, t2 = st.tabs(["🔎 Soru ve kaynak", "📚 Belge listesi"])
     with t1:
-        q = st.text_input("Soru", "Acil serviste hangi yetkinlik aranır?", key="rag_q")
+        st.session_state.setdefault("rag_q", "Acil serviste hangi yetkinlik aranır?")
+        q = st.text_input("Soru", key="rag_q")
         ex = st.columns(3)
-        for col, sample in zip(ex, ("Destek kuralı hangi birimleri kapsar?", "Kullanım oranı nedir?", "Hastaya hangi ilaç verilmeli?")):
-            if col.button(sample, width="stretch"):
-                st.session_state["rag_q"] = sample
-                st.rerun()
+        for i, (col, sample) in enumerate(zip(ex, ("Destek kuralı hangi birimleri kapsar?", "Kullanım oranı nedir?", "Hastaya hangi ilaç verilmeli?"))):
+            # Değer widget çizilmeden önce, callback içinde atanır (Streamlit kuralı).
+            col.button(sample, key=f"rag_ex_{i}", width="stretch", on_click=st.session_state.__setitem__, args=("rag_q", sample))
         if q:
             res = search_sources(q)
             S.ss().sess.log("belge_arama", soru=q, bulundu=res["bulundu"], kaynak=[k["kimlik"] for k in res["kaynaklar"]])
