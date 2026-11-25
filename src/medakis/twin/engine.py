@@ -17,7 +17,7 @@ from datetime import datetime, timedelta
 from typing import Any
 
 from medakis.density import camera as C
-from medakis.twin.data import KIND_TR, ROLE_TR, TwinData
+from medakis.twin.data import KIND_TR, ROLE_TR, TwinData, nurses_short
 
 LEVELS = ("normal", "sari", "turuncu", "kirmizi")
 LEVEL_TR = {"normal": "Normal", "sari": "Yükseliyor", "turuncu": "Yüksek", "kirmizi": "Kritik"}
@@ -106,7 +106,9 @@ class Twin:
             return None
         key = at if horizon == 60 else (at, horizon)
         if key not in self._rows:
-            self._rows[key] = self.scenario.u3_rows(at) if horizon == 60 else self.scenario.u3_rows(at, horizon)
+            rows = self.scenario.u3_rows(at) if horizon == 60 else self.scenario.u3_rows(at, horizon)
+            # Açık personel-dakikadır; yöneticiye eksik hemşire sayısı olarak gösterilir (pencere = tahmin ufku)
+            self._rows[key] = [{**r, "eksik_hemsire": nurses_short(r.get("acik_personel_dk"), int(r.get("ufuk_dk") or horizon))} for r in rows]
         return self._rows[key]
 
     def hourly(self, day: Any, role: str | None) -> list[dict]:
@@ -149,7 +151,8 @@ class Twin:
         for r in result["sonuc"].get("servis_rol") or []:
             if r["rol"] == "nurse":
                 out[r["servis_id"]] = {"ihtiyac_dk": r.get("ihtiyac_personel_dk_tam"), "kapasite_dk": r.get("kapasite_personel_dk_tam"),
-                                       "acik_dk": r.get("acik_personel_dk_tam"), "fazla_dk": r.get("fazla_personel_dk_tam")}  # fmt: skip
+                                       "acik_dk": r.get("acik_personel_dk_tam"), "fazla_dk": r.get("fazla_personel_dk_tam"),
+                                       "eksik_hemsire": nurses_short(r.get("acik_personel_dk_tam"))}  # fmt: skip
         return out
 
     def candidates(self, at: datetime, target: int, chosen: set[int] = frozenset()) -> list[dict]:
@@ -185,9 +188,9 @@ class Twin:
                 ev.append({"tur": "Yoğunluk olayı" if d["seviye"] == "kirmizi" else "Yoğunluk uyarısı", "seviye": d["seviye"], "birim": d["birim"],
                            "metin": f"{d['alan']}: {d['tespit']}/{d['kapasite']} kişi (%{round(100 * d['doluluk'])})"})  # fmt: skip
         for r in rows or []:
-            if r["rol"] == "nurse" and (r.get("acik_personel_dk") or 0) > 0:
+            if r["rol"] == "nurse" and r.get("eksik_hemsire", 0) > 0:
                 ev.append({"tur": "Erken uyarı (60 dk)", "seviye": "turuncu", "birim": r["servis_id"],
-                           "metin": f"{r['servis_adi']}: tahmini hemşire açığı {round(r['acik_personel_dk'])} personel-dk"})  # fmt: skip
+                           "metin": f"{r['servis_adi']}: 60 dk içinde {r['eksik_hemsire']} hemşire eksik (tahmin + tampon)"})  # fmt: skip
         return ev
 
     @staticmethod

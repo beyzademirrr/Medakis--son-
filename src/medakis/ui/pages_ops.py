@@ -22,8 +22,8 @@ def _kpis(snap: dict) -> list[tuple[str, str, str, str]]:
     crit = [d for d in dens if d["seviye"] in ("turuncu", "kirmizi")]
     at = snap["at"]
     pending_tasks = sum(len(eng.data.tasks_window(u, at, at + timedelta(minutes=60))) for u in eng.data.units)
-    gap = sum(r["acik_personel_dk"] or 0 for r in rows or [] if r["rol"] == "nurse") if rows else None
-    gap_units = {r["servis_id"] for r in rows or [] if r["rol"] == "nurse" and (r["acik_personel_dk"] or 0) > 0}
+    gap = sum(r["eksik_hemsire"] for r in rows or [] if r["rol"] == "nurse") if rows else None
+    gap_units = {r["servis_id"] for r in rows or [] if r["rol"] == "nurse" and r["eksik_hemsire"] > 0}
     reserve = [c for c in eng.data.staff_on_duty(at) if c["rol"] == "nurse" and not c["izinli"] and c["kullanilabilir_dk"] >= 60
                and c["birim"] not in gap_units]  # fmt: skip
     pend = sum(p["durum"] == "beklemede" for p in s.sess.proposals())
@@ -31,7 +31,7 @@ def _kpis(snap: dict) -> list[tuple[str, str, str, str]]:
             ("Hastane yoğunluğu", f"%{round(100 * total / cap)}", f"{total}/{cap} kişi (kamera tespiti)", theme.ACCENT),
             ("Kritik birim", str(len(crit)), ", ".join(d["ad"] for d in crit) or "yok", theme.CRIT if crit else theme.OK),
             ("Bekleyen görev (60 dk)", str(pending_tasks), "son tarihi pencerede", theme.WARN),
-            ("Tahmini personel açığı", "—" if gap is None else f"{round(gap)} dk", "hemşire personel-dk (RF+tampon)", theme.CRIT if gap else theme.OK),
+            ("Eksik hemşire (60 dk)", "—" if gap is None else str(gap), "tahmin + tampon · birim bazında", theme.CRIT if gap else theme.OK),
             ("Uygun rezerv", str(len(reserve)), "açığı olmayan birimlerde tam pencere hemşire", theme.ACCENT),
             ("Onay bekleyen", str(pend), "öneri", theme.PURPLE),
             ("Aktif uyarı", str(len(snap["events"])), "yoğunluk + erken uyarı", theme.ORANGE)]  # fmt: skip
@@ -179,10 +179,9 @@ def page_twin() -> None:
         table.append({"Birim": d["ad"], "Kamera (tespit/kapasite)": f"{d['tespit']}/{d['kapasite']}", "Yoğunluk": LEVEL_TR[d["seviye"]],
                       "Vardiyada personel": snap["staff"][u]["toplam"], "Hemşire": snap["staff"][u]["nurse"],
                       "Ek talep sinyali (dk)": snap["signal"].get(u, 0.0), "RF tahmin (dk)": r.get("nokta_tahmin_dk"),
-                      "Etkin kapasite (dk)": r.get("etkin_kapasite_dk"), "Açık (personel-dk)": r.get("acik_personel_dk")})  # fmt: skip
+                      "Etkin kapasite (dk)": r.get("etkin_kapasite_dk"), "Eksik hemşire": r.get("eksik_hemsire")})  # fmt: skip
     st.dataframe(pd.DataFrame(table), hide_index=True, width="stretch",
-                 column_config={"RF tahmin (dk)": st.column_config.NumberColumn(format="%.0f"), "Etkin kapasite (dk)": st.column_config.NumberColumn(format="%.0f"),
-                                "Açık (personel-dk)": st.column_config.NumberColumn(format="%.0f")})  # fmt: skip
+                 column_config={"RF tahmin (dk)": st.column_config.NumberColumn(format="%.0f"), "Etkin kapasite (dk)": st.column_config.NumberColumn(format="%.0f")})  # fmt: skip
     if snap["moves"]:
         st.success("Onaylı plan dijital ikizde SİMÜLE ediliyor (gerçek atama değildir): " +
                    "; ".join(f"{S.staff_code(p)} → {names[t]}" for p, t in snap["moves"].items()))  # fmt: skip
@@ -202,9 +201,12 @@ def page_twin() -> None:
     if res is None:
         return
     st.caption(f"Senaryo: {res['senaryo']} · gerçek atama yok")
-    frame = pd.DataFrame(res["satirlar"]).rename(columns={"ad": "Birim", "talep_once": "Talep (mevcut)", "talep_sonra": "Talep (senaryo)",
-                                                           "kapasite_once": "Etkin kapasite (mevcut)", "kapasite_sonra": "Etkin kapasite (senaryo)",
-                                                           "acik_once": "Açık (mevcut)", "acik_sonra": "Açık (senaryo)", "degisim": "Değişim"}).drop(columns=["birim"])  # fmt: skip
+    frame = pd.DataFrame(res["satirlar"])
+    frame["degisim"] = frame["eksik_sonra"] - frame["eksik_once"]
+    frame = frame[["ad", "talep_once", "talep_sonra", "kapasite_once", "kapasite_sonra", "eksik_once", "eksik_sonra", "degisim"]].rename(
+        columns={"ad": "Birim", "talep_once": "Talep dk (mevcut)", "talep_sonra": "Talep dk (senaryo)", "kapasite_once": "Etkin kapasite dk (mevcut)",
+                 "kapasite_sonra": "Etkin kapasite dk (senaryo)", "eksik_once": "Eksik hemşire (mevcut)", "eksik_sonra": "Eksik hemşire (senaryo)",
+                 "degisim": "Değişim (kişi)"})  # fmt: skip
     st.dataframe(frame, hide_index=True, width="stretch")
     for name, ok, why in res["kontroller"]:
         st.markdown(theme.alert(f"{'✔' if ok else '✖'} {name}: {why}", "normal" if ok else "kirmizi"), unsafe_allow_html=True)

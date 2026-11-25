@@ -90,7 +90,8 @@ gerçeği yan yana gösterilir. **Bu yöntem gerçek kamerada doğrulanmış ins
 ## 7. İş yükü tahmini
 
 Mevcut Random Forest modelleri ve U1 kalibrasyonlu tampon kullanılır (yeniden yazılmadı). Tahminler **personel-dakika**
-cinsindendir, kişi sayısı değildir. Kamera yoğunluğu modelin girdisi değildir; yalnız yoğunluğa duyarlı senaryoda ayrı
+cinsinden hesaplanır; açık ekranda ve agent yanıtlarında **eksik hemşire sayısı** olarak gösterilir
+(60 dk pencerede bir hemşire 60 personel-dk verir; yukarı yuvarlanır, ör. 67 dk → 2 hemşire). Kamera yoğunluğu modelin girdisi değildir; yalnız yoğunluğa duyarlı senaryoda ayrı
 etiketli **ek talep sinyali** olarak eklenir. Model dosyası yoksa uygulama sahte tahmin göstermez.
 
 ## 8. Yoğunluğa duyarlı optimizasyon

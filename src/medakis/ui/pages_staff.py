@@ -43,7 +43,7 @@ def page_staff() -> None:
     k[0].markdown(theme.kpi("Vardiyada", len(duty), f"{len(eng.data.staff)} kayıtlı personel", theme.BLUE), unsafe_allow_html=True)
     k[1].markdown(theme.kpi("Aktif", sum(_status(x) == "Aktif" for x in duty), "şu an görevde", theme.OK), unsafe_allow_html=True)
     k[2].markdown(theme.kpi("Molada / izinli", f"{sum(x['molada'] for x in duty)} / {sum(x['izinli'] for x in duty)}", "mola ve izin kayıtları", theme.WARN), unsafe_allow_html=True)
-    gaps = [r for r in snap["rows"] or [] if r["rol"] == "nurse" and (r.get("acik_personel_dk") or 0) > 0]
+    gaps = [r for r in snap["rows"] or [] if r["rol"] == "nurse" and r.get("eksik_hemsire", 0) > 0]
     k[3].markdown(theme.kpi("Kritik açık", len(gaps), ", ".join(names[r["servis_id"]] for r in gaps) or "yok", theme.CRIT if gaps else theme.OK), unsafe_allow_html=True)
     st.write("")
     st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch", height=380)
@@ -164,21 +164,22 @@ def page_optimization() -> None:
         st.markdown("#### Önerilen geçici görevlendirmeler")
         st.dataframe(C.df([{"p": S.staff_code(t["personel"]), "k": names[t["ev_servis"]], "h": names[t["hedef_servis"]],
                             "s": f"{S.local_hm(t['baslangic'])}–{S.local_hm(t['bitis'])}", "d": t["sure_dk"], "y": ", ".join(t.get("gerekli_yetkinlikler") or []),
-                            "g": f"hedefte {round(before[t['hedef_servis']]['acik_personel_dk'] or 0)} personel-dk açık; kaynakta asgari kişi korunur",
+                            "g": f"hedefte {before[t['hedef_servis']]['eksik_hemsire']} hemşire eksik; kaynakta asgari kişi korunur",
                             "r": str(t.get("destek_kurali_kaynagi") or "-")[:60]} for t in moves],
                           {"p": "Personel", "k": "Kaynak", "h": "Hedef", "s": "Saat", "d": "Süre dk", "y": "Gerekli yetkinlik", "g": "Gerekçe", "r": "Destek kuralı kaynağı"}),
                      hide_index=True, width="stretch")  # fmt: skip
-    st.markdown("#### Kapasite: mevcut ve önerilen (hemşire, personel-dk)")
+    st.markdown("#### Eksik hemşire: plansız, sinyalsiz plan ve bu plan")
     cmp = []
     for u in names:
         if u not in before:
             continue
         b0, a0 = gaps_a.get(u, {}), gaps_b.get(u, {})
         cmp.append({"Birim": names[u], "Tahmini ihtiyaç": b0.get("ihtiyac_dk"), "Mevcut kapasite": before[u].get("kullanilabilir_personel_dk"),
-                    "Önerilen kapasite": b0.get("kapasite_dk"), "Açık (plansız)": before[u].get("acik_personel_dk"),
-                    "Açık (sinyalsiz plan)": a0.get("acik_dk"), "Açık (bu plan)": b0.get("acik_dk"), "Ek sinyal": opt["sinyal"].get(u, 0.0)})  # fmt: skip
+                    "Önerilen kapasite": b0.get("kapasite_dk"), "Eksik (plansız)": before[u].get("eksik_hemsire"),
+                    "Eksik (sinyalsiz plan)": a0.get("eksik_hemsire"), "Eksik (bu plan)": b0.get("eksik_hemsire"), "Ek sinyal": opt["sinyal"].get(u, 0.0)})  # fmt: skip
     st.dataframe(pd.DataFrame(cmp), hide_index=True, width="stretch", column_config={c: st.column_config.NumberColumn(format="%.0f") for c in cmp[0] if c != "Birim"} if cmp else None)
-    st.caption("İhtiyaç = tamponlu talep / 0,85; kapasite = kullanılabilir personel-dakika. Yoğunluk sinyali yalnız açık takvimli hemşire satırına eklenir.")
+    st.caption("Eksik = 60 dk pencerede karşılanamayan iş için gereken hemşire sayısı (yukarı yuvarlanır). İhtiyaç ve kapasite sütunları "
+               "personel-dakikadır: ihtiyaç = tamponlu talep / 0,85. Yoğunluk sinyali yalnız açık takvimli hemşire satırına eklenir.")  # fmt: skip
 
     a, b = st.columns([1.3, 1])
     with a:
@@ -208,8 +209,8 @@ def page_optimization() -> None:
     tgt = m2.selectbox("Hedef birim", list(names), format_func=names.get, index=2, key="man_tgt")
     wi = W.evaluate(eng.twin, snap["at"], snap["minute"], s.surges, W.Scenario(move=(code, tgt)))
     if wi:
-        st.dataframe(pd.DataFrame(wi["satirlar"])[["ad", "acik_once", "acik_sonra", "degisim"]].rename(
-            columns={"ad": "Birim", "acik_once": "Açık (mevcut)", "acik_sonra": "Açık (yönlendirme sonrası)", "degisim": "Değişim"}), hide_index=True, width="stretch")  # fmt: skip
+        st.dataframe(pd.DataFrame(wi["satirlar"])[["ad", "eksik_once", "eksik_sonra"]].rename(
+            columns={"ad": "Birim", "eksik_once": "Eksik hemşire (mevcut)", "eksik_sonra": "Eksik hemşire (yönlendirme sonrası)"}), hide_index=True, width="stretch")  # fmt: skip
         ok = all(c[1] for c in wi["kontroller"])
         for name, good, why in wi["kontroller"]:
             st.markdown(theme.alert(f"{'✔' if good else '✖'} {name}: {why}", "normal" if good else "kirmizi"), unsafe_allow_html=True)

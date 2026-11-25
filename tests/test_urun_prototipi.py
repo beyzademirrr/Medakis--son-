@@ -99,6 +99,14 @@ def test_clock_moves_window_and_staffing_with_moves(engine):
     assert st1[3]["nurse"] == st0[3]["nurse"] + 1 and st1[1]["nurse"] == st0[1]["nurse"] - 1
 
 
+def test_gaps_are_shown_as_whole_nurses():
+    from medakis.twin.data import nurses_short, nurses_short_work
+
+    assert [nurses_short(x) for x in (None, 0, 0.3, 1, 60, 61, 67, 235)] == [0, 0, 0, 1, 1, 2, 2, 4]
+    assert nurses_short(31, window=30) == 2  # 30 dk ufukta bir hemşire 30 dk verir
+    assert nurses_short_work(51) == 1 and nurses_short_work(52) == 2  # iş dakikası: hemşire başına 60 × 0,85
+
+
 def test_density_signal_only_above_capacity(engine):
     dens = [{"birim": 3, "tespit": 30, "kapasite": 22}, {"birim": 1, "tespit": 10, "kapasite": 14}]
     sig = engine.twin.density_signal(dens)

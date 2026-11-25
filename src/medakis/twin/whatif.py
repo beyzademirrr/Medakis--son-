@@ -14,6 +14,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import datetime
 
+from medakis.twin.data import nurses_short
 from medakis.twin.engine import Twin
 
 UTIL = 0.85
@@ -82,7 +83,7 @@ def evaluate(twin: Twin, at: datetime, minute: int, base_surges: dict[int, float
                 checks.append(("Kaynak asgari kişi kuralı", floor_ok, f"kaynakta {after[src]['kisi']} kişi kalır (asgari {after[src]['asgari_kisi']})"))
                 src_gap = _finish(after[src])["acik_personel_dk"]
                 checks.append(("Kaynakta yeni açık oluşmaz", src_gap <= _finish(before[src])["acik_personel_dk"] + 1e-6,
-                               f"kaynak açığı {round(_finish(before[src])['acik_personel_dk'])} → {round(src_gap)} personel-dk"))  # fmt: skip
+                               f"kaynakta eksik hemşire {nurses_short(_finish(before[src])['acik_personel_dk'])} → {nurses_short(src_gap)}"))  # fmt: skip
     for code in sc.leave:
         s = duty.get(code)
         if s and s["birim"] in after:
@@ -98,7 +99,8 @@ def evaluate(twin: Twin, at: datetime, minute: int, base_surges: dict[int, float
         rows.append({"birim": u, "ad": b["ad"], "talep_once": round(b["talep_dk"], 1), "talep_sonra": round(a["talep_dk"], 1),
                      "kapasite_once": b["etkin_kapasite_dk"], "kapasite_sonra": a["etkin_kapasite_dk"],
                      "acik_once": b["acik_personel_dk"], "acik_sonra": a["acik_personel_dk"],
-                     "degisim": round(a["acik_personel_dk"] - b["acik_personel_dk"], 1)})  # fmt: skip
+                     "degisim": round(a["acik_personel_dk"] - b["acik_personel_dk"], 1),
+                     "eksik_once": nurses_short(b["acik_personel_dk"]), "eksik_sonra": nurses_short(a["acik_personel_dk"])})  # fmt: skip
     for u in after:
         if after[u]["kisi"] < after[u]["asgari_kisi"] and not any(c[0] == "Kaynak asgari kişi kuralı" for c in checks):
             checks.append((f"{after[u]['ad']} asgari kişi kuralı", False, f"{after[u]['kisi']} kişi < asgari {after[u]['asgari_kisi']}"))

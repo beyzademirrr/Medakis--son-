@@ -49,7 +49,7 @@ def get_service_status(ctx: ToolContext) -> list[dict]:
         r = rows.get(u.id, {})
         out.append({"birim": u.id, "ad": u.name, "hemsire": st[u.id]["nurse"], "personel": st[u.id]["toplam"], "molada": st[u.id]["molada"],
                     "tamponlu_talep_dk": r.get("tamponlu_talep_dk"), "etkin_kapasite_dk": r.get("etkin_kapasite_dk"),
-                    "acik_personel_dk": r.get("acik_personel_dk")})  # fmt: skip
+                    "acik_personel_dk": r.get("acik_personel_dk"), "eksik_hemsire": r.get("eksik_hemsire")})  # fmt: skip
     return out
 
 

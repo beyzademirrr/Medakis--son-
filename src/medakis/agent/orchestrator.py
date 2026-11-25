@@ -7,7 +7,6 @@ bildirim yönetici işlemidir. Bu orkestrasyon yerel bir prototiptir (LangGraph/
 
 from __future__ import annotations
 
-import math
 import re
 from collections.abc import Callable
 from dataclasses import dataclass, field
@@ -24,7 +23,7 @@ EXAMPLE_GROUPS: dict[str, tuple[str, ...]] = {
     "Personel yönlendirme (yönetici komutu)": ("STAFF0002'yi Acil Servis'e yönlendir", "Servis A'dan 1 hemşireyi Acil Servis'e gönder",
                                                "Acil Servis için taslak emirleri oluştur", "Acil Servis için uygun adaylar kimler?",
                                                "Alternatif öneri var mı?", "Bu yönlendirmenin riski ne?"),
-    "60 dk öngörü": ("Önümüzdeki 60 dakikada talep ve kapasite durumu nedir?", "Acil Servis için 60 dakikalık tampon ve açık kaç personel-dakika?"),
+    "60 dk öngörü": ("Önümüzdeki 60 dakikada talep ve kapasite durumu nedir?", "Acil Serviste önümüzdeki 60 dakikada kaç hemşire eksik?"),
     "Vardiya ve plan": ("Bugün hangi birimlerde personel açığı var?", "Servis B bugün 20:00–24:00 arasındaki açığı nasıl kapatalım?",
                         "Acil Serviste şu an kimler çalışıyor?", "Birimlerin personel kapasitesi nedir?", "STAFF0002 yetkinlikleri"),
     "Talepler ve onaylar": ("Acil için ek personel talebi oluştur", "Taleplerin durumu ne?", "Onay bekleyen kararlar neler?"),
@@ -202,7 +201,7 @@ def answer(message: str, ctx: T.ToolContext) -> Reply:
 
     # ---- Günlük açık (saatlik matris) ----------------------------------------------------------------------------
     hrs = _hours(m)
-    if _has(m, "açı", "acı", "acig", "açık", "acik") and (_has(m, "bugün", "bugun", "gün", "gun", "vardiya") or hrs):
+    if _has(m, "açı", "acı", "acig", "açık", "acik", "eksik") and (_has(m, "bugün", "bugun", "gün", "gun", "vardiya") or hrs):
         h0, h1 = hrs or (0, 24)
         gaps = T.call(ctx, "get_daily_gaps", unit=unit, start_hour=h0, end_hour=h1)
         day = twin.data.local(ctx.at).strftime("%d.%m.%Y")
@@ -214,16 +213,15 @@ def answer(message: str, ctx: T.ToolContext) -> Reply:
             by.setdefault(r["birim"], []).append(r)
         lines = []
         for u, rows in by.items():
-            worst = max(rows, key=lambda r: r["acik_dk"])
-            total = round(sum(r["acik_dk"] for r in rows))
-            lines.append(f"- **{names[u]}**: {len(rows)} saatte açık, toplam {total} personel-dk; en yüksek {worst['saat']:02d}:00 "
-                         f"({round(worst['acik_dk'])} dk, {worst['personel']} hemşire)")  # fmt: skip
-        text = f"{scope}{day} {h0:02d}:00–{h1:02d}:00 hemşire açıkları (talep > etkin kapasite, kullanım oranı %{round(100 * UTILIZATION)}):\n" + "\n".join(lines)
+            worst = max(rows, key=lambda r: r["eksik_hemsire"])
+            hours = ", ".join(f"{r['saat']:02d}:00 ({r['eksik_hemsire']})" for r in sorted(rows, key=lambda r: r["saat"]))
+            lines.append(f"- **{names[u]}**: en çok {worst['eksik_hemsire']} hemşire eksik ({worst['saat']:02d}:00, vardiyada {worst['personel']} hemşire). "
+                         f"Eksik olan saatler: {hours}")  # fmt: skip
+        text = f"{scope}{day} {h0:02d}:00–{h1:02d}:00 saatlik eksik hemşire sayısı (iş yükü, kullanım oranı %{round(100 * UTILIZATION)} ile):\n" + "\n".join(lines)
         plan = ["Saatlik talep/kapasite matrisini oku", "Açığı olan saatleri seç"]
         if _has(m, "nasıl", "nasil", "kapat", "çöz", "coz", "ne yap"):
-            peak = max(gaps, key=lambda r: r["acik_dk"])
-            need = math.ceil(peak["acik_dk"] / (60 * UTILIZATION))
-            text += (f"\n\nKapatma seçenekleri (en yüksek saat {peak['saat']:02d}:00 için yaklaşık {need} ek hemşire gerekir):\n"
+            peak = max(gaps, key=lambda r: r["eksik_hemsire"])
+            text += (f"\n\nKapatma seçenekleri (en yüksek saat {peak['saat']:02d}:00 için {peak['eksik_hemsire']} ek hemşire gerekir):\n"
                      f"- Ek personel talebi: \"{names[peak['birim']]} için ek personel talebi oluştur\"\n"
                      "- Destek kuralı kapsamındaki birimden geçici görevlendirme: \"Servis A'dan 1 hemşireyi … gönder\"\n"
                      "- Karar anında CP-SAT planı: Optimizasyon ve Yönlendirme ekranı (kısıtlar gevşetilmez)")  # fmt: skip
@@ -242,12 +240,12 @@ def answer(message: str, ctx: T.ToolContext) -> Reply:
                     ["Şimdiki yoğunluğu oku", "60 dk sonrasını projekte et"])  # fmt: skip
 
     # ---- 60 dk iş yükü tahmini -----------------------------------------------------------------------------------
-    if _has(m, "tahmin", "öngör", "ongor", "önümüzdeki", "onumuzdeki", "tampon", "60 dakika"):
+    if _has(m, "tahmin", "öngör", "ongor", "önümüzdeki", "onumuzdeki", "tampon", "60 dakika", "eksik"):
         rows = T.call(ctx, "get_workload_forecast")
         if rows is None:
             return done("Tahmin modeli dosyaları yüklü değil; tahmin üretilmedi (sahte tahmin gösterilmez).", ["Tahmini oku"])
-        lines = [f"- **{names[r['servis_id']]}**: RF nokta tahmini {round(r['nokta_tahmin_dk'])} dk + tampon {round(r['tampon_dk'] or 0)} dk → "
-                 f"etkin kapasite {round(r['etkin_kapasite_dk'])} dk, açık {round(r['acik_personel_dk'] or 0)} personel-dk"
+        lines = [f"- **{names[r['servis_id']]}**: " + (f"**{r['eksik_hemsire']} hemşire eksik**" if r["eksik_hemsire"] else "eksik yok")
+                 + f" (iş yükü tahmini {round(r['nokta_tahmin_dk'])} dk + tampon {round(r['tampon_dk'] or 0)} dk; etkin kapasite {round(r['etkin_kapasite_dk'])} dk)"
                  for r in rows if r["rol"] == "nurse" and r.get("nokta_tahmin_dk") is not None and (unit is None or r["servis_id"] == unit)]  # fmt: skip
         return done("Önümüzdeki 60 dakika için hemşire iş yükü (Random Forest + kalibrasyonlu tampon):\n" + ("\n".join(lines) or "- Bu birim için tahmin satırı yok."),
                     ["Tahmin satırlarını oku"])  # fmt: skip
@@ -255,9 +253,9 @@ def answer(message: str, ctx: T.ToolContext) -> Reply:
         sim = T.call(ctx, "simulate_transfer")
         if sim is None:
             return done("Optimizasyon için model dosyaları gerekli; risk hesaplanamadı.", ["Taşımayı simüle et"])
-        lines = [f"- {names[u]}: açık {round(sim['once'][u]['acik_dk'] or 0)} → {round(sim['sonra'][u]['acik_dk'] or 0)} personel-dk"
+        lines = [f"- {names[u]}: eksik hemşire {sim['once'][u]['eksik_hemsire']} → {sim['sonra'][u]['eksik_hemsire']}"
                  for u in sim["sonra"]]  # fmt: skip
-        return done("Yoğunluk sinyalli plan ile sinyalsiz plan karşılaştırması (CP-SAT sonrası kalan açıklar):\n" + "\n".join(lines) +
+        return done("Yoğunluk sinyalli plan ile sinyalsiz plan karşılaştırması (CP-SAT sonrası kalan eksik hemşire):\n" + "\n".join(lines) +
                     "\n\nRiskler: kaynak birim asgari kişi kuralı ve kaynak açığı doğrulayıcıda denetlenir; sentetik veridir, "
                     "gerçek hastanede doğrulanmamıştır.", ["Mevcut planı çöz", "Yoğunluk sinyalli planı çöz", "Karşılaştır"])  # fmt: skip
     if _has(m, "alternatif"):
@@ -347,10 +345,10 @@ def answer(message: str, ctx: T.ToolContext) -> Reply:
         lines = []
         for d in rows:
             s = status[d["birim"]]
-            gap = s["acik_personel_dk"]
+            gap = s["eksik_hemsire"]
             lines.append(f"- **{d['alan']}**: {d['tespit']}/{d['kapasite']} kişi (%{round(100 * d['doluluk'])}, {LEVEL_TR[d['seviye']]}); "
                          f"vardiyada {s['personel']} personel ({s['hemsire']} hemşire, {s['molada']} molada)"
-                         + (f"; 60 dk tahmini açık {round(gap)} personel-dk" if gap is not None else ""))  # fmt: skip
+                         + (f"; 60 dk içinde {gap} hemşire eksik" if gap else "; 60 dk içinde eksik yok" if gap == 0 else ""))  # fmt: skip
         hot = [d["alan"] for d in rows if d["seviye"] in ("turuncu", "kirmizi")]
         head = ("Yoğunluk olan alanlar: " + ", ".join(hot) + "\n\n") if hot and unit is None else ""
         return done(head + "Sentetik kamera ve vardiya verisine göre güncel durum:\n" + "\n".join(lines) +

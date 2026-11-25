@@ -73,7 +73,7 @@ def page_camera() -> None:
 
 
 def page_forecast() -> None:
-    C.top("İş Yükü Tahmini", "Mevcut Random Forest + U1 kalibrasyonlu tampon · 30/60 dk · personel-dakika (kişi sayısı değildir)")
+    C.top("İş Yükü Tahmini", "Mevcut Random Forest + U1 kalibrasyonlu tampon · 30/60 dk · iş yükü dakika, açık eksik kişi olarak")
     C.clock_controls("tahmin")
     snap = S.snapshot()
     eng = S.engine()
@@ -92,15 +92,15 @@ def page_forecast() -> None:
         table.append({"Birim": names[r["servis_id"]], "Model": r.get("model"), "30 dk tahmin (dk)": h.get("nokta_tahmin_dk"),
                       "60 dk tahmin (dk)": r.get("nokta_tahmin_dk"), "Tampon (dk)": r.get("tampon_dk"), "Tamponlu talep (dk)": r.get("tamponlu_talep_dk"),
                       "Kamera ek sinyali (dk)": sig, "Kullanılabilir (personel-dk)": r.get("kullanilabilir_personel_dk"),
-                      "Etkin kapasite (dk)": r.get("etkin_kapasite_dk"), "Açık (personel-dk)": r.get("acik_personel_dk"),
+                      "Etkin kapasite (dk)": r.get("etkin_kapasite_dk"), "Eksik hemşire" if role == "nurse" else "Eksik personel": r.get("eksik_hemsire"),
                       "Rezerv (dk)": r.get("fazla_dk"), "Takvim": r.get("takvim_durumu"), "Durum": r.get("durum")})  # fmt: skip
     num = {k: st.column_config.NumberColumn(format="%.0f") for k in table[0] if "(dk)" in k or "personel-dk" in k} if table else {}
     st.dataframe(pd.DataFrame(table), hide_index=True, width="stretch", column_config=num)
     st.caption("Model sürümü: " + ", ".join(sorted({str(r.get('model_surumu')) for r in snap["rows"] if r.get("model_surumu")})) +
                " · Kamera ek sinyali modele girmez; yalnız yoğunluğa duyarlı optimizasyonda ayrı etiketle eklenir.")  # fmt: skip
-    warn = [r for r in snap["rows"] if r["rol"] == role and (r.get("acik_personel_dk") or 0) > 0]
+    warn = [r for r in snap["rows"] if r["rol"] == role and r.get("eksik_hemsire", 0) > 0]
     for r in warn:
-        st.markdown(theme.alert(f"Erken uyarı (60 dk): {names[r['servis_id']]} — {round(r['acik_personel_dk'])} personel-dk açık "
+        st.markdown(theme.alert(f"Erken uyarı (60 dk): {names[r['servis_id']]} — {r['eksik_hemsire']} {'hemşire' if role == 'nurse' else 'personel'} eksik "
                                 f"(talep {round(r['tamponlu_talep_dk'])} dk > etkin kapasite {round(r['etkin_kapasite_dk'])} dk)", "turuncu"), unsafe_allow_html=True)  # fmt: skip
 
     st.markdown("#### Tahmin ve gerçekleşen (bu gün değerlendirilen karar anları)")
@@ -148,7 +148,7 @@ def page_heatmap() -> None:
         day: date = c1.date_input("Gün", cur_day, key="hm_day")
         with c2:
             role = _role_param()
-        metric = c3.radio("Ölçü", ("oran", "acik_dk"), format_func={"oran": "İş yükü oranı", "acik_dk": "Açık (dk)"}.get, horizontal=True)
+        metric = c3.radio("Ölçü", ("oran", "eksik_hemsire"), format_func={"oran": "İş yükü oranı", "eksik_hemsire": "Eksik personel (kişi)"}.get, horizontal=True)
         if mode == "gun":
             frame = pd.DataFrame(eng.twin.hourly(day, role))
             frame["Birim"] = frame["birim"].map(names)
@@ -163,7 +163,8 @@ def page_heatmap() -> None:
                 parts.append(f)
             frame = pd.concat(parts)
             frame = frame.groupby(["gun", "birim"], as_index=False).agg(talep_dk=("talep_dk", "sum"), etkin_kapasite_dk=("etkin_kapasite_dk", "sum"),
-                                                                        acik_dk=("acik_dk", "sum"), rezerv_dk=("rezerv_dk", "sum"), personel=("personel", "max"))  # fmt: skip
+                                                                        acik_dk=("acik_dk", "sum"), rezerv_dk=("rezerv_dk", "sum"), personel=("personel", "max"),
+                                                                        eksik_hemsire=("eksik_hemsire", "max"))  # fmt: skip
             frame["oran"] = (frame["talep_dk"] / frame["etkin_kapasite_dk"].where(frame["etkin_kapasite_dk"] > 0)).round(3)
             frame["Birim"] = frame["birim"].map(names)
             frame["saat"] = frame["gun"]
@@ -172,9 +173,9 @@ def page_heatmap() -> None:
         scale = alt.Scale(domain=[0, 0.6, 0.85, 1.0, 1.6], range=["#0F766E", theme.OK, theme.WARN, theme.ORANGE, theme.CRIT], clamp=True) if metric == "oran" \
             else alt.Scale(scheme="orangered")  # fmt: skip
         chart = alt.Chart(frame).mark_rect(stroke="#0B1220", strokeWidth=0.6).encode(
-            x=x, y=alt.Y("Birim:N", title=None), color=alt.Color(f"{metric}:Q", scale=scale, title="Oran" if metric == "oran" else "Açık dk"),
+            x=x, y=alt.Y("Birim:N", title=None), color=alt.Color(f"{metric}:Q", scale=scale, title="Oran" if metric == "oran" else "Eksik kişi"),
             opacity=alt.condition(sel, alt.value(1), alt.value(0.55)),
-            tooltip=["Birim", "saat", "talep_dk", "etkin_kapasite_dk", "oran", "acik_dk", "rezerv_dk", "personel"]).add_params(sel).properties(height=230)  # fmt: skip
+            tooltip=["Birim", "saat", "talep_dk", "etkin_kapasite_dk", "oran", alt.Tooltip("eksik_hemsire:Q", title="eksik kişi"), "personel"]).add_params(sel).properties(height=230)  # fmt: skip
         layers = chart
         if mode == "gun" and day == cur_day:
             now = pd.DataFrame({"saat": [eng.data.local(snap["at"]).hour]})
@@ -184,8 +185,9 @@ def page_heatmap() -> None:
                    "Beyaz kesik çizgi: geçerli karar anı.")  # fmt: skip
         st.markdown("##### En riskli pencereler")
         top = frame.dropna(subset=["oran"]).sort_values("oran", ascending=False).head(5)
-        st.dataframe(top[["Birim", "saat", "talep_dk", "etkin_kapasite_dk", "oran", "acik_dk", "personel"]].rename(
-            columns={"saat": "Saat/Gün", "talep_dk": "Talep dk", "etkin_kapasite_dk": "Etkin kap. dk", "oran": "Oran", "acik_dk": "Açık dk", "personel": "Personel"}),
+        st.dataframe(top[["Birim", "saat", "talep_dk", "etkin_kapasite_dk", "oran", "eksik_hemsire", "personel"]].rename(
+            columns={"saat": "Saat/Gün", "talep_dk": "Talep dk", "etkin_kapasite_dk": "Etkin kap. dk", "oran": "Oran", "eksik_hemsire": "Eksik kişi",
+                     "personel": "Vardiyada"}),
             hide_index=True, width="stretch")  # fmt: skip
         pts = (ev.selection.get("hucre") if ev and ev.selection else None) or []
         if pts:
@@ -196,7 +198,7 @@ def page_heatmap() -> None:
                 st.markdown(f"##### Hücre ayrıntısı · {names[int(r['birim'])]} · {r['saat']}")
                 k = st.columns(5)
                 for col, (lab, val) in zip(k, (("Talep dk", r["talep_dk"]), ("Etkin kapasite dk", r["etkin_kapasite_dk"]), ("Oran", r["oran"]),
-                                              ("Açık dk", r["acik_dk"]), ("Rezerv dk", r["rezerv_dk"]))):  # fmt: skip
+                                              ("Eksik kişi", r["eksik_hemsire"]), ("Rezerv dk", r["rezerv_dk"]))):  # fmt: skip
                     col.metric(lab, "—" if pd.isna(val) else f"{val:.2f}" if lab == "Oran" else f"{val:.0f}")
                 if mode == "gun":
                     _cell_routing(day, int(r["saat"]))

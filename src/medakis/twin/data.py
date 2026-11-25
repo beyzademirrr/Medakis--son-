@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import bisect
 import json
+import math
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
@@ -25,6 +26,19 @@ MOMENTS_FILE = ROOT / "docs" / "veri" / "asama5_guvenli_duzeltme2.json"
 ROLE_TR = {"nurse": "Hemşire", "support": "Destek personeli", "supervisor": "Sorumlu hemşire"}
 KIND_TR = {"inpatient": "Yataklı", "emergency": "Acil", "outpatient": "Ayaktan"}
 UTILIZATION = 0.85
+
+
+def nurses_short(staff_minutes: float | None, window: int = 60) -> int:
+    """Personel-dakika açığını eksik hemşire sayısına çevirir: pencerede bir hemşire `window` dakika verir; yukarı yuvarlanır.
+    Yarım dakikanın altındaki sayısal artık açık sayılmaz."""
+    if not staff_minutes or staff_minutes < 0.5:
+        return 0
+    return math.ceil(staff_minutes / window - 1e-9)
+
+
+def nurses_short_work(work_minutes: float | None, window: int = 60) -> int:
+    """İş dakikası açığı (talep − etkin kapasite) → eksik hemşire: bir hemşire pencerede `window` × kullanım oranı iş verir."""
+    return nurses_short((work_minutes or 0.0) / UTILIZATION, window)
 SOURCE_LABEL = "Sentetik Demo · üretici 2.1 (veritabanı gerekmez)"
 
 
@@ -187,6 +201,7 @@ class TwinData:
                 eff = cap * UTILIZATION
                 out.append({"birim": u, "saat": h, "baslangic": h0, "talep_dk": round(demand, 1), "kapasite_dk": round(cap, 1),
                             "etkin_kapasite_dk": round(eff, 1), "oran": None if eff == 0 else round(demand / eff, 3),
-                            "acik_dk": round(max(0.0, demand - eff), 1), "rezerv_dk": round(max(0.0, eff - demand), 1),
+                            "acik_dk": round(max(0.0, demand - eff), 1), "eksik_hemsire": nurses_short_work(max(0.0, demand - eff)),
+                            "rezerv_dk": round(max(0.0, eff - demand), 1),
                             "personel": sum(1 for s in staff if s["birim"] == u and s["kullanilabilir_dk"] > 0)})  # fmt: skip
         return out

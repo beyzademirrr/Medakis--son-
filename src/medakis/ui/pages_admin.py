@@ -65,9 +65,9 @@ def page_approvals() -> None:
             names = S.unit_names()
             g = Twin.gaps(opt)
             rows = {r["servis_id"]: r for r in S.engine().twin.forecast(at) or [] if r["rol"] == "nurse"}
-            st.markdown("##### What-if: onay öncesi ve sonrası (hemşire açığı, personel-dk)")
-            st.dataframe(pd.DataFrame([{"Birim": names[u], "Mevcut açık": round(rows[u]["acik_personel_dk"] or 0) if u in rows else None,
-                                        "Plan sonrası açık": round(v["acik_dk"] or 0)} for u, v in g.items()]), hide_index=True, width="stretch")  # fmt: skip
+            st.markdown("##### What-if: onay öncesi ve sonrası (eksik hemşire)")
+            st.dataframe(pd.DataFrame([{"Birim": names[u], "Şu an eksik": rows[u]["eksik_hemsire"] if u in rows else None,
+                                        "Plan sonrası eksik": v["eksik_hemsire"]} for u, v in g.items()]), hide_index=True, width="stretch")  # fmt: skip
     with right:
         st.markdown("#### Karar")
         st.caption(f"Karar veren oturum: {MANAGER_ACTOR} (prototip yetki politikası). Agent bu işlemleri yapamaz.")
@@ -229,7 +229,7 @@ def page_audit() -> None:
         g = {r["servis_id"]: r for r in rows_f if r["rol"] == "nurse"}
         for k in items:
             t, src = k["hedef_servis"], k.get("kaynak_servis")
-            st.markdown(f"- {S.staff_code(k['personel'])}: {names.get(src)} → {names.get(t)}; hedefte plansız açık {round(g.get(t, {}).get('acik_personel_dk') or 0)} personel-dk; "
+            st.markdown(f"- {S.staff_code(k['personel'])}: {names.get(src)} → {names.get(t)}; hedefte plansız {g.get(t, {}).get('eksik_hemsire', 0)} hemşire eksik; "
                         f"kaynakta asgari kişi doğrulayıcıda korunur.")  # fmt: skip
         st.markdown("**Kaynak belgeler**")
         ev = search_sources("birimler arası destek yetkinlik")
